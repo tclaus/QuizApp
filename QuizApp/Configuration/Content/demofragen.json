@@ -1,0 +1,252 @@
+[
+  {
+    "answers" : [
+      {
+        "text" : "Kiwi",
+        "correct" : false
+      },
+      {
+        "text" : "Nandu",
+        "correct" : false
+      },
+      {
+        "text" : "Elefantenvogel",
+        "correct" : false
+      },
+      {
+        "text" : "Strauß",
+        "correct" : true
+      }
+    ],
+    "levelId" : 1,
+    "explanation" : "",
+    "questionId" : "0",
+    "text" : "Welcher Laufvogel steckt dem Volksglauben nach den Kopf in den Sand?",
+    "category" : "Wissenschaft & Forschung"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Rotkäppchen",
+        "correct" : false
+      },
+      {
+        "text" : "Rapunzel",
+        "correct" : false
+      },
+      {
+        "text" : "Gretel",
+        "correct" : false
+      },
+      {
+        "text" : "Schneewittchen",
+        "correct" : true
+      }
+    ],
+    "levelId" : 2,
+    "explanation" : "",
+    "questionId" : "1",
+    "text" : "Welche Märchengestalt aß einen Apfel und fiel in tiefen Schlaf?",
+    "category" : "Literatur & Sprache"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "NOK",
+        "correct" : false
+      },
+      {
+        "text" : "OPEC",
+        "correct" : false
+      },
+      {
+        "text" : "WHO",
+        "correct" : false
+      },
+      {
+        "text" : "IOC",
+        "correct" : true
+      }
+    ],
+    "levelId" : 3,
+    "explanation" : "",
+    "questionId" : "2",
+    "text" : "Welche Organisation übernimmt die Vorbereitung und Durchführung der Olympischen Spiele?",
+    "category" : "Sport & Spiel"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Grönland",
+        "correct" : false
+      },
+      {
+        "text" : "Lettland",
+        "correct" : false
+      },
+      {
+        "text" : "Montenegro",
+        "correct" : false
+      },
+      {
+        "text" : "Estland",
+        "correct" : true
+      }
+    ],
+    "levelId" : 4,
+    "explanation" : "",
+    "questionId" : "3",
+    "text" : "Von welchem Land ist Tallinn die Hauptstadt?",
+    "category" : "Geographie"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Salsa tanzen",
+        "correct" : false
+      },
+      {
+        "text" : "Taekwondo",
+        "correct" : false
+      },
+      {
+        "text" : "Gitarre spielen",
+        "correct" : false
+      },
+      {
+        "text" : "Erste Hilfe",
+        "correct" : true
+      }
+    ],
+    "levelId" : 5,
+    "explanation" : "",
+    "questionId" : "4",
+    "text" : "Wo wird der Rautek-Griff in der Regel angewendet?",
+    "category" : "Gesellschaft"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Gebiet in Frankreich",
+        "correct" : false
+      },
+      {
+        "text" : "Freilichtbühne",
+        "correct" : false
+      },
+      {
+        "text" : "Vereinskasse",
+        "correct" : false
+      },
+      {
+        "text" : "Bouleplatz",
+        "correct" : true
+      }
+    ],
+    "levelId" : 6,
+    "explanation" : "",
+    "questionId" : "5",
+    "text" : "Was bezeichnet man als 'Boulodrome'?",
+    "category" : "Sport & Spiel"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Alexander Solschenizyn",
+        "correct" : false
+      },
+      {
+        "text" : "Leo N. Tolstoi",
+        "correct" : false
+      },
+      {
+        "text" : "Alexander N. Ostrowski",
+        "correct" : false
+      },
+      {
+        "text" : "Anton P. Tschechow",
+        "correct" : true
+      }
+    ],
+    "levelId" : 7,
+    "explanation" : "",
+    "questionId" : "6",
+    "text" : "Wer schrieb das Drama 'Drei Schwestern'?",
+    "category" : "Literatur & Sprache"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Cordon Bleu",
+        "correct" : false
+      },
+      {
+        "text" : "Zigeunerschnitzel",
+        "correct" : false
+      },
+      {
+        "text" : "Jägerschnitzel",
+        "correct" : false
+      },
+      {
+        "text" : "Berliner Schnitzel",
+        "correct" : true
+      }
+    ],
+    "levelId" : 8,
+    "explanation" : "",
+    "questionId" : "7",
+    "text" : "Welches dieser Fleischgerichte besteht aus panierten Kuheutern?",
+    "category" : "Essen & Trinken"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Oxer",
+        "correct" : false
+      },
+      {
+        "text" : "Rick",
+        "correct" : false
+      },
+      {
+        "text" : "Mauer",
+        "correct" : false
+      },
+      {
+        "text" : "Burg",
+        "correct" : true
+      }
+    ],
+    "levelId" : 9,
+    "explanation" : "",
+    "questionId" : "8",
+    "text" : "Welches Hindernis gibt es beim Springreiten nicht?",
+    "category" : "Sport & Spiel"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Braille",
+        "correct" : false
+      },
+      {
+        "text" : "Blacke Box",
+        "correct" : false
+      },
+      {
+        "text" : "Lettré Noire",
+        "correct" : false
+      },
+      {
+        "text" : "Cécogramme",
+        "correct" : true
+      }
+    ],
+    "levelId" : 10,
+    "explanation" : "",
+    "questionId" : "9",
+    "text" : "Wie heißt die internationale Bezeichnung im Versand von Blindensendungen?",
+    "category" : "Literatur & Sprache"
+  }
+]

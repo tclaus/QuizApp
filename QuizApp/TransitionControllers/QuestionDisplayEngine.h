@@ -1,0 +1,18 @@
+//
+//  QuestionDisplayEngine.h
+//  QuizApp
+//
+//  Created by Tope Abayomi on 01/01/2014.
+//  Copyright (c) 2014 App Design Vault. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "QuestionViewController.h"
+
+@interface QuestionDisplayEngine : NSObject
+
+-(void)attachDelegate:(id<QuestionViewControllerDelegate>)delegate;
+
+-(BOOL)showNextQuestion:(NSArray*)questions inMainView:(UIView*)mainView;
+
+@end
