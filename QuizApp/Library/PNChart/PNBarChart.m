@@ -13,7 +13,7 @@
 
 @implementation PNBarChart
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -29,15 +29,15 @@
 
 -(void)layoutSubviews{
     
-    [self setYLabels:_yValues];
-    [self setXLabels:_xLabels];
+    self.yLabels = _yValues;
+    self.xLabels = _xLabels;
     [self strokeChart];
 }
 
 -(void)setLegend:(NSString *)legend{
     
     PNChartLabel * label = [[PNChartLabel alloc] initWithFrame:CGRectMake(5,5,100, 20)];
-    [label setTextAlignment:NSTextAlignmentLeft];
+    label.textAlignment = NSTextAlignmentLeft;
     label.text = legend;
     label.textColor = [UIColor whiteColor];
     [self addSubview:label];
@@ -46,16 +46,16 @@
 -(void)setYValues:(NSArray *)yValues
 {
     _yValues = yValues;
-    [self setYLabels:yValues];
+    self.yLabels = yValues;
     
-    _xLabelWidth = (self.frame.size.width - chartMargin*2)/[_yValues count];
+    _xLabelWidth = (self.frame.size.width - chartMargin*2)/_yValues.count;
 }
 
 -(void)setYLabels:(NSArray *)yLabels
 {
     NSInteger max = 0;
     for (NSString * valueString in yLabels) {
-        NSInteger value = [valueString integerValue];
+        NSInteger value = valueString.integerValue;
         if (value > max) {
             max = value;
         }
@@ -84,13 +84,13 @@
         
         _actualLabels = [NSMutableArray array];
         
-        _xLabelWidth = (self.frame.size.width - chartMargin*2)/[xLabels count];
+        _xLabelWidth = (self.frame.size.width - chartMargin*2)/xLabels.count;
         NSInteger index = 0;
         for (NSString * labelText in xLabels) {
             //NSInteger index = [xLabels indexOfObject:labelText];
             PNChartLabel * label = [[PNChartLabel alloc] initWithFrame:CGRectMake((index *  _xLabelWidth + chartMargin), self.frame.size.height - 30.0, _xLabelWidth, 20.0)];
             index++;
-            [label setTextAlignment:NSTextAlignmentCenter];
+            label.textAlignment = NSTextAlignmentCenter;
             label.text = labelText;
             label.textColor = [UIColor whiteColor];
             
@@ -119,7 +119,7 @@
     _actualBars = [NSMutableArray array];
     
     for (NSString * valueString in _yValues) {
-        float value = [valueString floatValue];
+        float value = valueString.floatValue;
         
         float grade = (float)value / (float)_yValueMax;
 		PNBar * bar;

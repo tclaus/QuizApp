@@ -17,7 +17,7 @@
 
 @implementation PNScrollLineChart
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     if ( (self = [super initWithFrame:frame]) ) {
         [self initialize];        
     }
@@ -25,7 +25,7 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if ( (self = [super initWithCoder:aDecoder]) ) {
         [self initialize];
     }
@@ -52,12 +52,12 @@
 }
 
 - (void)setYValues:(NSArray *)values{
-    [self.graphView setYValues:values];
+    (self.graphView).yValues = values;
     self.contentSize = [self contentSizeWithWidth:self.graphView.frame.size.width];
 }
 
 - (void)setXLabels:(NSArray *)labels{
-    [self.graphView setXLabels:labels];
+    (self.graphView).xLabels = labels;
     self.contentSize = [self contentSizeWithWidth:self.graphView.frame.size.width];
 }
 

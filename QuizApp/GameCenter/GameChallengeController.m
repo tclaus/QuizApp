@@ -22,7 +22,7 @@
 
 @implementation GameChallengeController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -54,7 +54,7 @@
     [self.challengeButton setTitle:@"SEND CHALLENGE" forState:UIControlStateNormal];
     
     [self.closeButton setTitle:@"Close" forState:UIControlStateNormal];
-    [self.closeButton setTintColor:[UIColor blueColor]];
+    (self.closeButton).tintColor = [UIColor blueColor];
     
     
     self.titleLabel.text = @"Challenge Friends";
@@ -77,7 +77,7 @@
 - (void)challengeButtonPressed:(id) sender {
    
     NSMutableArray *playerIds = [NSMutableArray array];
-    NSArray *allValues = [_dataSource allValues];
+    NSArray *allValues = _dataSource.allValues;
     
     for (NSDictionary *dict in allValues) {
         if ([dict[kIsChallengedKey] boolValue] == YES) {
@@ -122,7 +122,7 @@
         
         if (score.value < _score) {
             NSMutableDictionary* playerScore = _dataSource[score.player.playerID];
-            playerScore[kIsChallengedKey] = [NSNumber numberWithBool:YES];
+            playerScore[kIsChallengedKey] = @YES;
         }
         
         _dataSource[score.player.playerID][kScoreKey] = score;
@@ -141,7 +141,7 @@
         }
         
         NSMutableDictionary* playerScore = _dataSource[player.playerID];
-        playerScore[kIsChallengedKey] = [NSNumber numberWithBool:NO];
+        playerScore[kIsChallengedKey] = @NO;
         
         GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:@"Leaderboard"];
         score.value = 3;;
@@ -180,7 +180,7 @@
     
     FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
     
-    NSDictionary *dict = [_dataSource allValues][indexPath.row];
+    NSDictionary *dict = _dataSource.allValues[indexPath.row];
 
     GKPlayer *player = dict[kPlayerKey];
     
@@ -209,10 +209,10 @@
     
     tickMark.hidden = !tickMark.hidden;
     
-    NSArray *array = [_dataSource allValues];
+    NSArray *array = _dataSource.allValues;
     NSMutableDictionary *dict = array[indexPath.row];
     
-    [dict setObject:[NSNumber numberWithBool:!tickMark.hidden] forKey:kIsChallengedKey];
+    dict[kIsChallengedKey] = [NSNumber numberWithBool:!tickMark.hidden];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

@@ -25,13 +25,15 @@
 
 -(void)authenticateLocalPlayer;
 
--(UIViewController*)createGameCenterViewController;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) GKGameCenterViewController *createGameCenterViewController;
 
 -(void)submitTestResult:(CGFloat)score forLeaderboard:(NSString*)leaderboardIdentifier;
 
 -(void)reportAchievementsTestResult:(CGFloat)percentScore;
 
 -(void)shareTestResult:(CGFloat)score forLeaderboard:(NSString*)leaderboardIdentifier;
+
+-(void)showLeaderboard: (NSString*) leaderboardID;
 
 -(void)loadScoresToChallenge;
 

@@ -53,7 +53,7 @@
 
 @implementation ResultsViewControlleriPad
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -139,7 +139,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"reviewDetail"]){
         
-        NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath* indexPath = (self.tableView).indexPathForSelectedRow;
         Question* question = self.questions[indexPath.row];
         
         QuestionViewController* controller = segue.destinationViewController;

@@ -50,7 +50,7 @@
     [self setNeedsDisplay];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if ((self = [super initWithCoder:aDecoder])) {
 		[self _initialize];
     }
@@ -58,7 +58,7 @@
 }
 
 
-- (id)initWithFrame:(CGRect)aFrame {
+- (instancetype)initWithFrame:(CGRect)aFrame {
     if ((self = [super initWithFrame:aFrame])) {
 		[self _initialize];
     }

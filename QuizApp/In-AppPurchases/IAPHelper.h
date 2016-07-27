@@ -17,7 +17,7 @@ typedef void (^RequestProductsCompletionHandler)(BOOL success, NSArray * product
 
 @interface IAPHelper : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver>
 
-- (id)initWithProductIdentifiers:(NSSet *)productIdentifiers;
+- (instancetype)initWithProductIdentifiers:(NSSet *)productIdentifiers NS_DESIGNATED_INITIALIZER;
 - (void)requestProductsWithCompletionHandler:(RequestProductsCompletionHandler)completionHandler;
 - (void)buyProduct:(SKProduct *)product;
 - (BOOL)productPurchased:(NSString *)productIdentifier;

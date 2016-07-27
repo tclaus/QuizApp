@@ -18,5 +18,5 @@
 
 @property (nonatomic, assign) BOOL chosen;
 
--(id)initWithDictionary:(NSDictionary*)dictionary;
+-(instancetype)initWithDictionary:(NSDictionary*)dictionary NS_DESIGNATED_INITIALIZER;
 @end

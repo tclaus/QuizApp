@@ -12,7 +12,7 @@
 
 - (UIColor *)averageColor
 {
-    CGImageRef rawImageRef = [self CGImage];
+    CGImageRef rawImageRef = self.CGImage;
 
     // This function returns the raw pixel values
 	CFDataRef data = CGDataProviderCopyData(CGImageGetDataProvider(rawImageRef));

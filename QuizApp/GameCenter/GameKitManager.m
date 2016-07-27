@@ -49,7 +49,7 @@
 -(void)setLastError:(NSError*)error {
     _lastError = [error copy];
     if (_lastError) {
-        NSLog(@"GameKitManager: Error: %@", [[_lastError userInfo] description]);
+        NSLog(@"GameKitManager: Error: %@", _lastError.userInfo.description);
     }
 }
 
@@ -74,7 +74,7 @@
     [rootVC dismissViewControllerAnimated:YES completion:nil];
 }
 
--(UIViewController*)createGameCenterViewController{
+-(GKGameCenterViewController*)createGameCenterViewController{
     
     GKGameCenterViewController *gameCenterViewController = [[GKGameCenterViewController alloc] init];
     gameCenterViewController.gameCenterDelegate = self;
@@ -190,7 +190,7 @@
     for (NSDictionary *achievement in achievements) {
         NSString *achievementId = achievement[@"Achievement ID"];
         NSNumber *percentNeeded = achievement[@"Percent Score Needed"];
-        float percentComplete = (percentScore * 1.0f/[percentNeeded intValue]) * 100;
+        float percentComplete = (percentScore * 1.0f/percentNeeded.intValue) * 100;
         
         if(percentComplete > 100){
             percentComplete = 100;
@@ -219,6 +219,18 @@
     [self presentViewController: activityViewController];
 }
 
+- (void) showLeaderboard: (NSString*) leaderboardID
+{
+    GKGameCenterViewController *gameCenterController = self.createGameCenterViewController;
+    
+    if (gameCenterController != nil)
+    {
+        gameCenterController.viewState = GKGameCenterViewControllerStateLeaderboards;
+        gameCenterController.leaderboardTimeScope = GKLeaderboardTimeScopeAllTime;
+        gameCenterController.leaderboardIdentifier = leaderboardID;
+        [self presentViewController:gameCenterController];
+    }
+}
 -(void)loadScoresToChallenge {
     
     GKLeaderboard* leaderboard = [[GKLeaderboard alloc] init];

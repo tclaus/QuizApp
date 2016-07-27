@@ -20,14 +20,14 @@
 
 @property (nonatomic, strong) NSString* category;
 
--(NSInteger)numberOfCorrectAnswers;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger numberOfCorrectAnswers;
 
 -(BOOL)indexIsCorrectAnswer:(NSInteger)answerIndex;
 
 -(BOOL)indexIsChosenAnswer:(NSInteger)answerIndex;
 
--(BOOL)hasBeenAnsweredCorrectly;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL hasBeenAnsweredCorrectly;
 
--(id)initWithDictionary:(NSDictionary*)dictionary;
+-(instancetype)initWithDictionary:(NSDictionary*)dictionary;
 
 @end

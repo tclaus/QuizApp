@@ -187,9 +187,9 @@
 }
 
 -(IBAction)didTapStartButton:(id)sender{
-    NSArray* indexPaths = [self.collectionView indexPathsForSelectedItems];
+    NSArray* indexPaths = (self.collectionView).indexPathsForSelectedItems;
     if(!indexPaths){
-        indexPaths = [self.tableView indexPathsForSelectedRows];
+        indexPaths = (self.tableView).indexPathsForSelectedRows;
     }
     
     if(indexPaths.count == 0){

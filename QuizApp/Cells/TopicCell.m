@@ -11,7 +11,7 @@
 
 @implementation TopicCell
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -32,7 +32,7 @@
 }
 
 -(void)setSelected:(BOOL)selected{
-    [super setSelected:selected];
+    super.selected = selected;
     
     self.tickImageView.alpha = selected ? 1.0 : 0.0;
 }

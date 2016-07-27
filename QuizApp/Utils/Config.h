@@ -41,6 +41,6 @@
 @property (nonatomic, assign) BOOL gameCenterEnabled;
 @property (nonatomic, assign) BOOL showTopicsinGrid;
 
--(NSArray*)getAllInAppPurchases;
+@property (NS_NONATOMIC_IOSONLY, getter=getAllInAppPurchases, readonly, copy) NSArray *allInAppPurchases;
 
 @end

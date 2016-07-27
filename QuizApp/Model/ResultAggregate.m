@@ -10,7 +10,7 @@
 
 @implementation ResultAggregate
 
--(id)initWithCoder:(NSCoder *)aDecoder{
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
     
     self = [super init];
     if (!self) {

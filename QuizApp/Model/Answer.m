@@ -10,17 +10,17 @@
 
 @implementation Answer
 
--(id)initWithDictionary:(NSDictionary*)dictionary{
+-(instancetype)initWithDictionary:(NSDictionary*)dictionary{
     
     self = [super init];
     if(self){
         self.text = dictionary[@"text"];
         self.image = dictionary[@"image"];
         NSNumber* correct = dictionary[@"correct"];
-        self.correct = [correct intValue] == 1 ? YES : NO;
+        self.correct = correct.intValue == 1 ? YES : NO;
         
         NSNumber* chosen = dictionary[@"chosen"];
-        self.chosen = [chosen intValue] == 1 ? YES : NO;
+        self.chosen = chosen.intValue == 1 ? YES : NO;
     }
     return self;
 }

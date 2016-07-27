@@ -11,7 +11,7 @@
 
 @implementation DropAnimationController
 
--(id)init{
+-(instancetype)init{
     self = [super init];
     
     if(self){
@@ -41,7 +41,7 @@
 
 -(void)executePresentationAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
     
-    UIView* inView = [transitionContext containerView];
+    UIView* inView = transitionContext.containerView;
     
     UIViewController* toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
@@ -72,7 +72,7 @@
 
 -(void)executeDismissalAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
     
-    UIView* inView = [transitionContext containerView];
+    UIView* inView = transitionContext.containerView;
     
     UIViewController* toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     

@@ -12,7 +12,7 @@
 @implementation AnswerCell
 
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -79,7 +79,7 @@
         // Show green color for right answer
         // self.barImageView
          self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        [ self.barImageView setTintColor:[UIColor greenColor]];
+        (self.barImageView).tintColor = [UIColor greenColor];
     }];
 }
 

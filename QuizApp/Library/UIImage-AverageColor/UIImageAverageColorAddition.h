@@ -10,7 +10,7 @@
 
 @interface UIImage (UIImageAverageColorAddition)
 
-- (UIColor *)averageColor;
-- (UIColor *)mergedColor;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) UIColor *averageColor;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) UIColor *mergedColor;
 
 @end

@@ -21,13 +21,13 @@ NSUserDomainMask, YES) objectAtIndex:0]
 
 +(NSArray*)questionsFromFile:(NSString*)file{
     
-    NSString* name = [file stringByDeletingPathExtension];
-    NSString* extension = [file pathExtension];
+    NSString* name = file.stringByDeletingPathExtension;
+    NSString* extension = file.pathExtension;
     
     NSString* path = [[NSBundle mainBundle] pathForResource:name ofType:extension];
     NSData* questionsData = [NSData dataWithContentsOfFile:path];
     
-    NSArray* questionDictionaries = [NSArray array];
+    NSArray* questionDictionaries = @[];
     
     if(questionsData){
         NSError* error;

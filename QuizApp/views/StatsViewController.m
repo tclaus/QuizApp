@@ -69,7 +69,7 @@
 
 @implementation StatsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -88,7 +88,7 @@
 {
     [super viewDidLoad];
     
-    self.gamecenterChallenges = [NSArray array];
+    self.gamecenterChallenges = @[];
     
     if([Config sharedInstance].gameCenterEnabled){
         GameKitManager *gameKitManager = [GameKitManager sharedInstance];
@@ -148,7 +148,7 @@
     // See highscores
     [self.highScoreButton setHidden:NO];
     self.highScoreButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.highScoreButton addTarget:self action:@selector(showChallengesTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.highScoreButton addTarget:self action:@selector(showHighscores:) forControlEvents:UIControlEventTouchUpInside];
     [self.highScoreButton setTitle:@"HIGHSCORES" forState:UIControlStateNormal];
     
     [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -167,7 +167,7 @@
         [self.refreshControl endRefreshing];
     }];
     
-    BOOL isIPhone4 = [[UIScreen mainScreen] bounds].size.height < 568;
+    BOOL isIPhone4 = [UIScreen mainScreen].bounds.size.height < 568;
     self.scoresBarChartHeightConstraint.constant = isIPhone4 ? 0 : 120;
     
     self.topStatsContainer.backgroundColor = [UIColor clearColor];
@@ -209,8 +209,8 @@
     graphView.translatesAutoresizingMaskIntoConstraints = NO;
     [Utils addConstraintsToSuperView:self.scoresBarChartContainer  andSubView:graphView withPadding:0];
     
-    [self.scoresBarChart setStrokeColor:[UIColor whiteColor]];
-    [self.scoresBarChart setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.1]];
+    (self.scoresBarChart).strokeColor = [UIColor whiteColor];
+    (self.scoresBarChart).backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.1];
     [self.scoresBarChart setXLabels:dataPoints[@"titles"]];
     [self.scoresBarChart setYValues:dataPoints[@"values"]];
     [self.scoresBarChart setLegend:[NSString stringWithFormat:@"Your Last %ld Scores", (long)numberOfScoresToShow]];
@@ -461,7 +461,8 @@
 }
 
 -(IBAction)showHighscores:(id)sender {
-    
+    GameKitManager *gkManager = [GameKitManager sharedInstance];
+    [gkManager showLeaderboard:@"TopScoresLeaderboard"];
 }
 
 - (void)didReceiveMemoryWarning

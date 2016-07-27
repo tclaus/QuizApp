@@ -12,18 +12,18 @@
 
 @implementation PNChartLabel
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self setLineBreakMode:NSLineBreakByWordWrapping];
-        [self setMinimumScaleFactor:11.0f];
-        [self setNumberOfLines:0];
-        [self setFont:[UIFont fontWithName:[ADVTheme mainFont] size:9]];
-        [self setTextColor:[UIColor colorWithWhite:0.5f alpha:1.0f]];
+        self.lineBreakMode = NSLineBreakByWordWrapping;
+        self.minimumScaleFactor = 11.0f;
+        self.numberOfLines = 0;
+        self.font = [UIFont fontWithName:[ADVTheme mainFont] size:9];
+        self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
         self.backgroundColor = [UIColor clearColor];
-        [self setTextAlignment:NSTextAlignmentLeft];
+        self.textAlignment = NSTextAlignmentLeft;
         self.userInteractionEnabled = YES;
     }
     return self;

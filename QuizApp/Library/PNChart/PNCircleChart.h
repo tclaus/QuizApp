@@ -15,7 +15,7 @@
 @interface PNCircleChart : UIView
 
 -(void)strokeChart;
-- (id)initWithFrame:(CGRect)frame andTotal:(NSNumber *)total andCurrent:(NSNumber *)current;
+- (instancetype)initWithFrame:(CGRect)frame andTotal:(NSNumber *)total andCurrent:(NSNumber *)current NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, strong) UIColor * strokeColor;
 @property (nonatomic, strong) NSNumber * total;

@@ -46,7 +46,7 @@
 
 @implementation QuestionViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -89,7 +89,7 @@
 
     self.footerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
     UIToolbar* toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
-    [toolbar setBarStyle:UIBarStyleBlack];
+    toolbar.barStyle = UIBarStyleBlack;
     [self.footerView insertSubview:toolbar belowSubview:self.answerButton];
     self.footerView.hidden = self.isForReview;
     
@@ -279,7 +279,7 @@
     for (NSInteger i = 0; i < self.question.answers.count; i++) {
         AnswerCell* cell = (AnswerCell*)[self.answerTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
     
-        [cell setUserInteractionEnabled:enable];
+        cell.userInteractionEnabled = enable;
     }
 }
 
