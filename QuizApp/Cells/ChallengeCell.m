@@ -28,7 +28,7 @@
 }
 
 -(void)awakeFromNib{
-    
+    [super awakeFromNib];
     
     self.contentView.backgroundColor = [UIColor blackColor];
     

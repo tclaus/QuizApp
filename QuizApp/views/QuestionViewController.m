@@ -81,7 +81,7 @@
     
     [self.answerButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     [self.answerButton setBackgroundImage:buttonDisabledBackground forState:UIControlStateDisabled];
-    self.answerButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:17.0f];
+    self.answerButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:19.0f];
     [self.answerButton addTarget:self action:@selector(answerTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.answerButton setTitle:@"NEXT" forState:UIControlStateNormal];
     self.answerButton.enabled = NO;
@@ -96,6 +96,7 @@
     
     self.headerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
     
+    // The Question Label
     CGFloat fontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 25 : 21;
     self.questionLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:fontSize];
     self.questionLabel.textColor = [UIColor whiteColor];
@@ -145,6 +146,7 @@
     AnswerCell* cell = nil;
     Answer* answer = self.question.answers[indexPath.row];
     
+    // If the answer contains an image - show the image instead of text
     if(answer.image){
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCellImage"];
         cell.answerImageView.image = [UIImage imageNamed:answer.image];
@@ -156,6 +158,8 @@
     cell.indexLabel.text = [self getAlphabetFromIndex:indexPath.row];
     cell.isForReview = self.isForReview;
     cell.backgroundColor = [UIColor clearColor];
+    
+    cell.indexLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:19.0f];
     
     if(self.isForReview || self.answerTapped){
         BOOL isChosenAnswer = [self.question indexIsChosenAnswer:indexPath.row];
@@ -182,12 +186,14 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [self doAnswerButtonState];
+    
 }
 
+/*
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self doAnswerButtonState];
 }
-
+*/
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -209,14 +215,19 @@
         CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
         //// for separator
         height += 1.0f;
-        NSLog(@"%f",height);
+       // NSLog(@"%f",height);
         return height;
     }
     
 }
 
+-(void)goToNextQuestion {
+    [self.delegate questionHasBeenAnswered:self.question withController:self];
+}
+
 -(IBAction)answerTapped:(id)sender{
     self.answerTapped = YES;
+    
     if(self.correctAnswerShown){
         [self enableInteractionOnCells:YES];
         [self.answerButton setTitle:@"NEXT" forState:UIControlStateNormal];
@@ -243,7 +254,14 @@
     
     NSArray* indexPaths = self.answerTableView.indexPathsForSelectedRows;
     
-    self.answerButton.enabled = indexPaths && indexPaths.count >= [self.question numberOfCorrectAnswers];
+     self.answerButton.enabled = indexPaths && indexPaths.count >= [self.question numberOfCorrectAnswers];
+    [self showCorrectAnswer];
+    
+
+    // Tap on right answer => Play happy sound => Mark as right => next
+    // Tap on flase answer => Play sad sound / Vibrate => Mark as false => next
+    
+    
 }
 
 -(void)showCorrectAnswer{
@@ -257,6 +275,9 @@
         
         [self enableInteractionOnCells:NO];
         [self.soundSystem vibrate];
+    }
+    
+    
         for (NSInteger i = 0; i < self.question.answers.count; i++) {
 
             AnswerCell* cell = (AnswerCell*)[self.answerTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
@@ -264,12 +285,14 @@
             Answer* answer = self.question.answers[i];
             
             if(answer.correct){
-                [cell showCorrectAnswerWithAnimation];
+                [cell showCorrectAnswerWithAnimation:^{
+                    [self goToNextQuestion];
+                }];
                 
             }else{
                 [cell showWrongAnswerWithAnimation];
             }
-        }
+        
     }
 }
 

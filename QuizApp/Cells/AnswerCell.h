@@ -37,6 +37,7 @@
 -(void)showImageForCorrectAnswer:(BOOL)correct AndChosenAnswer:(BOOL)chosen;
 
 -(void)showCorrectAnswerWithAnimation;
+-(void)showCorrectAnswerWithAnimation:(void (^)())complete;
 
 -(void)showWrongAnswerWithAnimation;
 

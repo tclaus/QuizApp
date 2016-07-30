@@ -21,6 +21,7 @@
 }
 
 -(void)awakeFromNib{
+    [super awakeFromNib];
     
     self.topicTitle.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
     self.topicTitle.textColor = [UIColor whiteColor];

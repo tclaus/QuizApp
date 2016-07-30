@@ -27,8 +27,8 @@
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
     
-    CGFloat textFontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 19.0f : 15.0f;
-    CGFloat indexFontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 25.0f : 18.0f;
+    CGFloat textFontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 24.0f : 22.0f;
+    CGFloat indexFontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 25.0f : 24.0f;
     
     self.answerLabel.textColor = [UIColor whiteColor];
     self.answerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:textFontSize];
@@ -74,19 +74,38 @@
 }
 
 -(void)showCorrectAnswerWithAnimation{
+    [self showCorrectAnswerWithAnimation:nil];
+}
+
+-(void)showCorrectAnswerWithAnimation:(void (^)())complete{
     [UIView animateWithDuration:1.0 animations:^{
         self.barImageView.alpha = 1.0;
         // Show green color for right answer
         // self.barImageView
-         self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         (self.barImageView).tintColor = [UIColor greenColor];
-    }];
+    } completion:^(BOOL finished) {
+        if (complete) {
+            complete();
+        }
+    }
+     ];
 }
+
+
 
 -(void)showWrongAnswerWithAnimation{
     [UIView animateWithDuration:1.0 animations:^{
-        self.contentView.alpha = 0.1;
-    }];
+        self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.contentView.alpha = 1.0;
+        (self.barImageView).tintColor = [UIColor redColor];
+    } completion:^(BOOL finished) {
+        // Show next
+    }
+];
+    
+    
+    
 }
 
 -(void)layoutSubviews{
