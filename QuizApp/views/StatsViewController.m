@@ -214,7 +214,7 @@
     (self.scoresBarChart).backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.1];
     [self.scoresBarChart setXLabels:dataPoints[@"titles"]];
     [self.scoresBarChart setYValues:dataPoints[@"values"]];
-    [self.scoresBarChart setLegend:[NSString stringWithFormat:@"Your Last %ld Scores", (long)numberOfScoresToShow]];
+    [self.scoresBarChart setLegend:[NSString stringWithFormat:NSLocalizedString(@"Your Last %ld Scores",@"Headline in Reviewslist"), (long)numberOfScoresToShow]];
     [self.scoresBarChart strokeChart];
 }
 

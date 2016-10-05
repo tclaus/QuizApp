@@ -36,7 +36,7 @@
 
 -(void)setLegend:(NSString *)legend{
     
-    PNChartLabel * label = [[PNChartLabel alloc] initWithFrame:CGRectMake(5,5,100, 20)];
+    PNChartLabel * label = [[PNChartLabel alloc] initWithFrame:CGRectMake(5,5,250, 20)];
     label.textAlignment = NSTextAlignmentLeft;
     label.text = legend;
     label.textColor = [UIColor whiteColor];

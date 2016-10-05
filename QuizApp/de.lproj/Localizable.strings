@@ -102,3 +102,10 @@
 /* Messgage: Time is up */
 "Your Time is Up" = "Deine Zeit ist abgelaufen!";
 
+/* No comment provided by engineer. */
+"Your Last %ld Scores" = "Deine letzen %ld Ergebnisse";
+
+/* No comment provided by engineer. */
+"Question %ld of %ld" = "Frage %ld von %ld";
+
+

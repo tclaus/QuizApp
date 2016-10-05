@@ -141,7 +141,7 @@
 
 -(void)setStatusInfoWithCount:(NSInteger)count{
     
-    self.statusLabel.text = [NSString stringWithFormat:@"Question %ld of %ld", (long)count+1, (unsigned long)self.questions.count];
+    self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Question %ld of %ld",@"Headline in questionlist"), (long)count+1, (unsigned long)self.questions.count];
     
     [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
     

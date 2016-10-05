@@ -20,7 +20,7 @@
         self.lineBreakMode = NSLineBreakByWordWrapping;
         self.minimumScaleFactor = 11.0f;
         self.numberOfLines = 0;
-        self.font = [UIFont fontWithName:[ADVTheme mainFont] size:9];
+        self.font = [UIFont fontWithName:[ADVTheme mainFont] size:12];
         self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
         self.backgroundColor = [UIColor clearColor];
         self.textAlignment = NSTextAlignmentLeft;
