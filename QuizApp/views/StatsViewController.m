@@ -101,7 +101,7 @@
     
     self.animationController = [[DropAnimationController alloc] init];
     
-    self.testsTakenLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
+    //self.testsTakenLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
     self.testsTakenLabel.textColor = [UIColor whiteColor];
     self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
     self.testsTakenLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
@@ -124,7 +124,7 @@
     self.scoresLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.scoresLabel.text = NSLocalizedString(@"LAST SCORE",@"Last Score");
     
-    self.scoresProgress.chartBorderWidth = 4.0f;
+    self.scoresProgress.chartBorderWidth = 8.0f;
     self.scoresProgress.chartBorderColor = [UIColor whiteColor];
     self.scoresProgress.fontName = [ADVTheme mainFont];
     

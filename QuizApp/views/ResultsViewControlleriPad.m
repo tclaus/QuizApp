@@ -71,7 +71,7 @@
     
     [self reportAchievementToGameCenter:fractionCorrect*100];
     
-    self.resultsChart.chartBorderWidth = 4.0f;
+    self.resultsChart.chartBorderWidth = 8.0f;
     self.resultsChart.chartBorderColor = [UIColor whiteColor];
     self.resultsChart.fontName = [ADVTheme mainFont];
     self.resultsChart.progress = fractionCorrect;

@@ -154,6 +154,12 @@
     if(self.currentTimeInterval == self.totalTimeInterval){
         [self timeUp];
     }
+    
+    
+    //Make a Tick-Sound?
+    // last 3 seconds?
+    
+    
 }
 
 -(void)updateTimerText{
@@ -162,7 +168,13 @@
     NSInteger minutes = floor(secondsLeft / 60);
     NSInteger seconds = round(secondsLeft - minutes * 60);
     
-    self.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld", (long)minutes, (long)seconds];
+    if (seconds<10) {
+        self.timerLabel.text = [NSString stringWithFormat:@"%ld:0%ld", (long)minutes, (long)seconds];
+    } else {
+        self.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld", (long)minutes, (long)seconds];
+    }
+    
+    
     
 }
 

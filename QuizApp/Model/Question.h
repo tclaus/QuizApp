@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSString* image;
 
-@property (nonatomic, strong) NSArray* answers;
+@property (nonatomic, strong) NSArray*  answers;
 
 @property (nonatomic, strong) NSString* explanation;
 
