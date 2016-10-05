@@ -84,7 +84,7 @@
     [self.answerButton setBackgroundImage:buttonDisabledBackground forState:UIControlStateDisabled];
     self.answerButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:19.0f];
     [self.answerButton addTarget:self action:@selector(answerTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.answerButton setTitle:NSLocalizedString(@"NEXTQuestion",@"") forState:UIControlStateNormal];
+    [self.answerButton setTitle:NSLocalizedString(@"NEXT QUESTION",@"") forState:UIControlStateNormal];
     self.answerButton.enabled = NO;
     self.answerButton.hidden = self.isForReview;
 
@@ -233,7 +233,7 @@
     
     if(self.correctAnswerShown){
         [self enableInteractionOnCells:YES];
-        [self.answerButton setTitle:NSLocalizedString(@"NEXTQuestion",@"") forState:UIControlStateNormal];
+        [self.answerButton setTitle:NSLocalizedString(@"NEXT QUESTION",@"") forState:UIControlStateNormal];
         [self.delegate questionHasBeenAnswered:self.question withController:self];
     }else{
         
@@ -249,7 +249,7 @@
         
         [self showCorrectAnswer];
         
-        [self.answerButton setTitle:NSLocalizedString(@"CONTINUEQuestion",@"") forState:UIControlStateNormal];
+        [self.answerButton setTitle:NSLocalizedString(@"CONTINUE QUESTIONS",@"") forState:UIControlStateNormal];
     }
 }
 

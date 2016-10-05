@@ -1,0 +1,104 @@
+/* 
+  localization.strings
+  DasQuiz
+
+  Created by Thorsten Claus on 05.10.16.
+  Copyright © 2016 Claus-Software. All rights reserved.
+*/
+
+/* No comment provided by engineer. */
+"%lu of %lu answers" = "%1$lu von %2$lu Antworten";
+
+/* No comment provided by engineer. */
+"%lu Questions" = "%lu Fragen";
+
+/* No comment provided by engineer. */
+"ACCEPT" = "Kaufen";
+
+/* No comment provided by engineer. */
+"CHALLENGE FRIENDS" = "Freunde herausfordern";
+
+/* No comment provided by engineer. */
+"Close" = "Schliessen";
+
+/* No comment provided by engineer. */
+"CONTINUE QUESTIONS" = "Nächste Frage";
+
+/* No comment provided by engineer. */
+"Here are your available challenges. Please choose one" = "Hier sind die aktuellen Herausforderungen. Suche dir eine aus.";
+
+/* No comment provided by engineer. */
+"Here are your results" = "Hier sind Deine Ergebnisse";
+
+/* No comment provided by engineer. */
+"HIGHSCORES" = "Punkteliste";
+
+/* No comment provided by engineer. */
+"Knowledge and Understanding" = "Wissen und Verständnis";
+
+/* Last Score */
+"LAST SCORE" = "Letzte Punkte";
+
+/* No comment provided by engineer. */
+"NEXT QUESTION" = "Weiter";
+
+/* No comment provided by engineer. */
+"No Topics Selected" = "Wähle ein Thema";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Oops something went wrong" = "Oh-Oh.. Etwas ging schief...";
+
+/* No comment provided by engineer. */
+"Please select one or more topics to take the quiz" = "Wähle ein oder mehrere Themen für das Quiz.";
+
+/* No comment provided by engineer. */
+"Product Not Found" = "Produkt nicht gefunden";
+
+/* No comment provided by engineer. */
+"Restore purchases" = "Käufe wieder herstellen";
+
+/* No comment provided by engineer. */
+"Results" = "Ergebnisse";
+
+/* No comment provided by engineer. */
+"Review" = "Auswertung";
+
+/* No comment provided by engineer. */
+"REVIEW TEST" = "Auswertung der Fragen";
+
+/* No comment provided by engineer. */
+"SEE CHALLENGES" = "Aktuelle Herausforderungen";
+
+/* Title: See results */
+"See Your Results" = "Hier gehts zu den Auswertungen";
+
+/* Seelct topics for questions */
+"Select Topics" = "Wähle ein Thema";
+
+/* No comment provided by engineer. */
+"SEND CHALLENGE" = "Fordere einen Freund heraus.";
+
+/* No comment provided by engineer. */
+"START" = "START";
+
+/* No comment provided by engineer. */
+"START TEST" = "STARTE FRAGEN";
+
+/* No comment provided by engineer. */
+"Stop" = "Stop";
+
+/* Tests taken so far */
+"TESTS TAKEN" = "Durchgeführte Fragen";
+
+/* Title- time is up */
+"Time Up!" = "Zeit ist abgelaufen";
+
+/* No comment provided by engineer. */
+"TOPICS" = "Themen";
+
+/* Messgage: Time is up */
+"Your Time is Up" = "Deine Zeit ist abgelaufen!";
+

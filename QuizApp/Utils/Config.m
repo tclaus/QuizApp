@@ -35,6 +35,9 @@
 
 -(void)loadInfo{
     
+    NSArray* availableLocalizations = [[NSBundle mainBundle] localizations];
+    NSArray* userPrefered = [NSBundle preferredLocalizationsFromArray:availableLocalizations forPreferences:[NSLocale preferredLanguages]];
+    
     NSString* path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     
     self.configInfo = [[NSDictionary alloc] initWithContentsOfFile:path];

@@ -42,7 +42,7 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.8];
     self.view.tintColor = [UIColor whiteColor];
     
-    self.infoLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:14];
+    //self.infoLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:14];
     self.infoLabel.textColor = [UIColor whiteColor];
     self.infoLabel.numberOfLines = 0;
     
@@ -51,7 +51,7 @@
     configInfo = [NSString stringWithFormat:configInfo, self.questions.count, passThreshold];
     self.infoLabel.text = configInfo;
     
-    self.questionsLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:18];
+    // self.questionsLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:18];
     self.questionsLabel.textColor = [UIColor whiteColor];
     self.questionsLabel.numberOfLines = 0;
     

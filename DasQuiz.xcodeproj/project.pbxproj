@@ -10,7 +10,7 @@
 		6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 6578C11D1D59A66D001D8DEE /* 1000Fragen.json */; };
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
 		65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E4D1DA4F05A0082380D /* Configuration.plist */; };
-		65B19E551DA4F4A60082380D /* localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E571DA4F4A60082380D /* localization.strings */; };
+		65B19E551DA4F4A60082380D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E571DA4F4A60082380D /* Localizable.strings */; };
 		7FAA61051930176500F55803 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA61041930176500F55803 /* StoreKit.framework */; };
 		7FAA6109193017C100F55803 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA6108193017C100F55803 /* IAPHelper.m */; };
 		7FAA610C1930198400F55803 /* QuizIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA610B1930198400F55803 /* QuizIAPHelper.m */; };
@@ -147,13 +147,11 @@
 /* Begin PBXFileReference section */
 		6578C11D1D59A66D001D8DEE /* 1000Fragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1000Fragen.json; sourceTree = "<group>"; };
 		657DB45F1D465FBD0035C3E6 /* demofragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demofragen.json; sourceTree = "<group>"; };
-		65B19E4C1DA4F05A0082380D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Configuration.plist; sourceTree = "<group>"; };
-		65B19E4F1DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		65B19E501DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/Configuration.plist; sourceTree = "<group>"; };
 		65B19E511DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65B19E521DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		65B19E561DA4F4A60082380D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/localization.strings; sourceTree = "<group>"; };
-		65B19E581DA4F4A80082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/localization.strings; sourceTree = "<group>"; };
+		65B19E581DA4F4A80082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65D1B4751DA5195F00F057EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		7FAA61041930176500F55803 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7FAA6107193017C100F55803 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
 		7FAA6108193017C100F55803 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 		ECE03E8D186213E00042490A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ECE03E8F186213E00042490A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ECE03E93186213E00042490A /* DasQuiz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DasQuiz-Info.plist"; sourceTree = "<group>"; };
-		ECE03E95186213E00042490A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECE03E97186213E00042490A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECE03E99186213E00042490A /* DasQuiz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DasQuiz-Prefix.pch"; sourceTree = "<group>"; };
 		ECE03E9A186213E00042490A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -270,7 +267,6 @@
 		ECE03EAC186213E00042490A /* DasQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DasQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE03EAD186213E00042490A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ECE03EB5186213E00042490A /* DasQuizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DasQuizTests-Info.plist"; sourceTree = "<group>"; };
-		ECE03EB7186213E00042490A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECE03EB9186213E00042490A /* QuizAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizAppTests.m; sourceTree = "<group>"; };
 		ECE03EC61862169C0042490A /* TopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicCell.h; path = Cells/TopicCell.h; sourceTree = "<group>"; };
 		ECE03EC71862169C0042490A /* TopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicCell.m; path = Cells/TopicCell.m; sourceTree = "<group>"; };
@@ -327,7 +323,6 @@
 		ECE03F4A18647B700042490A /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = views/ResultsViewController.m; sourceTree = "<group>"; };
 		ECE03F5018648B7C0042490A /* ADVRoundProgressChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADVRoundProgressChart.h; path = ADVRoundProgessChart/ADVRoundProgressChart.h; sourceTree = "<group>"; };
 		ECE03F5118648B7C0042490A /* ADVRoundProgressChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADVRoundProgressChart.m; path = ADVRoundProgessChart/ADVRoundProgressChart.m; sourceTree = "<group>"; };
-		ECE3B7BE18C9F22600F53483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		ECE3B7C018C9F62000F53483 /* ResultsViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewControlleriPad.h; path = views/ResultsViewControlleriPad.h; sourceTree = "<group>"; };
 		ECE3B7C118C9F62000F53483 /* ResultsViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewControlleriPad.m; path = views/ResultsViewControlleriPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -375,7 +370,7 @@
 				EC99213418B4FDEF000FCA6F /* Content */,
 				EC99213718B4FDEF000FCA6F /* Images */,
 				65B19E4D1DA4F05A0082380D /* Configuration.plist */,
-				65B19E571DA4F4A60082380D /* localization.strings */,
+				65B19E571DA4F4A60082380D /* Localizable.strings */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -839,9 +834,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
 				de,
+				Base,
 			);
 			mainGroup = ECE03E7F186213E00042490A;
 			productRefGroup = ECE03E89186213E00042490A /* Products */;
@@ -865,6 +859,7 @@
 				ECBD0C68187345B2002DC98B /* cross@2x.png in Resources */,
 				ECE03F29186341180042490A /* niagara@2x~ipad.png in Resources */,
 				65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */,
+				65B19E551DA4F4A60082380D /* Localizable.strings in Resources */,
 				ECAE920F18C77F9400D5EBAB /* mainImage.png in Resources */,
 				EC0D183D189957CE00BE6368 /* item-selected-circle@2x.png in Resources */,
 				ECE03F18186341180042490A /* amazonas@2x.png in Resources */,
@@ -891,7 +886,6 @@
 				657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */,
 				ECE03F26186341180042490A /* canyon~ipad.png in Resources */,
 				ECE03F27186341180042490A /* niagara.png in Resources */,
-				65B19E551DA4F4A60082380D /* localization.strings in Resources */,
 				ECE03F1E186341180042490A /* billow~ipad.png in Resources */,
 				EC0D183C189957CE00BE6368 /* item-selected-empty.png in Resources */,
 				EC99213F18B4FDEF000FCA6F /* sexandthecity.json in Resources */,
@@ -1017,26 +1011,23 @@
 		65B19E4D1DA4F05A0082380D /* Configuration.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				65B19E4C1DA4F05A0082380D /* Base */,
 				65B19E501DA4F0CB0082380D /* de */,
 			);
 			name = Configuration.plist;
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		65B19E571DA4F4A60082380D /* localization.strings */ = {
+		65B19E571DA4F4A60082380D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				65B19E561DA4F4A60082380D /* Base */,
 				65B19E581DA4F4A80082380D /* de */,
 			);
-			name = localization.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		ECE03E94186213E00042490A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ECE03E95186213E00042490A /* en */,
 				65B19E511DA4F0CB0082380D /* de */,
 			);
 			name = InfoPlist.strings;
@@ -1045,7 +1036,6 @@
 		ECE03EB6186213E00042490A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ECE03EB7186213E00042490A /* en */,
 				65B19E521DA4F0CB0082380D /* de */,
 			);
 			name = InfoPlist.strings;
@@ -1054,8 +1044,7 @@
 		ECE3B7BD18C9F22600F53483 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ECE3B7BE18C9F22600F53483 /* Base */,
-				65B19E4F1DA4F0CB0082380D /* de */,
+				65D1B4751DA5195F00F057EB /* Base */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";

@@ -5,7 +5,7 @@
 //  Created by Tope Abayomi on 18/12/2013.
 //  Copyright (c) 2013 App Design Vault. All rights reserved.
 //
-
+// This view is shown right before the questions start
 #import <UIKit/UIKit.h>
 #import "Topic.h"
 #import "QuestionViewController.h"

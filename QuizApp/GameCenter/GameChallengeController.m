@@ -57,7 +57,7 @@
     (self.closeButton).tintColor = [UIColor blueColor];
     
     
-    self.titleLabel.text = NSLocalizedString(@"Challenge Friends",@"");
+    self.titleLabel.text = NSLocalizedString(@"CHALLENGE FRIENDS",@"");
     self.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:15.0f];
     self.titleLabel.textColor = [UIColor whiteColor];
     

@@ -19,7 +19,7 @@
 		<key>Start Page Image</key>
 		<string>mainImage</string>
 		<key>Quiz Start Info</key>
-		<string>You will be presented with %d questions and a minimum of %d correct answers is required to pass. Good luck!</string>
+		<string>Es werden nun %d Fragen gezeigt. Mindestens %d Fragen müssen richtig beantwortet werden um diesen Test zu bestehen. Viel Erfolg!</string>
 		<key>Show Topics in Grid</key>
 		<true/>
 	</dict>
