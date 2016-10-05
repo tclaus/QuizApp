@@ -39,7 +39,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.title = @"Review";
+    self.title = NSLocalizedString(@"Review",@"");
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -54,7 +54,7 @@
     
     cell.countLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)indexPath.row + 1];
     cell.questionLabel.text = question.text;
-    [cell showCorrectImage:[question hasBeenAnsweredCorrectly]];
+    [cell showCorrectImage:question.hasBeenAnsweredCorrectly];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

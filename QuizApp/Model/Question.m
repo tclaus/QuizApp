@@ -74,7 +74,7 @@
         }
     }
     
-    return correctAnswersFound == [self numberOfCorrectAnswers];
+    return correctAnswersFound == self.numberOfCorrectAnswers;
 }
 
 @end

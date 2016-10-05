@@ -42,7 +42,7 @@
     self.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:15.0f];
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.numberOfLines = 0;
-    self.titleLabel.text = @"Here are your available challenges. Please choose one";
+    self.titleLabel.text = NSLocalizedString(@"Here are your available challenges. Please choose one",@"");
 }
 
 - (void)didReceiveMemoryWarning

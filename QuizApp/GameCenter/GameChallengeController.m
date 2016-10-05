@@ -51,13 +51,13 @@
     
     [self.challengeButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.challengeButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
-    [self.challengeButton setTitle:@"SEND CHALLENGE" forState:UIControlStateNormal];
+    [self.challengeButton setTitle:NSLocalizedString(@"SEND CHALLENGE",@"") forState:UIControlStateNormal];
     
-    [self.closeButton setTitle:@"Close" forState:UIControlStateNormal];
+    [self.closeButton setTitle:NSLocalizedString(@"Close",@"") forState:UIControlStateNormal];
     (self.closeButton).tintColor = [UIColor blueColor];
     
     
-    self.titleLabel.text = @"Challenge Friends";
+    self.titleLabel.text = NSLocalizedString(@"Challenge Friends",@"");
     self.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:15.0f];
     self.titleLabel.textColor = [UIColor whiteColor];
     

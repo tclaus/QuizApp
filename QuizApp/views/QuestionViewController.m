@@ -11,6 +11,7 @@
 #import "Answer.h"
 #import "ADVTheme.h"
 #import "SoundSystem.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface QuestionViewController ()
 
@@ -83,7 +84,7 @@
     [self.answerButton setBackgroundImage:buttonDisabledBackground forState:UIControlStateDisabled];
     self.answerButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:19.0f];
     [self.answerButton addTarget:self action:@selector(answerTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.answerButton setTitle:@"NEXT" forState:UIControlStateNormal];
+    [self.answerButton setTitle:NSLocalizedString(@"NEXTQuestion",@"") forState:UIControlStateNormal];
     self.answerButton.enabled = NO;
     self.answerButton.hidden = self.isForReview;
 
@@ -113,9 +114,11 @@
     [self loadData];
 }
 
+
+
 -(void)loadData{
     
-    self.answerTableView.allowsMultipleSelection = [self.question numberOfCorrectAnswers] > 1;
+    self.answerTableView.allowsMultipleSelection = (self.question).numberOfCorrectAnswers > 1;
     self.answerButton.enabled = NO;
     self.questionLabel.text = self.question.text;
     self.correctAnswerShown = NO;
@@ -230,7 +233,7 @@
     
     if(self.correctAnswerShown){
         [self enableInteractionOnCells:YES];
-        [self.answerButton setTitle:@"NEXT" forState:UIControlStateNormal];
+        [self.answerButton setTitle:NSLocalizedString(@"NEXTQuestion",@"") forState:UIControlStateNormal];
         [self.delegate questionHasBeenAnswered:self.question withController:self];
     }else{
         
@@ -246,7 +249,7 @@
         
         [self showCorrectAnswer];
         
-        [self.answerButton setTitle:@"CONTINUE" forState:UIControlStateNormal];
+        [self.answerButton setTitle:NSLocalizedString(@"CONTINUEQuestion",@"") forState:UIControlStateNormal];
     }
 }
 
@@ -254,7 +257,7 @@
     
     NSArray* indexPaths = self.answerTableView.indexPathsForSelectedRows;
     
-     self.answerButton.enabled = indexPaths && indexPaths.count >= [self.question numberOfCorrectAnswers];
+     self.answerButton.enabled = indexPaths && indexPaths.count >= (self.question).numberOfCorrectAnswers;
     [self showCorrectAnswer];
     
 
@@ -268,7 +271,7 @@
     
     self.correctAnswerShown = YES;
     
-    if([self.question hasBeenAnsweredCorrectly]){
+    if((self.question).hasBeenAnsweredCorrectly){
         [self.soundSystem playHappySound];
         [self.delegate questionHasBeenAnswered:self.question withController:self];
     }else{

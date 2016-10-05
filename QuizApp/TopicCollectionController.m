@@ -44,7 +44,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.title = @"Select Topics";
+    self.title = NSLocalizedString(@"Select Topics",@"Seelct topics for questions");
     
     self.collectionView.backgroundColor = [UIColor clearColor];
     [ADVTheme addGradientBackground:self.view];
@@ -176,7 +176,7 @@
     
     if(!productFound){
         
-        UIAlertController* alert =  [UIAlertController alertControllerWithTitle:@"Product Not Found" message:@"Oops something went wrong" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Product Not Found",@"") message:NSLocalizedString(@"Oops something went wrong",@"") preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:nil];
         
@@ -194,7 +194,7 @@
     
     if(indexPaths.count == 0){
         
-         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:@"No Topics Selected" message:@"Please select one or more topics to take the quiz" preferredStyle:UIAlertControllerStyleAlert];
+         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"No Topics Selected",@"") message:NSLocalizedString(@"Please select one or more topics to take the quiz",@"") preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:nil];
         

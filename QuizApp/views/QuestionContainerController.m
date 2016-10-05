@@ -91,7 +91,7 @@
     
     self.animationController = [[DropAnimationController alloc] init];
     
-    UIBarButtonItem* doneItem = [[UIBarButtonItem alloc] initWithTitle:@"Stop" style:UIBarButtonItemStylePlain target:self action:@selector(doneTapped:)];
+    UIBarButtonItem* doneItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Stop",@"") style:UIBarButtonItemStylePlain target:self action:@selector(doneTapped:)];
     self.navigationItem.rightBarButtonItem = doneItem;
     
     UIButton* infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
@@ -169,9 +169,9 @@
 -(void)timeUp{
     [self.timer invalidate];
    
-    UIAlertController* alert =  [UIAlertController alertControllerWithTitle:@"Time Up!"  message:@"Your Time is Up" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Time Up!",@"Title- time is up")  message:NSLocalizedString(@"Your Time is Up",@"Messgage: Time is up") preferredStyle:UIAlertControllerStyleAlert];
   
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"See Your Results" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"See Your Results",@"Title: See results") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
         [self saveResultsAndShowThem];
     }];

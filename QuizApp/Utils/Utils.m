@@ -83,7 +83,7 @@
 
     if(questions.count  > 0){
         for (Question* question in questions) {
-            if([question hasBeenAnsweredCorrectly]){
+            if(question.hasBeenAnsweredCorrectly){
                 correctCount++;
             }
         }

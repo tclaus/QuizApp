@@ -31,7 +31,7 @@
 			<key>Topic Image</key>
 			<string></string>
 			<key>Questions File</key>
-			<string>demofragen.json</string>
+			<string>1000Fragen.json</string>
 		</dict>
 		<dict>
 			<key>Topic Title</key>
@@ -57,9 +57,9 @@
 	<key>Quiz Settings</key>
 	<dict>
 		<key>Number Of Questions To Answer</key>
-		<integer>4</integer>
+		<integer>10</integer>
 		<key>Pass Threshold</key>
-		<integer>2</integer>
+		<integer>8</integer>
 		<key>Number of Questions To Practice</key>
 		<string>3</string>
 		<key>Is Timed Quiz</key>

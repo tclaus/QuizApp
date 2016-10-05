@@ -41,7 +41,7 @@
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.numberOfLines = 0;
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.titleLabel.text = @"Knowledge and Understanding";
+    self.titleLabel.text = NSLocalizedString(@"Knowledge and Understanding",@"");
     
     self.explanationLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:14];
     self.explanationLabel.textColor = [UIColor whiteColor];
@@ -56,7 +56,7 @@
     [self.doneButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.doneButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:19.0f];
     [self.doneButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.doneButton setTitle:@"OK" forState:UIControlStateNormal];
+    [self.doneButton setTitle:NSLocalizedString(@"OK",@"") forState:UIControlStateNormal];
 }
 
 -(IBAction)doneButtonTapped:(id)sender{

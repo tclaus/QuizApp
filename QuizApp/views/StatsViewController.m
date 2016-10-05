@@ -22,7 +22,7 @@
 #import "GameKitManager.h"
 #import "QuizIAPHelper.h"
 
-@interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol, UIAlertViewDelegate>
+@interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol>
 
 @property (nonatomic, weak) IBOutlet ADVRoundProgressChart* scoresProgress;
 
@@ -105,14 +105,14 @@
     self.testsTakenLabel.textColor = [UIColor whiteColor];
     self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
     self.testsTakenLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-    self.testsTakenLabel.text = @"TESTS TAKEN";
+    self.testsTakenLabel.text = NSLocalizedString(@"TESTS TAKEN","Tests taken so far");
     
     self.testsTakenCount.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
     self.testsTakenCount.textColor = [UIColor whiteColor];
     self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
     self.testsTakenCount.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     
-    self.restorePurchase = [[UIBarButtonItem alloc] initWithTitle:@"Restore purchases"
+    self.restorePurchase = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restore purchases",@"")
                                                             style:UIBarButtonItemStylePlain
                                                            target:self
                                                            action:@selector(onRetorePurchases:)];
@@ -122,7 +122,7 @@
     self.scoresLabel.textColor = [UIColor whiteColor];
     self.scoresLabel.adjustsFontSizeToFitWidth = YES;
     self.scoresLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-    self.scoresLabel.text = @"LAST SCORE";
+    self.scoresLabel.text = NSLocalizedString(@"LAST SCORE",@"Last Score");
     
     self.scoresProgress.chartBorderWidth = 4.0f;
     self.scoresProgress.chartBorderColor = [UIColor whiteColor];
@@ -133,23 +133,24 @@
     
     [self.startButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.startButton setTitle:@"START TEST" forState:UIControlStateNormal];
+    [self.startButton setTitle:NSLocalizedString(@"START TEST",@"") forState:UIControlStateNormal];
     
     [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.chooseTopicsButton setTitle:@"TOPICS" forState:UIControlStateNormal];
+    [self.chooseTopicsButton setTitle:NSLocalizedString(@"TOPICS",@"") forState:UIControlStateNormal];
 
     [self.challengesButton setHidden:NO];
     [self.challengesButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.challengesButton addTarget:self action:@selector(showChallengesTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.challengesButton setTitle:@"SEE CHALLENGES" forState:UIControlStateNormal];
+    [self.challengesButton setTitle:NSLocalizedString(@"SEE CHALLENGES",@"") forState:UIControlStateNormal];
     
     // See highscores
     [self.highScoreButton setHidden:NO];
+    [self.highScoreButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.highScoreButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.highScoreButton addTarget:self action:@selector(showHighscores:) forControlEvents:UIControlEventTouchUpInside];
-    [self.highScoreButton setTitle:@"HIGHSCORES" forState:UIControlStateNormal];
+    [self.highScoreButton setTitle:NSLocalizedString(@"HIGHSCORES",@"") forState:UIControlStateNormal];
     
     [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.chooseTopicsButton addTarget:self action:@selector(chooseTopicsTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -370,23 +371,18 @@
 
 -(void)buyProduct{
     
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex) {
-        [_products enumerateObjectsUsingBlock:^(SKProduct * product, NSUInteger idx, BOOL *stop) {
-            if ([product.productIdentifier isEqualToString:[Config sharedInstance].quizIAP.inAppPurchaseID]) {
-                [[QuizIAPHelper sharedInstance] buyProduct:product];
-                
-                *stop = YES;
-            }
-        }];
-        
-        return;
-    }
+    [_products enumerateObjectsUsingBlock:^(SKProduct * product, NSUInteger idx, BOOL *stop) {
+        if ([product.productIdentifier isEqualToString:[Config sharedInstance].quizIAP.inAppPurchaseID]) {
+            [[QuizIAPHelper sharedInstance] buyProduct:product];
+            
+            *stop = YES;
+        }
+    }];
     
-    [self startDirectQuizWithNumberOfQuestions:[Config sharedInstance].quizIAP.numberofFreeQuestions
-                                    fromTopics:_pendingQuiz[@"topics"]];
+//    
+//    [self startDirectQuizWithNumberOfQuestions:[Config sharedInstance].quizIAP.numberofFreeQuestions
+//                                    fromTopics:_pendingQuiz[@"topics"]];
+//    
 }
 
 - (void)productPurchased:(NSNotification *)notification {

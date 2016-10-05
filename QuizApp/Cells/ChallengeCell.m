@@ -45,7 +45,7 @@
     
     [self.acceptButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.acceptButton.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:13.0f];
-    [self.acceptButton setTitle:@"ACCEPT" forState:UIControlStateNormal];
+    [self.acceptButton setTitle:NSLocalizedString(@"ACCEPT",@"") forState:UIControlStateNormal];
     
     [self.acceptButton addTarget:self action:@selector(acceptButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     

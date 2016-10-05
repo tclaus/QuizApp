@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
 	
-    self.questionsLabel.text = [NSString stringWithFormat:@"%lu Questions", (unsigned long)self.questions.count];
+    self.questionsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%lu Questions",@""), (unsigned long)self.questions.count];
     
     self.results = [NSMutableArray array];
     
@@ -61,7 +61,7 @@
     [self.startButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:19.0f];
     [self.startButton addTarget:self action:@selector(showQuestionTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.startButton setTitle:@"START" forState:UIControlStateNormal];
+    [self.startButton setTitle:NSLocalizedString(@"START",@"") forState:UIControlStateNormal];
     
 }
 

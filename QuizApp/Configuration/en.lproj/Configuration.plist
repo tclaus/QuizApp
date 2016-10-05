@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Interface Settings</key>
+	<dict>
+		<key>Main Background</key>
+		<string>canyon</string>
+		<key>Main Font</key>
+		<string>Avenir-Book</string>
+		<key>Bold Font</key>
+		<string>Avenir-Black</string>
+		<key>Start Page Title</key>
+		<string>DAS! Quiz</string>
+		<key>Start Page Description</key>
+		<string>Testen Sie ihr Wissen</string>
+		<key>Start Page Sub Description</key>
+		<string>You can also change this info in the configuration file as well as the image above.</string>
+		<key>Start Page Image</key>
+		<string>mainImage</string>
+		<key>Quiz Start Info</key>
+		<string>You will be presented with %d questions and a minimum of %d correct answers is required to pass. Good luck!</string>
+		<key>Show Topics in Grid</key>
+		<true/>
+	</dict>
+	<key>Questions Data</key>
+	<array>
+		<dict>
+			<key>Topic Title</key>
+			<string>Demo fragen</string>
+			<key>Topic Image</key>
+			<string></string>
+			<key>Questions File</key>
+			<string>1000Fragen.json</string>
+		</dict>
+		<dict>
+			<key>Topic Title</key>
+			<string>Flags</string>
+			<key>Topic Image</key>
+			<string>spain.jpg</string>
+			<key>Questions File</key>
+			<string>flags.json</string>
+			<key>In App Purchase Identifier</key>
+			<string>flags.purchase</string>
+		</dict>
+		<dict>
+			<key>Topic Title</key>
+			<string>Flags Second</string>
+			<key>Topic Image</key>
+			<string>spain.jpg</string>
+			<key>Questions File</key>
+			<string>flags.json</string>
+			<key>In App Purchase Identifier</key>
+			<string>flagssecond.purchase</string>
+		</dict>
+	</array>
+	<key>Quiz Settings</key>
+	<dict>
+		<key>Number Of Questions To Answer</key>
+		<integer>10</integer>
+		<key>Pass Threshold</key>
+		<integer>8</integer>
+		<key>Number of Questions To Practice</key>
+		<string>3</string>
+		<key>Is Timed Quiz</key>
+		<true/>
+		<key>Time Needed In Minutes</key>
+		<string>0.5</string>
+	</dict>
+	<key>Game Center Settings</key>
+	<dict>
+		<key>Game Center Enabled</key>
+		<true/>
+		<key>Leaderboard ID</key>
+		<string>TopScoresLeaderboard</string>
+		<key>Achievements</key>
+		<array>
+			<dict>
+				<key>Achievement ID</key>
+				<string>FlawlessAchievement</string>
+				<key>Percent Score Needed</key>
+				<integer>100</integer>
+			</dict>
+		</array>
+	</dict>
+	<key>In App Purchase Settings</key>
+	<dict>
+		<key>Limit Number of Questions</key>
+		<false/>
+		<key>Number of Free Questions</key>
+		<integer>3</integer>
+		<key>Number of Free Quizzes</key>
+		<integer>1</integer>
+		<key>In-App Purchase ID</key>
+		<string>questions.purchase</string>
+		<key>IAP Alert Title</key>
+		<string>Notice</string>
+		<key>IAP Alert Message</key>
+		<string>The application is currently restricted to 3 questions. Would you like to upgrade to the PRO version to enjoy the entire functionality?</string>
+		<key>IAP Alert Buy</key>
+		<string>Upgrade!</string>
+		<key>IAP Alert Cancel</key>
+		<string>Stay Basic</string>
+	</dict>
+	<key>Topic Purchase Settings</key>
+	<dict>
+		<key>Limit Topics</key>
+		<true/>
+		<key>In-App Purchase ID</key>
+		<string>topics.purchase</string>
+		<key>IAP Alert Title</key>
+		<string>Notice</string>
+		<key>IAP Alert Message</key>
+		<string>You get this topic as part of the Pro upgrade package. Would you like to unlock this topic?</string>
+		<key>IAP Alert Buy</key>
+		<string>Unlock this topic</string>
+		<key>IAP Alert Buy All</key>
+		<string>Unlock all Topics - $2.99</string>
+		<key>IAP Alert Cancel</key>
+		<string>Continue With Basic Version</string>
+	</dict>
+</dict>
+</plist>

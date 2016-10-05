@@ -16,7 +16,7 @@
     static QuizIAPHelper * sharedInstance;
     dispatch_once(&once, ^{
         
-        NSArray* identifers = [[Config sharedInstance] getAllInAppPurchases];
+        NSArray* identifers = [Config sharedInstance].allInAppPurchases;
         NSSet * productIdentifiers = [NSSet setWithArray:identifers];
 
         sharedInstance = [[self alloc] initWithProductIdentifiers:productIdentifiers];

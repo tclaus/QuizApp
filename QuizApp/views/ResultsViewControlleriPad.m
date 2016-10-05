@@ -77,9 +77,9 @@
     self.resultsChart.progress = fractionCorrect;
     self.resultsChart.backgroundColor = [UIColor clearColor];
     
-    self.resultsChart.detailText =[NSString stringWithFormat:@"%lu of %lu answers", (long)correctCount, (unsigned long)self.questions.count];
+    self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];
     
-    self.title = @"Results";
+    self.title = NSLocalizedString(@"Results",@"");
     
     UIImage* buttonBackground = [[UIImage imageNamed:@"button"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -89,21 +89,21 @@
         
         [self.challengeFriendsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
         self.challengeFriendsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
-        [self.challengeFriendsButton setTitle:@"CHALLENGE FRIENDS" forState:UIControlStateNormal];
+        [self.challengeFriendsButton setTitle:NSLocalizedString(@"CHALLENGE FRIENDS",@"") forState:UIControlStateNormal];
     }else{
         self.challengeFriendsButton.hidden = YES;
     }
     
     [self.reviewButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.reviewButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
-    [self.reviewButton setTitle:@"REVIEW TEST" forState:UIControlStateNormal];
+    [self.reviewButton setTitle:NSLocalizedString(@"REVIEW TEST",@"") forState:UIControlStateNormal];
     
     if (UIUserInterfaceIdiomPad == UI_USER_INTERFACE_IDIOM()){
         self.reviewButton.hidden = YES;
     }
     
     
-    self.infoLabel.text = @"Here are your results";
+    self.infoLabel.text = NSLocalizedString(@"Here are your results",@"");
     self.infoLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16.0f];
     self.infoLabel.textColor = [ADVTheme foregroundColor];
     
@@ -172,7 +172,7 @@
     
     cell.countLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)indexPath.row + 1];
     cell.questionLabel.text = question.text;
-    [cell showCorrectImage:[question hasBeenAnsweredCorrectly]];
+    [cell showCorrectImage:question.hasBeenAnsweredCorrectly];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor clearColor];

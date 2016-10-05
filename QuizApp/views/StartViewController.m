@@ -55,13 +55,13 @@
         }
     }
     
-    self.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:titleFontSize];
+    //self.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:titleFontSize];
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.numberOfLines = 0;
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.text = [Config sharedInstance].startPageDescription;
     
-    self.subtitleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:subtitleFontSize];
+    //self.subtitleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:subtitleFontSize];
     self.subtitleLabel.textColor = [UIColor whiteColor];
     self.subtitleLabel.numberOfLines = 0;
     self.subtitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -75,7 +75,7 @@
     
     [self.startButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.startButton setTitle:@"START" forState:UIControlStateNormal];
+    [self.startButton setTitle:NSLocalizedString(@"START",@"") forState:UIControlStateNormal];
     [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
 }
 

@@ -58,27 +58,27 @@
     self.resultsChart.progress = fractionCorrect;
     self.resultsChart.backgroundColor = [UIColor clearColor];
     
-    self.resultsChart.detailText =[NSString stringWithFormat:@"%lu of %lu answers", (long)correctCount, (unsigned long)self.questions.count];
+    self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];
     
-    self.title = @"Results";
+    self.title = NSLocalizedString(@"Results",@"");
     
     UIImage* buttonBackground = [[UIImage imageNamed:@"button"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
     [self.reviewButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.reviewButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
-    [self.reviewButton setTitle:@"REVIEW TEST" forState:UIControlStateNormal];
+    [self.reviewButton setTitle:NSLocalizedString(@"REVIEW TEST",@"") forState:UIControlStateNormal];
     
     if([Config sharedInstance].gameCenterEnabled){
     
         [self.challengeFriendsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
         self.challengeFriendsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
-        [self.challengeFriendsButton setTitle:@"CHALLENGE FRIENDS" forState:UIControlStateNormal];
+        [self.challengeFriendsButton setTitle:NSLocalizedString(@"CHALLENGE FRIENDS",@"") forState:UIControlStateNormal];
     }else{
         self.challengeFriendsButton.alpha = 0.0;
     }
     
-    self.infoLabel.text = @"Here are your results";
+    self.infoLabel.text = NSLocalizedString(@"Here are your results",@"");
     self.infoLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16.0f];
     self.infoLabel.textColor = [ADVTheme foregroundColor];
     

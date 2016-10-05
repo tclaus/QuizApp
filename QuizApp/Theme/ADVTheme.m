@@ -28,7 +28,7 @@
     NSString* backgroundImage = [Config sharedInstance].mainBackground;
     UIImage* image = [UIImage imageNamed:backgroundImage];
     
-    return [image averageColor];
+    return image.averageColor;
 }
 
 + (UIColor*)foregroundColor{
@@ -69,7 +69,7 @@
     
     NSString* backgroundImage = [Config sharedInstance].mainBackground;
     UIImage* image = [UIImage imageNamed:backgroundImage];
-    UIColor* navigationColor = [image averageColor];
+    UIColor* navigationColor = image.averageColor;
     
     [UINavigationBar appearance].tintColor = [self foregroundColor];
     [UINavigationBar appearance].barTintColor = navigationColor;
