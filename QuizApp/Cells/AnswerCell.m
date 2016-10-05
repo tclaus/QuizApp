@@ -1,3 +1,4 @@
+
 //
 //  AnswerCell.m
 //  QuizApp
@@ -92,15 +93,19 @@
      ];
 }
 
-
-
 -(void)showWrongAnswerWithAnimation{
+    [self showWrongAnswerWithAnimation:nil];
+}
+
+-(void)showWrongAnswerWithAnimation:(void (^)())complete{
     [UIView animateWithDuration:1.0 animations:^{
         self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         self.contentView.alpha = 1.0;
         (self.barImageView).tintColor = [UIColor redColor];
     } completion:^(BOOL finished) {
-        // Show next
+        if (complete) {
+            complete();
+        }
     }
 ];
     

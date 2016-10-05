@@ -188,6 +188,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    
+    
     [self doAnswerButtonState];
     
 }
@@ -228,36 +230,15 @@
     [self.delegate questionHasBeenAnswered:self.question withController:self];
 }
 
--(IBAction)answerTapped:(id)sender{
-    self.answerTapped = YES;
-    
-    if(self.correctAnswerShown){
-        [self enableInteractionOnCells:YES];
-        [self.answerButton setTitle:NSLocalizedString(@"NEXT QUESTION",@"") forState:UIControlStateNormal];
-        [self.delegate questionHasBeenAnswered:self.question withController:self];
-    }else{
-        
-        NSArray* indexPaths = self.answerTableView.indexPathsForSelectedRows;
-        
-        for (NSIndexPath* indexPath in indexPaths) {
-            
-            Answer* answer = self.question.answers[indexPath.row];
-            answer.chosen = YES;
-        }
-        
-        self.answerTableView.contentOffset = CGPointMake(0, 0 - self.answerTableView.contentInset.top);
-        
-        [self showCorrectAnswer];
-        
-        [self.answerButton setTitle:NSLocalizedString(@"CONTINUE QUESTIONS",@"") forState:UIControlStateNormal];
-    }
-}
+
 
 -(void)doAnswerButtonState{
     
-    NSArray* indexPaths = self.answerTableView.indexPathsForSelectedRows;
+    NSIndexPath* indexPath = self.answerTableView.indexPathForSelectedRow;
+    Answer* answer = self.question.answers[indexPath.row];
+    answer.chosen = YES;
     
-     self.answerButton.enabled = indexPaths && indexPaths.count >= (self.question).numberOfCorrectAnswers;
+
     [self showCorrectAnswer];
     
 
@@ -271,12 +252,14 @@
     
     self.correctAnswerShown = YES;
     
+    BOOL answeredCorrect;
+    
     if((self.question).hasBeenAnsweredCorrectly){
+        answeredCorrect = YES;
         [self.soundSystem playHappySound];
-        [self.delegate questionHasBeenAnswered:self.question withController:self];
-    }else{
         
-        [self enableInteractionOnCells:NO];
+    }else{
+        answeredCorrect = NO;
         [self.soundSystem vibrate];
     }
     
@@ -287,25 +270,16 @@
             
             Answer* answer = self.question.answers[i];
             
-            if(answer.correct){
+            if (answer.correct){
+                
                 [cell showCorrectAnswerWithAnimation:^{
                     [self goToNextQuestion];
                 }];
                 
-            }else{
+            }else if (!answeredCorrect) {
                 [cell showWrongAnswerWithAnimation];
             }
         
-    }
-}
-
--(void)enableInteractionOnCells:(BOOL)enable{
-    
-    
-    for (NSInteger i = 0; i < self.question.answers.count; i++) {
-        AnswerCell* cell = (AnswerCell*)[self.answerTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-    
-        cell.userInteractionEnabled = enable;
     }
 }
 

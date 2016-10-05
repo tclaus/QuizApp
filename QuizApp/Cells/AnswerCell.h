@@ -40,5 +40,6 @@
 -(void)showCorrectAnswerWithAnimation:(void (^)())complete;
 
 -(void)showWrongAnswerWithAnimation;
+-(void)showWrongAnswerWithAnimation:(void (^)())complete;
 
 @end

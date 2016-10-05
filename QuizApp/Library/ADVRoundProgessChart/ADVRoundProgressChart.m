@@ -5,7 +5,8 @@
 //  Created by Tope Abayomi on 20/12/2013.
 //  Copyright (c) 2013 App Design Vault. All rights reserved.
 //
-
+//  With modifications from Thorsten Claus, Oct, 2016
+//
 #import "ADVRoundProgressChart.h"
 
 @interface ADVRoundProgressChart ()
@@ -65,6 +66,20 @@
     return self;
 }
 
+-(CGRect)precentLabelRect{
+    CGFloat midX = CGRectGetMidX(self.bounds);
+    CGFloat midY = CGRectGetMidY(self.bounds);
+    CGFloat labelSize = self.bounds.size.width*2/3;
+    return CGRectMake(midX - labelSize/2, midY-labelSize/2, labelSize, labelSize);
+}
+
+-(CGRect)descriptionLabelRect{
+    CGFloat midX = CGRectGetMidX(self.bounds);
+    CGFloat midY = CGRectGetMidY(self.bounds);
+    CGFloat labelSize = self.bounds.size.width*2/3;
+    return CGRectMake(midX - labelSize/2, midY+10, labelSize, labelSize/2);
+}
+
 - (void)_initialize {
 	self.backgroundColor = [UIColor clearColor];
 	
@@ -74,11 +89,8 @@
 	self.chartBorderColor = [UIColor blueColor];
     self.fontName = @"Helvetica";
     
-    CGFloat midX = CGRectGetMidX(self.bounds);
-    CGFloat midY = CGRectGetMidY(self.bounds);
-    CGFloat labelSize = self.bounds.size.width*2/3;
     
-    self.percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(midX - labelSize/2, midY-labelSize/2, labelSize, labelSize)];
+    self.percentLabel = [[UILabel alloc] initWithFrame:[self precentLabelRect]];
     self.percentLabel.backgroundColor = [UIColor clearColor];
     self.percentLabel.textColor = [UIColor whiteColor];
     self.percentLabel.textAlignment = NSTextAlignmentCenter;
@@ -88,7 +100,7 @@
     [self addSubview:self.percentLabel];
     
     
-    self.detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(midX - labelSize/2, midY+14, labelSize, labelSize/2)];
+    self.detailLabel = [[UILabel alloc] initWithFrame:[self descriptionLabelRect]];
     self.detailLabel.backgroundColor = [UIColor clearColor];
     self.detailLabel.textColor = [UIColor whiteColor];
     self.detailLabel.textAlignment = NSTextAlignmentCenter;
@@ -125,6 +137,9 @@
     CGContextAddPath(context, path);
     CGContextStrokePath(context);
     CGPathRelease(path);
+    
+    _percentLabel.frame = [self precentLabelRect];
+    _detailLabel.frame = [self descriptionLabelRect];
     
     _percentLabel.font = [UIFont fontWithName:self.fontName size:45.0f];
     _detailLabel.font = [UIFont fontWithName:self.fontName size:15.0f];
