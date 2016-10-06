@@ -1,252 +1,2527 @@
-[
+ [
   {
-    "answers" : [
-      {
-        "text" : "Kiwi",
-        "correct" : false
-      },
-      {
-        "text" : "Nandu",
-        "correct" : false
-      },
-      {
-        "text" : "Elefantenvogel",
-        "correct" : false
-      },
-      {
-        "text" : "Strauß",
-        "correct" : true
-      }
-    ],
-    "levelId" : 1,
-    "explanation" : "",
-    "questionId" : "0",
-    "text" : "Welcher Laufvogel steckt dem Volksglauben nach den Kopf in den Sand?",
-    "category" : "Wissenschaft & Forschung"
+  "answers" : [
+               {
+               "text" : "Asien",
+               "correct" : false
+               },
+               {
+               "text" : "Afrika",
+               "correct" : false
+               },
+               {
+               "text" : "Europa",
+               "correct" : false
+               },
+               {
+               "text" : "Amerika",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "0",
+  "text" : "Welchen Kontinent hat Kolumbus entdeckt?",
+  "category" : "Geschichte"
   },
   {
-    "answers" : [
-      {
-        "text" : "Rotkäppchen",
-        "correct" : false
-      },
-      {
-        "text" : "Rapunzel",
-        "correct" : false
-      },
-      {
-        "text" : "Gretel",
-        "correct" : false
-      },
-      {
-        "text" : "Schneewittchen",
-        "correct" : true
-      }
-    ],
-    "levelId" : 2,
-    "explanation" : "",
-    "questionId" : "1",
-    "text" : "Welche Märchengestalt aß einen Apfel und fiel in tiefen Schlaf?",
-    "category" : "Literatur & Sprache"
+  "answers" : [
+               {
+               "text" : "Kobolde",
+               "correct" : false
+               },
+               {
+               "text" : "Greise",
+               "correct" : false
+               },
+               {
+               "text" : "Männer",
+               "correct" : false
+               },
+               {
+               "text" : "Frauen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "1",
+  "text" : "Wer hat die Macht in Gesellschaften, die als 'Amazonen' bezeichnet werden?",
+  "category" : "Literatur & Sprache"
   },
   {
-    "answers" : [
-      {
-        "text" : "NOK",
-        "correct" : false
-      },
-      {
-        "text" : "OPEC",
-        "correct" : false
-      },
-      {
-        "text" : "WHO",
-        "correct" : false
-      },
-      {
-        "text" : "IOC",
-        "correct" : true
-      }
-    ],
-    "levelId" : 3,
-    "explanation" : "",
-    "questionId" : "2",
-    "text" : "Welche Organisation übernimmt die Vorbereitung und Durchführung der Olympischen Spiele?",
-    "category" : "Sport & Spiel"
+  "answers" : [
+               {
+               "text" : "Lachen + Weinen",
+               "correct" : false
+               },
+               {
+               "text" : "Essen + Trinken",
+               "correct" : false
+               },
+               {
+               "text" : "Schlafen + Träumen",
+               "correct" : false
+               },
+               {
+               "text" : "Lesen + Schreiben",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "2",
+  "text" : "Bei was hat ein Analphabet Probleme?",
+  "category" : "Gesundheit"
   },
   {
-    "answers" : [
-      {
-        "text" : "Grönland",
-        "correct" : false
-      },
-      {
-        "text" : "Lettland",
-        "correct" : false
-      },
-      {
-        "text" : "Montenegro",
-        "correct" : false
-      },
-      {
-        "text" : "Estland",
-        "correct" : true
-      }
-    ],
-    "levelId" : 4,
-    "explanation" : "",
-    "questionId" : "3",
-    "text" : "Von welchem Land ist Tallinn die Hauptstadt?",
-    "category" : "Geographie"
+  "answers" : [
+               {
+               "text" : "Tiger",
+               "correct" : false
+               },
+               {
+               "text" : "Frauen",
+               "correct" : false
+               },
+               {
+               "text" : "Ochsen",
+               "correct" : false
+               },
+               {
+               "text" : "Männer",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "3",
+  "text" : "Der deutscher Film heißt 'Wickie und die starken ..'?",
+  "category" : "Unterhaltung & Medien"
   },
   {
-    "answers" : [
-      {
-        "text" : "Salsa tanzen",
-        "correct" : false
-      },
-      {
-        "text" : "Taekwondo",
-        "correct" : false
-      },
-      {
-        "text" : "Gitarre spielen",
-        "correct" : false
-      },
-      {
-        "text" : "Erste Hilfe",
-        "correct" : true
-      }
-    ],
-    "levelId" : 5,
-    "explanation" : "",
-    "questionId" : "4",
-    "text" : "Wo wird der Rautek-Griff in der Regel angewendet?",
-    "category" : "Gesellschaft"
+  "answers" : [
+               {
+               "text" : "Mauersegler",
+               "correct" : false
+               },
+               {
+               "text" : "Adler",
+               "correct" : false
+               },
+               {
+               "text" : "Meise",
+               "correct" : false
+               },
+               {
+               "text" : "Elster",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "4",
+  "text" : "Von welchem Vogel sagt man er sei 'diebisch'?",
+  "category" : "Wissenschaft & Forschung"
   },
   {
-    "answers" : [
-      {
-        "text" : "Gebiet in Frankreich",
-        "correct" : false
-      },
-      {
-        "text" : "Freilichtbühne",
-        "correct" : false
-      },
-      {
-        "text" : "Vereinskasse",
-        "correct" : false
-      },
-      {
-        "text" : "Bouleplatz",
-        "correct" : true
-      }
-    ],
-    "levelId" : 6,
-    "explanation" : "",
-    "questionId" : "5",
-    "text" : "Was bezeichnet man als 'Boulodrome'?",
-    "category" : "Sport & Spiel"
+  "answers" : [
+               {
+               "text" : "Außerirdische",
+               "correct" : false
+               },
+               {
+               "text" : "Treibhauseffekt",
+               "correct" : false
+               },
+               {
+               "text" : "Blitze",
+               "correct" : false
+               },
+               {
+               "text" : "UV-Strahlung",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "5",
+  "text" : "Vor was schützt uns die Ozonschicht?",
+  "category" : "Wissenschaft & Forschung"
   },
   {
-    "answers" : [
-      {
-        "text" : "Alexander Solschenizyn",
-        "correct" : false
-      },
-      {
-        "text" : "Leo N. Tolstoi",
-        "correct" : false
-      },
-      {
-        "text" : "Alexander N. Ostrowski",
-        "correct" : false
-      },
-      {
-        "text" : "Anton P. Tschechow",
-        "correct" : true
-      }
-    ],
-    "levelId" : 7,
-    "explanation" : "",
-    "questionId" : "6",
-    "text" : "Wer schrieb das Drama 'Drei Schwestern'?",
-    "category" : "Literatur & Sprache"
+  "answers" : [
+               {
+               "text" : "schunkeln",
+               "correct" : false
+               },
+               {
+               "text" : "kunkeln",
+               "correct" : false
+               },
+               {
+               "text" : "runkeln",
+               "correct" : false
+               },
+               {
+               "text" : "munkeln",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "6",
+  "text" : "Was kann man im Dunkeln sprichwörtlich gut?",
+  "category" : "Literatur & Sprache"
   },
   {
-    "answers" : [
-      {
-        "text" : "Cordon Bleu",
-        "correct" : false
-      },
-      {
-        "text" : "Zigeunerschnitzel",
-        "correct" : false
-      },
-      {
-        "text" : "Jägerschnitzel",
-        "correct" : false
-      },
-      {
-        "text" : "Berliner Schnitzel",
-        "correct" : true
-      }
-    ],
-    "levelId" : 8,
-    "explanation" : "",
-    "questionId" : "7",
-    "text" : "Welches dieser Fleischgerichte besteht aus panierten Kuheutern?",
-    "category" : "Essen & Trinken"
+  "answers" : [
+               {
+               "text" : "Kaltes Schwein",
+               "correct" : false
+               },
+               {
+               "text" : "Kalte Kuh",
+               "correct" : false
+               },
+               {
+               "text" : "Kalte Ente",
+               "correct" : false
+               },
+               {
+               "text" : "Kalter Hund",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "7",
+  "text" : "Wie nennt man auch einen kalt hergestellten Schokoladen-Kekskuchen?",
+  "category" : "Essen & Trinken"
   },
   {
-    "answers" : [
-      {
-        "text" : "Oxer",
-        "correct" : false
-      },
-      {
-        "text" : "Rick",
-        "correct" : false
-      },
-      {
-        "text" : "Mauer",
-        "correct" : false
-      },
-      {
-        "text" : "Burg",
-        "correct" : true
-      }
-    ],
-    "levelId" : 9,
-    "explanation" : "",
-    "questionId" : "8",
-    "text" : "Welches Hindernis gibt es beim Springreiten nicht?",
-    "category" : "Sport & Spiel"
+  "answers" : [
+               {
+               "text" : "Lilie",
+               "correct" : false
+               },
+               {
+               "text" : "Narzisse",
+               "correct" : false
+               },
+               {
+               "text" : "Orchidee",
+               "correct" : false
+               },
+               {
+               "text" : "Rose",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "8",
+  "text" : "Als 'Königin der Blumen' gilt die ..?",
+  "category" : "Wissenschaft & Forschung"
   },
   {
-    "answers" : [
-      {
-        "text" : "Braille",
-        "correct" : false
-      },
-      {
-        "text" : "Blacke Box",
-        "correct" : false
-      },
-      {
-        "text" : "Lettré Noire",
-        "correct" : false
-      },
-      {
-        "text" : "Cécogramme",
-        "correct" : true
-      }
-    ],
-    "levelId" : 10,
-    "explanation" : "",
-    "questionId" : "9",
-    "text" : "Wie heißt die internationale Bezeichnung im Versand von Blindensendungen?",
-    "category" : "Literatur & Sprache"
+  "answers" : [
+               {
+               "text" : "weiblich",
+               "correct" : false
+               },
+               {
+               "text" : "ängstlich",
+               "correct" : false
+               },
+               {
+               "text" : "lustig",
+               "correct" : false
+               },
+               {
+               "text" : "männlich",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "9",
+  "text" : "Wie wirkt ein Mann, wenn er ein 'maskulines' Auftreten hat?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Pete Best",
+               "correct" : false
+               },
+               {
+               "text" : "Paul McCartney",
+               "correct" : false
+               },
+               {
+               "text" : "Stuart Sutcliffe",
+               "correct" : false
+               },
+               {
+               "text" : "John Lennon",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "10",
+  "text" : "Mit welchem 'Beatle-Mitglied' war Yoko Ono verheiratet?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Extrakt",
+               "correct" : false
+               },
+               {
+               "text" : "Exzeß",
+               "correct" : false
+               },
+               {
+               "text" : "Elixier",
+               "correct" : false
+               },
+               {
+               "text" : "Exil",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "11",
+  "text" : "Wie nennt man die Verbannung eines Menschen aus der eigenen Heimat ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Vogelart",
+               "correct" : false
+               },
+               {
+               "text" : "Elefantenart",
+               "correct" : false
+               },
+               {
+               "text" : "Obstsorte",
+               "correct" : false
+               },
+               {
+               "text" : "Fabelwesen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "12",
+  "text" : "Was sind 'Elfen'?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Orangenfalter",
+               "correct" : false
+               },
+               {
+               "text" : "Kiwifalter",
+               "correct" : false
+               },
+               {
+               "text" : "Ananasfalter",
+               "correct" : false
+               },
+               {
+               "text" : "Zitronenfalter",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "13",
+  "text" : "Welchen Schmetterling gibt es wirklich?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Simplizissimus",
+               "correct" : false
+               },
+               {
+               "text" : "Placebo",
+               "correct" : false
+               },
+               {
+               "text" : "Aggravant",
+               "correct" : false
+               },
+               {
+               "text" : "Simulant",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "14",
+  "text" : "Wer eine Krankheit vortäuscht, ist ein ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Ebbe",
+               "correct" : false
+               },
+               {
+               "text" : "Dünung",
+               "correct" : false
+               },
+               {
+               "text" : "Takel",
+               "correct" : false
+               },
+               {
+               "text" : "Flaute",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "15",
+  "text" : "Als was bezeichnet man das Fehlen jeglichen Windes?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Heizungsmann",
+               "correct" : false
+               },
+               {
+               "text" : "Bofrostmann",
+               "correct" : false
+               },
+               {
+               "text" : "Wassermann",
+               "correct" : false
+               },
+               {
+               "text" : "Eiermann",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "16",
+  "text" : "Blödel-Schlager von Klaus & Klaus: 'Klingelingeling, hier kommt der...'?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Kaltzeit",
+               "correct" : false
+               },
+               {
+               "text" : "Eiszeit",
+               "correct" : false
+               },
+               {
+               "text" : "Frostzeit",
+               "correct" : false
+               },
+               {
+               "text" : "Warmzeit",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "17",
+  "text" : "In welcher Zeit leben wir heute eigentlich?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Explorer 1",
+               "correct" : false
+               },
+               {
+               "text" : "San Marco 1",
+               "correct" : false
+               },
+               {
+               "text" : "Ariel 1",
+               "correct" : false
+               },
+               {
+               "text" : "Sputnik 1",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "18",
+  "text" : "Wie hieß der erste Satellit, der am 4. Oktober 1957 erfolgreich startete?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Türkei",
+               "correct" : false
+               },
+               {
+               "text" : "Luxemburg",
+               "correct" : false
+               },
+               {
+               "text" : "Kroatien",
+               "correct" : false
+               },
+               {
+               "text" : "Italien",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "19",
+  "text" : "In welchem Land galt die Währung 'Lira' bis Ende 2001?",
+  "category" : "Wirtschaft & Verkehr"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Technikerweiterung",
+               "correct" : false
+               },
+               {
+               "text" : "Spiel für Kinder",
+               "correct" : false
+               },
+               {
+               "text" : "Malprogramm",
+               "correct" : false
+               },
+               {
+               "text" : "Computerbetriebssystem",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "20",
+  "text" : "Was ist Linux?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "das Steak",
+               "correct" : false
+               },
+               {
+               "text" : "den Braten",
+               "correct" : false
+               },
+               {
+               "text" : "den Kuchen",
+               "correct" : false
+               },
+               {
+               "text" : "die Wurst",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "21",
+  "text" : "Wenn es um alles geht, dann geht es um ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Süßwasserfische",
+               "correct" : false
+               },
+               {
+               "text" : "Schlangen",
+               "correct" : false
+               },
+               {
+               "text" : "Käfer",
+               "correct" : false
+               },
+               {
+               "text" : "Antilopen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "22",
+  "text" : "Was sind Gnus?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Amsterdam",
+               "correct" : false
+               },
+               {
+               "text" : "Stockholm",
+               "correct" : false
+               },
+               {
+               "text" : "Bern",
+               "correct" : false
+               },
+               {
+               "text" : "Dublin",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "23",
+  "text" : "Was ist die Hauptstadt von Irland?",
+  "category" : "Geographie"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Frachtschiff",
+               "correct" : false
+               },
+               {
+               "text" : "Kriegsschiff",
+               "correct" : false
+               },
+               {
+               "text" : "Segelschiff",
+               "correct" : false
+               },
+               {
+               "text" : "Seitenschiff",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "24",
+  "text" : "Welches Schiff ist nicht seetüchtig?",
+  "category" : "Technik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Kaltjahr",
+               "correct" : false
+               },
+               {
+               "text" : "Spaltjahr",
+               "correct" : false
+               },
+               {
+               "text" : "Kalenderjahr",
+               "correct" : false
+               },
+               {
+               "text" : "Schaltjahr",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "25",
+  "text" : "Wie nennt man das Jahr, in dem der Februar 29 Tage hat?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Kinderschutz",
+               "correct" : false
+               },
+               {
+               "text" : "Bio-Food",
+               "correct" : false
+               },
+               {
+               "text" : "Ozonausstoß",
+               "correct" : false
+               },
+               {
+               "text" : "Erdölexport",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "26",
+  "text" : "Wofür steht die Organisation 'OPEC'?",
+  "category" : "Wirtschaft & Verkehr"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Jan Josef Liefers",
+               "correct" : false
+               },
+               {
+               "text" : "Mišel Maticevic",
+               "correct" : false
+               },
+               {
+               "text" : "Samuel Finzi",
+               "correct" : false
+               },
+               {
+               "text" : "Til Schweiger",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "27",
+  "text" : "Wer spielte in dem Film 'Kokowääh' mit seiner jungen Tochter zusammen?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Valentino Siani",
+               "correct" : false
+               },
+               {
+               "text" : "Guarneri del Gesù",
+               "correct" : false
+               },
+               {
+               "text" : "Leopold Widhalm",
+               "correct" : false
+               },
+               {
+               "text" : "Antonio Stradivari",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "28",
+  "text" : "Von welchem Geigenbauer besitzt Anne-Sophie Mutter zwei kostbare Violinen?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "PKK",
+               "correct" : false
+               },
+               {
+               "text" : "PTT",
+               "correct" : false
+               },
+               {
+               "text" : "PLO",
+               "correct" : false
+               },
+               {
+               "text" : "RAF",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "29",
+  "text" : "Von wem wurde Hanns-Martin Schleyer 1977 entführt?",
+  "category" : "Geschichte"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Stockholm",
+               "correct" : false
+               },
+               {
+               "text" : "Tirana",
+               "correct" : false
+               },
+               {
+               "text" : "Sofia",
+               "correct" : false
+               },
+               {
+               "text" : "Brüssel",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "30",
+  "text" : "Was ist die Hauptstadt von Belgien?",
+  "category" : "Geographie"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Washington",
+               "correct" : false
+               },
+               {
+               "text" : "Detroit",
+               "correct" : false
+               },
+               {
+               "text" : "New Jersey",
+               "correct" : false
+               },
+               {
+               "text" : "Chicago",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "31",
+  "text" : "In welcher Stadt begann Al Capone mit dem organisierten Verbrechen?",
+  "category" : "Geschichte"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Klassik",
+               "correct" : false
+               },
+               {
+               "text" : "Funk",
+               "correct" : false
+               },
+               {
+               "text" : "Punk",
+               "correct" : false
+               },
+               {
+               "text" : "Reggae",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "32",
+  "text" : "Durch welchen Musikstil wurde Bob Marley berühmt?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Hund",
+               "correct" : false
+               },
+               {
+               "text" : "Schaf",
+               "correct" : false
+               },
+               {
+               "text" : "Reh",
+               "correct" : false
+               },
+               {
+               "text" : "Fuchs",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "33",
+  "text" : "Welches Tier wird in Fabeln 'Reineke' genannt?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Ihre Haare",
+               "correct" : false
+               },
+               {
+               "text" : "Ihre Ohren",
+               "correct" : false
+               },
+               {
+               "text" : "Ihr Kleid",
+               "correct" : false
+               },
+               {
+               "text" : "Ihr Lächeln",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "34",
+  "text" : "Was fasziniert den Betrachter besonders an dem Bild 'Mona Lisa'?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "ist feuerfest",
+               "correct" : false
+               },
+               {
+               "text" : "ist wasserlöslich",
+               "correct" : false
+               },
+               {
+               "text" : "ist besonders hart",
+               "correct" : false
+               },
+               {
+               "text" : "leitet gut",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "35",
+  "text" : "Wodurch zeichnet sich Kupfer aus?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "die Sonne untergehen",
+               "correct" : false
+               },
+               {
+               "text" : "die Blumen blühen",
+               "correct" : false
+               },
+               {
+               "text" : "den Hund aus der Hütte",
+               "correct" : false
+               },
+               {
+               "text" : "die Katze aus dem Sack",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "36",
+  "text" : "Wer ein Geheimnis preisgibt, der lässt ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Etage",
+               "correct" : false
+               },
+               {
+               "text" : "Pentagon",
+               "correct" : false
+               },
+               {
+               "text" : "Container",
+               "correct" : false
+               },
+               {
+               "text" : "Penthouse",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "37",
+  "text" : "Wie bezeichnet man Dachwohnungen auf Hochhäusern?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Bottrop",
+               "correct" : false
+               },
+               {
+               "text" : "Bochum",
+               "correct" : false
+               },
+               {
+               "text" : "Hannover",
+               "correct" : false
+               },
+               {
+               "text" : "Wuppertal",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "38",
+  "text" : "Für welche deutsche Stadt gilt die Schwebebahn als Wahrzeichen?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "nichts oben drin",
+               "correct" : false
+               },
+               {
+               "text" : "nichts wie hin",
+               "correct" : false
+               },
+               {
+               "text" : "nichts im Sinn",
+               "correct" : false
+               },
+               {
+               "text" : "alles ist hin",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "39",
+  "text" : "'O du lieber Augustin' ..'?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Schwarzer Wolf",
+               "correct" : false
+               },
+               {
+               "text" : "Blueberry",
+               "correct" : false
+               },
+               {
+               "text" : "Troll von Troy",
+               "correct" : false
+               },
+               {
+               "text" : "Asterix",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "40",
+  "text" : "Wie heißt die erfolgreichste französische Comicserie?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Leeds",
+               "correct" : false
+               },
+               {
+               "text" : "Brighton",
+               "correct" : false
+               },
+               {
+               "text" : "London",
+               "correct" : false
+               },
+               {
+               "text" : "Liverpool",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "41",
+  "text" : "Aus welcher englischen Stadt stammen die 'Beatles'?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Amistad",
+               "correct" : false
+               },
+               {
+               "text" : "Gefährten",
+               "correct" : false
+               },
+               {
+               "text" : "Der weiße Hai",
+               "correct" : false
+               },
+               {
+               "text" : "Jurassic Park",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "42",
+  "text" : "In welchem Spielberg-Film lassen es die Saurier so richtig knallen?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Bersten",
+               "correct" : false
+               },
+               {
+               "text" : "Schneiden",
+               "correct" : false
+               },
+               {
+               "text" : "Knacken",
+               "correct" : false
+               },
+               {
+               "text" : "Brechen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "43",
+  "text" : "Auf 'Biegen und ..'?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Der Fliegende Norweger",
+               "correct" : false
+               },
+               {
+               "text" : "Der Fliegende Schwede",
+               "correct" : false
+               },
+               {
+               "text" : "Der Fliegende Ire",
+               "correct" : false
+               },
+               {
+               "text" : "Der Fliegende Holländer",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "44",
+  "text" : "Die 'Romantische Oper in drei Aufzügen' von Richard Wagner heißt ..?",
+  "category" : "Musik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Bajonett",
+               "correct" : false
+               },
+               {
+               "text" : "Trottinett",
+               "correct" : false
+               },
+               {
+               "text" : "Reginett",
+               "correct" : false
+               },
+               {
+               "text" : "Kabinett",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "45",
+  "text" : "Wie wird in der Politik die sogenannte 'Regierungsmannschaft' genannt?",
+  "category" : "Politik"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Pfeifentchen",
+               "correct" : false
+               },
+               {
+               "text" : "Schreientechen",
+               "correct" : false
+               },
+               {
+               "text" : "Gackerentchen",
+               "correct" : false
+               },
+               {
+               "text" : "Quietscheentchen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "46",
+  "text" : "Was nehmen manche Menschen gerne mit in die Badewanne?",
+  "category" : "Gesellschaft"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Sphärozyt",
+               "correct" : false
+               },
+               {
+               "text" : "Schisma",
+               "correct" : false
+               },
+               {
+               "text" : "Syndikat",
+               "correct" : false
+               },
+               {
+               "text" : "Sarkophag",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "47",
+  "text" : "Wie wird ein Sarg genannt, der für eine dauerhafte Erhaltung gedacht ist?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Pierre Briece",
+               "correct" : false
+               },
+               {
+               "text" : "Tom Hanks",
+               "correct" : false
+               },
+               {
+               "text" : "Harrison Ford",
+               "correct" : false
+               },
+               {
+               "text" : "Kevin Costner",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "48",
+  "text" : "Wer 'tanzte mit dem Wolf'?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Triangel",
+               "correct" : false
+               },
+               {
+               "text" : "Trommel",
+               "correct" : false
+               },
+               {
+               "text" : "Mundharmonika",
+               "correct" : false
+               },
+               {
+               "text" : "Flöte",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "49",
+  "text" : "Womit lockte der Rattenfänger von Hameln die Kinder aus der Stadt?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Käfer",
+               "correct" : false
+               },
+               {
+               "text" : "Katze",
+               "correct" : false
+               },
+               {
+               "text" : "Maus",
+               "correct" : false
+               },
+               {
+               "text" : "Laus",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "50",
+  "text" : "Welches Tier läuft einem bei Ärger sprichwörtlich über die Leber?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Elisabeth",
+               "correct" : false
+               },
+               {
+               "text" : "Paris",
+               "correct" : false
+               },
+               {
+               "text" : "Lydia",
+               "correct" : false
+               },
+               {
+               "text" : "Victoria",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "51",
+  "text" : "Wie heißt die Frau von David Beckham mit Vornamen?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Niedersachsen",
+               "correct" : false
+               },
+               {
+               "text" : "Hamburg",
+               "correct" : false
+               },
+               {
+               "text" : "Bremen",
+               "correct" : false
+               },
+               {
+               "text" : "Bayern",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "52",
+  "text" : "In welchem Bundesland gehört der 'Gamsbart' teilweise zur Tracht?",
+  "category" : "Gesellschaft"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "9",
+               "correct" : false
+               },
+               {
+               "text" : "6",
+               "correct" : false
+               },
+               {
+               "text" : "5",
+               "correct" : false
+               },
+               {
+               "text" : "7",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "53",
+  "text" : "Wie viele Weltwunder gab es insgesamt?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Bäcker",
+               "correct" : false
+               },
+               {
+               "text" : "Koch",
+               "correct" : false
+               },
+               {
+               "text" : "Schlachter",
+               "correct" : false
+               },
+               {
+               "text" : "Matrose",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "54",
+  "text" : "Was hatte 'Popeye' für einen Beruf?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Sofia",
+               "correct" : false
+               },
+               {
+               "text" : "Wien",
+               "correct" : false
+               },
+               {
+               "text" : "Oslo",
+               "correct" : false
+               },
+               {
+               "text" : "Zagreb",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "55",
+  "text" : "Was ist die Hauptstadt von Kroatien?",
+  "category" : "Geographie"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Vorschusslorbeeren",
+               "correct" : false
+               },
+               {
+               "text" : "Esskastanien",
+               "correct" : false
+               },
+               {
+               "text" : "Große Feste",
+               "correct" : false
+               },
+               {
+               "text" : "Applaus",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "56",
+  "text" : "Was sind 'Ovationen'?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "1,5 kg",
+               "correct" : false
+               },
+               {
+               "text" : "5 kg",
+               "correct" : false
+               },
+               {
+               "text" : "10 kg",
+               "correct" : false
+               },
+               {
+               "text" : "1 kg",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "57",
+  "text" : "Wie viel kg wiegt ein Liter Wasser?",
+  "category" : "Wissenschaft & Forschung"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Edward + Jack",
+               "correct" : false
+               },
+               {
+               "text" : "Peter + Bob",
+               "correct" : false
+               },
+               {
+               "text" : "James + Harrison",
+               "correct" : false
+               },
+               {
+               "text" : "Harry + William",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "58",
+  "text" : "Wie heißen die Söhne der verstorbenen Lady Di?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Paisley",
+               "correct" : false
+               },
+               {
+               "text" : "Fischgrät",
+               "correct" : false
+               },
+               {
+               "text" : "Nadelstreifen",
+               "correct" : false
+               },
+               {
+               "text" : "Karo",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "59",
+  "text" : "Welches Muster hat der traditionelle Schottenrock?",
+  "category" : "Gesellschaft"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Eine Pilzart",
+               "correct" : false
+               },
+               {
+               "text" : "Eine Vogelart",
+               "correct" : false
+               },
+               {
+               "text" : "Eine Pflanze",
+               "correct" : false
+               },
+               {
+               "text" : "Ein junges Wildschwein",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "60",
+  "text" : "Was ist ein 'Frischling'?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Geschiedenen",
+               "correct" : false
+               },
+               {
+               "text" : "Verlobten",
+               "correct" : false
+               },
+               {
+               "text" : "Jugendlichen",
+               "correct" : false
+               },
+               {
+               "text" : "Liebenden",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "61",
+  "text" : "Der Valentinstag am 14. Februar gilt in einigen Ländern als Tag der ..?",
+  "category" : "Gesellschaft"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Musikstück",
+               "correct" : false
+               },
+               {
+               "text" : "Tanzform",
+               "correct" : false
+               },
+               {
+               "text" : "Physikalische Größe",
+               "correct" : false
+               },
+               {
+               "text" : "Auslegung",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "62",
+  "text" : "Was ist eine Interpretation?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Genscherheringe",
+               "correct" : false
+               },
+               {
+               "text" : "Kaiser Wilhelmheringe",
+               "correct" : false
+               },
+               {
+               "text" : "Adenauerheringe",
+               "correct" : false
+               },
+               {
+               "text" : "Bismarckheringe",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "63",
+  "text" : "Heringslappen, die in Essig, Speiseöl, Zwiebeln, Senfkörnern und Lorbeer eingelegt sind, heißen ..?",
+  "category" : "Essen & Trinken"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Zervelatwurst",
+               "correct" : false
+               },
+               {
+               "text" : "Mettwurst",
+               "correct" : false
+               },
+               {
+               "text" : "Blutwurst",
+               "correct" : false
+               },
+               {
+               "text" : "Salami",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "64",
+  "text" : "Welche Wurstsorte leitet ihren Namen von 'salare' (lateinisch 'salzen') ab?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Meerschweinchen",
+               "correct" : false
+               },
+               {
+               "text" : "Katze",
+               "correct" : false
+               },
+               {
+               "text" : "Vogel",
+               "correct" : false
+               },
+               {
+               "text" : "Hund",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "65",
+  "text" : "Welches Haustier hat die Familie von Barack Obama?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Saxophonist",
+               "correct" : false
+               },
+               {
+               "text" : "Sanierer",
+               "correct" : false
+               },
+               {
+               "text" : "Solist",
+               "correct" : false
+               },
+               {
+               "text" : "Samariter",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "66",
+  "text" : "Wer Nächstenliebe übt ist ein ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Bounty",
+               "correct" : false
+               },
+               {
+               "text" : "Kinder-Schokolade",
+               "correct" : false
+               },
+               {
+               "text" : "Mon Chéri",
+               "correct" : false
+               },
+               {
+               "text" : "Duplo",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "67",
+  "text" : "Welche Marke wirbt mit 'die längste Praline der Welt'?",
+  "category" : "Wirtschaft & Verkehr"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Bayern",
+               "correct" : false
+               },
+               {
+               "text" : "Süddeutschland",
+               "correct" : false
+               },
+               {
+               "text" : "Burgund",
+               "correct" : false
+               },
+               {
+               "text" : "Sizilien",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "68",
+  "text" : "Cassata ist eine berühmte italienische Schichttorte aus ..?",
+  "category" : "Essen & Trinken"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "die Nerven verlieren",
+               "correct" : false
+               },
+               {
+               "text" : "rumschreien",
+               "correct" : false
+               },
+               {
+               "text" : "ins Bett gehen",
+               "correct" : false
+               },
+               {
+               "text" : "in die Luft gehen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "69",
+  "text" : "Der frühere Werbeslogan der Zigarettenmarke HB lautete:'Wer wird denn gleich ..?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Mediapark",
+               "correct" : false
+               },
+               {
+               "text" : "Fernmeldeturm",
+               "correct" : false
+               },
+               {
+               "text" : "Hohenzollernbrücke",
+               "correct" : false
+               },
+               {
+               "text" : "Dom",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "70",
+  "text" : "Was ist das Wahrzeichen Kölns?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Düsseldorf",
+               "correct" : false
+               },
+               {
+               "text" : "Hamburg",
+               "correct" : false
+               },
+               {
+               "text" : "Essen",
+               "correct" : false
+               },
+               {
+               "text" : "Mainz",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "71",
+  "text" : "In welcher Stadt hat das ZDF seinen Sitz?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Jean-Paul Sartre",
+               "correct" : false
+               },
+               {
+               "text" : "Wolfhart Spangenberg",
+               "correct" : false
+               },
+               {
+               "text" : "William Schwenck Gilbert",
+               "correct" : false
+               },
+               {
+               "text" : "William Shakespeare",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "72",
+  "text" : "'Hamlet' ist einer Tragödie von ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Schweden",
+               "correct" : false
+               },
+               {
+               "text" : "Frankreich",
+               "correct" : false
+               },
+               {
+               "text" : "Deutschland",
+               "correct" : false
+               },
+               {
+               "text" : "Österreich",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "73",
+  "text" : "Was welchem Land stammt die 'Sachertorte'?",
+  "category" : "Essen & Trinken"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Niederlande",
+               "correct" : false
+               },
+               {
+               "text" : "Nepal",
+               "correct" : false
+               },
+               {
+               "text" : "Schweiz",
+               "correct" : false
+               },
+               {
+               "text" : "Schottland",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "74",
+  "text" : "Wo liegen die 'Highlands'?",
+  "category" : "Geographie"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Brettspielen",
+               "correct" : false
+               },
+               {
+               "text" : "Denkspielen",
+               "correct" : false
+               },
+               {
+               "text" : "Schulhofspielen",
+               "correct" : false
+               },
+               {
+               "text" : "Kartenspielen",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "75",
+  "text" : "17 und 4 gehört zu den ..?",
+  "category" : "Sport & Spiel"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Schlafsack",
+               "correct" : false
+               },
+               {
+               "text" : "Regenmantel",
+               "correct" : false
+               },
+               {
+               "text" : "Ledertasche",
+               "correct" : false
+               },
+               {
+               "text" : "Radiergummi",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "76",
+  "text" : "Was nennt man umgangssprachlich 'Ratzefummel'?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Brak",
+               "correct" : false
+               },
+               {
+               "text" : "Leek",
+               "correct" : false
+               },
+               {
+               "text" : "Rap",
+               "correct" : false
+               },
+               {
+               "text" : "Wrap",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "77",
+  "text" : "Ein dünnes, mit einer Füllung zu einer Rolle gewickeltes Fladenbrot nennt man ..?",
+  "category" : "Essen & Trinken"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Lehmbau",
+               "correct" : false
+               },
+               {
+               "text" : "Keltische Münze",
+               "correct" : false
+               },
+               {
+               "text" : "Tierversuche",
+               "correct" : false
+               },
+               {
+               "text" : "Monumentales Grabmal",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "78",
+  "text" : "Was versteht man unter einem 'Mausoleum'?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "besonders intensiv",
+               "correct" : false
+               },
+               {
+               "text" : "besonders stachelig",
+               "correct" : false
+               },
+               {
+               "text" : "besonders belastbar",
+               "correct" : false
+               },
+               {
+               "text" : "besonders empfindlich",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "79",
+  "text" : "Unter 'mimosenhaft' versteht man ..?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Hans Schicker",
+               "correct" : false
+               },
+               {
+               "text" : "Ralf Gnießa",
+               "correct" : false
+               },
+               {
+               "text" : "Herbert Gröna",
+               "correct" : false
+               },
+               {
+               "text" : "Horst Schlemmer",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "80",
+  "text" : "Wie heißt die von Hape Kerkeling gespielte Person aus Grevenbroich?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Neppo",
+               "correct" : false
+               },
+               {
+               "text" : "Lepto",
+               "correct" : false
+               },
+               {
+               "text" : "Schupo",
+               "correct" : false
+               },
+               {
+               "text" : "Lupo",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "81",
+  "text" : "Wie heißt der Wolf bei Fix und Foxi?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Lunch",
+               "correct" : false
+               },
+               {
+               "text" : "Mittagsbrot",
+               "correct" : false
+               },
+               {
+               "text" : "Tea time",
+               "correct" : false
+               },
+               {
+               "text" : "Brunch",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "82",
+  "text" : "Wie nennt man eine Mahlzeit, die Frühstück und Mittagessen kombiniert?",
+  "category" : "Essen & Trinken"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Heißluftballon",
+               "correct" : false
+               },
+               {
+               "text" : "Kraniche",
+               "correct" : false
+               },
+               {
+               "text" : "Doppeldecker",
+               "correct" : false
+               },
+               {
+               "text" : "Tauben",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "83",
+  "text" : "Wer oder was überbrachte in den Anfängen der 'Luftpost' die Briefe?",
+  "category" : "Geschichte"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Füssen",
+               "correct" : false
+               },
+               {
+               "text" : "München",
+               "correct" : false
+               },
+               {
+               "text" : "Flensburg",
+               "correct" : false
+               },
+               {
+               "text" : "Zugspitze",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "84",
+  "text" : "Welches ist der kälteste Ort in Deutschland?",
+  "category" : "Geographie"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Lady Gaga",
+               "correct" : false
+               },
+               {
+               "text" : "Sissi",
+               "correct" : false
+               },
+               {
+               "text" : "Victoria",
+               "correct" : false
+               },
+               {
+               "text" : "Lady Diana",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "85",
+  "text" : "Welche Prinzessin trug volkstümlich den Titel 'Königin der Herzen'?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Paris",
+               "correct" : false
+               },
+               {
+               "text" : "Madrid",
+               "correct" : false
+               },
+               {
+               "text" : "Athen",
+               "correct" : false
+               },
+               {
+               "text" : "Rom",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "86",
+  "text" : "In welcher Stadt befindet sich das Kolosseum?",
+  "category" : "Geschichte"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Stuttgart",
+               "correct" : false
+               },
+               {
+               "text" : "Düsseldorf",
+               "correct" : false
+               },
+               {
+               "text" : "Bonn",
+               "correct" : false
+               },
+               {
+               "text" : "Frankfurt a.M.",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "87",
+  "text" : "In welcher Stadt liegt der größte deutsche Flughafen?",
+  "category" : "Kunst & Architektur"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Prolog",
+               "correct" : false
+               },
+               {
+               "text" : "Epilog",
+               "correct" : false
+               },
+               {
+               "text" : "Vernissage",
+               "correct" : false
+               },
+               {
+               "text" : "Premiere",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "88",
+  "text" : "Wie nennt man die erste Aufführung eines Bühnenstücks?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Cola",
+               "correct" : false
+               },
+               {
+               "text" : "Saft",
+               "correct" : false
+               },
+               {
+               "text" : "Mate",
+               "correct" : false
+               },
+               {
+               "text" : "Alkohol",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "89",
+  "text" : "Was darf in Spielhallen nicht ausgeschenkt werden?",
+  "category" : "Sport & Spiel"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Palast",
+               "correct" : false
+               },
+               {
+               "text" : "Hüsli",
+               "correct" : false
+               },
+               {
+               "text" : "Hütte",
+               "correct" : false
+               },
+               {
+               "text" : "Datsche",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "90",
+  "text" : "Wie wurde früher in der DDR umgangssprachlich das Wochenendhaus genannt?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Schlussteil eines Buches",
+               "correct" : false
+               },
+               {
+               "text" : "Oberseite des Brötchens",
+               "correct" : false
+               },
+               {
+               "text" : "Ehemalige DDR",
+               "correct" : false
+               },
+               {
+               "text" : "Ehefrau",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "91",
+  "text" : "Wer oder was wird gerne als die 'bessere Hälfte' bezeichnet?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Kaffee",
+               "correct" : false
+               },
+               {
+               "text" : "Wasser",
+               "correct" : false
+               },
+               {
+               "text" : "Schnaps",
+               "correct" : false
+               },
+               {
+               "text" : "Wein",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "92",
+  "text" : "Was wird vorwiegend in einer 'Vinothek' verkauft?",
+  "category" : "Essen & Trinken"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Wiederholung",
+               "correct" : false
+               },
+               {
+               "text" : "Reporting",
+               "correct" : false
+               },
+               {
+               "text" : "Rückintegration",
+               "correct" : false
+               },
+               {
+               "text" : "Recycling",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "93",
+  "text" : "Wie nennt man die Wiederverwendung leerer Verpackungen?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Dublin",
+               "correct" : false
+               },
+               {
+               "text" : "Paris",
+               "correct" : false
+               },
+               {
+               "text" : "Oslo",
+               "correct" : false
+               },
+               {
+               "text" : "Teheran",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "94",
+  "text" : "Welche dieser Städte liegt nicht in Europa?",
+  "category" : "Geographie"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Papstfrage",
+               "correct" : false
+               },
+               {
+               "text" : "Mönchfrage",
+               "correct" : false
+               },
+               {
+               "text" : "Küsterfrage",
+               "correct" : false
+               },
+               {
+               "text" : "Kardinalfrage",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "95",
+  "text" : "Wie heißt eine grundlegende Frage, durch deren Beantwortung ein Sachverhalt entscheiden wird?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Gottesfurcht",
+               "correct" : false
+               },
+               {
+               "text" : "Sprachlehre",
+               "correct" : false
+               },
+               {
+               "text" : "Müchenschutz",
+               "correct" : false
+               },
+               {
+               "text" : "Judenfeindlichkeit",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "96",
+  "text" : "Was bedeutet 'Antisemitismus'?",
+  "category" : "Literatur & Sprache"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "3",
+               "correct" : false
+               },
+               {
+               "text" : "5",
+               "correct" : false
+               },
+               {
+               "text" : "2",
+               "correct" : false
+               },
+               {
+               "text" : "4",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "97",
+  "text" : "Ein Kleeblatt mit wie vielen Blättern gilt als Glücksbringer?",
+  "category" : "Gesellschaft"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Klein",
+               "correct" : false
+               },
+               {
+               "text" : "Armani",
+               "correct" : false
+               },
+               {
+               "text" : "Boss",
+               "correct" : false
+               },
+               {
+               "text" : "Lagerfeld",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "98",
+  "text" : "Welcher Modeschöpfer 'entdeckte' Claudia Schiffer?",
+  "category" : "Gesellschaft"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Apotheken Reinschau",
+               "correct" : false
+               },
+               {
+               "text" : "Apotheken Klatsch",
+               "correct" : false
+               },
+               {
+               "text" : "Apotheken Blatt",
+               "correct" : false
+               },
+               {
+               "text" : "Apotheken Umschau",
+               "correct" : true
+               }
+               ],
+  "levelId" : 1,
+  "explanation" : "",
+  "questionId" : "99",
+  "text" : "Wie heißt das Gesundheitsmagazin, das in Apotheken meist kostenlos ausliegt?",
+  "category" : "Unterhaltung & Medien"
+  },
+  {
+  "answers" : [
+               {
+               "text" : "Dream",
+               "correct" : false
+               },
+               {
+               "text" : "Talismann",
+               "correct" : false
+               },
+               {
+               "text" : "Rainman",
+               "correct" : false
+               },
+               {
+               "text" : "Mainstream",
+               "correct" : true
+               }
+               ],
+  "levelId" : 2,
+  "explanation" : "",
+  "questionId" : "100",
+  "text" : "Den kulturellen Geschmack einer großen Mehrheit nennt man ..?",
+  "category" : "Gesellschaft"
   }
 ]

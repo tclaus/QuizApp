@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResultAggregate.h"
 
 @interface Datasource : NSObject
 
-+(NSArray*)loadAggregates;
+/**
+ Loads the list of questions ever made as ResultAggregates
+ */
++(NSArray*) loadAggregates;
 
 +(void)saveAggregates:(NSArray*)results forDate:(NSDate*)date;
 

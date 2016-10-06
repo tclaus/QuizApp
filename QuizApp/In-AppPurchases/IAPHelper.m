@@ -20,8 +20,6 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
     NSMutableSet * _purchasedProductIdentifiers;
 }
 
-
-
 - (instancetype)initWithProductIdentifiers:(NSSet *)productIdentifiers {
     if ((self = [super init])) {
         

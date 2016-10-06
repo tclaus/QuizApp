@@ -338,7 +338,9 @@
     if ([self IAPCheck]) {
         _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
         
-        UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle message:[Config sharedInstance].quizIAP.messageText preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle
+                                                                        message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText,[Config sharedInstance].quizIAP.numberofFreeQuestions]
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* buyAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageBuy style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
             
@@ -364,9 +366,15 @@
 
 - (BOOL)IAPCheck {
 
-    return [Config sharedInstance].quizIAP.limitQuestions
-    && ([Datasource loadAggregates].count >= [Config sharedInstance].quizIAP.numberofFreeQuizzes
-        && ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID]);
+    // Check, if number of quiz is limited. (Studid, then you cant play any more)
+    if ([Config sharedInstance].quizIAP.numberofFreeQuizzes > 0) {
+        return [Config sharedInstance].quizIAP.limitQuestions
+        && ([Datasource loadAggregates].count >= [Config sharedInstance].quizIAP.numberofFreeQuizzes
+            && ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID]);
+    }
+    
+    return YES;
+    
 }
 
 -(void)buyProduct{

@@ -27,31 +27,11 @@
 	<array>
 		<dict>
 			<key>Topic Title</key>
-			<string>Demo fragen</string>
+			<string>Basis Fragen</string>
 			<key>Topic Image</key>
 			<string></string>
 			<key>Questions File</key>
 			<string>1000Fragen.json</string>
-		</dict>
-		<dict>
-			<key>Topic Title</key>
-			<string>Flags</string>
-			<key>Topic Image</key>
-			<string>spain.jpg</string>
-			<key>Questions File</key>
-			<string>flags.json</string>
-			<key>In App Purchase Identifier</key>
-			<string>flags.purchase</string>
-		</dict>
-		<dict>
-			<key>Topic Title</key>
-			<string>Flags Second</string>
-			<key>Topic Image</key>
-			<string>spain.jpg</string>
-			<key>Questions File</key>
-			<string>flags.json</string>
-			<key>In App Purchase Identifier</key>
-			<string>flagssecond.purchase</string>
 		</dict>
 	</array>
 	<key>Quiz Settings</key>
@@ -86,17 +66,17 @@
 	<key>In App Purchase Settings</key>
 	<dict>
 		<key>Limit Number of Questions</key>
-		<false/>
+		<true/>
 		<key>Number of Free Questions</key>
-		<integer>3</integer>
+		<integer>100</integer>
 		<key>Number of Free Quizzes</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>In-App Purchase ID</key>
 		<string>questions.purchase</string>
 		<key>IAP Alert Title</key>
 		<string>Hinweis</string>
 		<key>IAP Alert Message</key>
-		<string>Das Quiz ist auf %count% Fragen beschränkt  Möchstest du alle Fragen freischalten?</string>
+		<string>Das Quiz ist auf %ld Fragen beschränkt  Möchstest du alle Fragen freischalten?</string>
 		<key>IAP Alert Buy</key>
 		<string>Upgrade!</string>
 		<key>IAP Alert Cancel</key>
@@ -105,7 +85,7 @@
 	<key>Topic Purchase Settings</key>
 	<dict>
 		<key>Limit Topics</key>
-		<true/>
+		<false/>
 		<key>In-App Purchase ID</key>
 		<string>topics.purchase</string>
 		<key>IAP Alert Title</key>

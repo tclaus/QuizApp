@@ -170,8 +170,8 @@ static BOOL heartSoundPlaying;
     [self updateTimerText];
    
     //Make a Tick-Sound?
-    // last 3 seconds?
-    if(self.currentTimeInterval > (self.totalTimeInterval - 3) ){
+    // last 5 seconds?
+    if(self.currentTimeInterval > (self.totalTimeInterval - 5) ){
         [self.soundSystem playTickSound];
     }
     
