@@ -11,6 +11,11 @@
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
 		65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E4D1DA4F05A0082380D /* Configuration.plist */; };
 		65B19E551DA4F4A60082380D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E571DA4F4A60082380D /* Localizable.strings */; };
+		65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B4781DA5A44B00F057EB /* SoundManager.m */; };
+		65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */; };
+		65F869291DA6486900402768 /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65F869261DA6486900402768 /* wrong.m4a */; };
+		65F8692A1DA6486900402768 /* rightquestion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65F869271DA6486900402768 /* rightquestion.mp3 */; };
+		65F8692B1DA6486900402768 /* timeout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65F869281DA6486900402768 /* timeout.mp3 */; };
 		7FAA61051930176500F55803 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA61041930176500F55803 /* StoreKit.framework */; };
 		7FAA6109193017C100F55803 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA6108193017C100F55803 /* IAPHelper.m */; };
 		7FAA610C1930198400F55803 /* QuizIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA610B1930198400F55803 /* QuizIAPHelper.m */; };
@@ -153,6 +158,12 @@
 		65B19E581DA4F4A80082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65D1B4751DA5195F00F057EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		65D1B4771DA55C0800F057EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		65D1B4781DA5A44B00F057EB /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Utils/SoundManager.m; sourceTree = "<group>"; };
+		65D1B4791DA5A44B00F057EB /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Utils/SoundManager.h; sourceTree = "<group>"; };
+		65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartbeat.mp3; sourceTree = "<group>"; };
+		65F869261DA6486900402768 /* wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.m4a; sourceTree = "<group>"; };
+		65F869271DA6486900402768 /* rightquestion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightquestion.mp3; sourceTree = "<group>"; };
+		65F869281DA6486900402768 /* timeout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timeout.mp3; sourceTree = "<group>"; };
 		7FAA61041930176500F55803 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7FAA6107193017C100F55803 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
 		7FAA6108193017C100F55803 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
@@ -388,6 +399,8 @@
 		EC2141DB189116D800739070 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				65D1B4781DA5A44B00F057EB /* SoundManager.m */,
+				65D1B4791DA5A44B00F057EB /* SoundManager.h */,
 				EC2141DC189116EF00739070 /* Utils.h */,
 				EC2141DD189116EF00739070 /* Utils.m */,
 				EC53D9F018A01B0100AA9D93 /* Config.h */,
@@ -443,6 +456,10 @@
 		ECB25E0C18C0CFE9008C965C /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				65F869261DA6486900402768 /* wrong.m4a */,
+				65F869271DA6486900402768 /* rightquestion.mp3 */,
+				65F869281DA6486900402768 /* timeout.mp3 */,
+				65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */,
 				ECB25E0D18C0CFE9008C965C /* tick.mp3 */,
 			);
 			path = sounds;
@@ -858,6 +875,7 @@
 				ECE03F391863465A0042490A /* button.png in Resources */,
 				ECBD0C65187345B2002DC98B /* tick.png in Resources */,
 				ECBD0C68187345B2002DC98B /* cross@2x.png in Resources */,
+				65F8692A1DA6486900402768 /* rightquestion.mp3 in Resources */,
 				ECE03F29186341180042490A /* niagara@2x~ipad.png in Resources */,
 				65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */,
 				65B19E551DA4F4A60082380D /* Localizable.strings in Resources */,
@@ -868,6 +886,7 @@
 				EC2141FB1891958E00739070 /* selected-question-empty@2x.png in Resources */,
 				6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */,
 				EC2141F61891940B00739070 /* check-tick.png in Resources */,
+				65F869291DA6486900402768 /* wrong.m4a in Resources */,
 				ECE03F17186341180042490A /* amazonas.png in Resources */,
 				ECE03F24186341180042490A /* canyon@2x.png in Resources */,
 				ECE03F2D186341180042490A /* sky@2x~ipad.png in Resources */,
@@ -912,11 +931,13 @@
 				ECE03E96186213E00042490A /* InfoPlist.strings in Resources */,
 				EC0D183E189957CE00BE6368 /* item-selected-empty@2x.png in Resources */,
 				ECBD0C66187345B2002DC98B /* tick@2x.png in Resources */,
+				65F8692B1DA6486900402768 /* timeout.mp3 in Resources */,
 				EC0D183B189957CE00BE6368 /* item-selected-circle.png in Resources */,
 				EC2141FA1891958E00739070 /* selected-question-empty.png in Resources */,
 				ECE03F3E1863487A0042490A /* button-disabled.png in Resources */,
 				ECB25E0E18C0CFE9008C965C /* tick.mp3 in Resources */,
 				ECE03F1F186341180042490A /* candela.png in Resources */,
+				65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */,
 				ECE03F2F186341180042490A /* sunrise.png in Resources */,
 				EC99213E18B4FDEF000FCA6F /* flags.json in Resources */,
 			);
@@ -979,6 +1000,7 @@
 				ECD4C8C418ABEC0D00BE5492 /* GameKitManager.m in Sources */,
 				ECBD0C921876FBF5002DC98B /* PNScrollLineChart.m in Sources */,
 				EC9794B5198A72D400EB7294 /* TopicInAppPurchaseData.m in Sources */,
+				65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */,
 				ECBD0C8C1876FBF5002DC98B /* PNBar.m in Sources */,
 				EC18EBFF18B24EAD00E7FE4F /* FriendCell.m in Sources */,
 				EC0D184D1899721100BE6368 /* UIImageAverageColorAddition.m in Sources */,

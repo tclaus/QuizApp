@@ -29,8 +29,6 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomMarginConstraint;
 
-@property (nonatomic, weak) IBOutlet UIButton* answerButton;
-
 @property (nonatomic, weak) IBOutlet UIView* footerView;
 
 @property (nonatomic, assign) BOOL correctAnswerShown;
@@ -80,18 +78,9 @@
     UIImage* buttonDisabledBackground = [[UIImage imageNamed:@"button-disabled"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     buttonDisabledBackground = [buttonDisabledBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
-    [self.answerButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    [self.answerButton setBackgroundImage:buttonDisabledBackground forState:UIControlStateDisabled];
-    self.answerButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:19.0f];
-    [self.answerButton addTarget:self action:@selector(answerTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.answerButton setTitle:NSLocalizedString(@"NEXT QUESTION",@"") forState:UIControlStateNormal];
-    self.answerButton.enabled = NO;
-    self.answerButton.hidden = self.isForReview;
-
     self.footerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
     UIToolbar* toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
     toolbar.barStyle = UIBarStyleBlack;
-    [self.footerView insertSubview:toolbar belowSubview:self.answerButton];
     self.footerView.hidden = self.isForReview;
     
     
@@ -119,7 +108,6 @@
 -(void)loadData{
     
     self.answerTableView.allowsMultipleSelection = (self.question).numberOfCorrectAnswers > 1;
-    self.answerButton.enabled = NO;
     self.questionLabel.text = self.question.text;
     self.correctAnswerShown = NO;
     self.answerTapped = NO;
@@ -242,10 +230,6 @@
     [self showCorrectAnswer];
     
 
-    // Tap on right answer => Play happy sound => Mark as right => next
-    // Tap on flase answer => Play sad sound / Vibrate => Mark as false => next
-    
-    
 }
 
 -(void)showCorrectAnswer{
@@ -260,6 +244,7 @@
         
     }else{
         answeredCorrect = NO;
+        [self.soundSystem playFailureSound];
         [self.soundSystem vibrate];
     }
     

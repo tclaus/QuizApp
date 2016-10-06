@@ -68,7 +68,8 @@
             
             [currentController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
             [mainView addSubview:currentController.view];
-            ConstraintsPackage* currentControllerPackage = [self addConstraintsToSuperview:mainView subview:currentController.view];            currentController.view.tag = 1;
+            ConstraintsPackage* currentControllerPackage = [self addConstraintsToSuperview:mainView subview:currentController.view];
+            currentController.view.tag = 1;
             
             self.constraintPackages = @[controllerPackage, currentControllerPackage];
         }
