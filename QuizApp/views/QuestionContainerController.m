@@ -13,6 +13,7 @@
 #import "Config.h"
 #import "DropAnimationController.h"
 #import "ExplanationViewController.h"
+#import "SoundSystem.h"
 
 @interface QuestionContainerController ()
 
@@ -36,9 +37,12 @@
 
 @property (nonatomic, strong) UIBarButtonItem* infoBarButton;
 
+@property (nonatomic, strong) SoundSystem* soundSystem;
 @end
 
 @implementation QuestionContainerController
+
+static BOOL heartSoundPlaying;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -98,9 +102,23 @@
     [infoButton addTarget:self action:@selector(moreInfoTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.infoBarButton = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
     self.navigationItem.leftBarButtonItem = self.infoBarButton;
-    
+    self.soundSystem = [[SoundSystem alloc]init];
     
     [self showNextQuestion];
+    
+    if (!heartSoundPlaying) {
+        [self.soundSystem playHeadBeatSound];
+        heartSoundPlaying = YES;
+    }
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    if (heartSoundPlaying) {
+        [self.soundSystem stopHeardBeatSound];
+        heartSoundPlaying = NO;
+    }
 }
 
 -(void)showNextQuestion{
@@ -150,15 +168,18 @@
 -(void)updateTime:(id)sender{
     self.currentTimeInterval++;
     [self updateTimerText];
-    
-    if(self.currentTimeInterval == self.totalTimeInterval){
-        [self timeUp];
-    }
-    
-    
+   
     //Make a Tick-Sound?
     // last 3 seconds?
+    if(self.currentTimeInterval > (self.totalTimeInterval - 3) ){
+        [self.soundSystem playTickSound];
+    }
     
+   // Time is up
+    if(self.currentTimeInterval == self.totalTimeInterval){
+        [self.soundSystem playTimeOutSound];
+        [self timeUp];
+    }
     
 }
 
@@ -179,6 +200,8 @@
 }
 
 -(void)timeUp{
+    
+    
     [self.timer invalidate];
    
     UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Time Up!",@"Title- time is up")  message:NSLocalizedString(@"Your Time is Up",@"Messgage: Time is up") preferredStyle:UIAlertControllerStyleAlert];

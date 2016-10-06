@@ -11,10 +11,14 @@
 
 @interface SoundSystem : NSObject
 
-@property (readwrite)   CFURLRef        soundFileURLRef;
-@property (readonly)    SystemSoundID   soundFileObject;
 
 -(void)playHappySound;
+-(void)playFailureSound;
+-(void)playTickSound;
+-(void)playHeadBeatSound;
+-(void)stopHeardBeatSound;
+-(void)playTimeOutSound;
+
 -(void)vibrate;
 
 @end
