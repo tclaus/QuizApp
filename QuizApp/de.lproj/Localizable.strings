@@ -81,8 +81,11 @@
 /* No comment provided by engineer. */
 "SEND CHALLENGE" = "Fordere einen Freund heraus.";
 
-/* No comment provided by engineer. */
-"START" = "START";
+/* Game Mode time Based */
+"GameModeTimeBased" = "%ld Minuten Quiz";
+
+/* Training Mode */
+"GameModeTrainingBased"  = "Training";
 
 /* No comment provided by engineer. */
 "START TEST" = "STARTE FRAGEN";
@@ -108,4 +111,14 @@
 /* No comment provided by engineer. */
 "Question %ld of %ld" = "Frage %ld von %ld";
 
+"Start Quiz" = "Starte Quiz";
+"Start Training" = "Starte Training";
+
+/* Game mode description */
+"GameModeTimeBasedCompetitionDescription" = "Du musst in %ld Sekunden so viele Fragen lösen, wie möglich. Die Schwierigkeitsstufe steigt dabei an. Deine Ergebnisse werden dabei gewertet.";
+
+"GameModeTrainigDescription" = "Du musst %ld Fragen lösen. Die Schwierigkeit steigt dabei an. Es gibt keine Zeitbeschränkung.";
+
+/* Points for quizmode */
+"Points: %ld" = "Punkte: %ld";
 

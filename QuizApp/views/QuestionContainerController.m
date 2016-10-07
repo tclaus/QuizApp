@@ -14,6 +14,7 @@
 #import "DropAnimationController.h"
 #import "ExplanationViewController.h"
 #import "SoundSystem.h"
+#import "GameModel.h"
 
 @interface QuestionContainerController ()
 
@@ -82,9 +83,10 @@ static BOOL heartSoundPlaying;
     self.timerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:14.0f];
     self.timerLabel.alpha = 0.0;
     
-    BOOL isTimedQuiz = [Config sharedInstance].isTimedQuiz;
+    self.points = 0;
     
-    self.totalTimeInterval = isTimedQuiz ? floor([Config sharedInstance].timeNeededInMinutes * 60) : 0;
+    // Set game time. Can be 0 in trainig mode
+    self.totalTimeInterval = [GameModel sharedInstance].gameTime;
     
     if(self.totalTimeInterval > 0){
         self.timerLabel.alpha = 1.0;
@@ -159,9 +161,25 @@ static BOOL heartSoundPlaying;
 
 -(void)setStatusInfoWithCount:(NSInteger)count{
     
-    self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Question %ld of %ld",@"Headline in questionlist"), (long)count+1, (unsigned long)self.questions.count];
+    // Training:
+    // Question %ld of %ld
     
-    [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
+    switch ([GameModel sharedInstance].activeGameMode) {
+        case GameModeTimeBasedCompetition:
+            
+            // In Quizmode: Punkte vergeben?
+            self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Points: %ld",@"Headline in questionlist for quizmode"), self.points];
+            [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
+            break;
+            
+        case GameModeTrainig:
+            
+            self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Question %ld of %ld",@"Headline in questionlist for trainingmode"), (long)count+1, (unsigned long)self.questions.count];
+            [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
+            break;
+        
+    }
+    
     
 }
 
@@ -169,8 +187,7 @@ static BOOL heartSoundPlaying;
     self.currentTimeInterval++;
     [self updateTimerText];
    
-    //Make a Tick-Sound?
-    // last 5 seconds?
+    //Make a Tick-Sound for the last 5 seconds
     if(self.currentTimeInterval > (self.totalTimeInterval - 5) ){
         [self.soundSystem playTickSound];
     }

@@ -9,6 +9,7 @@
 #import "StartViewController.h"
 #import "ADVTheme.h"
 #import "Config.h"
+#import "GameModel.h"
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -20,7 +21,8 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView* mainImageView;
 
-@property (nonatomic, weak) IBOutlet UIButton* startButton;
+@property (weak, nonatomic) IBOutlet UIButton *gameModeButton1;
+@property (weak, nonatomic) IBOutlet UIButton *gameModeButton2;
 
 @end
 
@@ -73,13 +75,31 @@
     UIImage* buttonBackground = [[UIImage imageNamed:@"button"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
-    [self.startButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.startButton setTitle:NSLocalizedString(@"START",@"") forState:UIControlStateNormal];
-    [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.gameModeButton1 setBackgroundImage:buttonBackground forState:UIControlStateNormal];
+    [self.gameModeButton2 setBackgroundImage:buttonBackground forState:UIControlStateNormal];
+    
+    //self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+    
+    NSString *mode1Text = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBased",@""),5];
+    
+    [self.gameModeButton1 setTitle:mode1Text forState:UIControlStateNormal];
+    [self.gameModeButton2 setTitle:NSLocalizedString(@"GameModeTrainingBased",@"") forState:UIControlStateNormal];
+//    [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 -(IBAction)startTapped:(id)sender{
+    
+    // Set Game ModeØ
+    
+    UIButton *button = (UIButton*)sender;
+    if (button.tag == 0) {
+        [GameModel sharedInstance].activeGameMode = GameModeTimeBasedCompetition;
+    }
+    
+    if (button.tag == 1) {
+        [GameModel sharedInstance].activeGameMode = GameModeTrainig;
+    }
     
     [self performSegueWithIdentifier:@"start" sender:self];
 }

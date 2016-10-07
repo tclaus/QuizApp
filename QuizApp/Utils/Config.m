@@ -79,8 +79,6 @@
     self.startPageImage = interfaceSettings[@"Start Page Image"];
     self.showTopicsinGrid = [interfaceSettings[@"Show Topics in Grid"] boolValue];
     
-    self.quizStartInfo = interfaceSettings[@"Quiz Start Info"];
-    
     
     
     NSDictionary* quizIAPSettings = self.configInfo[@"In App Purchase Settings"];

@@ -15,4 +15,8 @@
 
 @property (nonatomic, strong) NSArray* questions;
 
+/**
+ Total points for questions so far 
+ */
+@property (nonatomic) int points;
 @end

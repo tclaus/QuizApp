@@ -26,7 +26,6 @@
 @property (nonatomic, strong) NSString* startPageDescription;
 @property (nonatomic, strong) NSString* startPageSubDescription;
 @property (nonatomic, strong) NSString* startPageImage;
-@property (nonatomic, strong) NSString* quizStartInfo;
 @property (nonatomic, strong) NSString* mainFont;
 @property (nonatomic, strong) NSString* boldFont;
 @property (nonatomic, strong) NSString* mainBackground;

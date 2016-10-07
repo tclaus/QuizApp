@@ -15,11 +15,9 @@
 		<key>Start Page Description</key>
 		<string>Testen Sie ihr Wissen</string>
 		<key>Start Page Sub Description</key>
-		<string>Dieser Untertitel kann geändert werden.</string>
+		<string>Wähle einen Spielmodus</string>
 		<key>Start Page Image</key>
 		<string>mainImage</string>
-		<key>Quiz Start Info</key>
-		<string>Es werden nun %d Fragen gezeigt. Mindestens %d Fragen müssen richtig beantwortet werden um diesen Test zu bestehen. Viel Erfolg!</string>
 		<key>Show Topics in Grid</key>
 		<true/>
 	</dict>

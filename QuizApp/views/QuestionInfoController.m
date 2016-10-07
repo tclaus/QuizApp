@@ -13,6 +13,7 @@
 #import "Datasource.h"
 #import "QuestionContainerController.h"
 #import "Config.h"
+#import "GameModel.h"
 
 @interface QuestionInfoController ()
 
@@ -46,10 +47,28 @@
     self.infoLabel.textColor = [UIColor whiteColor];
     self.infoLabel.numberOfLines = 0;
     
-    NSString* configInfo = [Config sharedInstance].quizStartInfo;
-    NSInteger passThreshold = [Config sharedInstance].passThreshold;
-    configInfo = [NSString stringWithFormat:configInfo, self.questions.count, passThreshold];
-    self.infoLabel.text = configInfo;
+    NSString* gameInfoText;
+    
+    // (Quiz)
+    // Placeholder 1: Du musst in X Sekunden so viele Fragen lösen, wie möglich. Die Schwierigkeitsstufe steigt dabei an.
+    //                Deine Ergebnisse werden dabei gewertet.
+    //
+    // (Training)
+    // Du musst 50 Fragen lösen. Die Schwierigkeit steigt dabei an. Es gibt keine Zeitbeschränkung.
+    //
+    
+    
+    switch ([GameModel sharedInstance].activeGameMode) {
+        case GameModeTimeBasedCompetition:
+            gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBasedCompetitionDescription", @"Needs a placeholder for maxtime"), [GameModel sharedInstance].gameTime] ;
+            break;
+            
+        case GameModeTrainig:
+            gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTrainigDescription", @"Needs a placeholder for questioncount"), [GameModel sharedInstance].countQuestions] ;
+        
+    }
+    
+    self.infoLabel.text = gameInfoText;
     
     // self.questionsLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:18];
     self.questionsLabel.textColor = [UIColor whiteColor];

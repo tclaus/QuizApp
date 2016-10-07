@@ -16,6 +16,7 @@
 		65F869291DA6486900402768 /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65F869261DA6486900402768 /* wrong.m4a */; };
 		65F8692A1DA6486900402768 /* rightquestion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65F869271DA6486900402768 /* rightquestion.mp3 */; };
 		65F8692B1DA6486900402768 /* timeout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65F869281DA6486900402768 /* timeout.mp3 */; };
+		65F8692E1DA78BA500402768 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8692D1DA78BA500402768 /* GameModel.m */; };
 		7FAA61051930176500F55803 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA61041930176500F55803 /* StoreKit.framework */; };
 		7FAA6109193017C100F55803 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA6108193017C100F55803 /* IAPHelper.m */; };
 		7FAA610C1930198400F55803 /* QuizIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA610B1930198400F55803 /* QuizIAPHelper.m */; };
@@ -164,6 +165,8 @@
 		65F869261DA6486900402768 /* wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.m4a; sourceTree = "<group>"; };
 		65F869271DA6486900402768 /* rightquestion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightquestion.mp3; sourceTree = "<group>"; };
 		65F869281DA6486900402768 /* timeout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timeout.mp3; sourceTree = "<group>"; };
+		65F8692C1DA78BA500402768 /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		65F8692D1DA78BA500402768 /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 		7FAA61041930176500F55803 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7FAA6107193017C100F55803 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
 		7FAA6108193017C100F55803 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
@@ -678,6 +681,8 @@
 				EC2141D9189029CE00739070 /* ResultAggregate.m */,
 				EC97B5E719D3084200848267 /* ConstraintsPackage.h */,
 				EC97B5E819D3084200848267 /* ConstraintsPackage.m */,
+				65F8692C1DA78BA500402768 /* GameModel.h */,
+				65F8692D1DA78BA500402768 /* GameModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -959,6 +964,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBD0C771876FB4E002DC98B /* StatsViewController.m in Sources */,
+				65F8692E1DA78BA500402768 /* GameModel.m in Sources */,
 				ECE03ED3186217DD0042490A /* Datasource.m in Sources */,
 				ECE03F4B18647B700042490A /* ResultsViewController.m in Sources */,
 				ECBD0C6018733BCE002DC98B /* ReviewCell.m in Sources */,

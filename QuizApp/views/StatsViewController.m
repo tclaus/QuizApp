@@ -21,12 +21,14 @@
 #import "Config.h"
 #import "GameKitManager.h"
 #import "QuizIAPHelper.h"
+#import "GameModel.h"
 
 @interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol>
 
 @property (nonatomic, weak) IBOutlet ADVRoundProgressChart* scoresProgress;
 
 @property (nonatomic, strong) PNScrollBarChart* scoresBarChart;
+@property (weak, nonatomic) IBOutlet UILabel *gameModeLabel;
 
 @property (nonatomic, weak) IBOutlet UIView* scoresBarChartContainer;
 
@@ -133,7 +135,26 @@
     
     [self.startButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.startButton setTitle:NSLocalizedString(@"START TEST",@"") forState:UIControlStateNormal];
+    
+    // Start Training
+    // Start Quiz
+    NSString *startGameTitle;
+    NSString *gameModeHeadline;
+    
+    switch ([GameModel sharedInstance].activeGameMode) {
+        case GameModeTimeBasedCompetition:
+            startGameTitle = NSLocalizedString(@"Start Quiz", @"Button Title: Game Mode Competition");
+            gameModeHeadline = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBased",@""),5];
+            break;
+            
+        case GameModeTrainig:
+            startGameTitle = NSLocalizedString(@"Start Training", @"Button Title: Game Mode Training");
+            gameModeHeadline = NSLocalizedString(@"GameModeTrainingBased",@"");
+            break;
+    }
+    
+    [self.startButton setTitle:startGameTitle forState:UIControlStateNormal];
+    self.gameModeLabel.text = gameModeHeadline;
     
     [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
@@ -180,6 +201,7 @@
         self.topStatsContainerHeight.constant = 230;
     }
 }
+
 
 -(void)displayCharts{
     NSArray* aggregates = [Datasource loadAggregates];
