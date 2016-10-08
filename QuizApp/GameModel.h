@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, GameModes) {
 /**
   Anzahl Fragen 0= Unbegrenzt. GameTime UND CounTQustions dürfen nicht beide 0 sein.
  */
-@property (readonly, nonatomic) int countQuestions;
+@property (readonly, nonatomic) NSInteger numberOfQuestions;
 
 // MixedLevels YES/NO, Gemischte Schwierigkeit (YES) oder Aufsteigend
 @property (readonly, nonatomic) BOOL mixedLevels;

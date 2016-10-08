@@ -11,7 +11,8 @@
 
 @implementation Question
 
--(instancetype)initWithDictionary:(NSDictionary*)dictionary{
+
+-(instancetype)initWithDictionary:(NSDictionary*)dictionary  {
 
     self = [super init];
     if(self){
@@ -19,7 +20,7 @@
         self.image = dictionary[@"image"];
         self.explanation = dictionary[@"explanation"];
         self.category = dictionary[@"category"];
-        
+        self.level = [(NSNumber*) dictionary[@"levelId"] integerValue];
         NSArray* answerArray = dictionary[@"answers"];
         NSMutableArray* answersTmpArray = [NSMutableArray array];
         
@@ -33,17 +34,7 @@
     return self;
 }
 
--(NSInteger)numberOfCorrectAnswers{
-    
-    NSInteger correctCount = 0;
-    
-    for (Answer* answer in self.answers) {
-        if(answer.correct){
-            correctCount++;
-        }
-    }
-    return correctCount;
-}
+
 
 -(BOOL)indexIsCorrectAnswer:(NSInteger)answerIndex{
     
@@ -67,14 +58,13 @@
 
 -(BOOL)hasBeenAnsweredCorrectly{
     
-    int correctAnswersFound = 0;
     for (Answer* answer in self.answers) {
         if(answer.correct && answer.chosen){
-            correctAnswersFound++;
+            return YES;
         }
     }
     
-    return correctAnswersFound == self.numberOfCorrectAnswers;
+    return NO;
 }
 
 @end

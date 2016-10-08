@@ -35,15 +35,13 @@
 	<key>Quiz Settings</key>
 	<dict>
 		<key>Number Of Questions To Answer</key>
-		<integer>10</integer>
+		<integer>50</integer>
 		<key>Pass Threshold</key>
 		<integer>8</integer>
 		<key>Number of Questions To Practice</key>
-		<string>3</string>
-		<key>Is Timed Quiz</key>
-		<true/>
+		<string>50</string>
 		<key>Time Needed In Minutes</key>
-		<string>0.5</string>
+		<string>5</string>
 	</dict>
 	<key>Game Center Settings</key>
 	<dict>
@@ -67,8 +65,6 @@
 		<true/>
 		<key>Number of Free Questions</key>
 		<integer>100</integer>
-		<key>Number of Free Quizzes</key>
-		<integer>0</integer>
 		<key>In-App Purchase ID</key>
 		<string>questions.purchase</string>
 		<key>IAP Alert Title</key>

@@ -16,8 +16,18 @@
 
 @property (nonatomic, strong) NSArray* topics;
 
+/**
+ In a game model for fixed count of questions- this is the number of total questions to solve
+ */
 @property (nonatomic, assign) NSInteger numberOfQuestionsToAnswer;
+/**
+ In Training mode this is the number of question to train
+ */
 @property (nonatomic, assign) NSInteger numberOfQuestionsToPractice;
+/**
+ In a game mode- this can be the number of total question that needs to pass to win a game.
+ Number must be smaller than 'numberOfQuestionsToAnswer'
+ */
 @property (nonatomic, assign) NSInteger passThreshold;
 
 @property (nonatomic, strong) NSArray * gameCenterAchievements;
@@ -35,7 +45,6 @@
 
 @property (nonatomic, assign) CGFloat timeNeededInMinutes;
 
-@property (nonatomic, assign) BOOL isTimedQuiz;
 
 @property (nonatomic, assign) BOOL gameCenterEnabled;
 @property (nonatomic, assign) BOOL showTopicsinGrid;

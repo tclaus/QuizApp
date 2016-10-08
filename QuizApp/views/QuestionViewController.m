@@ -107,7 +107,6 @@
 
 -(void)loadData{
     
-    self.answerTableView.allowsMultipleSelection = (self.question).numberOfCorrectAnswers > 1;
     self.questionLabel.text = self.question.text;
     self.correctAnswerShown = NO;
     self.answerTapped = NO;

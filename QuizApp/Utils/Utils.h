@@ -22,6 +22,9 @@
 
 +(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
 
+/**
+ Loads topics and shuffels the questions to generate a list of newly shuffled questions
+ */
 +(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount;
 
 +(void)addConstraintsToSuperView:(UIView*)mainView andSubView:(UIView*)subView withPadding:(CGFloat)padding;

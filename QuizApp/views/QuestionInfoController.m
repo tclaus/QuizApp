@@ -35,8 +35,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    self.questionsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%lu Questions",@""), (unsigned long)self.questions.count];
     
     self.results = [NSMutableArray array];
     
@@ -61,10 +59,14 @@
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
             gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBasedCompetitionDescription", @"Needs a placeholder for maxtime"), [GameModel sharedInstance].gameTime] ;
+            self.questionsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%lu Seconds",@""), (unsigned long)[GameModel sharedInstance].gameTime];
+            
             break;
             
         case GameModeTrainig:
-            gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTrainigDescription", @"Needs a placeholder for questioncount"), [GameModel sharedInstance].countQuestions] ;
+            gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTrainigDescription", @"Needs a placeholder for questioncount"), [GameModel sharedInstance].numberOfQuestions] ;
+            self.questionsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%lu Questions",@""), (unsigned long)[GameModel sharedInstance].numberOfQuestions];
+            
         
     }
     

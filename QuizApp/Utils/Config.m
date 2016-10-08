@@ -59,7 +59,6 @@
     self.numberOfQuestionsToAnswer = [quizSettings[@"Number Of Questions To Answer"] integerValue];
     
     self.numberOfQuestionsToPractice = [quizSettings[@"Number of Questions To Practice"] integerValue];
-    self.isTimedQuiz = [quizSettings[@"Is Timed Quiz"] boolValue];
     self.timeNeededInMinutes = [quizSettings[@"Time Needed In Minutes"] floatValue];
     self.passThreshold = [quizSettings[@"Pass Threshold"] integerValue];
     
@@ -87,7 +86,6 @@
     
     self.quizIAP.limitQuestions = [quizIAPSettings[@"Limit Number of Questions"] boolValue];
     self.quizIAP.numberofFreeQuestions = [quizIAPSettings[@"Number of Free Questions"] integerValue];
-    self.quizIAP.numberofFreeQuizzes = [quizIAPSettings[@"Number of Free Quizzes"] integerValue];
     self.quizIAP.inAppPurchaseID = quizIAPSettings[@"In-App Purchase ID"];
     self.quizIAP.messageTitle = quizIAPSettings[@"IAP Alert Title"];
     self.quizIAP.messageText = quizIAPSettings[@"IAP Alert Message"];

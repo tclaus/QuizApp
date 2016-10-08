@@ -92,19 +92,52 @@
     return correctCount;
 }
 
+/**
+ Loads the free number of questions for the given topic
+ */
++(NSArray*)loadFreeQuestionsForTopic:(Topic*)topic{
+    // For base Topic: get a list of questions
+    // For all other (future) topics - all questions
+    
+    NSMutableArray *allQuestions = [NSMutableArray array];
+    
+        for (NSDictionary* questionDic in topic.questionJSONObjects) {
+            [allQuestions addObject:questionDic];
+        }
+    
+    NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
+    NSArray* batch = [self getFirst:[Config sharedInstance].quizIAP.numberofFreeQuestions elementsFromArray:shuffledQuestions];
+    
+    return batch;
+}
+
 +(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount{
     
     NSMutableArray *allQuestions = [NSMutableArray array];
     for (Topic* topic in selectedTopics) {
         
-        for (NSDictionary* questionDic in topic.questionJSONObjects) {
-            Question* question = [[Question alloc] initWithDictionary:questionDic];
-            [allQuestions addObject:question];
+        if (!topic.inAppPurchaseIdentifier) { // Base questions, just get a subset of questions until bought
+            
+            for (NSDictionary* questionDic in [self loadFreeQuestionsForTopic:topic]) {
+                Question* question = [[Question alloc] initWithDictionary:questionDic];
+                [allQuestions addObject:question];
+            }
+        } else { // For all other topics get all other qustions
+            for (NSDictionary* questionDic in topic.questionJSONObjects) {
+                Question* question = [[Question alloc] initWithDictionary:questionDic];
+                [allQuestions addObject:question];
+            }
         }
+        
     }
     
     NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
-    NSArray* batch = [self getFirst:questionCount elementsFromArray:shuffledQuestions];
+    NSArray* batch;
+    if (questionCount > 0 ) {
+        batch = [self getFirst:questionCount elementsFromArray:shuffledQuestions];
+    } else {
+        batch = [NSArray arrayWithArray:shuffledQuestions];
+    }
     
     for (Question* question in batch) {
         NSArray* shuffledAnswers = [self shuffleArray:question.answers];

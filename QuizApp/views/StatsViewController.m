@@ -155,6 +155,7 @@
     
     [self.startButton setTitle:startGameTitle forState:UIControlStateNormal];
     self.gameModeLabel.text = gameModeHeadline;
+    self.gameModeLabel.textColor = [UIColor whiteColor];
     
     [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
@@ -327,7 +328,7 @@
 -(void)didSelectTopics:(NSArray *)topics{
     
     if(topics.count > 0){
-        NSInteger questionCount = [Config sharedInstance].numberOfQuestionsToPractice;
+        NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
 
         if ([self IAPCheck]) {
             _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
@@ -355,10 +356,16 @@
 }
 
 -(void)startQuizFromTopics:(NSArray*)topics {
-    NSInteger questionCount = [Config sharedInstance].numberOfQuestionsToAnswer;
+    
+    NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
+    
+    // For training: fixed number from all topics
+    // For Time based: unlimited Number. (countQuestions is 0) 
+    
 
+    _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
+    
     if ([self IAPCheck]) {
-        _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle
                                                                         message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText,[Config sharedInstance].quizIAP.numberofFreeQuestions]
@@ -369,7 +376,9 @@
             [self buyProduct];
         }];
         
-        UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+             [self startQuiz];
+        }];
         
         [alert addAction:buyAction];
         [alert addAction:cancelAction];
@@ -379,23 +388,23 @@
         return;
     }
     
-    self.selectedQuestions = [Utils loadQuestionsFromTopics:topics forTotalNumberOfQuestions:questionCount];
-    
-    [self performSegueWithIdentifier:@"showInfo" sender:self];
-
+    [self startQuiz];
 }
 
+-(void)startQuiz{
+    self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:[(NSNumber*)_pendingQuiz[@"numberOfQuestions"] integerValue]];
+    [self performSegueWithIdentifier:@"showInfo" sender:self];
+}
 
+/**
+ Returns YES if product is upgraded
+ */
 - (BOOL)IAPCheck {
 
-    // Check, if number of quiz is limited. (Studid, then you cant play any more)
-    if ([Config sharedInstance].quizIAP.numberofFreeQuizzes > 0) {
-        return [Config sharedInstance].quizIAP.limitQuestions
-        && ([Datasource loadAggregates].count >= [Config sharedInstance].quizIAP.numberofFreeQuizzes
-            && ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID]);
-    }
+    // the App comes with 100 free questions, User should buy for the last 900.
     
-    return YES;
+    // Check, if number of quiz is limited. (Studid, then you cant play any more)
+        return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
     
 }
 

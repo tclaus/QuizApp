@@ -136,7 +136,33 @@ static BOOL heartSoundPlaying;
     }
 }
 
+
+-(void)calculatePoints:(Question*) question{
+    // Punkte berechnen:
+    // Im Quiz - Modus punkte
+    // IM Trainingsmodus nur anzahl (%) richtige Fragen
+    
+    if (question.hasBeenAnsweredCorrectly) {
+    
+    switch ([GameModel sharedInstance].activeGameMode) {
+        case GameModeTimeBasedCompetition:
+            self.points = self.points + 1;
+            break;
+            
+        case GameModeTrainig:
+            self.points = 0;
+            break;
+            
+    }
+    }
+}
+
 -(void)questionHasBeenAnswered:(Question *)question withController:(QuestionViewController *)controller{
+    
+    NSLog(@"HasBeenAnswered Correctly: %@", question.hasBeenAnsweredCorrectly?@"YES":@"NO");
+    
+    
+    [self calculatePoints:question];
     
     [self showNextQuestion];
 }
@@ -211,7 +237,6 @@ static BOOL heartSoundPlaying;
     } else {
         self.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld", (long)minutes, (long)seconds];
     }
-    
     
     
 }

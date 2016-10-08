@@ -20,7 +20,8 @@
 
 @property (nonatomic, strong) NSString* category;
 
-@property (NS_NONATOMIC_IOSONLY, readonly) NSInteger numberOfCorrectAnswers;
+@property (nonatomic) NSInteger level;
+
 
 -(BOOL)indexIsCorrectAnswer:(NSInteger)answerIndex;
 

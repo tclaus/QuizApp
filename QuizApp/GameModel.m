@@ -7,6 +7,7 @@
 //
 
 #import "GameModel.h"
+#import "Config.h"
 
 @implementation GameModel {
     GameModes _gameMode;
@@ -24,23 +25,23 @@
     return sharedInstance;
 }
 
--(GameModes)gameModes {
+-(GameModes)activeGameMode {
     return _gameMode;
 }
 
--(void)setGameMode:(GameModes)mode {
+-(void)setActiveGameMode:(GameModes)mode {
     _gameMode = mode;
     switch (mode) {
         case GameModeTimeBasedCompetition:
-            _gameTime = 0;
-            _countQuestions = 50;
+            _gameTime = 5 * 60;
+            _numberOfQuestions = 0;
             _mixedLevels = NO;
             _publishHighScores = NO;
             break;
             
         case GameModeTrainig:
-            _gameTime = 5 * 60;
-            _countQuestions = 0;
+            _gameTime = 0;
+            _numberOfQuestions = [Config sharedInstance].numberOfQuestionsToPractice;
             _mixedLevels = YES;
             _publishHighScores = YES;
     }
