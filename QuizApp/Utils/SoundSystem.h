@@ -15,8 +15,12 @@
 -(void)playHappySound;
 -(void)playFailureSound;
 -(void)playTickSound;
--(void)playHeadBeatSound;
--(void)stopHeardBeatSound;
+-(void)playHeartBeatSound;
+-(void)stopHeartBeatSound;
+
+-(void)playThinkingMusic;
+-(void)stopThinkingMusic;
+
 -(void)playTimeOutSound;
 
 -(void)vibrate;

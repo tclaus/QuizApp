@@ -25,23 +25,26 @@
     Sound *_tickSound;
     
     /// Heardbeat - during time based play
-    Sound *_heardBeatSound;
+    Sound *_heartBeatSound;
     ///
     Sound *_timeOutSound;
-    
+ 
+    Sound *_thinkingMusic;
 }
 
 -(instancetype)init{
     self = [super init];
     if(self){
     
-        _heardBeatSound = [Sound soundNamed:@"heartbeat.mp3"];
-        _heardBeatSound.baseVolume = 0.2f;
+        _heartBeatSound = [Sound soundNamed:@"heartbeat.mp3"];
+        _heartBeatSound.baseVolume = 0.2f;
         
         _tickSound = [Sound soundNamed:@"tick.mp3"];
         _happySound = [Sound soundNamed:@"rightquestion.mp3"];
         _timeOutSound = [Sound soundNamed:@"timeout.mp3"];
         _failureSound = [Sound soundNamed:@"wrong.m4a"];
+        _thinkingMusic = [Sound soundNamed:@"thinking.mp3"];
+        
     }
     
     return self;
@@ -59,19 +62,26 @@
     [_tickSound play];
 }
 
--(void)playHeadBeatSound{
+-(void)playHeartBeatSound{
     // 30 Sec loop
-    [[SoundManager sharedManager] playSound:_heardBeatSound looping:YES];
+    [[SoundManager sharedManager] playSound:_heartBeatSound looping:YES];
 }
 
--(void)stopHeardBeatSound{
-    [[SoundManager sharedManager] stopSound:_heardBeatSound];
+-(void)stopHeartBeatSound{
+    [[SoundManager sharedManager] stopSound:_heartBeatSound];
 }
 
 -(void)playTimeOutSound{
     [_timeOutSound play];
 }
 
+-(void)playThinkingMusic{
+    [[SoundManager sharedManager] playMusic:_thinkingMusic looping:YES];
+}
+
+-(void)stopThinkingMusic {
+    [[SoundManager sharedManager] stopMusic];
+}
 
 -(void)vibrate{
     AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);

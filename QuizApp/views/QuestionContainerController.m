@@ -109,7 +109,8 @@ static BOOL heartSoundPlaying;
     [self showNextQuestion];
     
     if (!heartSoundPlaying) {
-        [self.soundSystem playHeadBeatSound];
+        [self.soundSystem playHeartBeatSound];
+        [self.soundSystem playThinkingMusic];
         heartSoundPlaying = YES;
     }
     
@@ -118,7 +119,8 @@ static BOOL heartSoundPlaying;
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     if (heartSoundPlaying) {
-        [self.soundSystem stopHeardBeatSound];
+        [self.soundSystem stopHeartBeatSound];
+        [self.soundSystem stopThinkingMusic];
         heartSoundPlaying = NO;
     }
 }
