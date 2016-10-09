@@ -79,7 +79,7 @@ NSUserDomainMask, YES) objectAtIndex:0]
     return aggregates;
 }
 
-+(void)saveAggregates:(NSString*)filename results:(NSArray*)results forDate:(NSDate*)date{
++(void)saveAggregates:(NSString*)filename results:(NSArray*)results forDate:(NSDate*)date {
     
     CGFloat correctScore = [Utils calculateCorrectScore:results];
     CGFloat correctPercent = [Utils calculateCorrectPercent:results];

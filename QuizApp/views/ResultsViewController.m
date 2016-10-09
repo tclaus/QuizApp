@@ -14,6 +14,7 @@
 #import "Config.h"
 #import "GameChallengeController.h"
 #import "DropAnimationController.h"
+#import "GameModel.h"
 
 
 @interface ResultsViewController ()
@@ -26,7 +27,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel* infoLabel;
 
-@property (nonatomic, weak) IBOutlet UILabel* passOrFailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 @property (nonatomic, strong) id<ADVAnimationController> animationController;
 
@@ -47,16 +48,22 @@
 {
     [super viewDidLoad];
     
-    CGFloat fractionCorrect = [Utils calculateCorrectScore:self.questions];
+    NSInteger gamePoints = [Utils calculateCorrectScore:self.questions];
+    CGFloat correctFraction = [Utils calculateCorrectPercent:self.questions];
     NSInteger correctCount = [Utils calculateNumberOfCorrectAnswers:self.questions];
     
-    [self reportAchievementToGameCenter:fractionCorrect*100];
+    if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+        [self reportAchievementToGameCenter:gamePoints];
+    }
     
     self.resultsChart.chartBorderWidth = 8.0f;
     self.resultsChart.chartBorderColor = [UIColor whiteColor];
     self.resultsChart.fontName = [ADVTheme mainFont];
-    self.resultsChart.progress = fractionCorrect;
+    self.resultsChart.progress = correctFraction;
     self.resultsChart.backgroundColor = [UIColor clearColor];
+    
+    self.pointsLabel.text = [NSString stringWithFormat:@"%ld Points",gamePoints];
+    
     
     self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];
     
@@ -66,21 +73,22 @@
     buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
     [self.reviewButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    self.reviewButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
+
     [self.reviewButton setTitle:NSLocalizedString(@"REVIEW TEST",@"") forState:UIControlStateNormal];
     
     if([Config sharedInstance].gameCenterEnabled){
     
         [self.challengeFriendsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-        self.challengeFriendsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:16.0f];
+
         [self.challengeFriendsButton setTitle:NSLocalizedString(@"CHALLENGE FRIENDS",@"") forState:UIControlStateNormal];
     }else{
         self.challengeFriendsButton.alpha = 0.0;
     }
     
     self.infoLabel.text = NSLocalizedString(@"Here are your results",@"");
-    self.infoLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16.0f];
+
     self.infoLabel.textColor = [ADVTheme foregroundColor];
+    self.pointsLabel.textColor = [ADVTheme foregroundColor];
     
     [ADVTheme addGradientBackground:self.view];
     
@@ -97,9 +105,18 @@
 
 -(void)reportAchievementToGameCenter:(CGFloat)percentScore{
     if([Config sharedInstance].gameCenterEnabled){
-        NSString* leaderboardID = [Config sharedInstance].gameCenterLeaderboardID;
-        [[GameKitManager sharedInstance] submitTestResult:percentScore forLeaderboard:leaderboardID];
-        [[GameKitManager sharedInstance] reportAchievementsTestResult:percentScore];
+        
+        NSString* leaderboardID;
+       
+        if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+            leaderboardID = [Config sharedInstance].gameCenterTimeBasedLeaderboardID;
+            [[GameKitManager sharedInstance] submitTestResult:percentScore forLeaderboard:leaderboardID];
+            [[GameKitManager sharedInstance] reportAchievementsTestResult:percentScore];
+        } else {
+            // TODO: Endles game leaderboard
+        }
+        
+       
     }
 }
 

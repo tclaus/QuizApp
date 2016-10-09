@@ -18,8 +18,12 @@
 
 +(NSArray*)getLast:(NSInteger)count labelsForAggregates:(NSArray*)aggregates;
 
+/**
+  Calculates the correct pecent from numberoftotal solced questions
+ @param numberOfQuestions Number ob actually proceeded questions
+ */
 +(CGFloat)calculateCorrectPercent:(NSArray*)questions;
-+(CGFloat)calculateCorrectScore:(NSArray*)questions;
++(NSInteger)calculateCorrectScore:(NSArray*)questions;
 
 +(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
 

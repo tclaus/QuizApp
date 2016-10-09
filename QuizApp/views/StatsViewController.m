@@ -519,7 +519,7 @@
 
 -(IBAction)showHighscores:(id)sender {
     GameKitManager *gkManager = [GameKitManager sharedInstance];
-    [gkManager showLeaderboard:@"TopScoresLeaderboard"];
+    [gkManager showLeaderboard:[Config sharedInstance].gameCenterTimeBasedLeaderboardID];
 }
 
 - (void)didReceiveMemoryWarning

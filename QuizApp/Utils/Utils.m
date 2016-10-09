@@ -77,9 +77,9 @@
     return fractionCorrect;
 }
 
-+(CGFloat)calculateCorrectScore:(NSArray*)questions{
++(NSInteger)calculateCorrectScore:(NSArray*)questions{
     
-    CGFloat fractionCorrect = 0.0;
+    NSInteger fractionCorrect = 0;
     
     if(questions.count  > 0){
         for (Question* question in questions) {
