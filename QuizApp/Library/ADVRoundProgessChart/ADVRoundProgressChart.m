@@ -133,6 +133,9 @@
     CGMutablePathRef path = CGPathCreateMutable();
     CGContextSetLineWidth(context, _chartBorderWidth);
     CGFloat radius = rect.size.width/2 - _chartBorderWidth;
+    
+    
+    
     CGPathAddArc(path, NULL, rect.size.width/2, rect.size.height/2, radius, 0*3.142/180, angle*3.142/180, 0);
     CGContextAddPath(context, path);
     CGContextStrokePath(context);

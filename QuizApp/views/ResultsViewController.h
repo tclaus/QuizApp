@@ -12,6 +12,5 @@
 @interface ResultsViewController : UIViewController <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) NSArray* questions;
-
 @end
 

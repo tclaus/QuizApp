@@ -174,7 +174,11 @@ static BOOL heartSoundPlaying;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"results"]){
         ResultsViewController* controller = segue.destinationViewController;
-        controller.questions = self.questions;
+        
+        NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
+        controller.questions = subQuestions;
+        
+        
     }else if([segue.identifier isEqualToString:@"info"]){
         
         ExplanationViewController* controller = segue.destinationViewController;
@@ -268,6 +272,9 @@ static BOOL heartSoundPlaying;
     
 }
 
+/**
+ Save training data or quiz data
+ */
 -(void)saveResultsAndShowThem{
 
     NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];

@@ -24,10 +24,6 @@
 		7FAA610C1930198400F55803 /* QuizIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA610B1930198400F55803 /* QuizIAPHelper.m */; };
 		EC0D1832189827A700BE6368 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D1831189827A700BE6368 /* Answer.m */; };
 		EC0D18361899354F00BE6368 /* QuestionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0D18351899354F00BE6368 /* QuestionHeaderView.xib */; };
-		EC0D183B189957CE00BE6368 /* item-selected-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0D1837189957CE00BE6368 /* item-selected-circle.png */; };
-		EC0D183C189957CE00BE6368 /* item-selected-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0D1838189957CE00BE6368 /* item-selected-empty.png */; };
-		EC0D183D189957CE00BE6368 /* item-selected-circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0D1839189957CE00BE6368 /* item-selected-circle@2x.png */; };
-		EC0D183E189957CE00BE6368 /* item-selected-empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC0D183A189957CE00BE6368 /* item-selected-empty@2x.png */; };
 		EC0D184D1899721100BE6368 /* UIImageAverageColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D184C1899721100BE6368 /* UIImageAverageColorAddition.m */; };
 		EC18EBFB18B24CCD00E7FE4F /* GameChallengeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC18EBF918B24CCD00E7FE4F /* GameChallengeController.m */; };
 		EC18EBFF18B24EAD00E7FE4F /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC18EBFE18B24EAD00E7FE4F /* FriendCell.m */; };
@@ -36,16 +32,6 @@
 		EC2141E118915F8900739070 /* PNScrollBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2141DF18915F8900739070 /* PNScrollBarChart.m */; };
 		EC2141E41891697700739070 /* QuestionContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2141E31891697700739070 /* QuestionContainerController.m */; };
 		EC2141E7189171A400739070 /* StatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2141E6189171A400739070 /* StatusView.xib */; };
-		EC2141EA189178C000739070 /* selected-question.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141E8189178C000739070 /* selected-question.png */; };
-		EC2141EB189178C000739070 /* selected-question@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141E9189178C000739070 /* selected-question@2x.png */; };
-		EC2141EE18917B5400739070 /* questions-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141EC18917B5400739070 /* questions-icon.png */; };
-		EC2141EF18917B5400739070 /* questions-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141ED18917B5400739070 /* questions-icon@2x.png */; };
-		EC2141F2189187CF00739070 /* list-bottom-border.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141F0189187CF00739070 /* list-bottom-border.png */; };
-		EC2141F3189187CF00739070 /* list-bottom-border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141F1189187CF00739070 /* list-bottom-border@2x.png */; };
-		EC2141F61891940B00739070 /* check-tick.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141F41891940B00739070 /* check-tick.png */; };
-		EC2141F71891940B00739070 /* check-tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141F51891940B00739070 /* check-tick@2x.png */; };
-		EC2141FA1891958E00739070 /* selected-question-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141F81891958E00739070 /* selected-question-empty.png */; };
-		EC2141FB1891958E00739070 /* selected-question-empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2141F91891958E00739070 /* selected-question-empty@2x.png */; };
 		EC344A8918A296D1008BB993 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EC344A8818A296D1008BB993 /* UIImage+ImageEffects.m */; };
 		EC53D9F218A01B0100AA9D93 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = EC53D9F118A01B0100AA9D93 /* Config.m */; };
 		EC5997BC18D1D9F20030C0CD /* TopicTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5997BB18D1D9F20030C0CD /* TopicTableCell.m */; };
@@ -65,10 +51,6 @@
 		ECB25E0E18C0CFE9008C965C /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECB25E0D18C0CFE9008C965C /* tick.mp3 */; };
 		ECBD0C5D18733B1A002DC98B /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0C5C18733B1A002DC98B /* ReviewViewController.m */; };
 		ECBD0C6018733BCE002DC98B /* ReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0C5F18733BCE002DC98B /* ReviewCell.m */; };
-		ECBD0C65187345B2002DC98B /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBD0C61187345B2002DC98B /* tick.png */; };
-		ECBD0C66187345B2002DC98B /* tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBD0C62187345B2002DC98B /* tick@2x.png */; };
-		ECBD0C67187345B2002DC98B /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBD0C63187345B2002DC98B /* cross.png */; };
-		ECBD0C68187345B2002DC98B /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBD0C64187345B2002DC98B /* cross@2x.png */; };
 		ECBD0C6E18734C02002DC98B /* AnswerReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0C6D18734C02002DC98B /* AnswerReviewCell.m */; };
 		ECBD0C711874580D002DC98B /* QuestionDisplayEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0C701874580D002DC98B /* QuestionDisplayEngine.m */; };
 		ECBD0C771876FB4E002DC98B /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0C761876FB4E002DC98B /* StatsViewController.m */; };
@@ -132,12 +114,9 @@
 		ECE03F31186341180042490A /* sunrise@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F15186341180042490A /* sunrise@2x~ipad.png */; };
 		ECE03F32186341180042490A /* sunrise~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F16186341180042490A /* sunrise~ipad.png */; };
 		ECE03F36186341820042490A /* ADVTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03F35186341820042490A /* ADVTheme.m */; };
-		ECE03F3D1863487A0042490A /* button-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F3B1863487A0042490A /* button-disabled@2x.png */; };
-		ECE03F3E1863487A0042490A /* button-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F3C1863487A0042490A /* button-disabled.png */; };
 		ECE03F4B18647B700042490A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03F4A18647B700042490A /* ResultsViewController.m */; };
 		ECE03F5218648B7C0042490A /* ADVRoundProgressChart.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03F5118648B7C0042490A /* ADVRoundProgressChart.m */; };
 		ECE3B7BF18C9F22600F53483 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE3B7BD18C9F22600F53483 /* Main_iPad.storyboard */; };
-		ECE3B7C218C9F62000F53483 /* ResultsViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE3B7C118C9F62000F53483 /* ResultsViewControlleriPad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,10 +156,6 @@
 		EC0D1830189827A700BE6368 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = Model/Answer.h; sourceTree = "<group>"; };
 		EC0D1831189827A700BE6368 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = Model/Answer.m; sourceTree = "<group>"; };
 		EC0D18351899354F00BE6368 /* QuestionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionHeaderView.xib; sourceTree = "<group>"; };
-		EC0D1837189957CE00BE6368 /* item-selected-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-selected-circle.png"; sourceTree = "<group>"; };
-		EC0D1838189957CE00BE6368 /* item-selected-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-selected-empty.png"; sourceTree = "<group>"; };
-		EC0D1839189957CE00BE6368 /* item-selected-circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-selected-circle@2x.png"; sourceTree = "<group>"; };
-		EC0D183A189957CE00BE6368 /* item-selected-empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-selected-empty@2x.png"; sourceTree = "<group>"; };
 		EC0D184B1899721100BE6368 /* UIImageAverageColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAverageColorAddition.h; sourceTree = "<group>"; };
 		EC0D184C1899721100BE6368 /* UIImageAverageColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAverageColorAddition.m; sourceTree = "<group>"; };
 		EC18EBF818B24CCC00E7FE4F /* GameChallengeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameChallengeController.h; sourceTree = "<group>"; };
@@ -196,16 +171,6 @@
 		EC2141E21891697700739070 /* QuestionContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionContainerController.h; path = views/QuestionContainerController.h; sourceTree = "<group>"; };
 		EC2141E31891697700739070 /* QuestionContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionContainerController.m; path = views/QuestionContainerController.m; sourceTree = "<group>"; };
 		EC2141E6189171A400739070 /* StatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusView.xib; sourceTree = "<group>"; };
-		EC2141E8189178C000739070 /* selected-question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected-question.png"; sourceTree = "<group>"; };
-		EC2141E9189178C000739070 /* selected-question@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected-question@2x.png"; sourceTree = "<group>"; };
-		EC2141EC18917B5400739070 /* questions-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "questions-icon.png"; sourceTree = "<group>"; };
-		EC2141ED18917B5400739070 /* questions-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "questions-icon@2x.png"; sourceTree = "<group>"; };
-		EC2141F0189187CF00739070 /* list-bottom-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-bottom-border.png"; sourceTree = "<group>"; };
-		EC2141F1189187CF00739070 /* list-bottom-border@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-bottom-border@2x.png"; sourceTree = "<group>"; };
-		EC2141F41891940B00739070 /* check-tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-tick.png"; sourceTree = "<group>"; };
-		EC2141F51891940B00739070 /* check-tick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-tick@2x.png"; sourceTree = "<group>"; };
-		EC2141F81891958E00739070 /* selected-question-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected-question-empty.png"; sourceTree = "<group>"; };
-		EC2141F91891958E00739070 /* selected-question-empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected-question-empty@2x.png"; sourceTree = "<group>"; };
 		EC344A8718A296D1008BB993 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		EC344A8818A296D1008BB993 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		EC53D9F018A01B0100AA9D93 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = Utils/Config.h; sourceTree = "<group>"; };
@@ -238,10 +203,6 @@
 		ECBD0C5C18733B1A002DC98B /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewViewController.m; path = views/ReviewViewController.m; sourceTree = "<group>"; };
 		ECBD0C5E18733BCE002DC98B /* ReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewCell.h; path = Cells/ReviewCell.h; sourceTree = "<group>"; };
 		ECBD0C5F18733BCE002DC98B /* ReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewCell.m; path = Cells/ReviewCell.m; sourceTree = "<group>"; };
-		ECBD0C61187345B2002DC98B /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
-		ECBD0C62187345B2002DC98B /* tick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick@2x.png"; sourceTree = "<group>"; };
-		ECBD0C63187345B2002DC98B /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
-		ECBD0C64187345B2002DC98B /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		ECBD0C6C18734C02002DC98B /* AnswerReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnswerReviewCell.h; path = Cells/AnswerReviewCell.h; sourceTree = "<group>"; };
 		ECBD0C6D18734C02002DC98B /* AnswerReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnswerReviewCell.m; path = Cells/AnswerReviewCell.m; sourceTree = "<group>"; };
 		ECBD0C6F1874580D002DC98B /* QuestionDisplayEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDisplayEngine.h; sourceTree = "<group>"; };
@@ -332,14 +293,10 @@
 		ECE03F16186341180042490A /* sunrise~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunrise~ipad.png"; sourceTree = "<group>"; };
 		ECE03F34186341820042490A /* ADVTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVTheme.h; sourceTree = "<group>"; };
 		ECE03F35186341820042490A /* ADVTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVTheme.m; sourceTree = "<group>"; };
-		ECE03F3B1863487A0042490A /* button-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-disabled@2x.png"; sourceTree = "<group>"; };
-		ECE03F3C1863487A0042490A /* button-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-disabled.png"; sourceTree = "<group>"; };
 		ECE03F4918647B700042490A /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = views/ResultsViewController.h; sourceTree = "<group>"; };
 		ECE03F4A18647B700042490A /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = views/ResultsViewController.m; sourceTree = "<group>"; };
 		ECE03F5018648B7C0042490A /* ADVRoundProgressChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADVRoundProgressChart.h; path = ADVRoundProgessChart/ADVRoundProgressChart.h; sourceTree = "<group>"; };
 		ECE03F5118648B7C0042490A /* ADVRoundProgressChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADVRoundProgressChart.m; path = ADVRoundProgessChart/ADVRoundProgressChart.m; sourceTree = "<group>"; };
-		ECE3B7C018C9F62000F53483 /* ResultsViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewControlleriPad.h; path = views/ResultsViewControlleriPad.h; sourceTree = "<group>"; };
-		ECE3B7C118C9F62000F53483 /* ResultsViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewControlleriPad.m; path = views/ResultsViewControlleriPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,8 +569,6 @@
 				EC2141E31891697700739070 /* QuestionContainerController.m */,
 				ECE03EE618625D440042490A /* QuestionViewController.h */,
 				ECE03EE718625D440042490A /* QuestionViewController.m */,
-				ECE3B7C018C9F62000F53483 /* ResultsViewControlleriPad.h */,
-				ECE3B7C118C9F62000F53483 /* ResultsViewControlleriPad.m */,
 				ECE03F4918647B700042490A /* ResultsViewController.h */,
 				ECE03F4A18647B700042490A /* ResultsViewController.m */,
 				ECBD0C5B18733B1A002DC98B /* ReviewViewController.h */,
@@ -693,28 +648,8 @@
 			children = (
 				ECB25E0C18C0CFE9008C965C /* sounds */,
 				ECE03EFA186341180042490A /* backgrounds */,
-				EC0D1837189957CE00BE6368 /* item-selected-circle.png */,
-				EC0D1838189957CE00BE6368 /* item-selected-empty.png */,
-				EC0D1839189957CE00BE6368 /* item-selected-circle@2x.png */,
-				EC0D183A189957CE00BE6368 /* item-selected-empty@2x.png */,
-				EC2141F81891958E00739070 /* selected-question-empty.png */,
-				EC2141F91891958E00739070 /* selected-question-empty@2x.png */,
-				EC2141F41891940B00739070 /* check-tick.png */,
-				EC2141F51891940B00739070 /* check-tick@2x.png */,
-				EC2141F0189187CF00739070 /* list-bottom-border.png */,
-				EC2141F1189187CF00739070 /* list-bottom-border@2x.png */,
-				EC2141EC18917B5400739070 /* questions-icon.png */,
-				EC2141ED18917B5400739070 /* questions-icon@2x.png */,
-				EC2141E8189178C000739070 /* selected-question.png */,
-				EC2141E9189178C000739070 /* selected-question@2x.png */,
 				ECAE920D18C77F9400D5EBAB /* mainImage.png */,
 				ECAE920E18C77F9400D5EBAB /* mainImage@2x.png */,
-				ECBD0C61187345B2002DC98B /* tick.png */,
-				ECBD0C62187345B2002DC98B /* tick@2x.png */,
-				ECBD0C63187345B2002DC98B /* cross.png */,
-				ECBD0C64187345B2002DC98B /* cross@2x.png */,
-				ECE03F3B1863487A0042490A /* button-disabled@2x.png */,
-				ECE03F3C1863487A0042490A /* button-disabled.png */,
 				65C37F821DAA783900F793AC /* images.xcassets */,
 			);
 			path = Resources;
@@ -877,26 +812,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE3B7BF18C9F22600F53483 /* Main_iPad.storyboard in Resources */,
-				ECBD0C65187345B2002DC98B /* tick.png in Resources */,
-				ECBD0C68187345B2002DC98B /* cross@2x.png in Resources */,
 				65F8692A1DA6486900402768 /* rightquestion.mp3 in Resources */,
 				ECE03F29186341180042490A /* niagara@2x~ipad.png in Resources */,
 				65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */,
 				65B19E551DA4F4A60082380D /* Localizable.strings in Resources */,
 				ECAE920F18C77F9400D5EBAB /* mainImage.png in Resources */,
-				EC0D183D189957CE00BE6368 /* item-selected-circle@2x.png in Resources */,
 				ECE03F18186341180042490A /* amazonas@2x.png in Resources */,
-				EC2141EA189178C000739070 /* selected-question.png in Resources */,
-				EC2141FB1891958E00739070 /* selected-question-empty@2x.png in Resources */,
 				6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */,
-				EC2141F61891940B00739070 /* check-tick.png in Resources */,
 				65F869291DA6486900402768 /* wrong.m4a in Resources */,
 				ECE03F17186341180042490A /* amazonas.png in Resources */,
 				ECE03F24186341180042490A /* canyon@2x.png in Resources */,
 				ECE03F2D186341180042490A /* sky@2x~ipad.png in Resources */,
-				ECBD0C67187345B2002DC98B /* cross.png in Resources */,
 				ECE03F23186341180042490A /* canyon.png in Resources */,
-				ECE03F3D1863487A0042490A /* button-disabled@2x.png in Resources */,
 				ECE03F31186341180042490A /* sunrise@2x~ipad.png in Resources */,
 				ECE03F32186341180042490A /* sunrise~ipad.png in Resources */,
 				ECE03F2E186341180042490A /* sky~ipad.png in Resources */,
@@ -905,41 +832,29 @@
 				EC8D200D1AACC4F0003735D3 /* Launch.storyboard in Resources */,
 				ECE03F20186341180042490A /* candela@2x.png in Resources */,
 				ECE03F1B186341180042490A /* billow.png in Resources */,
-				EC2141EF18917B5400739070 /* questions-icon@2x.png in Resources */,
 				ECE03F22186341180042490A /* candela~ipad.png in Resources */,
 				657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */,
 				ECE03F26186341180042490A /* canyon~ipad.png in Resources */,
 				ECE03F27186341180042490A /* niagara.png in Resources */,
 				ECE03F1E186341180042490A /* billow~ipad.png in Resources */,
 				65C37F831DAA783900F793AC /* images.xcassets in Resources */,
-				EC0D183C189957CE00BE6368 /* item-selected-empty.png in Resources */,
 				EC99213F18B4FDEF000FCA6F /* sexandthecity.json in Resources */,
 				ECE03F2B186341180042490A /* sky.png in Resources */,
 				ECE03F19186341180042490A /* amazonas@2x~ipad.png in Resources */,
 				EC2141E7189171A400739070 /* StatusView.xib in Resources */,
-				EC2141F3189187CF00739070 /* list-bottom-border@2x.png in Resources */,
-				EC2141EE18917B5400739070 /* questions-icon.png in Resources */,
-				EC2141F71891940B00739070 /* check-tick@2x.png in Resources */,
 				ECE03F30186341180042490A /* sunrise@2x.png in Resources */,
 				ECE03F1D186341180042490A /* billow@2x~ipad.png in Resources */,
-				EC2141F2189187CF00739070 /* list-bottom-border.png in Resources */,
 				ECE03F1A186341180042490A /* amazonas~ipad.png in Resources */,
 				ECAE921018C77F9400D5EBAB /* mainImage@2x.png in Resources */,
 				ECE03F25186341180042490A /* canyon@2x~ipad.png in Resources */,
 				ECE03F28186341180042490A /* niagara@2x.png in Resources */,
 				ECE03F2A186341180042490A /* niagara~ipad.png in Resources */,
 				EC0D18361899354F00BE6368 /* QuestionHeaderView.xib in Resources */,
-				EC2141EB189178C000739070 /* selected-question@2x.png in Resources */,
 				ECE03EA7186213E00042490A /* Images.xcassets in Resources */,
 				ECE03F21186341180042490A /* candela@2x~ipad.png in Resources */,
 				ECE03E96186213E00042490A /* InfoPlist.strings in Resources */,
-				EC0D183E189957CE00BE6368 /* item-selected-empty@2x.png in Resources */,
-				ECBD0C66187345B2002DC98B /* tick@2x.png in Resources */,
 				654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */,
 				65F8692B1DA6486900402768 /* timeout.mp3 in Resources */,
-				EC0D183B189957CE00BE6368 /* item-selected-circle.png in Resources */,
-				EC2141FA1891958E00739070 /* selected-question-empty.png in Resources */,
-				ECE03F3E1863487A0042490A /* button-disabled.png in Resources */,
 				ECB25E0E18C0CFE9008C965C /* tick.mp3 in Resources */,
 				ECE03F1F186341180042490A /* candela.png in Resources */,
 				65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */,
@@ -980,7 +895,6 @@
 				EC99213018B28C0F000FCA6F /* AvailableChallengesController.m in Sources */,
 				ECE03EF5186330410042490A /* DropAnimationController.m in Sources */,
 				ECBD0C8F1876FBF5002DC98B /* PNCircleChart.m in Sources */,
-				ECE3B7C218C9F62000F53483 /* ResultsViewControlleriPad.m in Sources */,
 				ECE03EE818625D440042490A /* QuestionViewController.m in Sources */,
 				EC2141DE189116EF00739070 /* Utils.m in Sources */,
 				EC2141E118915F8900739070 /* PNScrollBarChart.m in Sources */,

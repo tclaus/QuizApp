@@ -66,7 +66,7 @@
     self.gameCenterEnabled = [gameCenterSettings[@"Game Center Enabled"] boolValue];
 
     self.gameCenterLeaderboardID = gameCenterSettings[@"Leaderboard ID"];
-    self.gameCenterLeaderboardID = gameCenterSettings[@"Leaderboard ID Time Based"];
+    self.gameCenterTimeBasedLeaderboardID = gameCenterSettings[@"Leaderboard ID Time Based"];
     self.gameCenterAchievements = gameCenterSettings[@"Achievements"];
     
     NSDictionary* interfaceSettings = self.configInfo[@"Interface Settings"];
