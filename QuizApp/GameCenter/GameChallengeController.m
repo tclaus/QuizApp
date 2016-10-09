@@ -188,7 +188,8 @@
         if (!error) {
             cell.avatarImageView.image = photo;
         } else {
-            NSLog(@"Error loading image");
+            NSLog(@"Error loading image: %@",error.localizedDescription);
+            cell.avatarImageView.image = [UIImage imageNamed:@"User"];
         }
     }];
     

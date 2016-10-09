@@ -14,6 +14,7 @@
 #import "Config.h"
 #import "GameChallengeController.h"
 #import "DropAnimationController.h"
+#import "GameModel.h"
 
 
 @interface ResultsViewController ()
@@ -47,15 +48,17 @@
 {
     [super viewDidLoad];
     
-    CGFloat fractionCorrect = [Utils calculateCorrectScore:self.questions];
+    CGFloat gamePoints = [Utils calculateCorrectScore:self.questions];
     NSInteger correctCount = [Utils calculateNumberOfCorrectAnswers:self.questions];
     
-    [self reportAchievementToGameCenter:fractionCorrect*100];
+    if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+        [self reportAchievementToGameCenter:gamePoints];
+    }
     
     self.resultsChart.chartBorderWidth = 8.0f;
     self.resultsChart.chartBorderColor = [UIColor whiteColor];
     self.resultsChart.fontName = [ADVTheme mainFont];
-    self.resultsChart.progress = fractionCorrect;
+    self.resultsChart.progress = [Utils calculateCorrectPercent:self.questions];
     self.resultsChart.backgroundColor = [UIColor clearColor];
     
     self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];
@@ -97,7 +100,15 @@
 
 -(void)reportAchievementToGameCenter:(CGFloat)percentScore{
     if([Config sharedInstance].gameCenterEnabled){
-        NSString* leaderboardID = [Config sharedInstance].gameCenterLeaderboardID;
+        
+        NSString* leaderboardID;
+       
+        if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+            leaderboardID = [Config sharedInstance].gameCenterTimeBasedLeaderboardID;
+        } else {
+            // TODO: Endles game leaderboard
+        }
+        
         [[GameKitManager sharedInstance] submitTestResult:percentScore forLeaderboard:leaderboardID];
         [[GameKitManager sharedInstance] reportAchievementsTestResult:percentScore];
     }

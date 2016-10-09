@@ -67,18 +67,18 @@
 {
     [super viewDidLoad];
     
-	CGFloat fractionCorrect = [Utils calculateCorrectPercent:self.questions];
+	CGFloat gamePoints = [Utils calculateCorrectScore:self.questions];
     NSInteger correctCount = [Utils calculateNumberOfCorrectAnswers:self.questions];
     
     // Only report in quizMode
     if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
-        [self reportAchievementToGameCenter:fractionCorrect*100];
+        [self reportAchievementToGameCenter:gamePoints];
     }
     
     self.resultsChart.chartBorderWidth = 8.0f;
     self.resultsChart.chartBorderColor = [UIColor whiteColor];
     self.resultsChart.fontName = [ADVTheme mainFont];
-    self.resultsChart.progress = fractionCorrect;
+    self.resultsChart.progress = [Utils calculateCorrectPercent:self.questions];
     self.resultsChart.backgroundColor = [UIColor clearColor];
     
     self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];

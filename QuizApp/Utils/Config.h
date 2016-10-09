@@ -32,6 +32,7 @@
 
 @property (nonatomic, strong) NSArray * gameCenterAchievements;
 @property (nonatomic, strong) NSString* gameCenterLeaderboardID;
+@property (nonatomic, strong) NSString* gameCenterTimeBasedLeaderboardID;
 @property (nonatomic, strong) NSString* startPageTitle;
 @property (nonatomic, strong) NSString* startPageDescription;
 @property (nonatomic, strong) NSString* startPageSubDescription;

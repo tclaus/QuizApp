@@ -49,6 +49,8 @@
 		<true/>
 		<key>Leaderboard ID</key>
 		<string>TopScoresLeaderboard</string>
+		<key>Leaderboard ID Time Based</key>
+		<string>TimeBasedGame</string>
 		<key>Achievements</key>
 		<array>
 			<dict>

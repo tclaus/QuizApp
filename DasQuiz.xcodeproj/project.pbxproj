@@ -12,6 +12,7 @@
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
 		65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E4D1DA4F05A0082380D /* Configuration.plist */; };
 		65B19E551DA4F4A60082380D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E571DA4F4A60082380D /* Localizable.strings */; };
+		65C37F831DAA783900F793AC /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C37F821DAA783900F793AC /* images.xcassets */; };
 		65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B4781DA5A44B00F057EB /* SoundManager.m */; };
 		65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */; };
 		65F869291DA6486900402768 /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65F869261DA6486900402768 /* wrong.m4a */; };
@@ -131,8 +132,6 @@
 		ECE03F31186341180042490A /* sunrise@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F15186341180042490A /* sunrise@2x~ipad.png */; };
 		ECE03F32186341180042490A /* sunrise~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F16186341180042490A /* sunrise~ipad.png */; };
 		ECE03F36186341820042490A /* ADVTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03F35186341820042490A /* ADVTheme.m */; };
-		ECE03F391863465A0042490A /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F371863465A0042490A /* button.png */; };
-		ECE03F3A1863465A0042490A /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F381863465A0042490A /* button@2x.png */; };
 		ECE03F3D1863487A0042490A /* button-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F3B1863487A0042490A /* button-disabled@2x.png */; };
 		ECE03F3E1863487A0042490A /* button-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE03F3C1863487A0042490A /* button-disabled.png */; };
 		ECE03F4B18647B700042490A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03F4A18647B700042490A /* ResultsViewController.m */; };
@@ -159,6 +158,7 @@
 		65B19E511DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65B19E521DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65B19E581DA4F4A80082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65C37F821DAA783900F793AC /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		65D1B4751DA5195F00F057EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		65D1B4771DA55C0800F057EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		65D1B4781DA5A44B00F057EB /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Utils/SoundManager.m; sourceTree = "<group>"; };
@@ -332,8 +332,6 @@
 		ECE03F16186341180042490A /* sunrise~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunrise~ipad.png"; sourceTree = "<group>"; };
 		ECE03F34186341820042490A /* ADVTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADVTheme.h; sourceTree = "<group>"; };
 		ECE03F35186341820042490A /* ADVTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVTheme.m; sourceTree = "<group>"; };
-		ECE03F371863465A0042490A /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
-		ECE03F381863465A0042490A /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
 		ECE03F3B1863487A0042490A /* button-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-disabled@2x.png"; sourceTree = "<group>"; };
 		ECE03F3C1863487A0042490A /* button-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-disabled.png"; sourceTree = "<group>"; };
 		ECE03F4918647B700042490A /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = views/ResultsViewController.h; sourceTree = "<group>"; };
@@ -717,8 +715,7 @@
 				ECBD0C64187345B2002DC98B /* cross@2x.png */,
 				ECE03F3B1863487A0042490A /* button-disabled@2x.png */,
 				ECE03F3C1863487A0042490A /* button-disabled.png */,
-				ECE03F371863465A0042490A /* button.png */,
-				ECE03F381863465A0042490A /* button@2x.png */,
+				65C37F821DAA783900F793AC /* images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -880,7 +877,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE3B7BF18C9F22600F53483 /* Main_iPad.storyboard in Resources */,
-				ECE03F391863465A0042490A /* button.png in Resources */,
 				ECBD0C65187345B2002DC98B /* tick.png in Resources */,
 				ECBD0C68187345B2002DC98B /* cross@2x.png in Resources */,
 				65F8692A1DA6486900402768 /* rightquestion.mp3 in Resources */,
@@ -915,11 +911,11 @@
 				ECE03F26186341180042490A /* canyon~ipad.png in Resources */,
 				ECE03F27186341180042490A /* niagara.png in Resources */,
 				ECE03F1E186341180042490A /* billow~ipad.png in Resources */,
+				65C37F831DAA783900F793AC /* images.xcassets in Resources */,
 				EC0D183C189957CE00BE6368 /* item-selected-empty.png in Resources */,
 				EC99213F18B4FDEF000FCA6F /* sexandthecity.json in Resources */,
 				ECE03F2B186341180042490A /* sky.png in Resources */,
 				ECE03F19186341180042490A /* amazonas@2x~ipad.png in Resources */,
-				ECE03F3A1863465A0042490A /* button@2x.png in Resources */,
 				EC2141E7189171A400739070 /* StatusView.xib in Resources */,
 				EC2141F3189187CF00739070 /* list-bottom-border@2x.png in Resources */,
 				EC2141EE18917B5400739070 /* questions-icon.png in Resources */,
