@@ -12,6 +12,14 @@
 
 @property (nonatomic, strong) NSDate* date;
 
+/**
+ In training mode (fixed number of Questions -) percent
+ */
 @property (nonatomic, assign) CGFloat percent;
+
+/**
+ In quiz mode (fixed time) - the total points
+ */
+@property (nonatomic, assign) CGFloat points;
 
 @end

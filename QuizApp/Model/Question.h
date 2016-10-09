@@ -22,6 +22,10 @@
 
 @property (nonatomic) NSInteger level;
 
+/**
+ Number of points for a correct question
+ */
+-(CGFloat) points;
 
 -(BOOL)indexIsCorrectAnswer:(NSInteger)answerIndex;
 

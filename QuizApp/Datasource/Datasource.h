@@ -14,9 +14,11 @@
 /**
  Loads the list of questions ever made as ResultAggregates
  */
-+(NSArray*) loadAggregates;
++(NSArray*)loadTimeBasedAggregates;
++(NSArray*)loadTrainingAggregates;
 
-+(void)saveAggregates:(NSArray*)results forDate:(NSDate*)date;
++(void)saveTimeBasedAggregates:(NSArray*)results forDate:(NSDate*)date;
++(void)saveTrainingAggregates:(NSArray*)results forDate:(NSDate*)date;
 
 +(NSArray*)questionsFromFile:(NSString*)file;
 

@@ -136,7 +136,9 @@ static BOOL heartSoundPlaying;
     }
 }
 
-
+/**
+ Add points to total point label
+ */
 -(void)calculatePoints:(Question*) question{
     // Punkte berechnen:
     // Im Quiz - Modus punkte
@@ -146,7 +148,7 @@ static BOOL heartSoundPlaying;
     
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
-            self.points = self.points + 1;
+            self.points = self.points + question.points;
             break;
             
         case GameModeTrainig:
@@ -195,7 +197,7 @@ static BOOL heartSoundPlaying;
             
             // In Quizmode: Punkte vergeben?
             self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Points: %ld",@"Headline in questionlist for quizmode"), self.points];
-            [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
+            [self.statusProgress setProgress:self.currentTimeInterval/(CGFloat)self.totalTimeInterval animated:YES];
             break;
             
         case GameModeTrainig:
@@ -238,7 +240,11 @@ static BOOL heartSoundPlaying;
         self.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld", (long)minutes, (long)seconds];
     }
     
-    
+    // In quizmode update status bar by time
+    if  ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+            [self.statusProgress setProgress:self.currentTimeInterval/(CGFloat)self.totalTimeInterval animated:YES];
+    }
+
 }
 
 -(void)timeUp{
@@ -262,7 +268,18 @@ static BOOL heartSoundPlaying;
 
 -(void)saveResultsAndShowThem{
 
-    [Datasource saveAggregates:self.questions forDate:[NSDate date]];
+    NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
+    
+    switch ([GameModel sharedInstance].activeGameMode) {
+        case GameModeTimeBasedCompetition:
+            [Datasource saveTimeBasedAggregates:subQuestions forDate:[NSDate date]];
+            break;
+        case GameModeTrainig:
+            [Datasource saveTrainingAggregates:subQuestions forDate:[NSDate date]];
+            break;
+    }
+    
+    
     [self performSegueWithIdentifier:@"results" sender:self];
 }
 

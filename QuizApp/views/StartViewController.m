@@ -80,7 +80,8 @@
     
     //self.startButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     
-    NSString *mode1Text = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBased",@""),5];
+    
+    NSString *mode1Text = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBased",@""), (CGFloat)[Config sharedInstance].timeNeededInMinutes];
     
     [self.gameModeButton1 setTitle:mode1Text forState:UIControlStateNormal];
     [self.gameModeButton2 setTitle:NSLocalizedString(@"GameModeTrainingBased",@"") forState:UIControlStateNormal];

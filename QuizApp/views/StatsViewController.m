@@ -144,7 +144,7 @@
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
             startGameTitle = NSLocalizedString(@"Start Quiz", @"Button Title: Game Mode Competition");
-            gameModeHeadline = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBased",@""),5];
+            gameModeHeadline = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBased",@""),(CGFloat)[GameModel sharedInstance].gameTime / 60];
             break;
             
         case GameModeTrainig:
@@ -205,7 +205,20 @@
 
 
 -(void)displayCharts{
-    NSArray* aggregates = [Datasource loadAggregates];
+    NSArray* aggregates;
+    
+    switch ([GameModel sharedInstance].activeGameMode) {
+        case GameModeTimeBasedCompetition:
+            aggregates= [Datasource loadTimeBasedAggregates];
+            break;
+            
+        case GameModeTrainig:
+            aggregates= [Datasource loadTrainingAggregates];
+            break;
+    }
+    
+    
+    
     CGFloat lastScore = [Utils getLastTestScore:aggregates];
     
     self.scoresProgress.progress = lastScore/100.0;

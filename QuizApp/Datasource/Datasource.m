@@ -19,6 +19,9 @@ NSUserDomainMask, YES) objectAtIndex:0]
 
 @implementation Datasource
 
+/**
+ Loads the questions
+ */
 +(NSArray*)questionsFromFile:(NSString*)file{
     
     NSString* name = file.stringByDeletingPathExtension;
@@ -41,7 +44,30 @@ NSUserDomainMask, YES) objectAtIndex:0]
     return questionDictionaries;
 }
 
-+(NSArray*)loadAggregates{
++(NSArray*)loadTimeBasedAggregates{
+    
+    return [self loadAggregates:@"timebasedResultsAggregate.plist"];
+}
+
++(void)saveTimeBasedAggregates:(NSArray*)results forDate:(NSDate*)date{
+    
+    [self saveAggregates:@"timebasedResultsAggregate.plist" results:results forDate:date];
+    
+}
+
+
++(NSArray*)loadTrainingAggregates{
+    
+    return [self loadAggregates:@"trainingResultsAggregate.plist"];
+}
+
++(void)saveTrainingAggregates:(NSArray*)results forDate:(NSDate*)date{
+    
+    [self saveAggregates:@"trainingResultsAggregate.plist" results:results forDate:date];
+
+}
+
++(NSArray*)loadAggregates:(NSString*)filename{
     
     NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"resultsAggregate.plist"];
     
@@ -49,17 +75,19 @@ NSUserDomainMask, YES) objectAtIndex:0]
     if(!aggregates){
         aggregates = [NSMutableArray array];
     }
-
+    
     return aggregates;
 }
 
-+(void)saveAggregates:(NSArray*)results forDate:(NSDate*)date{
-
++(void)saveAggregates:(NSString*)filename results:(NSArray*)results forDate:(NSDate*)date{
+    
     CGFloat correctScore = [Utils calculateCorrectScore:results];
+    CGFloat correctPercent = [Utils calculateCorrectPercent:results];
     
     ResultAggregate* result = [[ResultAggregate alloc] init];
     result.date = date;
-    result.percent = correctScore * 100;
+    result.percent = correctPercent * 100;
+    result.points = correctScore;
     
     NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"resultsAggregate.plist"];
     

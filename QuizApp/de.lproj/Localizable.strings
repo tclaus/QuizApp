@@ -84,7 +84,7 @@
 "SEND CHALLENGE" = "Fordere einen Freund heraus.";
 
 /* Game Mode time Based */
-"GameModeTimeBased" = "%ld Minuten Quiz";
+"GameModeTimeBased" = "%g Minuten Quiz";
 
 /* Training Mode */
 "GameModeTrainingBased"  = "Training";

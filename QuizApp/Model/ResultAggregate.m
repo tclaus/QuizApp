@@ -19,6 +19,7 @@
     
     self.date = [aDecoder decodeObjectForKey:@"date"];
     self.percent = [aDecoder decodeFloatForKey:@"percent"];
+    self.percent = [aDecoder decodeFloatForKey:@"points"];
     
     return self;
 }
@@ -26,6 +27,7 @@
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:self.date forKey:@"date"];
     [encoder encodeFloat:self.percent forKey:@"percent"];
+    [encoder encodeFloat:self.percent forKey:@"points"];
 }
 
 @end

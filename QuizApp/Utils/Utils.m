@@ -63,7 +63,7 @@
     return [self getLast:count elementsFromArray:labels];
 }
 
-+(CGFloat)calculateCorrectScore:(NSArray*)questions{
++(CGFloat)calculateCorrectPercent:(NSArray*)questions{
     
     CGFloat fractionCorrect = 0.0;
     
@@ -71,6 +71,22 @@
         
         NSInteger correctCount = [self calculateNumberOfCorrectAnswers:questions];
         fractionCorrect = correctCount/(CGFloat)questions.count;
+    }
+    
+    
+    return fractionCorrect;
+}
+
++(CGFloat)calculateCorrectScore:(NSArray*)questions{
+    
+    CGFloat fractionCorrect = 0.0;
+    
+    if(questions.count  > 0){
+        for (Question* question in questions) {
+            if(question.hasBeenAnsweredCorrectly){
+                fractionCorrect = fractionCorrect + question.points ;
+            }
+        }
     }
     
     

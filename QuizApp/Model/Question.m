@@ -67,4 +67,9 @@
     return NO;
 }
 
+-(CGFloat)points {
+    return self.level * 2;
+}
+
+
 @end

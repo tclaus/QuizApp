@@ -33,7 +33,7 @@
     _gameMode = mode;
     switch (mode) {
         case GameModeTimeBasedCompetition:
-            _gameTime = 5 * 60;
+            _gameTime = [Config sharedInstance].timeNeededInMinutes * 60;
             _numberOfQuestions = 0;
             _mixedLevels = NO;
             _publishHighScores = NO;

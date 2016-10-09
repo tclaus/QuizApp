@@ -18,6 +18,7 @@
 
 +(NSArray*)getLast:(NSInteger)count labelsForAggregates:(NSArray*)aggregates;
 
++(CGFloat)calculateCorrectPercent:(NSArray*)questions;
 +(CGFloat)calculateCorrectScore:(NSArray*)questions;
 
 +(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
