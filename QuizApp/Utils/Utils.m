@@ -127,6 +127,35 @@
     return batch;
 }
 
++(NSArray*)loadQuestionsWithIncreasingLevelFromTopics:(NSArray *)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount {
+    NSArray *questions = [self loadQuestionsFromTopics:selectedTopics forTotalNumberOfQuestions:questionCount];
+    
+   questions = [questions sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+       Question *q1 = obj1;
+       Question *q2 = obj2;
+       
+       if (q1.level == q2.level) {
+           return NSOrderedSame;
+       }
+       
+       if (q1.level > q2.level) {
+           return NSOrderedDescending;
+       }
+       
+       if (q1.level < q2.level) {
+           return NSOrderedAscending;
+       }
+       
+       return NSOrderedSame;
+       
+   }];
+    
+    
+    return questions;
+    
+    
+}
+
 +(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount{
     
     NSMutableArray *allQuestions = [NSMutableArray array];

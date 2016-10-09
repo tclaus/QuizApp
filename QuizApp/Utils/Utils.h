@@ -24,7 +24,13 @@
 +(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
 
 /**
- Loads topics and shuffels the questions to generate a list of newly shuffled questions
+ Loads topics and shuffels the questions to generate a list of newly shuffled questions. If questioncount is 0, then every possible question will beloaded.
+ Sorted then by question levels
+ */
++(NSArray*)loadQuestionsWithIncreasingLevelFromTopics:(NSArray *)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount;
+
+/**
+ Loads topics and shuffels the questions to generate a list of newly shuffled questions. If questioncount is 0, then every possible question will beloaded.
  */
 +(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount;
 

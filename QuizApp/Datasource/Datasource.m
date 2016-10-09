@@ -69,7 +69,7 @@ NSUserDomainMask, YES) objectAtIndex:0]
 
 +(NSArray*)loadAggregates:(NSString*)filename{
     
-    NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"resultsAggregate.plist"];
+    NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:filename];
     
     NSMutableArray* aggregates = [NSKeyedUnarchiver unarchiveObjectWithFile:resultsStoragePath];
     if(!aggregates){
@@ -89,7 +89,7 @@ NSUserDomainMask, YES) objectAtIndex:0]
     result.percent = correctPercent * 100;
     result.points = correctScore;
     
-    NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"resultsAggregate.plist"];
+    NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:filename];
     
     NSMutableArray* aggregates = [NSKeyedUnarchiver unarchiveObjectWithFile:resultsStoragePath];
     

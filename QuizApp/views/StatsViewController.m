@@ -405,7 +405,16 @@
 }
 
 -(void)startQuiz{
-    self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:[(NSNumber*)_pendingQuiz[@"numberOfQuestions"] integerValue]];
+    
+    if ([GameModel sharedInstance].activeGameMode == GameModeTrainig ) {
+    
+        self.selectedQuestions = [Utils loadQuestionsWithIncreasingLevelFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:[(NSNumber*)_pendingQuiz[@"numberOfQuestions"] integerValue]];
+    
+    } else {
+        
+       self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:[(NSNumber*)_pendingQuiz[@"numberOfQuestions"] integerValue]];
+    }
+    
     [self performSegueWithIdentifier:@"showInfo" sender:self];
 }
 

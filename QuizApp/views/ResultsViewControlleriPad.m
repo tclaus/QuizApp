@@ -17,6 +17,7 @@
 #import "Question.h"
 #import "QuestionViewController.h"
 #import "ReviewViewController.h"
+#import "GameModel.h"
 
 @interface ResultsViewControlleriPad ()
 
@@ -66,10 +67,13 @@
 {
     [super viewDidLoad];
     
-	CGFloat fractionCorrect = [Utils calculateCorrectScore:self.questions];
+	CGFloat fractionCorrect = [Utils calculateCorrectPercent:self.questions];
     NSInteger correctCount = [Utils calculateNumberOfCorrectAnswers:self.questions];
     
-    [self reportAchievementToGameCenter:fractionCorrect*100];
+    // Only report in quizMode
+    if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+        [self reportAchievementToGameCenter:fractionCorrect*100];
+    }
     
     self.resultsChart.chartBorderWidth = 8.0f;
     self.resultsChart.chartBorderColor = [UIColor whiteColor];

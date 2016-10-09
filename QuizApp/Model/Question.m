@@ -21,6 +21,8 @@
         self.explanation = dictionary[@"explanation"];
         self.category = dictionary[@"category"];
         self.level = [(NSNumber*) dictionary[@"levelId"] integerValue];
+        self.questionID = [(NSNumber*) dictionary[@"questionId"] integerValue];
+        
         NSArray* answerArray = dictionary[@"answers"];
         NSMutableArray* answersTmpArray = [NSMutableArray array];
         
@@ -71,5 +73,8 @@
     return self.level * 2;
 }
 
+-(NSString *)debugDescription {
+    return [NSString stringWithFormat:@"ID: %ld, Level: %ld",self.level, self.level];
+}
 
 @end

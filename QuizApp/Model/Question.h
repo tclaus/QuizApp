@@ -22,6 +22,8 @@
 
 @property (nonatomic) NSInteger level;
 
+@property (nonatomic) NSInteger questionID;
+
 /**
  Number of points for a correct question
  */

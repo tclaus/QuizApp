@@ -188,6 +188,24 @@
 */
 
 
+-(CGFloat)heightOfCellWithIngredientLine:(NSString *)ingredientLine
+                       withSuperviewWidth:(CGFloat)superviewWidth
+{
+    CGFloat labelWidth                  = superviewWidth - 30.0f;
+    //    use the known label width with a maximum height of 100 points
+    CGSize labelContraints              = CGSizeMake(labelWidth, 100.0f);
+    
+    NSStringDrawingContext *context     = [[NSStringDrawingContext alloc] init];
+    
+    CGRect labelRect                    = [ingredientLine boundingRectWithSize:labelContraints
+                                                                       options:NSStringDrawingUsesLineFragmentOrigin
+                                                                    attributes:nil
+                                                                       context:context];
+    
+    //    return the calculated required height of the cell considering the label
+    return labelRect.size.height;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -200,6 +218,23 @@
          AnswerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell"];
         
         cell.answerLabel.text = answer.text;
+        
+        
+        CGFloat labelWidth                  = cell.answerLabel.frame.size.width;
+        //    use the known label width with a maximum height of 100 points
+        CGSize labelContraints              = CGSizeMake(labelWidth, MAXFLOAT);
+        
+        NSStringDrawingContext *context     = [[NSStringDrawingContext alloc] init];
+        
+        CGRect labelRect                    = [cell.answerLabel.text boundingRectWithSize:labelContraints
+                                                                           options:NSStringDrawingUsesLineFragmentOrigin
+                                                                               attributes:@{
+                                                                                            NSFontAttributeName : cell.answerLabel.font
+                                                                                            }
+                                                                           context:context];
+
+        cell.answerLabel.frame = labelRect;
+        
         
         [cell setNeedsLayout];
         [cell layoutIfNeeded];

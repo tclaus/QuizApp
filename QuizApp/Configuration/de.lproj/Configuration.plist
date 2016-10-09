@@ -35,13 +35,13 @@
 	<key>Quiz Settings</key>
 	<dict>
 		<key>Number Of Questions To Answer</key>
-		<integer>50</integer>
+		<integer>10</integer>
 		<key>Pass Threshold</key>
 		<integer>8</integer>
 		<key>Number of Questions To Practice</key>
-		<string>50</string>
+		<string>10</string>
 		<key>Time Needed In Minutes</key>
-		<string>2.5</string>
+		<string>2</string>
 	</dict>
 	<key>Game Center Settings</key>
 	<dict>
