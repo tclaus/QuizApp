@@ -45,8 +45,6 @@
 		EC99213F18B4FDEF000FCA6F /* sexandthecity.json in Resources */ = {isa = PBXBuildFile; fileRef = EC99213618B4FDEF000FCA6F /* sexandthecity.json */; };
 		ECAE8EF318C7714800D5EBAB /* ExplanationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAE8EF218C7714800D5EBAB /* ExplanationViewController.m */; };
 		ECAE920C18C77E4300D5EBAB /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAE920B18C77E4300D5EBAB /* StartViewController.m */; };
-		ECAE920F18C77F9400D5EBAB /* mainImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAE920D18C77F9400D5EBAB /* mainImage.png */; };
-		ECAE921018C77F9400D5EBAB /* mainImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECAE920E18C77F9400D5EBAB /* mainImage@2x.png */; };
 		ECB251FD18BF9CB9007B8CC0 /* SoundSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB251FC18BF9CB9007B8CC0 /* SoundSystem.m */; };
 		ECB25E0E18C0CFE9008C965C /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECB25E0D18C0CFE9008C965C /* tick.mp3 */; };
 		ECBD0C5D18733B1A002DC98B /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0C5C18733B1A002DC98B /* ReviewViewController.m */; };
@@ -194,8 +192,6 @@
 		ECAE8EF218C7714800D5EBAB /* ExplanationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExplanationViewController.m; path = views/ExplanationViewController.m; sourceTree = "<group>"; };
 		ECAE920A18C77E4300D5EBAB /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = views/StartViewController.h; sourceTree = "<group>"; };
 		ECAE920B18C77E4300D5EBAB /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = views/StartViewController.m; sourceTree = "<group>"; };
-		ECAE920D18C77F9400D5EBAB /* mainImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainImage.png; sourceTree = "<group>"; };
-		ECAE920E18C77F9400D5EBAB /* mainImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainImage@2x.png"; sourceTree = "<group>"; };
 		ECB251FB18BF9CB9007B8CC0 /* SoundSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundSystem.h; path = Utils/SoundSystem.h; sourceTree = "<group>"; };
 		ECB251FC18BF9CB9007B8CC0 /* SoundSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundSystem.m; path = Utils/SoundSystem.m; sourceTree = "<group>"; };
 		ECB25E0D18C0CFE9008C965C /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
@@ -648,8 +644,6 @@
 			children = (
 				ECB25E0C18C0CFE9008C965C /* sounds */,
 				ECE03EFA186341180042490A /* backgrounds */,
-				ECAE920D18C77F9400D5EBAB /* mainImage.png */,
-				ECAE920E18C77F9400D5EBAB /* mainImage@2x.png */,
 				65C37F821DAA783900F793AC /* images.xcassets */,
 			);
 			path = Resources;
@@ -816,7 +810,6 @@
 				ECE03F29186341180042490A /* niagara@2x~ipad.png in Resources */,
 				65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */,
 				65B19E551DA4F4A60082380D /* Localizable.strings in Resources */,
-				ECAE920F18C77F9400D5EBAB /* mainImage.png in Resources */,
 				ECE03F18186341180042490A /* amazonas@2x.png in Resources */,
 				6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */,
 				65F869291DA6486900402768 /* wrong.m4a in Resources */,
@@ -845,7 +838,6 @@
 				ECE03F30186341180042490A /* sunrise@2x.png in Resources */,
 				ECE03F1D186341180042490A /* billow@2x~ipad.png in Resources */,
 				ECE03F1A186341180042490A /* amazonas~ipad.png in Resources */,
-				ECAE921018C77F9400D5EBAB /* mainImage@2x.png in Resources */,
 				ECE03F25186341180042490A /* canyon@2x~ipad.png in Resources */,
 				ECE03F28186341180042490A /* niagara@2x.png in Resources */,
 				ECE03F2A186341180042490A /* niagara~ipad.png in Resources */,

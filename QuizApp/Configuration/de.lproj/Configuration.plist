@@ -27,7 +27,7 @@
 			<key>Topic Title</key>
 			<string>Basis Fragen</string>
 			<key>Topic Image</key>
-			<string></string>
+			<string>baseQuestions</string>
 			<key>Questions File</key>
 			<string>1000Fragen.json</string>
 		</dict>

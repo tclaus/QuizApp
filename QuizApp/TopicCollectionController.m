@@ -54,7 +54,7 @@
     self.layout.minimumInteritemSpacing = 5;
     self.layout.minimumLineSpacing = 5;
     
-    self.layout.itemSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? CGSizeMake(150, 200) : CGSizeMake(175, 236);
+   // self.layout.itemSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? CGSizeMake(150, 200) : CGSizeMake(175, 236);
     
 }
 
