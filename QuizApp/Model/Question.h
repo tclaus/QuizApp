@@ -27,7 +27,7 @@
 /**
  Number of points for a correct question
  */
--(CGFloat) points;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGFloat points;
 
 -(BOOL)indexIsCorrectAnswer:(NSInteger)answerIndex;
 

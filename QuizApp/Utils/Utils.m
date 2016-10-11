@@ -12,6 +12,9 @@
 #import "Topic.h"
 #import "Question.h"
 
+#define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, \
+NSUserDomainMask, YES) objectAtIndex:0]
+
 @implementation Utils
 
 +(CGFloat)calculateAverageTestScores:(NSArray*)aggregates{
@@ -46,7 +49,7 @@
     NSMutableArray* scores = [NSMutableArray array];
     for(ResultAggregate* aggregate in aggregates){
         
-        [scores addObject:[NSNumber numberWithFloat:aggregate.percent]];
+        [scores addObject:@(aggregate.percent)];
     }
     
     return [self getLast:count elementsFromArray:scores];
@@ -108,6 +111,10 @@
     return correctCount;
 }
 
+
+
+static NSMutableArray *allQuestions;
+
 /**
  Loads the free number of questions for the given topic
  */
@@ -115,46 +122,73 @@
     // For base Topic: get a list of questions
     // For all other (future) topics - all questions
     
-    NSMutableArray *allQuestions = [NSMutableArray array];
-    
-        for (NSDictionary* questionDic in topic.questionJSONObjects) {
-            [allQuestions addObject:questionDic];
+    NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"DemoQuestions.json"];
+    if (!allQuestions) {
+        // Load from file
+        
+        allQuestions = [NSKeyedUnarchiver unarchiveObjectWithFile:resultsStoragePath];
+        if(!allQuestions){
+            allQuestions = [NSMutableArray array];
+            
+            // Generate an save questions
+            for (NSDictionary* questionDic in topic.questionJSONObjects) {
+                [allQuestions addObject:questionDic];
+            }
+            
+            NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
+            NSArray* batch = [self getFirst:[Config sharedInstance].quizIAP.numberofFreeQuestions elementsFromArray:shuffledQuestions];
+            
+            [NSKeyedArchiver archiveRootObject:batch toFile:resultsStoragePath];
+            
+            allQuestions = [NSMutableArray arrayWithArray: batch];
         }
+        
+    }
     
-    NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
-    NSArray* batch = [self getFirst:[Config sharedInstance].quizIAP.numberofFreeQuestions elementsFromArray:shuffledQuestions];
+    return allQuestions;
+}
+
+/*
+ Sort and return questions
+ */
++(NSArray*) sortArrayByLevel:(NSArray*)questions{
     
-    return batch;
+    questions = [questions sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        Question *q1 = obj1;
+        Question *q2 = obj2;
+        
+        if (q1.level == q2.level) {
+            return NSOrderedSame;
+        }
+        
+        if (q1.level > q2.level) {
+            return NSOrderedDescending;
+        }
+        
+        if (q1.level < q2.level) {
+            return NSOrderedAscending;
+        }
+        
+        return NSOrderedSame;
+    }];
+    
+    return questions;
+
 }
 
 +(NSArray*)loadQuestionsWithIncreasingLevelFromTopics:(NSArray *)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount {
     NSArray *questions = [self loadQuestionsFromTopics:selectedTopics forTotalNumberOfQuestions:questionCount];
     
-   questions = [questions sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-       Question *q1 = obj1;
-       Question *q2 = obj2;
-       
-       if (q1.level == q2.level) {
-           return NSOrderedSame;
-       }
-       
-       if (q1.level > q2.level) {
-           return NSOrderedDescending;
-       }
-       
-       if (q1.level < q2.level) {
-           return NSOrderedAscending;
-       }
-       
-       return NSOrderedSame;
-       
-   }];
+    questions = [self sortArrayByLevel:questions];
     
     
     return questions;
     
     
 }
+
+
+
 
 +(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount{
     
@@ -188,6 +222,9 @@
         NSArray* shuffledAnswers = [self shuffleArray:question.answers];
         question.answers = shuffledAnswers;
     }
+    
+    // sort by level
+    batch = [self sortArrayByLevel:batch];
     
     return batch;
 }

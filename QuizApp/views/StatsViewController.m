@@ -161,7 +161,7 @@
     self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.chooseTopicsButton setTitle:NSLocalizedString(@"TOPICS",@"") forState:UIControlStateNormal];
 
-    [self.challengesButton setHidden:NO];
+    [self.challengesButton setHidden:YES];
     [self.challengesButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.challengesButton addTarget:self action:@selector(showChallengesTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -408,11 +408,11 @@
     
     if ([GameModel sharedInstance].activeGameMode == GameModeTrainig ) {
     
-        self.selectedQuestions = [Utils loadQuestionsWithIncreasingLevelFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:[(NSNumber*)_pendingQuiz[@"numberOfQuestions"] integerValue]];
+        self.selectedQuestions = [Utils loadQuestionsWithIncreasingLevelFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue];
     
     } else {
         
-       self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:[(NSNumber*)_pendingQuiz[@"numberOfQuestions"] integerValue]];
+       self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue];
     }
     
     [self performSegueWithIdentifier:@"showInfo" sender:self];
@@ -510,7 +510,10 @@
         }
     }
     self.gamecenterChallengeInfos = infos;
-    self.challengesButton.hidden = (self.gamecenterChallengeInfos.count == 0);
+    //self.challengesButton.hidden = (self.gamecenterChallengeInfos.count == 0);
+    
+    // TODO: Challenges is hidden in Storyboard, until re-implemented
+    
 }
 
 -(IBAction)showChallengesTapped:(id)sender{

@@ -62,7 +62,7 @@
     self.resultsChart.progress = correctFraction;
     self.resultsChart.backgroundColor = [UIColor clearColor];
     
-    self.pointsLabel.text = [NSString stringWithFormat:@"%ld Points",gamePoints];
+    self.pointsLabel.text = [NSString stringWithFormat:@"%ld Points",(long)gamePoints];
     
     
     self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];
@@ -84,6 +84,8 @@
     }else{
         self.challengeFriendsButton.alpha = 0.0;
     }
+    
+    self.challengeFriendsButton.hidden = YES;
     
     self.infoLabel.text = NSLocalizedString(@"Here are your results",@"");
 
