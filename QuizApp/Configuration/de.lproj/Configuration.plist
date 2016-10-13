@@ -39,7 +39,7 @@
 		<key>Pass Threshold</key>
 		<integer>8</integer>
 		<key>Number of Questions To Practice</key>
-		<string>10</string>
+		<string>50</string>
 		<key>Time Needed In Minutes</key>
 		<string>2</string>
 	</dict>
