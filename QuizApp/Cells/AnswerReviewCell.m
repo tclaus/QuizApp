@@ -49,6 +49,15 @@
     
     self.barImageView.alpha = chosen ? 1.0 : 0.0;
     self.tickImageView.alpha = correct ? 1.0 : 0.0;
+    
+    if (correct && chosen) {
+        self.tickImageView.image = [UIImage imageNamed:@"tick"];
+    }
+    
+    if (!correct && chosen) {
+        self.tickImageView.image = [UIImage imageNamed:@"cross"];
+    }
+    
 
 }
 

@@ -18,6 +18,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView* questionImageView;
 
 @property (nonatomic, weak) IBOutlet UIView* headerView;
+@property (weak, nonatomic) IBOutlet UILabel *questionCategoryLabel;
 
 @property (nonatomic, weak) IBOutlet UILabel* questionLabel;
 
@@ -92,6 +93,9 @@
     self.questionLabel.textColor = [UIColor whiteColor];
     self.questionLabel.numberOfLines = 0;
     
+    self.questionCategoryLabel.textColor = [UIColor whiteColor];
+    
+    
     self.questionImageView.contentMode = UIViewContentModeScaleAspectFit;
      
     self.alphabets = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
@@ -108,9 +112,12 @@
 -(void)loadData{
     
     self.questionLabel.text = self.question.text;
+    self.questionCategoryLabel.text = self.question.category;
+    
     self.correctAnswerShown = NO;
     self.answerTapped = NO;
 
+    // Show or hide question image
     if(self.question.image){
 
         self.imageViewConstraint.constant = 135;
@@ -151,6 +158,8 @@
     
     cell.indexLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:19.0f];
     
+    
+    
     if(self.isForReview || self.answerTapped){
         BOOL isChosenAnswer = [self.question indexIsChosenAnswer:indexPath.row];
         BOOL isCorrectAnswer = [self.question indexIsCorrectAnswer:indexPath.row];
@@ -158,7 +167,6 @@
         [cell showImageForCorrectAnswer:isCorrectAnswer AndChosenAnswer:isChosenAnswer];
         cell.isCorrect = isCorrectAnswer;
     }
-
     /*[cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
     
@@ -288,6 +296,8 @@
             AnswerCell* cell = (AnswerCell*)[self.answerTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
             
             Answer* answer = self.question.answers[i];
+            
+            [cell showImageForCorrectAnswer:answer.correct AndChosenAnswer:answer.chosen];
             
             if (answer.correct){
                 

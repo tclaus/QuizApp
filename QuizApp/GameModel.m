@@ -37,6 +37,7 @@
             _numberOfQuestions = 0;
             _mixedLevels = NO;
             _publishHighScores = NO;
+            _suddenDeath = NO;
             break;
             
         case GameModeTrainig:
@@ -44,6 +45,8 @@
             _numberOfQuestions = [Config sharedInstance].numberOfQuestionsToPractice;
             _mixedLevels = YES;
             _publishHighScores = YES;
+            _suddenDeath = NO;
+            break;
     }
     
 }

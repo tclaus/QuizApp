@@ -39,6 +39,9 @@ typedef NS_ENUM(NSUInteger, GameModes) {
 // PublishHighScores
 @property (readonly, nonatomic) BOOL publishHighScores;
 
-
+/**
+ End game with first incorrect answer
+ */
+@property (readonly,nonatomic) BOOL suddenDeath;
 
 @end

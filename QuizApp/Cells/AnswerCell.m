@@ -46,6 +46,9 @@
     self.answerImageView.clipsToBounds = YES;
     self.answerImageView.contentMode = UIViewContentModeScaleAspectFit;
 
+    self.tickImageView.image = nil;
+     self.barImageView.tintColor = [UIColor clearColor];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -56,21 +59,32 @@
         return;
     }
     self.barImageView.alpha = selected ? 1.0 : 0.0;
-    self.tickImageView.alpha = selected ? 1.0 : 0.0;
 
     if (self.answerTapped) {
         self.contentView.alpha = 0.1;
         if (self.isCorrect) {
             self.contentView.alpha = 1.0;
-            self.barImageView.alpha = 1.0;
+            self.barImageView.image = [UIImage imageNamed:@"cross"];
+        } else {
+            self.barImageView.image = [UIImage imageNamed:@"tick"];
         }
+    } else {
+        self.tickImageView.image = nil;
     }
 }
 
 -(void)showImageForCorrectAnswer:(BOOL)correct AndChosenAnswer:(BOOL)chosen{
 
     self.barImageView.alpha = chosen ? 1.0 : 0.0;
-    self.tickImageView.alpha = correct ? 1.0 : 0.0;
+    
+    if (correct && chosen) {
+        self.tickImageView.image = [UIImage imageNamed:@"tick"];
+    }
+    
+    if (!correct && chosen) {
+        self.tickImageView.image = [UIImage imageNamed:@"cross"];
+    }
+    
     
 }
 
@@ -82,7 +96,6 @@
     [UIView animateWithDuration:1.0 animations:^{
         self.barImageView.alpha = 1.0;
         // Show green color for right answer
-        // self.barImageView
         self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         (self.barImageView).tintColor = [UIColor greenColor];
     } completion:^(BOOL finished) {
