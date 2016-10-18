@@ -29,10 +29,6 @@
  */
 @property (nonatomic) NSInteger numberOfSuccessfulTries;
 
-/**
- Number of failures in a row
- */
-@property (nonatomic) NSInteger numberOfFailues;
 
 /**
  Level up. If min number of tries succeed, then increase level. 

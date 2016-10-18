@@ -20,6 +20,8 @@
 
 @interface ResultsViewController ()
 
+@property (strong, nonatomic) IBOutlet UIView *nextLevelView;
+
 @property (nonatomic, weak) IBOutlet ADVRoundProgressChart* resultsChart;
 
 @property (nonatomic, weak) IBOutlet UIButton* reviewButton;

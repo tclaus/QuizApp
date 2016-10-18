@@ -24,7 +24,7 @@
 #import "GameModel.h"
 #import "GameStats.h"
 
-@interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol>
+@interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol, UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) IBOutlet ADVRoundProgressChart* scoresProgress;
 
@@ -70,13 +70,22 @@
 
 // Stars for level progress
 
+
 @property (weak, nonatomic) IBOutlet UIImageView *star1;
 @property (weak, nonatomic) IBOutlet UIImageView *star2;
 @property (weak, nonatomic) IBOutlet UIImageView *star3;
 
+@property (weak, nonatomic) IBOutlet UIView *levelUpView;
+@property (strong,nonatomic) UIVisualEffect* effect;
+@property (strong, nonatomic) UIVisualEffectView *effectView;
+
 @end
 
-@implementation StatsViewController
+@implementation StatsViewController {
+    NSInteger lastLevel;
+}
+
+
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -89,8 +98,17 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
     [self displayCharts];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (lastLevel < [GameStats sharedInstance].currentLevel) {
+        [self animateIn];
+        lastLevel = [GameStats sharedInstance].currentLevel;
+    }
+    
 }
 
 - (void)viewDidLoad
@@ -110,16 +128,13 @@
     
     self.animationController = [[DropAnimationController alloc] init];
     
-    //self.testsTakenLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
     self.levelLabel.textColor = [UIColor whiteColor];
-    // self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
-    // self.testsTakenLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+    
     self.levelLabel.text = NSLocalizedString(@"Level","Tests taken so far");
     
     self.levelNumber.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
     self.levelNumber.textColor = [UIColor whiteColor];
-    // self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
-    // self.levelNumber.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+    
     
     self.restorePurchase = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restore purchases",@"")
                                                             style:UIBarButtonItemStylePlain
@@ -208,6 +223,18 @@
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
         self.topStatsContainerHeight.constant = 230;
     }
+    
+    // Save Effect
+    lastLevel = [GameStats sharedInstance].currentLevel;
+    
+    self.effectView = [[UIVisualEffectView alloc] initWithFrame:self.view.bounds];
+    self.effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    self.effect = self.effectView.effect;
+    
+    self.effectView.effect = nil;
+    
+    self.levelUpView.layer.cornerRadius = 5;
+    
 }
 
 
@@ -260,6 +287,44 @@
     [self.scoresBarChart strokeChart];
 }
 
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    
+    [self animateOut];
+    return YES;
+}
+
+-(void)animateIn{
+    
+    
+    [self.view addSubview:self.effectView];
+    
+    [self.effectView.contentView addSubview:self.levelUpView];
+    self.levelUpView.center = self.view.center;
+    self.levelUpView.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    self.levelUpView.alpha = 0;
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        
+        self.effectView.effect = self.effect;
+        self.levelUpView.alpha = 1;
+        self.levelUpView.transform = CGAffineTransformIdentity;
+        
+    }];
+    
+}
+
+-(void)animateOut{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.levelUpView.transform = CGAffineTransformMakeScale(1.3, 1.3);
+        self.levelUpView.alpha = 0;
+        
+        self.effectView.effect = nil;
+        
+    } completion:^(BOOL finished) {
+        [self.levelUpView removeFromSuperview];
+        [self.effectView removeFromSuperview];
+    }];
+}
 
 /**
  Show current user level
@@ -274,21 +339,21 @@
     
     if ([GameStats sharedInstance].numberOfSuccessfulTries >= 1) {
         
-        [UIView animateWithDuration:0.3 delay:1 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
             self.star1.alpha = 1.0;
         } completion:nil];
     }
     
     if ([GameStats sharedInstance].numberOfSuccessfulTries >= 2) {
         
-        [UIView animateWithDuration:0.3 delay:1.3 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.5 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
             self.star2.alpha = 1.0;
         } completion:nil];
     }
     
     if ([GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
         
-        [UIView animateWithDuration:0.3 delay:1.6 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveLinear animations:^{
             self.star3.alpha = 1.0;
         } completion:nil];
     }
@@ -452,7 +517,7 @@
     
     } else {
         
-       self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue];
+       self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue minLevel:[GameStats sharedInstance].currentLevel] ;
     }
     
     [self performSegueWithIdentifier:@"showInfo" sender:self];
@@ -501,7 +566,7 @@
 }
 
 -(void)startDirectQuizWithNumberOfQuestions:(NSInteger)numberOfQuestions fromTopics:(NSArray*)topics{
-    self.selectedQuestions = [Utils loadQuestionsFromTopics:topics forTotalNumberOfQuestions:numberOfQuestions];
+    self.selectedQuestions = [Utils loadQuestionsFromTopics:topics forTotalNumberOfQuestions:numberOfQuestions minLevel:[GameStats sharedInstance].currentLevel];
     
     [self performSegueWithIdentifier:@"startTest" sender:self];
     

@@ -32,7 +32,6 @@ int maxLevel = 10;
 -(void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeInteger:self.currentLevel forKey:@"currentLevel"];
     [encoder encodeInteger:self.numberOfSuccessfulTries forKey:@"numberOfSuccessfulTries"];
-    [encoder encodeInteger:self.numberOfFailues forKey:@"numberOfFailues"];
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
@@ -44,7 +43,6 @@ int maxLevel = 10;
     
     self.currentLevel = [aDecoder decodeIntegerForKey:@"currentLevel"];
     self.numberOfSuccessfulTries = [aDecoder decodeIntegerForKey:@"numberOfSuccessfulTries"];
-    self.numberOfFailues = [aDecoder decodeIntegerForKey:@"numberOfFailues"];
     
     if (self.currentLevel == 0) {
         self.currentLevel = 1;
@@ -59,7 +57,6 @@ int maxLevel = 10;
     GameStats *loadedStats = [NSKeyedUnarchiver unarchiveObjectWithFile:resultsStoragePath];
 
     self.currentLevel = loadedStats.currentLevel;
-    self.numberOfFailues = loadedStats.numberOfFailues;
     self.numberOfSuccessfulTries = loadedStats.numberOfSuccessfulTries;
     NSLog(@"GameStats loaded.");
 //
@@ -79,13 +76,11 @@ int maxLevel = 10;
         if (self.currentLevel < maxLevel) {
             self.currentLevel = self.currentLevel +1;
             self.numberOfSuccessfulTries = 0;
-            self.numberOfFailues = 0;
             [self saveData];
             return YES;
         }
     } else {
         self.numberOfSuccessfulTries = self.numberOfSuccessfulTries + 1;
-        self.numberOfFailues = 0;
     }
     
     [self saveData];
@@ -93,17 +88,15 @@ int maxLevel = 10;
 }
 
 -(BOOL)levelDown {
-    if (self.numberOfFailues >= maxNumberOfTries ) {
+    if (self.numberOfSuccessfulTries == 0 ) {
         if (self.currentLevel > 1) {
             self.currentLevel = self.currentLevel -1;
-            self.numberOfSuccessfulTries = 0;
-            self.numberOfFailues = 0;
+            self.numberOfSuccessfulTries = 3;
             [self saveData];
             return YES;
         }
     } else {
-        self.numberOfFailues = self.numberOfFailues +1;
-        self.numberOfSuccessfulTries = 0;
+        self.numberOfSuccessfulTries =  self.numberOfSuccessfulTries -1;
     }
     [self saveData];
     return NO;

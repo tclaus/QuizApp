@@ -177,7 +177,7 @@ static NSMutableArray *allQuestions;
 }
 
 +(NSArray*)loadQuestionsWithIncreasingLevelFromTopics:(NSArray *)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount {
-    NSArray *questions = [self loadQuestionsFromTopics:selectedTopics forTotalNumberOfQuestions:questionCount];
+    NSArray *questions = [self loadQuestionsFromTopics:selectedTopics forTotalNumberOfQuestions:questionCount minLevel:0];
     
     questions = [self sortArrayByLevel:questions];
     
@@ -188,23 +188,25 @@ static NSMutableArray *allQuestions;
 }
 
 
-
-
-+(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount{
++(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount minLevel:(NSInteger)minLevel{
     
     NSMutableArray *allQuestions = [NSMutableArray array];
     for (Topic* topic in selectedTopics) {
         
         if (!topic.inAppPurchaseIdentifier) { // Base questions, just get a subset of questions until bought
             
-            for (NSDictionary* questionDic in [self loadFreeQuestionsForTopic:topic]) {
+            for (NSDictionary* questionDic in topic.questionJSONObjects) { // [self loadFreeQuestionsForTopic:topic]) {
                 Question* question = [[Question alloc] initWithDictionary:questionDic];
-                [allQuestions addObject:question];
+                if (question.level >= minLevel) {
+                    [allQuestions addObject:question];
+                }
             }
         } else { // For all other topics get all other qustions
             for (NSDictionary* questionDic in topic.questionJSONObjects) {
                 Question* question = [[Question alloc] initWithDictionary:questionDic];
-                [allQuestions addObject:question];
+                if (question.level >= minLevel) {
+                    [allQuestions addObject:question];
+                }
             }
         }
         

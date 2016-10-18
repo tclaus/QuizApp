@@ -325,7 +325,7 @@ static BOOL heartSoundPlaying;
             }
             
             
-        } else if (percent <= 50) {
+        } else if (percent <= 0.5) {
             // Player just tapped, but doesn't care about right answers
             BOOL downLevel = [[GameStats sharedInstance] levelDown];
             
