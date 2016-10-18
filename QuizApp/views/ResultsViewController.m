@@ -15,6 +15,7 @@
 #import "GameChallengeController.h"
 #import "DropAnimationController.h"
 #import "GameModel.h"
+#import "GameStats.h"
 
 
 @interface ResultsViewController ()
@@ -64,7 +65,6 @@
     
     self.pointsLabel.text = [NSString stringWithFormat:@"%ld Points",(long)gamePoints];
     
-    
     self.resultsChart.detailText =[NSString stringWithFormat:NSLocalizedString(@"%lu of %lu answers",@""), (long)correctCount, (unsigned long)self.questions.count];
     
     self.title = NSLocalizedString(@"Results",@"");
@@ -104,6 +104,7 @@
     self.animationController = [[DropAnimationController alloc] init];
     
 }
+
 
 -(void)reportAchievementToGameCenter:(CGFloat)percentScore{
     if([Config sharedInstance].gameCenterEnabled){

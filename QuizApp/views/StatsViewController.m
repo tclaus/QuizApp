@@ -37,7 +37,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel* levelNumber;
 
-@property (nonatomic, weak) IBOutlet UILabel* testsTakenLabel;
+@property (nonatomic, weak) IBOutlet UILabel* levelLabel;
 
 @property (nonatomic, weak) IBOutlet UILabel* scoresLabel;
 
@@ -111,10 +111,10 @@
     self.animationController = [[DropAnimationController alloc] init];
     
     //self.testsTakenLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
-    self.testsTakenLabel.textColor = [UIColor whiteColor];
+    self.levelLabel.textColor = [UIColor whiteColor];
     // self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
     // self.testsTakenLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-    self.testsTakenLabel.text = NSLocalizedString(@"TESTS TAKEN","Tests taken so far");
+    self.levelLabel.text = NSLocalizedString(@"Level","Tests taken so far");
     
     self.levelNumber.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
     self.levelNumber.textColor = [UIColor whiteColor];
@@ -224,12 +224,11 @@
             break;
     }
     
-    
-    
     CGFloat lastScore = [Utils getLastTestScore:aggregates];
     
+    [self displayLevelAndStars];
+    
     self.scoresProgress.progress = lastScore/100.0;
-    self.levelNumber.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].currentLevel];
     
     NSInteger numberOfScoresToShow = 15;
     NSArray* scores = [Utils getLast:numberOfScoresToShow scoresFromAggregates:aggregates];
@@ -259,6 +258,40 @@
     [self.scoresBarChart setYValues:dataPoints[@"values"]];
     [self.scoresBarChart setLegend:[NSString stringWithFormat:NSLocalizedString(@"Your Last %ld Scores",@"Headline in Reviewslist"), (long)numberOfScoresToShow]];
     [self.scoresBarChart strokeChart];
+}
+
+
+/**
+ Show current user level
+ */
+-(void)displayLevelAndStars {
+    
+    self.levelNumber.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].currentLevel];
+    
+    self.star1.alpha = 0;
+    self.star2.alpha = 0;
+    self.star3.alpha = 0;
+    
+    if ([GameStats sharedInstance].numberOfSuccessfulTries >= 1) {
+        
+        [UIView animateWithDuration:0.3 delay:1 options:UIViewAnimationOptionCurveLinear animations:^{
+            self.star1.alpha = 1.0;
+        } completion:nil];
+    }
+    
+    if ([GameStats sharedInstance].numberOfSuccessfulTries >= 2) {
+        
+        [UIView animateWithDuration:0.3 delay:1.3 options:UIViewAnimationOptionCurveLinear animations:^{
+            self.star2.alpha = 1.0;
+        } completion:nil];
+    }
+    
+    if ([GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+        
+        [UIView animateWithDuration:0.3 delay:1.6 options:UIViewAnimationOptionCurveLinear animations:^{
+            self.star3.alpha = 1.0;
+        } completion:nil];
+    }
 }
 
 - (IBAction)onRetorePurchases:(id)sender {
