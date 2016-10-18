@@ -16,6 +16,7 @@ NSUserDomainMask, YES) objectAtIndex:0]
 #import "Answer.h"
 #import "Utils.h"
 #import "ResultAggregate.h"
+#import "GameStats.h"
 
 @implementation Datasource
 

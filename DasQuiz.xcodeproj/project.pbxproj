@@ -12,6 +12,7 @@
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
 		65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E4D1DA4F05A0082380D /* Configuration.plist */; };
 		65B19E551DA4F4A60082380D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E571DA4F4A60082380D /* Localizable.strings */; };
+		65B31AE51DB410B100872C86 /* GameStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B31AE41DB410B100872C86 /* GameStats.m */; };
 		65C37F831DAA783900F793AC /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C37F821DAA783900F793AC /* images.xcassets */; };
 		65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B4781DA5A44B00F057EB /* SoundManager.m */; };
 		65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */; };
@@ -135,6 +136,8 @@
 		65B19E511DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65B19E521DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65B19E581DA4F4A80082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		65B31AE31DB410B100872C86 /* GameStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStats.h; sourceTree = "<group>"; };
+		65B31AE41DB410B100872C86 /* GameStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStats.m; sourceTree = "<group>"; };
 		65C37F821DAA783900F793AC /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		65D1B4751DA5195F00F057EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		65D1B4771DA55C0800F057EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
@@ -635,6 +638,8 @@
 				EC97B5E819D3084200848267 /* ConstraintsPackage.m */,
 				65F8692C1DA78BA500402768 /* GameModel.h */,
 				65F8692D1DA78BA500402768 /* GameModel.m */,
+				65B31AE31DB410B100872C86 /* GameStats.h */,
+				65B31AE41DB410B100872C86 /* GameStats.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -897,6 +902,7 @@
 				ECBD0C911876FBF5002DC98B /* PNLineChart.m in Sources */,
 				ECBD0C931876FBF5002DC98B /* UICountingLabel.m in Sources */,
 				ECBD0C5D18733B1A002DC98B /* ReviewViewController.m in Sources */,
+				65B31AE51DB410B100872C86 /* GameStats.m in Sources */,
 				EC99213318B294F6000FCA6F /* ChallengeCell.m in Sources */,
 				ECE03EC81862169C0042490A /* TopicCell.m in Sources */,
 				EC2141DA189029CE00739070 /* ResultAggregate.m in Sources */,

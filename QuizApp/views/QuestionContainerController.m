@@ -15,6 +15,8 @@
 #import "ExplanationViewController.h"
 #import "SoundSystem.h"
 #import "GameModel.h"
+#import "GameStats.h"
+#import "Utils.h"
 
 @interface QuestionContainerController ()
 
@@ -39,6 +41,8 @@
 @property (nonatomic, strong) UIBarButtonItem* infoBarButton;
 
 @property (nonatomic, strong) SoundSystem* soundSystem;
+
+
 @end
 
 @implementation QuestionContainerController
@@ -256,6 +260,10 @@ static BOOL heartSoundPlaying;
 -(void)timeUp{
     
     
+    long qc = self.currentQuestionIndex;
+    NSLog(@"Questions solved: %ld",qc);
+    
+
     [self.timer invalidate];
    
     UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Time Up!",@"Title- time is up")  message:NSLocalizedString(@"Your Time is Up",@"Messgage: Time is up") preferredStyle:UIAlertControllerStyleAlert];
@@ -282,15 +290,64 @@ static BOOL heartSoundPlaying;
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
             [Datasource saveTimeBasedAggregates:subQuestions forDate:[NSDate date]];
+            [self checkLevelProgress:subQuestions secondsNeeded:self.totalTimeInterval];
+            
             break;
         case GameModeTrainig:
             [Datasource saveTrainingAggregates:subQuestions forDate:[NSDate date]];
             break;
     }
     
+    // Show Level up! (or level down)
     
     [self performSegueWithIdentifier:@"results" sender:self];
 }
+
+-(void)checkLevelProgress:(NSArray*)results secondsNeeded:(int)time{
+    // 3.7sec pro Antwort  = 31 Fragen.
+    // davon 90% richtig => Level up
+    // 120 Punkte? => 1200
+    
+    // In unterschiedlichen Levels, die Zeit anziehen lassen: 3Sec Pro Frage ist schon sehr schnell
+    
+    // Number of questions reached?
+    if ((time / results.count) < 6.0) {
+        CGFloat percent = [Utils calculateCorrectPercent:results];
+        // >= 90 % success?
+        if (percent >=0.9) {
+            // PossibleLevel up
+            BOOL nextLevel = [[GameStats sharedInstance] levelUp];
+         
+            // If next Level - Show screen
+            // If only next Try - show number of tries
+            if (nextLevel) {
+                [self showLevelUpAnimation];
+            }
+            
+            
+        } else if (percent <= 50) {
+            // Player just tapped, but doesn't care about right answers
+            BOOL downLevel = [[GameStats sharedInstance] levelDown];
+            
+            // If level down - Show screen
+            
+            if (downLevel) {
+                [self showLevelDownAnimation];
+            }
+            
+        }
+    }
+}
+
+-(void)showLevelUpAnimation{
+    NSLog(@"Hurra ! Level up!");
+}
+
+-(void)showLevelDownAnimation{
+    NSLog(@"You fool. Level down");
+}
+
+
 
 -(IBAction)moreInfoTapped:(id)sender{
     [self performSegueWithIdentifier:@"info" sender:self];

@@ -85,7 +85,6 @@
         self.tickImageView.image = [UIImage imageNamed:@"cross"];
     }
     
-    
 }
 
 -(void)showCorrectAnswerWithAnimation{

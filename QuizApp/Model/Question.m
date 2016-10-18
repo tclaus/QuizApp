@@ -70,7 +70,7 @@
 }
 
 -(CGFloat)points {
-    return self.level * 2;
+    return self.level * 100;
 }
 
 -(NSString *)debugDescription {
