@@ -22,6 +22,7 @@
 #import "GameKitManager.h"
 #import "QuizIAPHelper.h"
 #import "GameModel.h"
+#import "GameStats.h"
 
 @interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol>
 
@@ -34,7 +35,7 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint* scoresBarChartHeightConstraint;
 
-@property (nonatomic, weak) IBOutlet UILabel* testsTakenCount;
+@property (nonatomic, weak) IBOutlet UILabel* levelNumber;
 
 @property (nonatomic, weak) IBOutlet UILabel* testsTakenLabel;
 
@@ -66,6 +67,12 @@
 @property (nonatomic, weak) IBOutlet UIView* spacerView;
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint* topStatsContainerHeight;
+
+// Stars for level progress
+
+@property (weak, nonatomic) IBOutlet UIImageView *star1;
+@property (weak, nonatomic) IBOutlet UIImageView *star2;
+@property (weak, nonatomic) IBOutlet UIImageView *star3;
 
 @end
 
@@ -105,14 +112,14 @@
     
     //self.testsTakenLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
     self.testsTakenLabel.textColor = [UIColor whiteColor];
-    self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
-    self.testsTakenLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+    // self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
+    // self.testsTakenLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.testsTakenLabel.text = NSLocalizedString(@"TESTS TAKEN","Tests taken so far");
     
-    self.testsTakenCount.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
-    self.testsTakenCount.textColor = [UIColor whiteColor];
-    self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
-    self.testsTakenCount.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+    self.levelNumber.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
+    self.levelNumber.textColor = [UIColor whiteColor];
+    // self.testsTakenLabel.adjustsFontSizeToFitWidth = YES;
+    // self.levelNumber.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     
     self.restorePurchase = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restore purchases",@"")
                                                             style:UIBarButtonItemStylePlain
@@ -222,7 +229,7 @@
     CGFloat lastScore = [Utils getLastTestScore:aggregates];
     
     self.scoresProgress.progress = lastScore/100.0;
-    self.testsTakenCount.text = [NSString stringWithFormat:@"%lu", (unsigned long)aggregates.count];
+    self.levelNumber.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].currentLevel];
     
     NSInteger numberOfScoresToShow = 15;
     NSArray* scores = [Utils getLast:numberOfScoresToShow scoresFromAggregates:aggregates];

@@ -24,6 +24,7 @@ int maxLevel = 10;
     static id sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
+        [sharedInstance loadData];
     });
     return sharedInstance;
 }
@@ -44,6 +45,10 @@ int maxLevel = 10;
     self.currentLevel = [aDecoder decodeIntegerForKey:@"currentLevel"];
     self.numberOfSuccessfulTries = [aDecoder decodeIntegerForKey:@"numberOfSuccessfulTries"];
     self.numberOfFailues = [aDecoder decodeIntegerForKey:@"numberOfFailues"];
+    
+    if (self.currentLevel == 0) {
+        self.currentLevel = 1;
+    }
     
     return self;
     
