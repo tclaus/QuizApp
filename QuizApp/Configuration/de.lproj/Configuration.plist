@@ -72,9 +72,9 @@
 		<key>IAP Alert Title</key>
 		<string>Hinweis</string>
 		<key>IAP Alert Message</key>
-		<string>Das Quiz ist auf %ld Fragen beschränkt  Möchstest du alle Fragen freischalten?</string>
+		<string>Das Spiel ist auf %ld Level eingeschränkt. Möchtest du die anderen 5 Levels freischalten? Über 30.000 Punkte sind dann möglich.</string>
 		<key>IAP Alert Buy</key>
-		<string>Upgrade!</string>
+		<string>Freischalten!</string>
 		<key>IAP Alert Cancel</key>
 		<string>Bei Basisversion bleiben</string>
 	</dict>

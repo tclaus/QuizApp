@@ -83,7 +83,7 @@
     return gameCenterViewController;
 }
 
--(void)submitTestResult:(CGFloat)score forLeaderboard:(NSString*)leaderboardIdentifier {
+-(void)submitTestResult:(NSInteger)score forLeaderboard:(NSString*)leaderboardIdentifier {
     
     if (!_localPlayerAuthenticated) {
         NSLog(@"Player not authenticated");
@@ -145,6 +145,30 @@
     }];
 }
 
+// SpeedyQuiz
+/**
+ Quiz was solved in a record time
+ */
+-(void)reportSpeedAchievement{
+    
+    if (!_localPlayerAuthenticated){
+        NSLog(@"Player not authenticated");
+        return;
+    }
+    
+    GKAchievement* achievement = [self getAchievementByID:@"SpeedyQuiz"];
+    achievement.percentComplete = 100;
+    
+        [GKAchievement reportAchievements:@[achievement] withCompletionHandler:^(NSError *error) {
+            [self setLastError:error];
+            
+            if([_delegate respondsToSelector:@selector(didReportAchievement:)])
+                [_delegate didReportAchievement:achievement];
+        }];
+}
+
+
+
 -(void)reportAchievementWithID:(NSString*)identifier percentComplete:(float)percent{
     
     if (!_localPlayerAuthenticated){
@@ -181,7 +205,13 @@
     return achievement;
 }
 
-
+-(void)reportSpeedyAchievement:(CGFloat)percentScore secondsPerQuestion:(CGFloat)secondsPerQuestion {
+    if (percentScore >= 0.9) {
+        if (secondsPerQuestion < 5) {
+            [self reportSpeedAchievement];
+        }
+    }
+}
 
 -(void)reportAchievementsTestResult:(CGFloat)percentScore {
 
@@ -190,7 +220,7 @@
     for (NSDictionary *achievement in achievements) {
         NSString *achievementId = achievement[@"Achievement ID"];
         NSNumber *percentNeeded = achievement[@"Percent Score Needed"];
-        float percentComplete = (percentScore * 1.0f/percentNeeded.intValue) * 100;
+        float percentComplete = (percentScore * 100 / percentNeeded.intValue) * 100;
         
         if(percentComplete > 100){
             percentComplete = 100;
