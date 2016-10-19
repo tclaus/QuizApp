@@ -41,7 +41,7 @@
 		<key>Number of Questions To Practice</key>
 		<string>50</string>
 		<key>Time Needed In Minutes</key>
-		<string>2</string>
+		<string>0.5</string>
 	</dict>
 	<key>Game Center Settings</key>
 	<dict>
