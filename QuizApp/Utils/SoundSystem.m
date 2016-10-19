@@ -30,6 +30,18 @@
     Sound *_timeOutSound;
  
     Sound *_thinkingMusic;
+    
+    Sound *_levelUpSound;
+}
+
++ (instancetype)sharedInstance
+{
+    static dispatch_once_t once;
+    static id sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
 }
 
 -(instancetype)init{
@@ -44,6 +56,7 @@
         _timeOutSound = [Sound soundNamed:@"timeout.mp3"];
         _failureSound = [Sound soundNamed:@"wrong.m4a"];
         _thinkingMusic = [Sound soundNamed:@"thinking.mp3"];
+        _levelUpSound = [Sound soundNamed:@"levelup.m4a"];
         
     }
     
@@ -56,6 +69,10 @@
 
 -(void)playFailureSound{
     [_failureSound play];
+}
+
+-(void)playLevelUpSound{
+    [_levelUpSound play];
 }
 
 -(void)playTickSound{

@@ -74,7 +74,7 @@
 }
 
 -(NSString *)debugDescription {
-    return [NSString stringWithFormat:@"ID: %ld, Level: %ld",(long)self.questionID, self.level];
+    return [NSString stringWithFormat:@"ID: %ld, Level: %ld",(long)self.questionID, (long)self.level];
 }
 
 @end

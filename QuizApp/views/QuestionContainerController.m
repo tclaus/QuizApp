@@ -109,7 +109,7 @@ static BOOL heartSoundPlaying;
     [infoButton addTarget:self action:@selector(moreInfoTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.infoBarButton = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
     self.navigationItem.leftBarButtonItem = self.infoBarButton;
-    self.soundSystem = [[SoundSystem alloc]init];
+    self.soundSystem = [SoundSystem sharedInstance];
     
     [self showNextQuestion];
     

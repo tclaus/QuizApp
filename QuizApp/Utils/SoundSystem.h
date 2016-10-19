@@ -11,9 +11,11 @@
 
 @interface SoundSystem : NSObject
 
++ (instancetype)sharedInstance;
 
 -(void)playHappySound;
 -(void)playFailureSound;
+-(void)playLevelUpSound;
 -(void)playTickSound;
 -(void)playHeartBeatSound;
 -(void)stopHeartBeatSound;

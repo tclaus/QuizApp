@@ -23,6 +23,7 @@
 #import "QuizIAPHelper.h"
 #import "GameModel.h"
 #import "GameStats.h"
+#import "SoundSystem.h"
 
 @interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol, UIGestureRecognizerDelegate>
 
@@ -104,6 +105,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+
     
     if (lastLevel < [GameStats sharedInstance].currentLevel) {
         [self animateIn];
@@ -296,6 +298,7 @@
 
 -(void)animateIn{
     
+    [[SoundSystem sharedInstance] playLevelUpSound];
     
     [self.view addSubview:self.effectView];
     
@@ -328,12 +331,12 @@
 }
 
 /**
- Show current user level
+ Show current user leve
  */
 -(void)displayLevelAndStars {
     
-    self.levelNumber.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].currentLevel];
-    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].lastPoints];
+    self.levelNumber.text = [NSString stringWithFormat:@"%ld", (long)[GameStats sharedInstance].currentLevel];
+    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", (long)[GameStats sharedInstance].lastPoints];
     self.star1.alpha = 0;
     self.star2.alpha = 0;
     self.star3.alpha = 0;

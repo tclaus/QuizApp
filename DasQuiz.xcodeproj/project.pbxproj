@@ -16,6 +16,7 @@
 		65C37F831DAA783900F793AC /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C37F821DAA783900F793AC /* images.xcassets */; };
 		65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B4781DA5A44B00F057EB /* SoundManager.m */; };
 		65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */; };
+		65D8ECC21DB7B4C3009DF03A /* levelup.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ECC11DB7B4C3009DF03A /* levelup.m4a */; };
 		65F869291DA6486900402768 /* wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65F869261DA6486900402768 /* wrong.m4a */; };
 		65F8692A1DA6486900402768 /* rightquestion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65F869271DA6486900402768 /* rightquestion.mp3 */; };
 		65F8692B1DA6486900402768 /* timeout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65F869281DA6486900402768 /* timeout.mp3 */; };
@@ -144,6 +145,7 @@
 		65D1B4781DA5A44B00F057EB /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Utils/SoundManager.m; sourceTree = "<group>"; };
 		65D1B4791DA5A44B00F057EB /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Utils/SoundManager.h; sourceTree = "<group>"; };
 		65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartbeat.mp3; sourceTree = "<group>"; };
+		65D8ECC11DB7B4C3009DF03A /* levelup.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = levelup.m4a; sourceTree = "<group>"; };
 		65F869261DA6486900402768 /* wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.m4a; sourceTree = "<group>"; };
 		65F869271DA6486900402768 /* rightquestion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightquestion.mp3; sourceTree = "<group>"; };
 		65F869281DA6486900402768 /* timeout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timeout.mp3; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 		ECB25E0C18C0CFE9008C965C /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				65D8ECC11DB7B4C3009DF03A /* levelup.m4a */,
 				654E0C241DAA5B96003C5392 /* thinking.mp3 */,
 				65F869261DA6486900402768 /* wrong.m4a */,
 				65F869271DA6486900402768 /* rightquestion.mp3 */,
@@ -822,6 +825,7 @@
 				ECE03F24186341180042490A /* canyon@2x.png in Resources */,
 				ECE03F2D186341180042490A /* sky@2x~ipad.png in Resources */,
 				ECE03F23186341180042490A /* canyon.png in Resources */,
+				65D8ECC21DB7B4C3009DF03A /* levelup.m4a in Resources */,
 				ECE03F31186341180042490A /* sunrise@2x~ipad.png in Resources */,
 				ECE03F32186341180042490A /* sunrise~ipad.png in Resources */,
 				ECE03F2E186341180042490A /* sky~ipad.png in Resources */,
