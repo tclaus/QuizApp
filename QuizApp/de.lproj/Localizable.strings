@@ -117,10 +117,12 @@
 "Start Training" = "Starte Training";
 
 /* Game mode description */
-"GameModeTimeBasedCompetitionDescription" = "Du musst in %ld Sekunden so viele Fragen lösen, wie möglich. Die Schwierigkeitsstufe steigt dabei an. Deine Ergebnisse werden dabei gewertet.";
+"GameModeTimeBasedCompetitionDescription" = "Du musst in %ld Sekunden so viele Fragen lösen, wie möglich. Deine Ergebnisse werden dabei gewertet.";
 
 "GameModeTrainigDescription" = "Du musst %ld Fragen lösen. Die Schwierigkeit steigt dabei an. Es gibt keine Zeitbeschränkung.";
 
 /* Points for quizmode */
 "Points: %ld" = "Punkte: %ld";
 
+/* Level for question */
+"Level %ld" = "Stufe: %ld";
