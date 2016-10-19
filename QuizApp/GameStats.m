@@ -17,6 +17,16 @@ NSUserDomainMask, YES) objectAtIndex:0]
 int maxNumberOfTries = 3;
 int maxLevel = 10;
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        if (self.currentLevel == 0) {
+            self.currentLevel = 1;
+        }
+    }
+    return self;
+}
 
 + (instancetype)sharedInstance
 {
@@ -25,6 +35,8 @@ int maxLevel = 10;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
         [sharedInstance loadData];
+        
+
     });
     return sharedInstance;
 }
@@ -32,6 +44,7 @@ int maxLevel = 10;
 -(void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeInteger:self.currentLevel forKey:@"currentLevel"];
     [encoder encodeInteger:self.numberOfSuccessfulTries forKey:@"numberOfSuccessfulTries"];
+    [encoder encodeInteger:self.lastPoints forKey:@"lastPoints"];
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
@@ -43,10 +56,7 @@ int maxLevel = 10;
     
     self.currentLevel = [aDecoder decodeIntegerForKey:@"currentLevel"];
     self.numberOfSuccessfulTries = [aDecoder decodeIntegerForKey:@"numberOfSuccessfulTries"];
-    
-    if (self.currentLevel == 0) {
-        self.currentLevel = 1;
-    }
+    self.lastPoints = [aDecoder decodeIntegerForKey:@"lastPoints"];
     
     return self;
     
@@ -58,6 +68,12 @@ int maxLevel = 10;
 
     self.currentLevel = loadedStats.currentLevel;
     self.numberOfSuccessfulTries = loadedStats.numberOfSuccessfulTries;
+    self.lastPoints = loadedStats.lastPoints;
+    
+    if (self.currentLevel == 0) {
+        self.currentLevel = 1;
+    }
+    
     NSLog(@"GameStats loaded.");
 //
 }
@@ -65,7 +81,6 @@ int maxLevel = 10;
 - (void)saveData {
     NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"gameStats.plist"];
     BOOL success = [NSKeyedArchiver archiveRootObject:self toFile:resultsStoragePath];
-    NSLog(@"Gamestats saved: success: %hhd",success);
     
 //
 }

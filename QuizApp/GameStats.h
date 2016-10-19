@@ -29,6 +29,10 @@
  */
 @property (nonatomic) NSInteger numberOfSuccessfulTries;
 
+/**
+ Sets or gets last number of scores
+ */
+@property (nonatomic) NSInteger lastPoints;
 
 /**
  Level up. If min number of tries succeed, then increase level. 

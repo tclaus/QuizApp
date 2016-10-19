@@ -11,6 +11,7 @@
 #import "Datasource.h"
 #import "ADVTheme.h"
 #import "Config.h"
+#import "QuizIAPHelper.h"
 #import "DropAnimationController.h"
 #import "ExplanationViewController.h"
 #import "SoundSystem.h"
@@ -308,13 +309,22 @@ static BOOL heartSoundPlaying;
     // davon 90% richtig => Level up
     // 120 Punkte? => 1200
     
+    // IAP Check
+    if ([self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 &&  [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+        NSLog(@"Level 4 reached with 3 tries. But no IAP until now");
+        return;
+    }
+    
     // In unterschiedlichen Levels, die Zeit anziehen lassen: 3Sec Pro Frage ist schon sehr schnell
+    // Den ganz lahmen, oder wenn man einfach gar nichts macht, wird aber kein Punkt abgezogen
+    
+    [GameStats sharedInstance].lastPoints = self.points;
     
     // Number of questions reached?
     if ((time / results.count) < 6.0) {
         CGFloat percent = [Utils calculateCorrectPercent:results];
         // >= 90 % success?
-        if (percent >=0.9) {
+        if (percent >=0.80) {
             // PossibleLevel up
             BOOL nextLevel = [[GameStats sharedInstance] levelUp];
          
@@ -337,6 +347,18 @@ static BOOL heartSoundPlaying;
             
         }
     }
+}
+
+/**
+ Returns YES if product is upgraded
+ */
+- (BOOL)IAPCheck {
+    
+    // the App comes with 100 free questions, User should buy for the last 900.
+    
+    // Check, if number of quiz is limited. (Studid, then you cant play any more)
+    return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
+    
 }
 
 -(void)showLevelUpAnimation{

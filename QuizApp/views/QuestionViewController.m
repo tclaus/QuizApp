@@ -19,6 +19,7 @@
 
 @property (nonatomic, weak) IBOutlet UIView* headerView;
 @property (weak, nonatomic) IBOutlet UILabel *questionCategoryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *questionLevelLabel;
 
 @property (nonatomic, weak) IBOutlet UILabel* questionLabel;
 
@@ -94,7 +95,7 @@
     self.questionLabel.numberOfLines = 0;
     
     self.questionCategoryLabel.textColor = [UIColor whiteColor];
-    
+    self.questionLevelLabel.textColor = [UIColor whiteColor];
     
     self.questionImageView.contentMode = UIViewContentModeScaleAspectFit;
      
@@ -113,7 +114,7 @@
     
     self.questionLabel.text = self.question.text;
     self.questionCategoryLabel.text = self.question.category;
-    
+    self.questionLevelLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Level %ld", @"Level headline for question"), self.question.level];;
     self.correctAnswerShown = NO;
     self.answerTapped = NO;
 

@@ -21,14 +21,25 @@
 
 @property (nonatomic, readwrite) BOOL includeLocalPlayerScore;
 
+
+
 +(id)sharedInstance;
 
 -(void)authenticateLocalPlayer;
 
 @property (NS_NONATOMIC_IOSONLY, readonly, strong) GKGameCenterViewController *createGameCenterViewController;
 
--(void)submitTestResult:(CGFloat)score forLeaderboard:(NSString*)leaderboardIdentifier;
+-(void)submitTestResult:(NSInteger)score forLeaderboard:(NSString*)leaderboardIdentifier;
 
+/*
+ Report fast question solver
+ */
+-(void)reportSpeedyAchievement:(CGFloat)percentScore secondsPerQuestion:(CGFloat)secondsPerQuestion;
+
+/*
+ Report quote of corect answers
+ @param percentScore: float 0..1 that represents the percernt value
+ */
 -(void)reportAchievementsTestResult:(CGFloat)percentScore;
 
 -(void)shareTestResult:(CGFloat)score forLeaderboard:(NSString*)leaderboardIdentifier;

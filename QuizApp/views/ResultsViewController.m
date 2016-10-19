@@ -56,7 +56,7 @@
     NSInteger correctCount = [Utils calculateNumberOfCorrectAnswers:self.questions];
     
     if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
-        [self reportAchievementToGameCenter:gamePoints];
+        [self reportAchievementToGameCenter:correctFraction points:gamePoints];
     }
     
     self.resultsChart.chartBorderWidth = 8.0f;
@@ -108,15 +108,27 @@
 }
 
 
--(void)reportAchievementToGameCenter:(CGFloat)percentScore{
+-(void)reportAchievementToGameCenter:(CGFloat)percentScore points:(NSInteger)points{
     if([Config sharedInstance].gameCenterEnabled){
         
         NSString* leaderboardID;
        
         if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
+          
             leaderboardID = [Config sharedInstance].gameCenterTimeBasedLeaderboardID;
-            [[GameKitManager sharedInstance] submitTestResult:percentScore forLeaderboard:leaderboardID];
+            
+            [[GameKitManager sharedInstance] submitTestResult:points forLeaderboard:leaderboardID];
+            
             [[GameKitManager sharedInstance] reportAchievementsTestResult:percentScore];
+            
+            
+            NSInteger time =  [Config sharedInstance].timeNeededInMinutes * 60;
+            NSInteger questionsSolved = self.questions.count;
+            
+            CGFloat ratio = time / questionsSolved;
+            
+            [[GameKitManager sharedInstance] reportSpeedyAchievement:percentScore secondsPerQuestion:ratio];
+            
         } else {
             // TODO: Endles game leaderboard
         }

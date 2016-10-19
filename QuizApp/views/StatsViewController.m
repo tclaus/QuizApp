@@ -38,6 +38,7 @@
 @property (nonatomic, weak) IBOutlet UILabel* levelNumber;
 
 @property (nonatomic, weak) IBOutlet UILabel* levelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 @property (nonatomic, weak) IBOutlet UILabel* scoresLabel;
 
@@ -134,6 +135,7 @@
     
     self.levelNumber.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
     self.levelNumber.textColor = [UIColor whiteColor];
+    self.pointsLabel.textColor = [UIColor whiteColor];
     
     
     self.restorePurchase = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Restore purchases",@"")
@@ -252,7 +254,6 @@
     }
     
     CGFloat lastScore = [Utils getLastTestScore:aggregates];
-    
     [self displayLevelAndStars];
     
     self.scoresProgress.progress = lastScore/100.0;
@@ -332,7 +333,7 @@
 -(void)displayLevelAndStars {
     
     self.levelNumber.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].currentLevel];
-    
+    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", [GameStats sharedInstance].lastPoints];
     self.star1.alpha = 0;
     self.star2.alpha = 0;
     self.star3.alpha = 0;
@@ -405,6 +406,7 @@
         QuestionInfoController* controller = segue.destinationViewController;
         controller.questions = self.selectedQuestions;
        
+        
         controller.userPressedStartBlock = ^(){
             [self userDidStartQuiz];
         };
@@ -483,7 +485,7 @@
 
     _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
     
-    if ([self IAPCheck]) {
+    if ([self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 &&  [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle
                                                                         message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText,[Config sharedInstance].quizIAP.numberofFreeQuestions]
