@@ -82,7 +82,7 @@ static BOOL heartSoundPlaying;
     self.currentQuestionIndex = -1;
     
     self.view.backgroundColor = [UIColor blackColor];
-
+    
     self.timerLabel = (UILabel*)[statusView viewWithTag:3];
     self.timerLabel.textColor = [UIColor whiteColor];
     self.timerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:14.0f];
@@ -152,17 +152,17 @@ static BOOL heartSoundPlaying;
     // IM Trainingsmodus nur anzahl (%) richtige Fragen
     
     if (question.hasBeenAnsweredCorrectly) {
-    
-    switch ([GameModel sharedInstance].activeGameMode) {
-        case GameModeTimeBasedCompetition:
-            self.points = self.points + question.points;
-            break;
-            
-        case GameModeTrainig:
-            self.points = 0;
-            break;
-            
-    }
+        
+        switch ([GameModel sharedInstance].activeGameMode) {
+            case GameModeTimeBasedCompetition:
+                self.points = self.points + question.points;
+                break;
+                
+            case GameModeTrainig:
+                self.points = 0;
+                break;
+                
+        }
     }
 }
 
@@ -216,7 +216,7 @@ static BOOL heartSoundPlaying;
             self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Question %ld of %ld",@"Headline in questionlist for trainingmode"), (long)count+1, (unsigned long)self.questions.count];
             [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
             break;
-        
+            
     }
     
     
@@ -225,13 +225,13 @@ static BOOL heartSoundPlaying;
 -(void)updateTime:(id)sender{
     self.currentTimeInterval++;
     [self updateTimerText];
-   
+    
     //Make a Tick-Sound for the last 5 seconds
     if(self.currentTimeInterval > (self.totalTimeInterval - 5) ){
         [self.soundSystem playTickSound];
     }
     
-   // Time is up
+    // Time is up
     if(self.currentTimeInterval == self.totalTimeInterval){
         [self.soundSystem playTimeOutSound];
         [self timeUp];
@@ -253,9 +253,9 @@ static BOOL heartSoundPlaying;
     
     // In quizmode update status bar by time
     if  ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
-            [self.statusProgress setProgress:self.currentTimeInterval/(CGFloat)self.totalTimeInterval animated:YES];
+        [self.statusProgress setProgress:self.currentTimeInterval/(CGFloat)self.totalTimeInterval animated:YES];
     }
-
+    
 }
 
 -(void)timeUp{
@@ -264,11 +264,11 @@ static BOOL heartSoundPlaying;
     long qc = self.currentQuestionIndex;
     NSLog(@"Questions solved: %ld",qc);
     
-
+    
     [self.timer invalidate];
-   
+    
     UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Time Up!",@"Title- time is up")  message:NSLocalizedString(@"Your Time is Up",@"Messgage: Time is up") preferredStyle:UIAlertControllerStyleAlert];
-  
+    
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"See Your Results",@"Title: See results") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
         [self saveResultsAndShowThem];
@@ -285,7 +285,7 @@ static BOOL heartSoundPlaying;
  Save training data or quiz data
  */
 -(void)saveResultsAndShowThem{
-
+    
     NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
     
     switch ([GameModel sharedInstance].activeGameMode) {
@@ -327,7 +327,7 @@ static BOOL heartSoundPlaying;
         if (percent >=0.80) {
             // PossibleLevel up
             BOOL nextLevel = [[GameStats sharedInstance] levelUp];
-         
+            
             // If next Level - Show screen
             // If only next Try - show number of tries
             if (nextLevel) {

@@ -75,11 +75,7 @@
     self.answerTableView.backgroundColor = [UIColor clearColor];
     self.answerTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    UIImage* buttonBackground = [[UIImage imageNamed:@"button"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-    buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    UIImage* buttonDisabledBackground = [[UIImage imageNamed:@"button-disabled"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-    buttonDisabledBackground = [buttonDisabledBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
+
     self.footerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
     UIToolbar* toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
     toolbar.barStyle = UIBarStyleBlack;
@@ -168,15 +164,7 @@
         [cell showImageForCorrectAnswer:isCorrectAnswer AndChosenAnswer:isChosenAnswer];
         cell.isCorrect = isCorrectAnswer;
     }
-    /*[cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
     
-    [cell.contentView setNeedsLayout];
-    [cell.contentView layoutIfNeeded];
-    
-    //cell.answerLabel.preferredMaxLayoutWidth = CGRectGetWidth(cell.answerLabel.frame);
-    [cell.contentView layoutIfNeeded];
-     */
     
     cell.contentView.alpha = 1.0f;
     return cell;

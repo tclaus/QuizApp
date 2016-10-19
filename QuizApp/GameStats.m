@@ -80,7 +80,7 @@ int maxLevel = 10;
 
 - (void)saveData {
     NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"gameStats.plist"];
-    BOOL success = [NSKeyedArchiver archiveRootObject:self toFile:resultsStoragePath];
+    [NSKeyedArchiver archiveRootObject:self toFile:resultsStoragePath];
     
 //
 }

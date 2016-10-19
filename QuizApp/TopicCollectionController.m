@@ -174,7 +174,7 @@
         }
     }
     
-    if(!productFound){
+    if(productFound == NO){
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Product Not Found",@"") message:NSLocalizedString(@"Oops something went wrong",@"") preferredStyle:UIAlertControllerStyleAlert];
         

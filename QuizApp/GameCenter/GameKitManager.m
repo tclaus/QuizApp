@@ -206,8 +206,9 @@
 }
 
 -(void)reportSpeedyAchievement:(CGFloat)percentScore secondsPerQuestion:(CGFloat)secondsPerQuestion {
+    
     if (percentScore >= 0.9) {
-        if (secondsPerQuestion < 5) {
+        if (secondsPerQuestion <= 4) { // es soll ja hart sein..
             [self reportSpeedAchievement];
         }
     }
