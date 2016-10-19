@@ -485,10 +485,10 @@
 
     _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
     
-    if ([self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 &&  [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+    if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle
-                                                                        message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText,[Config sharedInstance].quizIAP.numberofFreeQuestions]
+                                                                        message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText, 4]
                                                                  preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* buyAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageBuy style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
