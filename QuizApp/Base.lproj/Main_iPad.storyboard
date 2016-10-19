@@ -150,6 +150,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="K5b-ce-k0z">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-md-gu8" userLabel="Fb Action">
+                                        <state key="normal" image="facebook"/>
+                                        <connections>
+                                            <action selector="openFacebook:" destination="8Et-it-6ha" eventType="touchUpInside" id="lN0-5p-udl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-US-3Vv" userLabel="Share Button">
+                                        <state key="normal" image="email"/>
+                                        <connections>
+                                            <action selector="openSendMail:" destination="8Et-it-6ha" eventType="touchUpInside" id="6K7-Nl-za7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-aH-PGp" userLabel="Rate Button">
+                                        <state key="normal" image="favorites"/>
+                                        <connections>
+                                            <action selector="openAppStore:" destination="8Et-it-6ha" eventType="touchUpInside" id="Gde-YF-pOf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -163,10 +185,12 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstItem="oCT-AL-uXC" firstAttribute="centerX" secondItem="2fp-Sr-RJe" secondAttribute="centerX" id="To5-hh-Ppd"/>
+                            <constraint firstItem="K5b-ce-k0z" firstAttribute="centerX" secondItem="2fp-Sr-RJe" secondAttribute="centerX" id="Ton-fV-EEm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hFk-C2-isG" secondAttribute="trailing" constant="104" id="bMi-NX-Jhe">
                                 <variation key="heightClass=regular-widthClass=compact" constant="12"/>
                             </constraint>
                             <constraint firstItem="SyF-fH-dA2" firstAttribute="top" secondItem="hFk-C2-isG" secondAttribute="bottom" constant="27.5" id="fgd-Rg-yuN"/>
+                            <constraint firstItem="6s2-x3-U9Y" firstAttribute="top" secondItem="K5b-ce-k0z" secondAttribute="bottom" constant="20" id="iHu-5P-1yw"/>
                             <constraint firstItem="SyF-fH-dA2" firstAttribute="leading" secondItem="2fp-Sr-RJe" secondAttribute="leadingMargin" constant="52" id="nUJ-vC-4vm">
                                 <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                             </constraint>
@@ -1370,6 +1394,9 @@
         <image name="baseQuestions" width="175" height="175"/>
         <image name="button" width="145" height="42"/>
         <image name="check-tick" width="26" height="26"/>
+        <image name="email" width="32" height="32"/>
+        <image name="facebook" width="32" height="32"/>
+        <image name="favorites" width="32" height="32"/>
         <image name="head" width="256" height="256"/>
         <image name="item-selected-empty" width="298" height="39"/>
         <image name="list-bottom-border.png" width="287" height="1"/>

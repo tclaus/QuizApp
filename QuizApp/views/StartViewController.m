@@ -7,6 +7,7 @@
 //
 
 #import "StartViewController.h"
+
 #import "ADVTheme.h"
 #import "Config.h"
 #import "GameModel.h"
@@ -104,6 +105,61 @@
     
     [self performSegueWithIdentifier:@"start" sender:self];
 }
+
+#pragma mark -
+- (IBAction)openFacebook:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
+    
+}
+- (IBAction)openSendMail:(id)sender {
+    // Email Subject
+    NSString *emailTitle = @"DAS!Quiz auf iOS";
+    // Email Content
+    NSString *messageBody = @"";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"info@claus-software.de"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+
+}
+
+- (IBAction)openAppStore:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://appstore.com/dasquiz"]];
+}
+
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
