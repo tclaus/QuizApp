@@ -95,7 +95,7 @@
     
     self.questionImageView.contentMode = UIViewContentModeScaleAspectFit;
      
-    self.alphabets = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
+    self.alphabets = @[@"A)", @"B)", @"C)", @"D)", @"E)", @"F)", @"G)", @"H)", @"I)", @"J)", @"K)", @"L)", @"M)", @"N)", @"O)", @"P)", @"Q)", @"R)", @"S)", @"T)", @"U)", @"V)", @"W)", @"X)", @"Y)", @"Z)"];
     self.soundSystem = [SoundSystem sharedInstance];
     
     self.topMarginConstraint.constant = self.isForReview ? 10 : 70;
