@@ -148,6 +148,30 @@ static NSMutableArray *allQuestions;
     return allQuestions;
 }
 
+static NSMutableSet *_usedQuestionIDs;
+
++(void)addAsUsedQuestion:(NSInteger)questionID {
+    if (!_usedQuestionIDs) {
+        _usedQuestionIDs = [NSMutableSet set];
+    }
+    
+    [_usedQuestionIDs addObject:[NSNumber numberWithInteger:questionID]];
+    
+}
+
++(void)clearUsedQuestions {
+    if (_usedQuestionIDs) {
+        [_usedQuestionIDs removeAllObjects];
+    }
+}
+
++(BOOL)questionwasUsed:(NSInteger)questionID {
+    if (_usedQuestionIDs) {
+        [_usedQuestionIDs containsObject:[NSNumber numberWithInteger:questionID]];
+    }
+    return NO;
+}
+
 /*
  Sort and return questions
  */
