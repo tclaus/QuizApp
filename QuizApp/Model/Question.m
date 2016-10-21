@@ -77,4 +77,18 @@
     return [NSString stringWithFormat:@"ID: %ld, Level: %ld",(long)self.questionID, (long)self.level];
 }
 
+- (BOOL)isEqual:(id)other
+{
+    if (other == self) {
+        return YES;
+    } else {
+        return ((Question*)other).questionID == self.questionID;
+    }
+}
+
+- (NSUInteger)hash
+{
+    return [super hash];
+}
+
 @end

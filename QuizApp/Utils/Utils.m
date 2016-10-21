@@ -10,7 +10,7 @@
 #import "ResultAggregate.h"
 #import "Config.h"
 #import "Topic.h"
-#import "Question.h"
+
 
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, \
 NSUserDomainMask, YES) objectAtIndex:0]
@@ -148,30 +148,32 @@ static NSMutableArray *allQuestions;
     return allQuestions;
 }
 
-static NSMutableSet *_usedQuestionIDs;
+#pragma mark Recent Questions
+static NSMutableArray *_usedQuestions;
 
-+(void)addAsUsedQuestion:(NSInteger)questionID {
-    if (!_usedQuestionIDs) {
-        _usedQuestionIDs = [NSMutableSet set];
++(void)addAsUsedQuestion:(Question*)question {
+    if (!_usedQuestions) {
+        _usedQuestions = [NSMutableArray array];
     }
     
-    [_usedQuestionIDs addObject:[NSNumber numberWithInteger:questionID]];
+    [_usedQuestions addObject:question];
+    
+    // Remove first question if bucket is full
+    if (_usedQuestions.count > 30) {
+        [_usedQuestions removeObjectsAtIndexes:[NSIndexSet indexSetWithIndex:0]];
+    }
     
 }
 
-+(void)clearUsedQuestions {
-    if (_usedQuestionIDs) {
-        [_usedQuestionIDs removeAllObjects];
++(void)clearAllUsedQuestions {
+    if (_usedQuestions) {
+        [_usedQuestions removeAllObjects];
     }
 }
 
-+(BOOL)questionwasUsed:(NSInteger)questionID {
-    if (_usedQuestionIDs) {
-        [_usedQuestionIDs containsObject:[NSNumber numberWithInteger:questionID]];
-    }
-    return NO;
-}
 
+#pragma mark -
+#pragma mark Load Questions
 /*
  Sort and return questions
  */
@@ -237,11 +239,12 @@ static NSMutableSet *_usedQuestionIDs;
     }
     
     NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
-    NSArray* batch;
+    
+    NSMutableArray* batch;
     if (questionCount > 0 ) {
-        batch = [self getFirst:questionCount elementsFromArray:shuffledQuestions];
+        batch = [NSMutableArray arrayWithArray:[self getFirst:questionCount elementsFromArray:shuffledQuestions]];
     } else {
-        batch = [NSArray arrayWithArray:shuffledQuestions];
+        batch = [NSMutableArray arrayWithArray:shuffledQuestions];
     }
     
     for (Question* question in batch) {
@@ -250,8 +253,20 @@ static NSMutableSet *_usedQuestionIDs;
     }
     
     // sort by level
-    batch = [self sortArrayByLevel:batch];
+    batch = [NSMutableArray arrayWithArray: [self sortArrayByLevel:batch]];
     
+    // Remove recent questions
+    if (_usedQuestions) {
+        
+        for (Question *question in _usedQuestions) {
+            
+            if ([batch containsObject:question]) {
+                [batch removeObject:question];
+            }
+        }
+        
+        
+    }
     return batch;
 }
 

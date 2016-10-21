@@ -170,6 +170,7 @@ static BOOL heartSoundPlaying;
     
     NSLog(@"HasBeenAnswered Correctly: %@", question.hasBeenAnsweredCorrectly?@"YES":@"NO");
     
+    [Utils addAsUsedQuestion:controller.question];
     
     [self calculatePoints:question];
     

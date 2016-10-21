@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Question.h"
 
 @interface Utils : NSObject
 
@@ -26,6 +27,16 @@
 +(NSInteger)calculateCorrectScore:(NSArray*)questions;
 
 +(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
+
+/**
+ Add question as used question - will not be shown again until list is cleared
+ */
++(void)addAsUsedQuestion:(Question*)question;
+
+/**
+ Clear recently used list
+ */
++(void)clearAllUsedQuestions;
 
 /**
  Loads topics and shuffels the questions to generate a list of newly shuffled questions. If questioncount is 0, then every possible question will beloaded.

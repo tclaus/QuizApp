@@ -105,7 +105,6 @@
 }
 
 
-
 -(void)loadData{
     
     self.questionLabel.text = self.question.text;
