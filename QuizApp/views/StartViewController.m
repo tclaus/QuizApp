@@ -48,23 +48,13 @@
     
     self.view.tintColor = [UIColor whiteColor];
     
-    CGFloat titleFontSize = 13;
-    CGFloat subtitleFontSize = 9;
     
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
-        if(self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
-            titleFontSize = 19;
-            subtitleFontSize = 16;
-        }
-    }
-    
-    //self.titleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:titleFontSize];
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.numberOfLines = 0;
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.text = [Config sharedInstance].startPageDescription;
     
-    //self.subtitleLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:subtitleFontSize];
+    
     self.subtitleLabel.textColor = [UIColor whiteColor];
     self.subtitleLabel.numberOfLines = 0;
     self.subtitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -86,8 +76,7 @@
     
     [self.gameModeButton1 setTitle:mode1Text forState:UIControlStateNormal];
     [self.gameModeButton2 setTitle:NSLocalizedString(@"GameModeTrainingBased",@"") forState:UIControlStateNormal];
-//    [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
+
 }
 
 -(IBAction)startTapped:(id)sender{
