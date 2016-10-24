@@ -135,7 +135,6 @@
     
     self.levelLabel.text = NSLocalizedString(@"Level","Tests taken so far");
     
-    self.levelNumber.font = [UIFont fontWithName:[ADVTheme mainFont] size:72];
     self.levelNumber.textColor = [UIColor whiteColor];
     self.pointsLabel.textColor = [UIColor whiteColor];
     
@@ -146,15 +145,15 @@
                                                            action:@selector(onRetorePurchases:)];
     self.navigationItem.rightBarButtonItem = self.restorePurchase;
     
-    self.scoresLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
+   // self.scoresLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
     self.scoresLabel.textColor = [UIColor whiteColor];
-    self.scoresLabel.adjustsFontSizeToFitWidth = YES;
+   // self.scoresLabel.adjustsFontSizeToFitWidth = YES;
     self.scoresLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.scoresLabel.text = NSLocalizedString(@"LAST SCORE",@"Last Score");
     
     self.scoresProgress.chartBorderWidth = 8.0f;
     self.scoresProgress.chartBorderColor = [UIColor whiteColor];
-    self.scoresProgress.fontName = [ADVTheme mainFont];
+   // self.scoresProgress.fontName = [ADVTheme mainFont];
     
     UIImage* buttonBackground = [[UIImage imageNamed:@"button"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -184,19 +183,19 @@
     self.gameModeLabel.textColor = [UIColor whiteColor];
     
     [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+   // self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.chooseTopicsButton setTitle:NSLocalizedString(@"TOPICS",@"") forState:UIControlStateNormal];
 
     [self.challengesButton setHidden:YES];
     [self.challengesButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+   // self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.challengesButton addTarget:self action:@selector(showChallengesTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.challengesButton setTitle:NSLocalizedString(@"SEE CHALLENGES",@"") forState:UIControlStateNormal];
     
     // See highscores
     [self.highScoreButton setHidden:NO];
     [self.highScoreButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    self.highScoreButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+   // self.highScoreButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.highScoreButton addTarget:self action:@selector(showHighscores:) forControlEvents:UIControlEventTouchUpInside];
     [self.highScoreButton setTitle:NSLocalizedString(@"HIGHSCORES",@"") forState:UIControlStateNormal];
     
@@ -216,17 +215,12 @@
         [self.refreshControl endRefreshing];
     }];
     
-    BOOL isIPhone4 = [UIScreen mainScreen].bounds.size.height < 568;
-    self.scoresBarChartHeightConstraint.constant = isIPhone4 ? 0 : 120;
     
     self.topStatsContainer.backgroundColor = [UIColor clearColor];
-    self.buttonContainer.backgroundColor = [UIColor clearColor];
     self.scoresBarChartContainer.backgroundColor = [UIColor clearColor];
     self.spacerView.backgroundColor = [UIColor clearColor];
     
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-        self.topStatsContainerHeight.constant = 230;
-    }
+    
     
     // Save Effect
     lastLevel = [GameStats sharedInstance].currentLevel;
@@ -272,7 +266,6 @@
     }
     
     self.scoresBarChart = [[PNScrollBarChart alloc] initWithFrame:CGRectZero];
-    self.scoresBarChart.translatesAutoresizingMaskIntoConstraints = false;
     self.scoresBarChart.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scoresBarChartContainer addSubview:self.scoresBarChart];
     
