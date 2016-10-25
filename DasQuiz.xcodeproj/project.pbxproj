@@ -115,7 +115,6 @@
 		65C37F821DAA783900F793AC /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		65C4AD3F1DB7C16700680EC2 /* backgrounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = backgrounds.xcassets; sourceTree = "<group>"; };
 		65D1B4751DA5195F00F057EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		65D1B4771DA55C0800F057EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		65D1B4781DA5A44B00F057EB /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Utils/SoundManager.m; sourceTree = "<group>"; };
 		65D1B4791DA5A44B00F057EB /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Utils/SoundManager.h; sourceTree = "<group>"; };
 		65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartbeat.mp3; sourceTree = "<group>"; };
@@ -882,7 +881,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				65D1B4751DA5195F00F057EB /* Base */,
-				65D1B4771DA55C0800F057EB /* de */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";

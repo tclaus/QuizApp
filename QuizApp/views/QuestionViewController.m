@@ -15,9 +15,6 @@
 
 @interface QuestionViewController ()
 
-@property (nonatomic, weak) IBOutlet UIImageView* questionImageView;
-
-@property (nonatomic, weak) IBOutlet UIView* headerView;
 @property (weak, nonatomic) IBOutlet UILabel *questionCategoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *questionLevelLabel;
 
@@ -62,8 +59,8 @@
     
     self.answerTableView.delegate = self;
     self.answerTableView.dataSource = self;
-    self.answerTableView.estimatedRowHeight = 90.0;
-    self.answerTableView.rowHeight = UITableViewAutomaticDimension;
+    self.answerTableView.estimatedRowHeight = 80.0;
+   // self.answerTableView.rowHeight = UITableViewAutomaticDimension;
 
   
     self.view.tintColor = [UIColor whiteColor];
@@ -82,24 +79,17 @@
     self.footerView.hidden = self.isForReview;
     
     
-    self.headerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
-    
     // The Question Label
-    CGFloat fontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 25 : 21;
-    self.questionLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:fontSize];
     self.questionLabel.textColor = [UIColor whiteColor];
-    self.questionLabel.numberOfLines = 0;
     
     self.questionCategoryLabel.textColor = [UIColor whiteColor];
     self.questionLevelLabel.textColor = [UIColor whiteColor];
     
-    self.questionImageView.contentMode = UIViewContentModeScaleAspectFit;
-     
     self.alphabets = @[@"A)", @"B)", @"C)", @"D)", @"E)", @"F)", @"G)", @"H)", @"I)", @"J)", @"K)", @"L)", @"M)", @"N)", @"O)", @"P)", @"Q)", @"R)", @"S)", @"T)", @"U)", @"V)", @"W)", @"X)", @"Y)", @"Z)"];
     self.soundSystem = [SoundSystem sharedInstance];
     
-    self.topMarginConstraint.constant = self.isForReview ? 10 : 70;
-    self.bottomMarginConstraint.constant = self.isForReview ? 0 : 60;
+    //self.topMarginConstraint.constant = self.isForReview ? 10 : 70;
+    //self.bottomMarginConstraint.constant = self.isForReview ? 0 : 60;
     
     [self loadData];
 }
@@ -113,19 +103,6 @@
     self.correctAnswerShown = NO;
     self.answerTapped = NO;
 
-    // Show or hide question image
-    if(self.question.image){
-
-        self.imageViewConstraint.constant = 135;
-        
-        UIImage* image = [UIImage imageNamed:self.question.image];
-        self.questionImageView.image = image;
-  
-    }else{
-        self.imageViewConstraint.constant = 0;
-        self.questionImageView.image = nil;
-    }
-    
     [self.answerTableView reloadData];
 }
 
@@ -205,7 +182,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-   
     Answer* answer = self.question.answers[indexPath.row];
     
     if(answer.image){
@@ -237,8 +213,8 @@
         
         CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
         //// for separator
-        height += 1.0f;
-       // NSLog(@"%f",height);
+        // height += 1.0f;
+        NSLog(@"%ld, Rowheigh: %f",(long)indexPath.row, height);
         return height;
     }
     

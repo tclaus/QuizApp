@@ -28,16 +28,10 @@
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
     
-    CGFloat textFontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 24.0f : 22.0f;
-    CGFloat indexFontSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 25.0f : 24.0f;
     
     self.answerLabel.textColor = [UIColor whiteColor];
-    self.answerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:textFontSize];
-    self.answerLabel.numberOfLines = 0;
 
-    
     self.indexLabel.textColor = [UIColor whiteColor];
-    self.indexLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:indexFontSize];
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
