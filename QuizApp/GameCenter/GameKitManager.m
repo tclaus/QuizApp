@@ -9,7 +9,7 @@
 #import "GameKitManager.h"
 #import "Config.h"
 
-@interface GameKitManager () <GKGameCenterControllerDelegate>
+@interface GameKitManager () <GKGameCenterControllerDelegate, GKMatchmakerViewControllerDelegate>
 
 @property (nonatomic, assign) BOOL localPlayerAuthenticated;
 
@@ -262,6 +262,20 @@
         [self presentViewController:gameCenterController];
     }
 }
+
+
+- (void)hostMatch
+{
+    GKMatchRequest *request = [[GKMatchRequest alloc] init];
+    request.minPlayers = 2;
+    request.maxPlayers = 2;
+    
+    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:request];
+    mmvc.matchmakerDelegate = self;
+    
+    [self presentViewController:mmvc];
+}
+
 -(void)loadScoresToChallenge {
     
     GKLeaderboard* leaderboard = [[GKLeaderboard alloc] init];

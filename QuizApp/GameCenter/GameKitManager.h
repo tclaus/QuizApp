@@ -46,6 +46,11 @@
 
 -(void)showLeaderboard: (NSString*) leaderboardID;
 
+/**
+ Start hosting a match
+ */
+- (void)hostMatch;
+
 -(void)loadScoresToChallenge;
 
 -(void)findMyFriends;

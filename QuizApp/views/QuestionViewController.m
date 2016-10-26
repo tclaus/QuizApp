@@ -22,12 +22,6 @@
 
 @property (nonatomic, weak) IBOutlet UITableView* answerTableView;
 
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *imageViewConstraint;
-
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topMarginConstraint;
-
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomMarginConstraint;
-
 @property (nonatomic, weak) IBOutlet UIView* footerView;
 
 @property (nonatomic, assign) BOOL correctAnswerShown;
@@ -37,6 +31,7 @@
 @property (nonatomic, strong) NSArray* alphabets;
 
 @property (nonatomic, strong) SoundSystem* soundSystem;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView;
 
 -(void)showCorrectAnswer;
 
@@ -62,7 +57,19 @@
     self.answerTableView.estimatedRowHeight = 80.0;
    // self.answerTableView.rowHeight = UITableViewAutomaticDimension;
 
-  
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        // get size, will only check if iphone 4S: 480, 5: 568, 6/7 : 667
+        if (self.view.bounds.size.height == 480) {
+            self.stackView.spacing = 0;
+        }
+        if (self.view.bounds.size.height == 568) {
+            self.stackView.spacing = 15;
+        }
+        if (self.view.bounds.size.height > 568) {
+            self.stackView.spacing = 25;
+        }
+    }
+    
     self.view.tintColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = YES;
