@@ -141,7 +141,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         // get size, will only check if iphone 4S: 480
         if (self.view.bounds.size.height == 480) {
-            self.scoresBarChartContainer.hidden = YES;
+            self.scoresBarChartHeightConstraint.constant = 0;
         }
     }
     
