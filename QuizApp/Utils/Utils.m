@@ -159,7 +159,7 @@ static NSMutableArray *_usedQuestions;
     [_usedQuestions addObject:question];
     
     // Remove first question if bucket is full
-    if (_usedQuestions.count > 30) {
+    if (_usedQuestions.count > 60) {
         [_usedQuestions removeObjectsAtIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
     

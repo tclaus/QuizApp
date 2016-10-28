@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 App Design Vault. All rights reserved.
 //
 
+#import <Social/Social.h>
+
 #import "ResultsViewController.h"
 #import "ReviewViewController.h"
 #import "ADVTheme.h"
@@ -33,6 +35,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 
 @property (nonatomic, strong) id<ADVAnimationController> animationController;
+@property (weak, nonatomic) IBOutlet UIButton *shareOnFacebook;
+@property (weak, nonatomic) IBOutlet UIButton *shareOnTwitter;
 
 @end
 
@@ -105,6 +109,17 @@
     
     self.animationController = [[DropAnimationController alloc] init];
     
+    
+    
+    if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        self.shareOnFacebook.enabled =  NO;
+        self.shareOnFacebook.alpha = 0.5;
+    }
+    
+    if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        self.shareOnTwitter.enabled = NO;
+        self.shareOnTwitter.alpha = 0.5;
+    }
 }
 
 
@@ -184,6 +199,71 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)shareOnFacebook:(id)sender {
+    
+        
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            
+            NSInteger gamePoints = [Utils calculateCorrectScore:self.questions];
+            NSInteger level = [GameStats sharedInstance].currentLevel;
+            
+            SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"Ich habe bei 'DAS!Quiz' soeben %ld Punkte im Level %ld erreicht!",gamePoints,level]];
+            
+            [mySLComposerSheet addURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
+            
+            [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+                
+                switch (result) {
+                    case SLComposeViewControllerResultCancelled:
+                        NSLog(@"Post Canceled");
+                        break;
+                    case SLComposeViewControllerResultDone:
+                        NSLog(@"Post Sucessful");
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }];
+            
+            [self presentViewController:mySLComposerSheet animated:YES completion:nil];
+        }
+    
+}
+- (IBAction)shareOnTwitter:(id)sender {
+
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        
+        NSInteger gamePoints = [Utils calculateCorrectScore:self.questions];
+        NSInteger level = [GameStats sharedInstance].currentLevel;
+        
+        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"Ich habe bei 'DAS!Quiz' soeben %ld Punkte im Level %ld erreicht!",gamePoints,level]];
+        
+        [mySLComposerSheet addURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
+        
+        [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+            
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Post Canceled");
+                    break;
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Post Sucessful");
+                    break;
+                    
+                default:
+                    break;
+            }
+        }];
+        
+        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
+    }
+
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -267,8 +267,13 @@ static BOOL heartSoundPlaying;
     
     
     [self.timer invalidate];
+    NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
     
-    UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Time Up!",@"Title- time is up")  message:NSLocalizedString(@"Your Time is Up",@"Messgage: Time is up") preferredStyle:UIAlertControllerStyleAlert];
+    NSString *message = [self gameOverAlertMessage:subQuestions secondsNeeded:self.totalTimeInterval];
+    
+    UIAlertController* alert =  [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Time Up!",@"Title- time is up")
+                                                                    message:message
+                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"See Your Results",@"Title: See results") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
@@ -321,6 +326,10 @@ static BOOL heartSoundPlaying;
     
     [GameStats sharedInstance].lastPoints = self.points;
     
+}
+
+-(NSString*)gameOverAlertMessage:(NSArray*)results secondsNeeded:(int)time{
+    
     // Number of questions reached?
     if ((time / results.count) < 6.0) {
         CGFloat percent = [Utils calculateCorrectPercent:results];
@@ -332,22 +341,41 @@ static BOOL heartSoundPlaying;
             // If next Level - Show screen
             // If only next Try - show number of tries
             if (nextLevel) {
-                [self showLevelUpAnimation];
+                return @"Das war SUPER!";
+            } else {
+                return @"Kannst du es ein bischen besser?";
             }
             
             
-        } else if (percent <= 0.5) {
+        } else if(percent >0.5 && percent <0.80) {
+            
+            // ab 20 Fragen UND 80% richtig
+            NSInteger neededQuestions = (20 - results.count);
+            if (neededQuestions > 0) {
+                return [NSString stringWithFormat:@"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern.",neededQuestions];
+            } else {
+                // Dann war es wohl zu schlecht
+                return @"Üben, üben, üben...";
+            }
+            
+            
+        } else  {
             // Player just tapped, but doesn't care about right answers
             BOOL downLevel = [[GameStats sharedInstance] levelDown];
             
             // If level down - Show screen
             
             if (downLevel) {
-                [self showLevelDownAnimation];
+                return @"Schade. Du verlierst ein Stern";
+            } else {
+                return @"Das war nicht schlecht. Aber nicht einfach drauf los tippen.";
             }
             
         }
+    } else {
+        return @"Kannst du mehr Fragen richtig lösen?";
     }
+    
 }
 
 /**
