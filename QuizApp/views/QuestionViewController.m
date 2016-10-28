@@ -221,7 +221,6 @@
         CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
         //// for separator
         // height += 1.0f;
-        NSLog(@"%ld, Rowheigh: %f",(long)indexPath.row, height);
         return height;
     }
     

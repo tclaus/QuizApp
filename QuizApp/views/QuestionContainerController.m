@@ -168,7 +168,7 @@ static BOOL heartSoundPlaying;
 
 -(void)questionHasBeenAnswered:(Question *)question withController:(QuestionViewController *)controller{
     
-    NSLog(@"HasBeenAnswered Correctly: %@", question.hasBeenAnsweredCorrectly?@"YES":@"NO");
+
     
     [Utils addAsUsedQuestion:controller.question];
     
@@ -389,15 +389,6 @@ static BOOL heartSoundPlaying;
     return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
     
 }
-
--(void)showLevelUpAnimation{
-    NSLog(@"Hurra ! Level up!");
-}
-
--(void)showLevelDownAnimation{
-    NSLog(@"You fool. Level down");
-}
-
 
 
 -(IBAction)moreInfoTapped:(id)sender{
