@@ -19,6 +19,8 @@
 #import "GameStats.h"
 #import "Utils.h"
 
+@import FirebaseAnalytics;
+
 @interface QuestionContainerController ()
 
 @property (nonatomic, strong) QuestionDisplayEngine* displayEngine;
@@ -392,7 +394,22 @@ static BOOL heartSoundPlaying;
 
 
 -(IBAction)moreInfoTapped:(id)sender{
-    [self performSegueWithIdentifier:@"info" sender:self];
+    
+   
+    Question* question = self.questions[self.currentQuestionIndex];
+    
+    NSURL *url = [NSURL URLWithString:question.explanation];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        
+        [FIRAnalytics logEventWithName:@"ViewExplanation"
+                            parameters:@{
+                                         @"TargetURL": question.explanation
+                                         }];
+        
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    // Dont open a view, go to wikipedia
+   // [self performSegueWithIdentifier:@"info" sender:self];
 }
 
 -(void)setInfoButtonStatus{

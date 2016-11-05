@@ -11,6 +11,7 @@
 #import "ADVTheme.h"
 #import "Config.h"
 #import "GameModel.h"
+@import FirebaseAnalytics;
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -85,10 +86,22 @@
     
     UIButton *button = (UIButton*)sender;
     if (button.tag == 0) {
+        
+        [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{
+                                                                      kFIRParameterItemName:@"Time Based Game",
+                                                                      kFIRParameterItemID:@"TimeBasedGame"
+                                                                      }];
+        
         [GameModel sharedInstance].activeGameMode = GameModeTimeBasedCompetition;
     }
     
     if (button.tag == 1) {
+        
+        [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{
+                                                                      kFIRParameterItemName:@"Training Game",
+                                                                      kFIRParameterItemID:@"TrainingGame"
+                                                                      }];
+        
         [GameModel sharedInstance].activeGameMode = GameModeTrainig;
     }
     

@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ADVTheme.h"
 
+@import UIKit;
+@import Firebase;
+
 #import "QuizIAPHelper.h"
 
 @implementation AppDelegate
@@ -18,6 +21,9 @@
     [ADVTheme customizeTheme];
     
     [QuizIAPHelper sharedInstance];
+    
+    [FIRApp configure];
+    
     return YES;
 }
 							

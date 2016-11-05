@@ -25,6 +25,8 @@
 #import "GameStats.h"
 #import "SoundSystem.h"
 
+@import FirebaseAnalytics;
+
 @interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol, UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) IBOutlet ADVRoundProgressChart* scoresProgress;
@@ -296,6 +298,9 @@
 }
 
 -(void)animateIn{
+    
+    [FIRAnalytics logEventWithName:kFIREventLevelUp parameters:@{
+                                                                 kFIRParameterLevel:[NSNumber numberWithInteger:[GameStats sharedInstance].currentLevel]}];
     
     [[SoundSystem sharedInstance] playLevelUpSound];
     

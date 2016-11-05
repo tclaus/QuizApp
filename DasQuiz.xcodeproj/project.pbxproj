@@ -10,6 +10,7 @@
 		654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654E0C241DAA5B96003C5392 /* thinking.mp3 */; };
 		6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 6578C11D1D59A66D001D8DEE /* 1000Fragen.json */; };
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
+		659A7F031DCDF25500E910CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 659A7F021DCDF25500E910CA /* GoogleService-Info.plist */; };
 		65B19E4B1DA4F05A0082380D /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E4D1DA4F05A0082380D /* Configuration.plist */; };
 		65B19E551DA4F4A60082380D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B19E571DA4F4A60082380D /* Localizable.strings */; };
 		65B31AE51DB410B100872C86 /* GameStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B31AE41DB410B100872C86 /* GameStats.m */; };
@@ -25,6 +26,8 @@
 		7FAA61051930176500F55803 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAA61041930176500F55803 /* StoreKit.framework */; };
 		7FAA6109193017C100F55803 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA6108193017C100F55803 /* IAPHelper.m */; };
 		7FAA610C1930198400F55803 /* QuizIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA610B1930198400F55803 /* QuizIAPHelper.m */; };
+		9986495FD3EA31D49EE802CC /* Pods_DasQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */; };
+		B789AD37DD8A593D7D6395EF /* Pods_DasQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3766877403AA840995383 /* Pods_DasQuizTests.framework */; };
 		EC0D1832189827A700BE6368 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D1831189827A700BE6368 /* Answer.m */; };
 		EC0D18361899354F00BE6368 /* QuestionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0D18351899354F00BE6368 /* QuestionHeaderView.xib */; };
 		EC0D184D1899721100BE6368 /* UIImageAverageColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D184C1899721100BE6368 /* UIImageAverageColorAddition.m */; };
@@ -44,8 +47,6 @@
 		EC97B5E919D3084200848267 /* ConstraintsPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC97B5E819D3084200848267 /* ConstraintsPackage.m */; };
 		EC99213018B28C0F000FCA6F /* AvailableChallengesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99212F18B28C0F000FCA6F /* AvailableChallengesController.m */; };
 		EC99213318B294F6000FCA6F /* ChallengeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99213218B294F6000FCA6F /* ChallengeCell.m */; };
-		EC99213E18B4FDEF000FCA6F /* flags.json in Resources */ = {isa = PBXBuildFile; fileRef = EC99213518B4FDEF000FCA6F /* flags.json */; };
-		EC99213F18B4FDEF000FCA6F /* sexandthecity.json in Resources */ = {isa = PBXBuildFile; fileRef = EC99213618B4FDEF000FCA6F /* sexandthecity.json */; };
 		ECAE8EF318C7714800D5EBAB /* ExplanationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAE8EF218C7714800D5EBAB /* ExplanationViewController.m */; };
 		ECAE920C18C77E4300D5EBAB /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAE920B18C77E4300D5EBAB /* StartViewController.m */; };
 		ECB251FD18BF9CB9007B8CC0 /* SoundSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB251FC18BF9CB9007B8CC0 /* SoundSystem.m */; };
@@ -103,9 +104,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654E0C241DAA5B96003C5392 /* thinking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thinking.mp3; sourceTree = "<group>"; };
 		6578C11D1D59A66D001D8DEE /* 1000Fragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1000Fragen.json; sourceTree = "<group>"; };
 		657DB45F1D465FBD0035C3E6 /* demofragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demofragen.json; sourceTree = "<group>"; };
+		659A7F021DCDF25500E910CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65B19E501DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/Configuration.plist; sourceTree = "<group>"; };
 		65B19E511DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65B19E521DA4F0CB0082380D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -130,6 +133,11 @@
 		7FAA6108193017C100F55803 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
 		7FAA610A1930198400F55803 /* QuizIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizIAPHelper.h; sourceTree = "<group>"; };
 		7FAA610B1930198400F55803 /* QuizIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizIAPHelper.m; sourceTree = "<group>"; };
+		8E55667AC42BF9EA162D13AF /* Pods-DasQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-DasQuiz/Pods-DasQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		8FE3766877403AA840995383 /* Pods_DasQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEE59C43E1CD206114DA29E /* Pods-DasQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasQuizTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DasQuizTests/Pods-DasQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCBA14400379B6F5C78508CA /* Pods-DasQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DasQuiz/Pods-DasQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		E526D5191D94DE1FABA18464 /* Pods-DasQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DasQuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DasQuizTests/Pods-DasQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC0D1830189827A700BE6368 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = Model/Answer.h; sourceTree = "<group>"; };
 		EC0D1831189827A700BE6368 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = Model/Answer.m; sourceTree = "<group>"; };
 		EC0D18351899354F00BE6368 /* QuestionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionHeaderView.xib; sourceTree = "<group>"; };
@@ -165,8 +173,6 @@
 		EC99212F18B28C0F000FCA6F /* AvailableChallengesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvailableChallengesController.m; path = views/AvailableChallengesController.m; sourceTree = "<group>"; };
 		EC99213118B294F6000FCA6F /* ChallengeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChallengeCell.h; path = Cells/ChallengeCell.h; sourceTree = "<group>"; };
 		EC99213218B294F6000FCA6F /* ChallengeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChallengeCell.m; path = Cells/ChallengeCell.m; sourceTree = "<group>"; };
-		EC99213518B4FDEF000FCA6F /* flags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flags.json; sourceTree = "<group>"; };
-		EC99213618B4FDEF000FCA6F /* sexandthecity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sexandthecity.json; sourceTree = "<group>"; };
 		ECAE8EF118C7714800D5EBAB /* ExplanationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExplanationViewController.h; path = views/ExplanationViewController.h; sourceTree = "<group>"; };
 		ECAE8EF218C7714800D5EBAB /* ExplanationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExplanationViewController.m; path = views/ExplanationViewController.m; sourceTree = "<group>"; };
 		ECAE920A18C77E4300D5EBAB /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = views/StartViewController.h; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 				ECE03E8E186213E00042490A /* CoreGraphics.framework in Frameworks */,
 				ECE03E90186213E00042490A /* UIKit.framework in Frameworks */,
 				ECE03E8C186213E00042490A /* Foundation.framework in Frameworks */,
+				9986495FD3EA31D49EE802CC /* Pods_DasQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,12 +273,24 @@
 				ECE03EAE186213E00042490A /* XCTest.framework in Frameworks */,
 				ECE03EB0186213E00042490A /* UIKit.framework in Frameworks */,
 				ECE03EAF186213E00042490A /* Foundation.framework in Frameworks */,
+				B789AD37DD8A593D7D6395EF /* Pods_DasQuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ABD5DD24A09745922224D6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCBA14400379B6F5C78508CA /* Pods-DasQuiz.debug.xcconfig */,
+				8E55667AC42BF9EA162D13AF /* Pods-DasQuiz.release.xcconfig */,
+				CBEE59C43E1CD206114DA29E /* Pods-DasQuizTests.debug.xcconfig */,
+				E526D5191D94DE1FABA18464 /* Pods-DasQuizTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7FAA6106193017B100F55803 /* In-AppPurchases */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +305,7 @@
 		EC0D183F18996B9D00BE6368 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				659A7F021DCDF25500E910CA /* GoogleService-Info.plist */,
 				EC99213418B4FDEF000FCA6F /* Content */,
 				EC99213718B4FDEF000FCA6F /* Images */,
 				65B19E4D1DA4F05A0082380D /* Configuration.plist */,
@@ -345,8 +365,6 @@
 			children = (
 				6578C11D1D59A66D001D8DEE /* 1000Fragen.json */,
 				657DB45F1D465FBD0035C3E6 /* demofragen.json */,
-				EC99213518B4FDEF000FCA6F /* flags.json */,
-				EC99213618B4FDEF000FCA6F /* sexandthecity.json */,
 			);
 			name = Content;
 			path = Configuration/Content;
@@ -428,6 +446,7 @@
 				ECE03EB3186213E00042490A /* QuizAppTests */,
 				ECE03E8A186213E00042490A /* Frameworks */,
 				ECE03E89186213E00042490A /* Products */,
+				3ABD5DD24A09745922224D6B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -449,6 +468,8 @@
 				ECE03E8D186213E00042490A /* CoreGraphics.framework */,
 				ECE03E8F186213E00042490A /* UIKit.framework */,
 				ECE03EAD186213E00042490A /* XCTest.framework */,
+				57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */,
+				8FE3766877403AA840995383 /* Pods_DasQuizTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -660,9 +681,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECE03EBD186213E00042490A /* Build configuration list for PBXNativeTarget "DasQuiz" */;
 			buildPhases = (
+				6F3386985D8582770B153A86 /* [CP] Check Pods Manifest.lock */,
 				ECE03E84186213E00042490A /* Sources */,
 				ECE03E85186213E00042490A /* Frameworks */,
 				ECE03E86186213E00042490A /* Resources */,
+				1CDE8542A154505CB73BB1B0 /* [CP] Embed Pods Frameworks */,
+				C1287BBC86A3F35F18816976 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -677,9 +701,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECE03EC0186213E00042490A /* Build configuration list for PBXNativeTarget "DasQuizTests" */;
 			buildPhases = (
+				90FF47E6CD6672B4D40BEC67 /* [CP] Check Pods Manifest.lock */,
 				ECE03EA8186213E00042490A /* Sources */,
 				ECE03EA9186213E00042490A /* Frameworks */,
 				ECE03EAA186213E00042490A /* Resources */,
+				FA37E32318AE0B72ED4EC2DA /* [CP] Embed Pods Frameworks */,
+				06371427FE3A19CDD7353C48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -749,16 +776,15 @@
 				65C4AD401DB7C16700680EC2 /* backgrounds.xcassets in Resources */,
 				657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */,
 				65C37F831DAA783900F793AC /* images.xcassets in Resources */,
-				EC99213F18B4FDEF000FCA6F /* sexandthecity.json in Resources */,
 				EC2141E7189171A400739070 /* StatusView.xib in Resources */,
 				EC0D18361899354F00BE6368 /* QuestionHeaderView.xib in Resources */,
 				ECE03EA7186213E00042490A /* Images.xcassets in Resources */,
 				ECE03E96186213E00042490A /* InfoPlist.strings in Resources */,
 				654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */,
 				65F8692B1DA6486900402768 /* timeout.mp3 in Resources */,
+				659A7F031DCDF25500E910CA /* GoogleService-Info.plist in Resources */,
 				ECB25E0E18C0CFE9008C965C /* tick.mp3 in Resources */,
 				65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */,
-				EC99213E18B4FDEF000FCA6F /* flags.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +797,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06371427FE3A19CDD7353C48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DasQuizTests/Pods-DasQuizTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CDE8542A154505CB73BB1B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DasQuiz/Pods-DasQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F3386985D8582770B153A86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90FF47E6CD6672B4D40BEC67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1287BBC86A3F35F18816976 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DasQuiz/Pods-DasQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA37E32318AE0B72ED4EC2DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DasQuizTests/Pods-DasQuizTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECE03E84186213E00042490A /* Sources */ = {
@@ -984,6 +1103,7 @@
 		};
 		ECE03EBE186213E00042490A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCBA14400379B6F5C78508CA /* Pods-DasQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1004,6 +1124,7 @@
 		};
 		ECE03EBF186213E00042490A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E55667AC42BF9EA162D13AF /* Pods-DasQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1024,6 +1145,7 @@
 		};
 		ECE03EC1186213E00042490A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBEE59C43E1CD206114DA29E /* Pods-DasQuizTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1049,6 +1171,7 @@
 		};
 		ECE03EC2186213E00042490A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E526D5191D94DE1FABA18464 /* Pods-DasQuizTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
