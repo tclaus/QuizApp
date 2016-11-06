@@ -31,6 +31,7 @@
 
 @implementation StartViewController
 
+static NSString * const reviewURLTemplate                   = @"itms-apps://itunes.apple.com/app/id1136679552";
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -135,7 +136,9 @@
 }
 
 - (IBAction)openAppStore:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://appstore.com/dasquiz"]];
+    // reviewURLTemplate
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURLTemplate]];
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://appstore.com/dasquiz"]];
 }
 
 
