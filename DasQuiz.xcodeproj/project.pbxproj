@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651BF8661DCFA3180072C7AC /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651BF8651DCFA3180072C7AC /* AppIcons.xcassets */; };
 		654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654E0C241DAA5B96003C5392 /* thinking.mp3 */; };
 		6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 6578C11D1D59A66D001D8DEE /* 1000Fragen.json */; };
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
@@ -73,7 +74,6 @@
 		ECE03E98186213E00042490A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03E97186213E00042490A /* main.m */; };
 		ECE03E9C186213E00042490A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03E9B186213E00042490A /* AppDelegate.m */; };
 		ECE03EA5186213E00042490A /* TopicCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE03EA4186213E00042490A /* TopicCollectionController.m */; };
-		ECE03EA7186213E00042490A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE03EA6186213E00042490A /* Images.xcassets */; };
 		ECE03EAE186213E00042490A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE03EAD186213E00042490A /* XCTest.framework */; };
 		ECE03EAF186213E00042490A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE03E8B186213E00042490A /* Foundation.framework */; };
 		ECE03EB0186213E00042490A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE03E8F186213E00042490A /* UIKit.framework */; };
@@ -105,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		651BF8651DCFA3180072C7AC /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
 		654E0C241DAA5B96003C5392 /* thinking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thinking.mp3; sourceTree = "<group>"; };
 		6578C11D1D59A66D001D8DEE /* 1000Fragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1000Fragen.json; sourceTree = "<group>"; };
 		657DB45F1D465FBD0035C3E6 /* demofragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demofragen.json; sourceTree = "<group>"; };
@@ -222,7 +223,6 @@
 		ECE03E9B186213E00042490A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ECE03EA3186213E00042490A /* TopicCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicCollectionController.h; sourceTree = "<group>"; };
 		ECE03EA4186213E00042490A /* TopicCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicCollectionController.m; sourceTree = "<group>"; };
-		ECE03EA6186213E00042490A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECE03EAC186213E00042490A /* DasQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DasQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE03EAD186213E00042490A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ECE03EB5186213E00042490A /* DasQuizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DasQuizTests-Info.plist"; sourceTree = "<group>"; };
@@ -493,8 +493,8 @@
 				ECE03EC31862140E0042490A /* Views */,
 				ECE3B7BD18C9F22600F53483 /* Main_iPad.storyboard */,
 				EC8D200C1AACC4F0003735D3 /* Launch.storyboard */,
-				ECE03EA6186213E00042490A /* Images.xcassets */,
 				ECE03E92186213E00042490A /* Supporting Files */,
+				651BF8651DCFA3180072C7AC /* AppIcons.xcassets */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -772,6 +772,7 @@
 				65B19E551DA4F4A60082380D /* Localizable.strings in Resources */,
 				6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */,
 				65F869291DA6486900402768 /* wrong.m4a in Resources */,
+				651BF8661DCFA3180072C7AC /* AppIcons.xcassets in Resources */,
 				65D8ECC21DB7B4C3009DF03A /* levelup.m4a in Resources */,
 				EC8D200D1AACC4F0003735D3 /* Launch.storyboard in Resources */,
 				65C4AD401DB7C16700680EC2 /* backgrounds.xcassets in Resources */,
@@ -779,7 +780,6 @@
 				65C37F831DAA783900F793AC /* images.xcassets in Resources */,
 				EC2141E7189171A400739070 /* StatusView.xib in Resources */,
 				EC0D18361899354F00BE6368 /* QuestionHeaderView.xib in Resources */,
-				ECE03EA7186213E00042490A /* Images.xcassets in Resources */,
 				ECE03E96186213E00042490A /* InfoPlist.strings in Resources */,
 				654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */,
 				65F8692B1DA6486900402768 /* timeout.mp3 in Resources */,

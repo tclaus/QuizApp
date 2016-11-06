@@ -29,6 +29,8 @@
  */
 @property (nonatomic) NSInteger numberOfSuccessfulTries;
 
+- (void)saveData;
+
 /**
  Sets or gets last number of scores
  */

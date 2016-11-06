@@ -74,6 +74,10 @@ int maxLevel = 10;
         self.currentLevel = 1;
     }
     
+    if (!self.numberOfSuccessfulTries) {
+        self.numberOfSuccessfulTries = 0;
+    }
+    
     NSLog(@"GameStats loaded.");
 //
 }

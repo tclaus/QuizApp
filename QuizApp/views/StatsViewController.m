@@ -501,6 +501,23 @@
     
     _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
     
+    NSLog(@"Level = %ld",[GameStats sharedInstance].currentLevel );
+    NSLog(@"Tries = %ld",[GameStats sharedInstance].numberOfSuccessfulTries );
+    
+    if ([GameStats sharedInstance].currentLevel >= 4) {
+            if ( [self IAPCheck]) {
+                NSLog(@"Not buyed. Repair fraud");
+                
+                if ([GameStats sharedInstance].currentLevel > 4) {
+                    [GameStats sharedInstance].currentLevel = 4;
+                    [GameStats sharedInstance].numberOfSuccessfulTries = 3;
+                    [[GameStats sharedInstance] saveData];
+                }
+                
+            }
+        
+    }
+    
     if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle

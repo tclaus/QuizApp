@@ -338,7 +338,13 @@ static BOOL heartSoundPlaying;
         // >= 90 % success?
         if (percent >=0.80) {
             // PossibleLevel up
-            BOOL nextLevel = [[GameStats sharedInstance] levelUp];
+            BOOL nextLevel = false;
+            
+            if ([self IAPCheck]) {
+                nextLevel= [[GameStats sharedInstance] levelUp];
+            }
+            
+            
             
             // If next Level - Show screen
             // If only next Try - show number of tries
