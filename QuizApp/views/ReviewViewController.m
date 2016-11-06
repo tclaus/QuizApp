@@ -11,12 +11,16 @@
 #import "ReviewCell.h"
 #import "Question.h"
 #import "ADVTheme.h"
+@import Firebase;
 
 @interface ReviewViewController ()
 
 @end
 
 @implementation ReviewViewController
+
+
+
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,9 +65,67 @@
     return cell;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    Question* question = self.questions[indexPath.row];
+    NSURL *explanatioinURL = [NSURL URLWithString:question.explanation];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:explanatioinURL]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+    
+    UITableViewRowAction *info = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                                                    title:@"Info"
+                                                                  handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                      Question* question = self.questions[indexPath.row];
+                                                                      NSURL *explanatioinURL = [NSURL URLWithString:question.explanation];
+                                                                      
+                                                                          [FIRAnalytics logEventWithName:@"ViewExplanation"
+                                                                                              parameters:@{
+                                                                                                           @"questionID": [NSNumber numberWithInteger: question.questionID]
+                                                                                                           }];
+                                                                          
+                                                                          [[UIApplication sharedApplication] openURL:explanatioinURL];
+                                                                      
+                                                                  }];
+    return @[info];
+        
+    
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [self performSegueWithIdentifier:@"reviewDetail" sender:self];
+}
+
+- (CGFloat) tableView: (UITableView *) tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    ReviewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
+    
+    Question* question = self.questions[indexPath.row];
+    
+    
+    CGSize labelSize = CGSizeMake(cell.questionLabel.frame.size.width, MAXFLOAT);
+    CGRect labelRect;
+    if (question.text.length > 0)
+        labelRect = [question.text boundingRectWithSize:labelSize
+                                                options:NSStringDrawingUsesLineFragmentOrigin
+                                             attributes:  @{NSFontAttributeName:[UIFont systemFontOfSize:22],
+                                                            NSParagraphStyleAttributeName: paragraphStyle.copy}
+                                                context:nil];
+  
+   
+    return 24.0 + labelRect.size.height;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

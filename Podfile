@@ -6,8 +6,8 @@ target 'DasQuiz' do
   use_frameworks!
 
   # Pods for DasQuiz
-pod 'Firebase/Core'
-pod 'UAAppReviewManager'
+ pod 'Firebase/Core'
+ pod 'UAAppReviewManager'
 
   target 'DasQuizTests' do
     inherit! :search_paths

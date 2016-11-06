@@ -34,14 +34,9 @@
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
     
-    CGFloat labelSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 20.0f : 14.0f;
-    CGFloat countSize = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 32.0f : 22.0f;
-    
     self.countLabel.textColor = [UIColor whiteColor];
-    self.countLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:countSize];
     
     self.questionLabel.textColor = [UIColor whiteColor];
-    self.questionLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:labelSize];
     
     self.correctImage = [[UIImage imageNamed:@"tick"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.wrongImage = [[UIImage imageNamed:@"cross"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -57,8 +52,10 @@
 -(void)showCorrectImage:(BOOL)correct{
     if (correct) {
         self.resultImageView.image = self.correctImage;
+        self.tintColor = [UIColor greenColor];
     }else{
         self.resultImageView.image = self.wrongImage;
+        self.tintColor = [UIColor redColor];
     }
 }
 

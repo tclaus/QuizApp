@@ -339,7 +339,7 @@
         [self.effectView removeFromSuperview];
         
         [UAAppReviewManager userDidSignificantEvent:YES];
-        
+       
     }];
 }
 

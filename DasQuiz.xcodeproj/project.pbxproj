@@ -730,6 +730,7 @@
 					ECE03E87186213E00042490A = {
 						DevelopmentTeam = MYEC2JCSBB;
 						DevelopmentTeamName = "Thorsten Claus";
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1117,6 +1118,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.quizshow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1138,6 +1140,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.quizshow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

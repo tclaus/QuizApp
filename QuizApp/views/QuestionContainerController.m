@@ -403,7 +403,7 @@ static BOOL heartSoundPlaying;
         
         [FIRAnalytics logEventWithName:@"ViewExplanation"
                             parameters:@{
-                                         @"TargetURL": question.explanation
+                                         @"questionID": [NSNumber numberWithInteger: question.questionID]
                                          }];
         
         [[UIApplication sharedApplication] openURL:url];
