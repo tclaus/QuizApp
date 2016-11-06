@@ -72,6 +72,11 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint* topStatsContainerHeight;
 
+/**
+ Is false during the first time a info screen is presented. True after first visit
+ */
+@property (nonatomic) BOOL infoScreenShowed;
+
 // Stars for level progress
 
 
@@ -107,7 +112,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
+    
     
     if (lastLevel < [GameStats sharedInstance].currentLevel) {
         [self animateIn];
@@ -153,15 +158,15 @@
                                                            action:@selector(onRetorePurchases:)];
     self.navigationItem.rightBarButtonItem = self.restorePurchase;
     
-   // self.scoresLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
+    // self.scoresLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16];
     self.scoresLabel.textColor = [UIColor whiteColor];
-   // self.scoresLabel.adjustsFontSizeToFitWidth = YES;
+    // self.scoresLabel.adjustsFontSizeToFitWidth = YES;
     self.scoresLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     self.scoresLabel.text = NSLocalizedString(@"LAST SCORE",@"Last Score");
     
     self.scoresProgress.chartBorderWidth = 8.0f;
     self.scoresProgress.chartBorderColor = [UIColor whiteColor];
-   // self.scoresProgress.fontName = [ADVTheme mainFont];
+    // self.scoresProgress.fontName = [ADVTheme mainFont];
     
     UIImage* buttonBackground = [[UIImage imageNamed:@"button"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     buttonBackground = [buttonBackground imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -191,19 +196,19 @@
     self.gameModeLabel.textColor = [UIColor whiteColor];
     
     [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-   // self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+    // self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.chooseTopicsButton setTitle:NSLocalizedString(@"TOPICS",@"") forState:UIControlStateNormal];
-
+    
     [self.challengesButton setHidden:YES];
     [self.challengesButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-   // self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+    // self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.challengesButton addTarget:self action:@selector(showChallengesTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.challengesButton setTitle:NSLocalizedString(@"SEE CHALLENGES",@"") forState:UIControlStateNormal];
     
     // See highscores
     [self.highScoreButton setHidden:NO];
     [self.highScoreButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-   // self.highScoreButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
+    // self.highScoreButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.highScoreButton addTarget:self action:@selector(showHighscores:) forControlEvents:UIControlEventTouchUpInside];
     [self.highScoreButton setTitle:NSLocalizedString(@"HIGHSCORES",@"") forState:UIControlStateNormal];
     
@@ -412,7 +417,7 @@
         
         QuestionInfoController* controller = segue.destinationViewController;
         controller.questions = self.selectedQuestions;
-       
+        
         
         controller.userPressedStartBlock = ^(){
             [self userDidStartQuiz];
@@ -422,7 +427,7 @@
         UINavigationController* controller = segue.destinationViewController;
         QuestionContainerController* c = (QuestionContainerController*)controller.topViewController;
         c.questions = self.selectedQuestions;
-
+        
     } else if([segue.identifier isEqualToString:@"topics"] || [segue.identifier isEqualToString:@"topics-tableView"]){
         
         UINavigationController* nav = segue.destinationViewController;
@@ -434,15 +439,15 @@
         AvailableChallengesController* controller = (AvailableChallengesController*)nav.topViewController;
         controller.challenges = self.gamecenterChallengeInfos;
         /*if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-            controller.transitioningDelegate = self;
-            controller.modalPresentationStyle = UIModalPresentationCustom;
-        }*/
+         controller.transitioningDelegate = self;
+         controller.modalPresentationStyle = UIModalPresentationCustom;
+         }*/
         controller.userDidAcceptChallengeBlock = ^(GKChallenge* challenge) {
             NSArray* topics = [Config sharedInstance].topics;
             NSInteger questionCount = [Config sharedInstance].numberOfQuestionsToAnswer;
             [self startDirectQuizWithNumberOfQuestions:questionCount fromTopics:topics];
         };
-
+        
     }
 }
 
@@ -456,7 +461,7 @@
     
     if(topics.count > 0){
         NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
-
+        
         if ([self IAPCheck]) {
             _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
             
@@ -464,7 +469,7 @@
             
             UIAlertAction* buyAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageBuy style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
                 
-                    [self buyProduct];
+                [self buyProduct];
             }];
             
             UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:nil];
@@ -487,9 +492,9 @@
     NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
     
     // For training: fixed number from all topics
-    // For Time based: unlimited Number. (countQuestions is 0) 
+    // For Time based: unlimited Number. (countQuestions is 0)
     
-
+    
     _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
     
     if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
@@ -504,7 +509,7 @@
         }];
         
         UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-             [self startQuiz];
+            [self startQuiz];
         }];
         
         [alert addAction:buyAction];
@@ -521,26 +526,33 @@
 -(void)startQuiz{
     
     if ([GameModel sharedInstance].activeGameMode == GameModeTrainig ) {
-    
+        
         self.selectedQuestions = [Utils loadQuestionsWithIncreasingLevelFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue];
-    
+        
     } else {
         
-       self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue minLevel:[GameStats sharedInstance].currentLevel] ;
+        self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue minLevel:[GameStats sharedInstance].currentLevel] ;
     }
     
-    [self performSegueWithIdentifier:@"showInfo" sender:self];
+    if (!self.infoScreenShowed) {
+        [self performSegueWithIdentifier:@"showInfo" sender:self];
+        self.infoScreenShowed = YES;
+        
+    } else {
+        // Start quiz
+        [self userDidStartQuiz];
+    }
 }
 
 /**
  Returns YES if product is upgraded
  */
 - (BOOL)IAPCheck {
-
+    
     // the App comes with 100 free questions, User should buy for the last 900.
     
     // Check, if number of quiz is limited. (Studid, then you cant play any more)
-        return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
+    return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
     
 }
 
@@ -554,10 +566,10 @@
         }
     }];
     
-//    
-//    [self startDirectQuizWithNumberOfQuestions:[Config sharedInstance].quizIAP.numberofFreeQuestions
-//                                    fromTopics:_pendingQuiz[@"topics"]];
-//    
+    //
+    //    [self startDirectQuizWithNumberOfQuestions:[Config sharedInstance].quizIAP.numberofFreeQuestions
+    //                                    fromTopics:_pendingQuiz[@"topics"]];
+    //
 }
 
 - (void)productPurchased:(NSNotification *)notification {
@@ -607,7 +619,7 @@
     }
     
     [[GameKitManager sharedInstance] getPlayerInfo:playerIDs];
-
+    
     self.gamecenterChallenges = challenges;
 }
 
