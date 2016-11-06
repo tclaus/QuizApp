@@ -13,6 +13,8 @@
 @import Firebase;
 
 #import "QuizIAPHelper.h"
+#import <UAAppReviewManager/UAAppReviewManager.h>
+
 
 @implementation AppDelegate
 
@@ -23,6 +25,15 @@
     [QuizIAPHelper sharedInstance];
     
     [FIRApp configure];
+    
+    [UAAppReviewManager setAppID:@"1136679552"];
+    // [UAAppReviewManager setDebug:YES];
+    [UAAppReviewManager setReviewTitle:NSLocalizedString(@"Das!Quiz bewerten", @"reviewTitle")];
+    [UAAppReviewManager setReviewMessage:NSLocalizedString( @"Gefällt dir 'Das!Quiz'? Dann teile doch anderen mit, was du denkst. So kann Das!Quiz bekannt und besser werden. Vielen Dank!", @"reviewMessage")];
+    [UAAppReviewManager setRateButtonTitle:NSLocalizedString(@"Das!Quiz bewerten", @"rateButtonTitle")];
+    [UAAppReviewManager setCancelButtonTitle:@"Nö"];
+    [UAAppReviewManager setRemindButtonTitle:@"Später vielleicht"];
+    [UAAppReviewManager showPromptIfNecessary];
     
     return YES;
 }

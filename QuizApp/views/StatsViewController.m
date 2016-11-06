@@ -24,6 +24,7 @@
 #import "GameModel.h"
 #import "GameStats.h"
 #import "SoundSystem.h"
+#import <UAAppReviewManager/UAAppReviewManager.h>
 
 @import FirebaseAnalytics;
 
@@ -336,6 +337,9 @@
     } completion:^(BOOL finished) {
         [self.levelUpView removeFromSuperview];
         [self.effectView removeFromSuperview];
+        
+        [UAAppReviewManager userDidSignificantEvent:YES];
+        
     }];
 }
 
