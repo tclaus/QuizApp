@@ -340,8 +340,11 @@ static BOOL heartSoundPlaying;
             // PossibleLevel up
             BOOL nextLevel = false;
             
-            if ([self IAPCheck]) {
+            if ([self IAPProductPurchased] || ([GameStats sharedInstance].currentLevel <= 4 && [GameStats sharedInstance].numberOfSuccessfulTries <= 2)  ) {
                 nextLevel= [[GameStats sharedInstance] levelUp];
+            } else {
+                // Not purchased!
+                return @"Wenn Du in das nächset Level möchtest, musst du das Spiel freischalten.";
             }
             
             
@@ -351,7 +354,7 @@ static BOOL heartSoundPlaying;
             if (nextLevel) {
                 return @"Das war SUPER!";
             } else {
-                return @"Kannst du es ein bischen besser?";
+                return @"Du hast ein Stern verdient!";
             }
             
             
@@ -374,7 +377,7 @@ static BOOL heartSoundPlaying;
             // If level down - Show screen
             
             if (downLevel) {
-                return @"Schade. Du verlierst ein Stern";
+                return @"Schade. Du wirst herabgestuft.";
             } else {
                 return @"Das war nicht schlecht. Aber nicht einfach drauf los tippen.";
             }
@@ -395,6 +398,16 @@ static BOOL heartSoundPlaying;
     
     // Check, if number of quiz is limited. (Studid, then you cant play any more)
     return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
+    
+}
+
+
+/**
+ YES if purchased
+ */
+- (BOOL)IAPProductPurchased {
+    
+    return  [[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
     
 }
 

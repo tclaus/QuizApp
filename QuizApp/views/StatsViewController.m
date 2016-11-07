@@ -546,6 +546,7 @@
 
 -(void)startQuiz{
     
+    // Generate questions
     if ([GameModel sharedInstance].activeGameMode == GameModeTrainig ) {
         
         self.selectedQuestions = [Utils loadQuestionsWithIncreasingLevelFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue];
@@ -566,7 +567,7 @@
 }
 
 /**
- Returns YES if product is upgraded
+ Returns NO if product is upgraded, YES if product is bought
  */
 - (BOOL)IAPCheck {
     
