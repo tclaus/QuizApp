@@ -501,8 +501,8 @@
     
     _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
     
-    NSLog(@"Level = %ld",[GameStats sharedInstance].currentLevel );
-    NSLog(@"Tries = %ld",[GameStats sharedInstance].numberOfSuccessfulTries );
+    NSLog(@"Level = %ld",(long) [GameStats sharedInstance].currentLevel );
+    NSLog(@"Tries = %ld",(long)[GameStats sharedInstance].numberOfSuccessfulTries );
     
     if ([GameStats sharedInstance].currentLevel >= 4) {
             if ( [self IAPCheck]) {
