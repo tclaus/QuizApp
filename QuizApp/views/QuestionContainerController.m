@@ -340,10 +340,10 @@ static BOOL heartSoundPlaying;
             // PossibleLevel up
             BOOL nextLevel = false;
             
-            if ([self IAPProductPurchased] || ([GameStats sharedInstance].currentLevel <= 4 && [GameStats sharedInstance].numberOfSuccessfulTries <= 2)  ) {
+            if ([self IAPProductPurchased] || ( [GameStats sharedInstance].currentLevel <= 4 && [GameStats sharedInstance].numberOfSuccessfulTries < 3)  ) {
                 nextLevel= [[GameStats sharedInstance] levelUp];
             } else {
-                // Not purchased!
+                // Not purchased!  
                 return @"Wenn Du in das nächset Level möchtest, musst du das Spiel freischalten.";
             }
             

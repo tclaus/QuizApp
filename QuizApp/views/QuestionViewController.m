@@ -60,7 +60,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         // get size, will only check if iphone 4S: 480, 5: 568, 6/7 : 667
         if (self.view.bounds.size.height == 480) {
-            self.stackView.spacing = 0;
+            self.stackView.spacing = 10;
         }
         if (self.view.bounds.size.height == 568) {
             self.stackView.spacing = 15;

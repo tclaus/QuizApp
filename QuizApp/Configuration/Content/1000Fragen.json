@@ -12519,7 +12519,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Panavia_Tornado ",
     "questionId" : "500",
     "text" : "Wie heißt das 'Mehrzweckkampf-Flugzeug', welches auch in Deutschland eingesetzt wird?",
     "category" : "Technik"
@@ -12544,7 +12544,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Speiseeis",
     "questionId" : "501",
     "text" : "Wo gab es vermutlich das erste Speiseeis?",
     "category" : "Geschichte"
@@ -12569,7 +12569,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Biber#Kulturaspekte",
     "questionId" : "502",
     "text" : "Wie lautet der Fabelname des Bibers?",
     "category" : "Literatur & Sprache"
@@ -12594,7 +12594,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kim_Peek",
     "questionId" : "503",
     "text" : "Für welchen Film diente Kim Peek aufgrund seiner Spezialbegabung als Vorbild?",
     "category" : "Unterhaltung & Medien"
@@ -12619,7 +12619,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Nepotismus",
     "questionId" : "504",
     "text" : "Wofür steht das Fremdwort 'Nepotismus'?",
     "category" : "Literatur & Sprache"
@@ -12644,7 +12644,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schwerelosigkeit",
     "questionId" : "505",
     "text" : "In welcher Farbe brennt eine Kerze in der Schwerelosigkeit?",
     "category" : "Wissenschaft & Forschung"
@@ -12669,7 +12669,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Darts",
     "questionId" : "506",
     "text" : "Was ist die höchste Punktzahl, die man beim Dartspiel mit einem Pfeil erzielen kann?",
     "category" : "Sport & Spiel"
@@ -12694,7 +12694,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Serenade",
     "questionId" : "507",
     "text" : "Die Bezeichnung für einen Morgengesang im Gegensatz zur Serenade heißt ..?",
     "category" : "Musik"
@@ -12719,7 +12719,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bundesliga",
     "questionId" : "508",
     "text" : "Wie viele Spieltage hat die 1. Fußball-Bundesliga?",
     "category" : "Sport & Spiel"
@@ -12744,7 +12744,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Feldberg_(Schwarzwald)",
     "questionId" : "509",
     "text" : "Welcher dieser Berge in Deutschland ist kein Tafelberg?",
     "category" : "Geographie"
@@ -12769,7 +12769,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kap_Hoorn",
     "questionId" : "510",
     "text" : "Wie heißt der südlichste Teil Südamerikas?",
     "category" : "Geographie"
@@ -12794,7 +12794,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Albert_Einstein",
     "questionId" : "511",
     "text" : "Welche von diesen Personen war kein Zeitgenosse der anderen Personen?",
     "category" : "Geschichte"
@@ -12819,7 +12819,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Terre_des_hommes",
     "questionId" : "512",
     "text" : "In welchem Land wurde das Kinderhilfswerk 'Terre des hommes' gegründet?",
     "category" : "Gesellschaft"
@@ -12844,7 +12844,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Traditionelle_chinesische_Medizin",
     "questionId" : "513",
     "text" : "Wie wird jene Heilkunde bezeichnet, die sich in China seit mehr als 2000 Jahren entwickelt hat?",
     "category" : "Gesundheit"
@@ -12869,7 +12869,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Dünung",
     "questionId" : "514",
     "text" : "Wie nennt man Wellenbewegung des Meers, die sich über Kilometer hin fortpflanzen kann?",
     "category" : "Wissenschaft & Forschung"
@@ -12894,7 +12894,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "Howard Carter",
     "questionId" : "515",
     "text" : "Von wem wurde 1922 in Ägypten das Grab des Tutanchamun gefunden?",
     "category" : "Wissenschaft & Forschung"
@@ -12919,7 +12919,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/John_Lennon",
     "questionId" : "516",
     "text" : "In welchem Jahr starb der englische Musiker John Lennon?",
     "category" : "Musik"
@@ -12944,7 +12944,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bram_Stoker",
     "questionId" : "517",
     "text" : "Welche Schauerfigur erschuf der Schriftsteller Bram Stoker?",
     "category" : "Literatur & Sprache"
@@ -12969,7 +12969,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Megastadt",
     "questionId" : "518",
     "text" : "Ab wie vielen Einwohnern bezeichnet man eine Stadt als 'Megastadt'?",
     "category" : "Geographie"
@@ -12994,7 +12994,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bullauge",
     "questionId" : "519",
     "text" : "Was ist der Grund für die kreisrunde Form eines Bullauges?",
     "category" : "Wissenschaft & Forschung"
@@ -13019,7 +13019,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Australien",
     "questionId" : "520",
     "text" : "Wie viele Zeitzonen hat der kontinentale Teil von Australien?",
     "category" : "Geographie"
@@ -13044,7 +13044,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Monopoly",
     "questionId" : "521",
     "text" : "Nach Angaben des Verlages, wird das Spiel Monopoly in wie vielen Sprachen verkauft?",
     "category" : "Sport & Spiel"
@@ -13069,7 +13069,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Die_menschliche_Komödie",
     "questionId" : "522",
     "text" : "Wer verfasste 'Die menschliche Komödie'?",
     "category" : "Literatur & Sprache"
@@ -13094,7 +13094,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mariachi",
     "questionId" : "523",
     "text" : "Aus welchem Land ist 'Mariachi' ein typisches Musikgenre?",
     "category" : "Musik"
@@ -13119,7 +13119,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hodometer",
     "questionId" : "524",
     "text" : "Was ist ein Hodometer?",
     "category" : "Literatur & Sprache"
@@ -13144,7 +13144,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Widerstand_(Bauelement)",
     "questionId" : "525",
     "text" : "Welches der folgenden elektronischen Bauteile ist nicht aktiv?",
     "category" : "Wissenschaft & Forschung"
@@ -13169,7 +13169,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Jochen_Rindt",
     "questionId" : "526",
     "text" : "Welcher Automobilrennfahrer wurde posthum zum Formel-1-Weltmeister gekürt?",
     "category" : "Sport & Spiel"
@@ -13194,7 +13194,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Wollgräser",
     "questionId" : "527",
     "text" : "Wollgras gehört zur Pflanzenfamilie der ..?",
     "category" : "Wissenschaft & Forschung"
@@ -13219,7 +13219,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_von_Bergen_in_Griechenland",
     "questionId" : "528",
     "text" : "Wie heißt der höchste Gipfel in Griechenland?",
     "category" : "Geographie"
@@ -13244,7 +13244,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Belgischer_Kreisel",
     "questionId" : "529",
     "text" : "Was versteht man unter dem 'Belgischen Kreisel'?",
     "category" : "Sport & Spiel"
@@ -13269,7 +13269,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Coulrophobie",
     "questionId" : "530",
     "text" : "Wie wird die krankhafte Angst vor Clowns bezeichnet?",
     "category" : "Gesundheit"
@@ -13294,7 +13294,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Erster_Opiumkrieg",
     "questionId" : "531",
     "text" : "Welche Staaten befanden sich 1840 bis 1842 im Opiumkrieg?",
     "category" : "Geschichte"
@@ -13319,7 +13319,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schwedeneisbecher",
     "questionId" : "532",
     "text" : "Der Eisbecher aus Speiseeis mit Vanillegeschmack, Apfelmus, Eierlikör und Schlagsahne heißt ..?",
     "category" : "Essen & Trinken"
@@ -13344,7 +13344,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Lichtstrom",
     "questionId" : "533",
     "text" : "Wie heißt die photometrische SI-Einheit des Lichtstroms?",
     "category" : "Wissenschaft & Forschung"
@@ -13369,7 +13369,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Haus_der_Geschichte",
     "questionId" : "534",
     "text" : "In welcher Stadt Deutschlands befindet sich das 'Haus der Geschichte der Bundesrepublik Deutschland'",
     "category" : "Kunst & Architektur"
@@ -13394,7 +13394,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Für_Elise",
     "questionId" : "535",
     "text" : "Wer komponierte das Klavierstück 'Für Elise'?",
     "category" : "Musik"
@@ -13419,7 +13419,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Rudi_Gutendorf",
     "questionId" : "536",
     "text" : "Wer gilt als Weltenbummler unter den deutschen Trainern?",
     "category" : "Sport & Spiel"
@@ -13444,7 +13444,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Archimedische_Schraube",
     "questionId" : "537",
     "text" : "Was ist eine Archimedische Schraube?",
     "category" : "Technik"
@@ -13469,7 +13469,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Klimax",
     "questionId" : "538",
     "text" : "Was bedeutet der Begriff 'Klimax'?",
     "category" : "Literatur & Sprache"
@@ -13494,7 +13494,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Partition_(Datenträger)",
     "questionId" : "539",
     "text" : "Um eine große Festplatte in mehrere logische Laufwerke zu verwandeln, muss man sie ..?",
     "category" : "Technik"
@@ -13519,7 +13519,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hoover-Talsperre",
     "questionId" : "540",
     "text" : "Welcher Fluss wird vom Hoover-Damm gestaut?",
     "category" : "Geographie"
@@ -13544,7 +13544,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Frankfurter_Buchmesse",
     "questionId" : "541",
     "text" : "In welchem Monat findet jährlich die Frankfurter Buchmesse statt?",
     "category" : "Literatur & Sprache"
@@ -13569,7 +13569,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wiktionary.org\/wiki\/Droge",
     "questionId" : "542",
     "text" : "Der Begriff 'Droge' stammt ursprüngllich aus dem Niederländischem Begriff 'droog' und bedeutet ..?",
     "category" : "Literatur & Sprache"
@@ -13594,7 +13594,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Viereck",
     "questionId" : "543",
     "text" : "Wie heißt ein Viereck bei dem alle vier Seiten gleich lang sind?",
     "category" : "Wissenschaft & Forschung"
@@ -13619,7 +13619,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bodenkunde",
     "questionId" : "544",
     "text" : "Als was bezeichnet die 'Bodenkunde' die Gesamtheit der toten organischen Substanz eines Bodens?",
     "category" : "Wissenschaft & Forschung"
@@ -13644,7 +13644,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_der_erfolgreichsten_Sommerolympioniken",
     "questionId" : "545",
     "text" : "Welcher deutsche Sportler gewann am häufigsten Gold bei Olympia?",
     "category" : "Sport & Spiel"
@@ -13669,7 +13669,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Engelshaar",
     "questionId" : "546",
     "text" : "Welche Nudelsorte ist dünner als Spaghetti und wird auch 'Engelshaar' genannt?",
     "category" : "Essen & Trinken"
@@ -13694,7 +13694,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Edgar_Wallace",
     "questionId" : "547",
     "text" : "Wer gehört nicht zu den Klassikern der Science-Fiction-Literatur?",
     "category" : "Literatur & Sprache"
@@ -13719,7 +13719,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Jogging",
     "questionId" : "548",
     "text" : "Wieviel Kalorien verbraucht man bei eine Stunde Joggen?",
     "category" : "Gesundheit"
@@ -13744,7 +13744,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Störe",
     "questionId" : "549",
     "text" : "Welcher Süßwasserfisch erreicht das höchste natürliche Alter?",
     "category" : "Wissenschaft & Forschung"
@@ -13769,7 +13769,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Jojo_Moyes",
     "questionId" : "550",
     "text" : "Welcher Roman der Schriftstellerin Jojo Moyes wurde 2016 fürs Kino verfilmt?",
     "category" : "Literatur & Sprache"
@@ -13794,7 +13794,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hundeäquator",
     "questionId" : "551",
     "text" : "Wo gibt es einen 'Hundeäquator'?",
     "category" : "Gesellschaft"
@@ -13819,7 +13819,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Deutschland",
     "questionId" : "552",
     "text" : "Wie viele Nachbarstaaten hat Deutschland?",
     "category" : "Geographie"
@@ -13844,7 +13844,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Niederlande",
     "questionId" : "553",
     "text" : "Welches Land ist kein Anrainerstaat der Ostsee?",
     "category" : "Geographie"
@@ -13869,7 +13869,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Labrador_Retriever",
     "questionId" : "554",
     "text" : "Welches ist die beliebteste Hunderasse in Großbritannien und den USA?",
     "category" : "Wissenschaft & Forschung"
@@ -13894,7 +13894,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Marseille",
     "questionId" : "555",
     "text" : "Wie heißt die größte Stadt in der Provence?",
     "category" : "Geographie"
@@ -13919,7 +13919,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ohrfeige#Umgangssprache_und_Redewendungen",
     "questionId" : "556",
     "text" : "Welches Wort ist kein Synonym für die 'Ohrfeige'?",
     "category" : "Literatur & Sprache"
@@ -13944,7 +13944,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Plotter",
     "questionId" : "557",
     "text" : "Was dient bei einem Computer nicht als Eingabegerät?",
     "category" : "Technik"
@@ -13969,7 +13969,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Neapel",
     "questionId" : "558",
     "text" : "An welchem Meer liegt Neapel?",
     "category" : "Geographie"
@@ -13994,7 +13994,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Blautopf",
     "questionId" : "559",
     "text" : "Was versteht man unter dem Blautopf?",
     "category" : "Literatur & Sprache"
@@ -14019,7 +14019,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Homo_faber_(Roman)",
     "questionId" : "560",
     "text" : "Wer schrieb den Roman 'Homo faber'?",
     "category" : "Literatur & Sprache"
@@ -14044,7 +14044,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Anti-Atomkraft-Bewegung",
     "questionId" : "561",
     "text" : "Was ist das Symbol der Anti-Atomkraft-Bewegung in vielen Ländern?",
     "category" : "Gesellschaft"
@@ -14069,7 +14069,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kirk_Douglas",
     "questionId" : "562",
     "text" : "Unter welchem Pseudonym ist Issur Danielovitsch Demskjj bekannt?",
     "category" : "Unterhaltung & Medien"
@@ -14094,7 +14094,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Handwerkerhäuschen",
     "questionId" : "563",
     "text" : "In welcher deutschen Stadt stehen die sogenannten 'Handwerkerhäuschen'?",
     "category" : "Kunst & Architektur"
@@ -14119,7 +14119,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hebamme",
     "questionId" : "564",
     "text" : "In welchem Land heißt der männliche Entbindungspfleger 'Hebamme'?",
     "category" : "Gesellschaft"
@@ -14144,7 +14144,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Tastatur",
     "questionId" : "565",
     "text" : "Auf welcher Taste einer Computertastatur befinden sich zwei langgezogene Pfeile?",
     "category" : "Technik"
@@ -14169,7 +14169,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Taler",
     "questionId" : "566",
     "text" : "Aus welchem Material bestand ein 'Taler'?",
     "category" : "Geschichte"
@@ -14194,7 +14194,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Pomologie",
     "questionId" : "567",
     "text" : "Die Lehre der Arten und Sorten von Obst sowie deren Bestimmung heißt ..?",
     "category" : "Wissenschaft & Forschung"
@@ -14219,7 +14219,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Flappy_Bird",
     "questionId" : "568",
     "text" : "Wie heißt ein Android-Kultspiel im Retro-Look?",
     "category" : "Technik"
@@ -14244,7 +14244,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hermaphroditismus",
     "questionId" : "569",
     "text" : "Welcher Begriff hat nichts mit Zweigeschlechtlichkeit zu tun?",
     "category" : "Literatur & Sprache"
@@ -14269,7 +14269,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Polygon",
     "questionId" : "570",
     "text" : "Wie lautet der mathematische Fachbegriff für ein Vieleck?",
     "category" : "Wissenschaft & Forschung"
@@ -14294,7 +14294,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_der_Musikhochschulen_und_Konservatorien_in_Deutschland",
     "questionId" : "571",
     "text" : "Wer war der Gründer der ersten Musikhochschule in Deutschland?",
     "category" : "Gesellschaft"
@@ -14319,7 +14319,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Rap",
     "questionId" : "572",
     "text" : "Was ist die 'Königsdisziplin' im 'Schnell-Rappen'?",
     "category" : "Musik"
@@ -14344,7 +14344,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Jade",
     "questionId" : "573",
     "text" : "Wie heißt der grüne Stein, den die Indianer Mexikos zu Heilzwecken einsetzten?",
     "category" : "Wissenschaft & Forschung"
@@ -14369,7 +14369,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Entstalinisierung",
     "questionId" : "574",
     "text" : "Wer leitete die 'Entstalinisierung' der Sowjetunion ein?",
     "category" : "Politik"
@@ -14394,7 +14394,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Nikon",
     "questionId" : "575",
     "text" : "Zu welchem Automobilkonzern gehört der Fotoapparathersteller 'Nikon'?",
     "category" : "Wirtschaft & Verkehr"
@@ -14419,7 +14419,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Levante",
     "questionId" : "576",
     "text" : "Was versteht man unter 'Levante'?",
     "category" : "Literatur & Sprache"
@@ -14444,7 +14444,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ewiges_Licht",
     "questionId" : "577",
     "text" : "Wo findet man das 'Ewige Licht'?",
     "category" : "Glaube & Religion"
@@ -14469,7 +14469,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Wladimir_Klitschko#Sonstiges",
     "questionId" : "578",
     "text" : "Welches Lied hat Wladimir Klitschko als 'Einlaufmusik'?",
     "category" : "Sport & Spiel"
@@ -14494,7 +14494,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Montagne_Sainte-Victoire",
     "questionId" : "579",
     "text" : "In welchem Land liegt der Berg 'Sainte-Victoire'?",
     "category" : "Geographie"
@@ -14519,7 +14519,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Netzstrumpf",
     "questionId" : "580",
     "text" : "Was sind 'Ajour-Strümpfe'?",
     "category" : "Gesellschaft"
@@ -14544,7 +14544,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Eierkuchen#Mittel-_und_Osteuropa",
     "questionId" : "581",
     "text" : "Von welchem Tier stammt die Grundzutat für den 'Palatschinken'?",
     "category" : "Essen & Trinken"
@@ -14569,7 +14569,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kiwifrucht",
     "questionId" : "582",
     "text" : "Welche Frucht wird auch 'Chinesische Stachelbeere' genannt?",
     "category" : "Essen & Trinken"
@@ -14594,7 +14594,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Elefanten",
     "questionId" : "583",
     "text" : "Wie lange dauert die Schwangerschaft einer Elefantenkuh?",
     "category" : "Wissenschaft & Forschung"
@@ -14619,7 +14619,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Butter",
     "questionId" : "584",
     "text" : "Zu wieviel % muß Butter nach der EU-Verordnung zu mindestens aus Milchfett bestehen?",
     "category" : "Essen & Trinken"
@@ -14644,7 +14644,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Superman",
     "questionId" : "585",
     "text" : "In welcher Stadt kämpft Superman für das Gute?",
     "category" : "Unterhaltung & Medien"
@@ -14669,7 +14669,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Totes_Meer",
     "questionId" : "586",
     "text" : "Wo befindet sich die tiefste Landstelle der Erde?",
     "category" : "Geographie"
@@ -14694,7 +14694,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Warze",
     "questionId" : "587",
     "text" : "Was ist 'Verrucae'?",
     "category" : "Literatur & Sprache"
@@ -14719,7 +14719,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Olympische_Winterspiele",
     "questionId" : "588",
     "text" : "Wann und wo fanden die ersten Olympischen Winterspiele statt?",
     "category" : "Sport & Spiel"
@@ -14744,7 +14744,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Keferloher",
     "questionId" : "589",
     "text" : "Was ist ein 'Keferloher'?",
     "category" : "Literatur & Sprache"
@@ -14769,7 +14769,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Galapagosinseln",
     "questionId" : "590",
     "text" : "Zu welchem Land gehören die Galapagosinseln?",
     "category" : "Geographie"
@@ -14794,7 +14794,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Zalando",
     "questionId" : "591",
     "text" : "Seit wann gibt es den Online-Versandhändler Zalando?",
     "category" : "Wirtschaft & Verkehr"
@@ -14819,7 +14819,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Nikolai_Frederik_Severin_Grundtvig",
     "questionId" : "592",
     "text" : "Was gründete Nicolai Grundtvig 1844 in Dänemark?",
     "category" : "Geschichte"
@@ -14844,7 +14844,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/George_Fox",
     "questionId" : "593",
     "text" : "Welche Religionsgemeinschaft wurde im 17. Jhdt. von George Fox gegründet?",
     "category" : "Glaube & Religion"
@@ -14869,7 +14869,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Sextner_Dolomiten",
     "questionId" : "594",
     "text" : "Wie heißt das bekannteste Bergmassiv der ' Sextener Dolomiten'?",
     "category" : "Geographie"
@@ -14894,7 +14894,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Deutsches_Ledermuseum",
     "questionId" : "595",
     "text" : "Wo befindet sich das 'Deutsche Ledermuseum'?",
     "category" : "Kunst & Architektur"
@@ -14919,7 +14919,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Lippenstift",
     "questionId" : "596",
     "text" : "Der älteste Fund, der auf das Färben von Lippen hindeutet, stammt aus welchem Jahr?",
     "category" : "Geschichte"
@@ -14944,7 +14944,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Epikanthus_medialis",
     "questionId" : "597",
     "text" : "In welchen Themenbereich gehört der Begriff 'Epikanthus-Falte'?",
     "category" : "Literatur & Sprache"
@@ -14969,7 +14969,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Deutsche_Revolution_1848\/1849",
     "questionId" : "598",
     "text" : "In welchem Jahr fand die so genannte Märzrevolution statt?",
     "category" : "Geschichte"
@@ -14994,7 +14994,7 @@
       }
     ],
     "levelId" : 6,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Edukt",
     "questionId" : "599",
     "text" : "Wie nennt man einen aus Rohstoffen abgeschiedenen Stoff?",
     "category" : "Wissenschaft & Forschung"
@@ -15019,7 +15019,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Jago_(Forschungstauchboot)",
     "questionId" : "600",
     "text" : "Was ist 'Jago'?",
     "category" : "Technik"
@@ -15044,7 +15044,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Red_Dot_Design_Museum",
     "questionId" : "601",
     "text" : "In welcher Stadt in NRW befindet sich das 'Red dot design museum'?",
     "category" : "Kunst & Architektur"
@@ -15069,7 +15069,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Geldschöpfung",
     "questionId" : "602",
     "text" : "Wie wird die Ausgabe von Noten und Münzen durch den Staat genannt?",
     "category" : "Wirtschaft & Verkehr"
@@ -15094,7 +15094,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Pfadfinder",
     "questionId" : "603",
     "text" : "Wo wurde 1907 das erste experimentelle Pfadfinderlager durchgeführt?",
     "category" : "Gesellschaft"
@@ -15119,7 +15119,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Le_Mont-Saint-Michel",
     "questionId" : "604",
     "text" : "In welcher Region von Frankreich liegt das bekannte Kloster 'Le Mont Saint-Michel'?",
     "category" : "Kunst & Architektur"
@@ -15144,7 +15144,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_der_längsten_Brücken",
     "questionId" : "605",
     "text" : "In welchem Land steht die längste über Wasser führende Brücke der Welt?",
     "category" : "Kunst & Architektur"
@@ -15169,7 +15169,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Nikobaren",
     "questionId" : "606",
     "text" : "Was sind 'Nikobaren'?",
     "category" : "Literatur & Sprache"
@@ -15194,7 +15194,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Surma_(Volk)",
     "questionId" : "607",
     "text" : "Bei welchem Naturvolk dienen Rinder als regelmäßige Lieferanten für Trinkblut ohne Schlachtung?",
     "category" : "Gesellschaft"
@@ -15219,7 +15219,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wiktionary.org\/wiki\/adobe",
     "questionId" : "608",
     "text" : "Was ist ein Adobe?",
     "category" : "Literatur & Sprache"
@@ -15244,7 +15244,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Peter_Ustinov",
     "questionId" : "609",
     "text" : "In welchem Film spielte Sir Peter Ustinov eine Hauptrolle?",
     "category" : "Unterhaltung & Medien"
@@ -15269,7 +15269,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Haustier",
     "questionId" : "610",
     "text" : "Das älteste bekannte Haustier ohne direkten wirtschaftlichen Nutzen ist ..?",
     "category" : "Gesellschaft"
@@ -15294,7 +15294,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Die_Simpsons#Briefmarken",
     "questionId" : "611",
     "text" : "Welche Comicfigur(en) erschien(en) in den USA auf offiziellen Briefmarken?",
     "category" : "Literatur & Sprache"
@@ -15319,7 +15319,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mike_Krüger#Singles",
     "questionId" : "612",
     "text" : "In welchem Lied besang Mike Krüger sein Stottern gegenüber Frauen?",
     "category" : "Musik"
@@ -15344,7 +15344,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Halma",
     "questionId" : "613",
     "text" : "Wie heißt es beim Halma, wenn der Spieler mehrere Felder auf einmal zurücklegen kann?",
     "category" : "Sport & Spiel"
@@ -15369,7 +15369,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bundessozialgericht",
     "questionId" : "614",
     "text" : "In welcher deutschen Stadt hat das Bundessozialgericht seinen Sitz?",
     "category" : "Politik"
@@ -15394,7 +15394,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Balladenjahr",
     "questionId" : "615",
     "text" : "Welches Jahr bezeichnet man in der deutschen Literaturgeschichte als das 'Balladenjahr'?",
     "category" : "Literatur & Sprache"
@@ -15419,7 +15419,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Basketball",
     "questionId" : "616",
     "text" : "Wie hoch hängt der Korb beim Basketball?",
     "category" : "Sport & Spiel"
@@ -15444,7 +15444,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Fahruntüchtigkeit",
     "questionId" : "617",
     "text" : "In Deutschland liegt ab wieviel ‰ für Kraftfahrzeugfahrer absolute Fahruntüchtigkeit vor?",
     "category" : "Politik"
@@ -15469,7 +15469,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Magnitude",
     "questionId" : "618",
     "text" : "Was ist fachsprachlich eine 'Magnitude'?",
     "category" : "Wissenschaft & Forschung"
@@ -15494,7 +15494,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Tor_(Fußball)",
     "questionId" : "619",
     "text" : "Wie hoch ist ein Fußballtor?",
     "category" : "Sport & Spiel"
@@ -15519,7 +15519,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Peter_Müller_(Boxer)",
     "questionId" : "620",
     "text" : "Welcher deutsche Boxer hatte den Beinamen 'De Aap'?",
     "category" : "Sport & Spiel"
@@ -15544,7 +15544,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Europa",
     "questionId" : "621",
     "text" : "Zu welchem Land gehört die Insel, die geografisch als der südlichste Punkt Europas gilt?",
     "category" : "Geographie"
@@ -15569,7 +15569,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Marc_Chagall",
     "questionId" : "622",
     "text" : "In welchem Land ist der Maler Marc Chagall geboren?",
     "category" : "Kunst & Architektur"
@@ -15594,7 +15594,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wiktionary.org\/wiki\/Moratorium",
     "questionId" : "623",
     "text" : "Welches dieser Worte ist kein Synonyme für 'Moratorium'?",
     "category" : "Literatur & Sprache"
@@ -15619,7 +15619,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Blue_Stilton",
     "questionId" : "624",
     "text" : "Wobei handelt es sich nicht um einen Hartkäse?",
     "category" : "Essen & Trinken"
@@ -15644,7 +15644,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Brownout_(Luftfahrt)",
     "questionId" : "625",
     "text" : "Wie bezeichnet man eine Einschränkung der Sichtverhältnisse durch Staub oder Sand im Luftverkehr?",
     "category" : "Wirtschaft & Verkehr"
@@ -15669,7 +15669,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Deutsche_Demokratische_Republik",
     "questionId" : "626",
     "text" : "Wer war der letzte Ministerpräsident der DDR?",
     "category" : "Politik"
@@ -15694,7 +15694,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Formaldehyd",
     "questionId" : "627",
     "text" : "Welches Material absorbiert auf natürliche Weise Formaldehyd?",
     "category" : "Wissenschaft & Forschung"
@@ -15719,7 +15719,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Golden_Gate_Bridge",
     "questionId" : "628",
     "text" : "Wie lang ist die Golden-Gate-Brücke?",
     "category" : "Kunst & Architektur"
@@ -15744,7 +15744,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mann_mit_dem_Hammer",
     "questionId" : "629",
     "text" : "Insbesonders bei welcher Sportart gibt es die Bezeichnung 'Hungerast'?",
     "category" : "Sport & Spiel"
@@ -15769,7 +15769,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Cupula",
     "questionId" : "630",
     "text" : "Was ist bei Früchten die 'Cupula'?",
     "category" : "Wissenschaft & Forschung"
@@ -15794,7 +15794,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Franzbrötchen",
     "questionId" : "631",
     "text" : "Wie nennt man ein süßes Feingebäck aus Plunder- oder Hefeteig, das mit Zucker und Zimt gefüllt ist?",
     "category" : "Essen & Trinken"
@@ -15819,7 +15819,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bullen-_und_Bärenmarkt",
     "questionId" : "632",
     "text" : "Welcher Begriff steht für anhaltend sinkende Kurse an der Börse?",
     "category" : "Wirtschaft & Verkehr"
@@ -15844,7 +15844,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Dallas_(Fernsehserie,_1978)",
     "questionId" : "633",
     "text" : "Welche der folgenden Figuren passt nicht in die TV-Serie 'Dallas'?",
     "category" : "Unterhaltung & Medien"
@@ -15869,7 +15869,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Balaton",
     "questionId" : "634",
     "text" : "Wie heißt der größte See Mitteleuropas?",
     "category" : "Geographie"
@@ -15894,7 +15894,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Flugobst",
     "questionId" : "635",
     "text" : "Welche Frucht wird im Lebensmittel-Fachhandel nicht als 'Flugobst' bezeichnet?",
     "category" : "Essen & Trinken"
@@ -15919,7 +15919,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Alligatoren",
     "questionId" : "636",
     "text" : "Wie viele Arten von Alligatoren existieren heute noch weltweit?",
     "category" : "Wissenschaft & Forschung"
@@ -15944,7 +15944,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schokoladenhai",
     "questionId" : "637",
     "text" : "Der 'Schokoladenhai' gehört zu welcher Gattung?",
     "category" : "Wissenschaft & Forschung"
@@ -15969,7 +15969,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/A_Star_Is_Born",
     "questionId" : "638",
     "text" : "In 'A Star Is Born' spielte Barbra Streisand neben dem Countrysänger ..?",
     "category" : "Unterhaltung & Medien"
@@ -15994,7 +15994,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kalifornien",
     "questionId" : "639",
     "text" : "In welcher Stadt residiert Arnold Schwarzenegger als Gouverneur?",
     "category" : "Unterhaltung & Medien"
@@ -16019,7 +16019,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Balthasar_Hubmaier",
     "questionId" : "640",
     "text" : "'Gnad, freyd und frid in Gott!' Wer sagte diese Worte?",
     "category" : "Glaube & Religion"
@@ -16044,7 +16044,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Barack_Obama",
     "questionId" : "641",
     "text" : "Welche US-Präsidenten Gattin hat \/ hatte den Namen 'Robinson' in ihrem vollen Namen?",
     "category" : "Unterhaltung & Medien"
@@ -16069,7 +16069,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Fliegenfänger_(Begriffsklärung)",
     "questionId" : "642",
     "text" : "Bei welcher Sportart gibt es im Jargon den Begriff 'Fliegenfänger'?",
     "category" : "Sport & Spiel"
@@ -16094,7 +16094,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kinetik_(Chemie)",
     "questionId" : "643",
     "text" : "Welcher Bereich der Chemie beschäftigt sich mit dem zeitlichen Ablauf chemischer Reaktionen?",
     "category" : "Wissenschaft & Forschung"
@@ -16119,7 +16119,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Metrisches_Einheitensystem",
     "questionId" : "644",
     "text" : "Welche der genannten Einheit ist keine metrische Einheit?",
     "category" : "Wissenschaft & Forschung"
@@ -16144,7 +16144,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kürbisse",
     "questionId" : "645",
     "text" : "Hinter welchem Begriff verbirgt sich auch eine Kürbissorte?",
     "category" : "Wissenschaft & Forschung"
@@ -16169,7 +16169,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kirchenjahr",
     "questionId" : "646",
     "text" : "Wann beginnt das evangelische und katholische Kirchenjahr?",
     "category" : "Glaube & Religion"
@@ -16194,7 +16194,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "http:\/\/www.worldometers.info\/de\/",
     "questionId" : "647",
     "text" : "Wie viele Menschen wurden im Jahr 2000 in jeder Minute auf der ganzen Welt geboren?",
     "category" : "Wissenschaft & Forschung"
@@ -16219,7 +16219,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Möbelbau",
     "questionId" : "648",
     "text" : "Von wem wurde der 'Bugholzstuhl' Mitte des 19. Jahrhunderts erfunden?",
     "category" : "Kunst & Architektur"
@@ -16244,7 +16244,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Umwelthauptstadt_Europas",
     "questionId" : "649",
     "text" : "Welche Stadt wird 2017 'Umwelthauptstadt Europas'?",
     "category" : "Technik"
@@ -16269,7 +16269,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Martinique",
     "questionId" : "650",
     "text" : "Welche Währung hat die Bevölkerung von Martinique?",
     "category" : "Wirtschaft & Verkehr"
@@ -16294,7 +16294,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Zweitwohnungsteuer",
     "questionId" : "651",
     "text" : "In welcher deutschen Stadt zahlt man die niedrigste 'Zweitwohnungssteuer'?",
     "category" : "Politik"
@@ -16319,7 +16319,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/en.wikipedia.org\/wiki\/Dingla",
     "questionId" : "652",
     "text" : "Was ist Dingla?",
     "category" : "Literatur & Sprache"
@@ -16344,7 +16344,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Streuung_(Statistik)",
     "questionId" : "653",
     "text" : "Welche Maßzahl gehört nicht zur charakteristischen Maßzahl eines Geländewagens?",
     "category" : "Technik"
@@ -16369,7 +16369,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Indien",
     "questionId" : "654",
     "text" : "Welches Land gilt, gemessen an der Einwohnerzahl, als die größte Demokratie der Welt?",
     "category" : "Gesellschaft"
@@ -16394,7 +16394,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Gewöhnliche_Robinie",
     "questionId" : "655",
     "text" : "Welcher dieser Bäume ist kein Nadelbaum?",
     "category" : "Wissenschaft & Forschung"
@@ -16419,7 +16419,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Großbritannien_(Insel)",
     "questionId" : "656",
     "text" : "Wie heißt der höchste Berg in Großbritannien?",
     "category" : "Geographie"
@@ -16444,7 +16444,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Spinat#Inhaltsstoffe",
     "questionId" : "657",
     "text" : "Was hat den geringsten Eisengehalt?",
     "category" : "Essen & Trinken"
@@ -16469,7 +16469,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Paul_Cézanne",
     "questionId" : "658",
     "text" : "In welcher französischen Stadt ist der Maler Paul Cézanne geboren und auch gestorben?",
     "category" : "Kunst & Architektur"
@@ -16494,7 +16494,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schweiz",
     "questionId" : "659",
     "text" : "Welches ist der größte Fluß der Schweiz?",
     "category" : "Geographie"
@@ -16519,7 +16519,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Capybara",
     "questionId" : "660",
     "text" : "Mit wem ist das Wasserschwein eng verwandt?",
     "category" : "Wissenschaft & Forschung"
@@ -16544,7 +16544,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schwingung",
     "questionId" : "661",
     "text" : "Wie wird das Ausmaß der Schwingungen eines Tons genannt?",
     "category" : "Wissenschaft & Forschung"
@@ -16569,7 +16569,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Eisheilige",
     "questionId" : "662",
     "text" : "Wie viele 'Eisheilige' gibt es?",
     "category" : "Wissenschaft & Forschung"
@@ -16594,7 +16594,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Allesfresser",
     "questionId" : "663",
     "text" : "Wie nennt man Tiere, die sich von pflanzlichen und tierischen Organismen ernähren?",
     "category" : "Wissenschaft & Forschung"
@@ -16619,7 +16619,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Balderschwang#Klima",
     "questionId" : "664",
     "text" : "Wie heißt der Ort mit den meisten Niederschlägen in Deutschland?",
     "category" : "Geographie"
@@ -16644,7 +16644,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Rasierklinge",
     "questionId" : "665",
     "text" : "Aus welchem Material wurden die ersten Rasierklingen gefertigt?",
     "category" : "Wissenschaft & Forschung"
@@ -16669,7 +16669,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Limerick",
     "questionId" : "666",
     "text" : "In der Regel besteht ein Limerick aus wie viele Zeilen?",
     "category" : "Literatur & Sprache"
@@ -16694,7 +16694,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Blutgruppe",
     "questionId" : "667",
     "text" : "Welche Blutgruppe kommt in Europa am häufigsten vor?",
     "category" : "Wissenschaft & Forschung"
@@ -16719,7 +16719,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Muskatnussbaum",
     "questionId" : "668",
     "text" : "Beim Genuß von wie viel Gramm Muskatnuss, kann es zu Vergiftungserscheinungen kommen?",
     "category" : "Gesundheit"
@@ -16744,7 +16744,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_der_IATA-Codes\/S#SX",
     "questionId" : "669",
     "text" : "Welcher Flughafen ist gemeint, wenn man SXB angibt?",
     "category" : "Wirtschaft & Verkehr"
@@ -16769,7 +16769,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Gewöhnlicher_Löwenzahn",
     "questionId" : "670",
     "text" : "Der Löwenzahn gehört zur Pflanzenfamilie der ..?",
     "category" : "Wissenschaft & Forschung"
@@ -16794,7 +16794,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mannheim_Tornados",
     "questionId" : "671",
     "text" : "Welche deutsche Baseball-Mannschaft ist seit der Gründungssaison ununterbrochen in der Bundesliga?",
     "category" : "Sport & Spiel"
@@ -16819,7 +16819,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Quecksilberthermometer",
     "questionId" : "672",
     "text" : "Welche der folgenden Erfindungen wurde als Letzte gemacht?",
     "category" : "Technik"
@@ -16844,7 +16844,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kegel_(Geometrie)",
     "questionId" : "673",
     "text" : "Welcher dieser Begriffe kommt nicht bei dem geometrischen Körper 'Kegel' vor?",
     "category" : "Wissenschaft & Forschung"
@@ -16869,7 +16869,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Brandenburger_Tor",
     "questionId" : "674",
     "text" : "Wie hoch ist das Brandenburger Tor in Berlin?",
     "category" : "Kunst & Architektur"
@@ -16894,7 +16894,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bauchmuskulatur",
     "questionId" : "675",
     "text" : "Wieviel % an Körperfett sollte nicht überschritten werden, damit die Bauchmuskeln gut sichtbar sind?",
     "category" : "Gesundheit"
@@ -16919,7 +16919,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Sprotten",
     "questionId" : "676",
     "text" : "Welcher der folgenden Fische ist kein Süßwasserfisch?",
     "category" : "Wissenschaft & Forschung"
@@ -16944,7 +16944,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Wolfgang_Amadeus_Mozart",
     "questionId" : "677",
     "text" : "Welchen Komponisten der Wiener Klassik verbindet man mit den Ausdruck 'Donnerblitzbub'?",
     "category" : "Musik"
@@ -16969,7 +16969,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bockwurst",
     "questionId" : "678",
     "text" : "Die 'Bockwurst' hat ihren Namen von ..?",
     "category" : "Essen & Trinken"
@@ -16994,7 +16994,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kreiszahl",
     "questionId" : "679",
     "text" : "Welcher Rauminhalt wird mit der Zahl Pi berechnet?",
     "category" : "Wissenschaft & Forschung"
@@ -17019,7 +17019,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Vogelsberg",
     "questionId" : "680",
     "text" : "Was ist das grösste zusammenhängende Vulkangebiet in Mitteleuropa?.?",
     "category" : "Geographie"
@@ -17044,7 +17044,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Sugababes",
     "questionId" : "681",
     "text" : "Die erste Single welcher Band hieß 'Overload'?",
     "category" : "Musik"
@@ -17069,7 +17069,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Antwerpen",
     "questionId" : "682",
     "text" : "Welche Stadt war im 15.+16. Jhdt.. zeitweise die wichtigste Handelsmetropole Europas?",
     "category" : "Geschichte"
@@ -17119,7 +17119,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/The_Beatles",
     "questionId" : "684",
     "text" : "Welcher Beatle spielte die Bassgitarre?",
     "category" : "Musik"
@@ -17144,7 +17144,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Zoonose",
     "questionId" : "685",
     "text" : "Wie nennt man eine übertragbare Infektionskrankheit von Mensch zu Tier und umgekehrt?",
     "category" : "Wissenschaft & Forschung"
@@ -17169,7 +17169,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Standardtänze",
     "questionId" : "686",
     "text" : "Welcher dieser Tänze gehört nicht zu den Standardtänzen?",
     "category" : "Sport & Spiel"
@@ -17194,7 +17194,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Leopard_2",
     "questionId" : "687",
     "text" : "Wie viele Liter Kraftstoff verbraucht der Kampfpanzer 'Leopard 2' ca. pro 100 Km auf der Straße?",
     "category" : "Wirtschaft & Verkehr"
@@ -17219,7 +17219,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ukraine",
     "questionId" : "688",
     "text" : "In welchem Jahr wurde die Ukraine unabhängig?",
     "category" : "Geschichte"
@@ -17244,7 +17244,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_von_Kirschsorten",
     "questionId" : "689",
     "text" : "Csengödi, Korund, Badeborner Schwarze, Naprumi sind Obstsorten welcher Art?",
     "category" : "Essen & Trinken"
@@ -17269,7 +17269,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Macchie",
     "questionId" : "690",
     "text" : "Wie bezeichnet man eine immergrüne Gebüschformation der mediterranen Hartlaubvegetationszone?",
     "category" : "Wissenschaft & Forschung"
@@ -17294,7 +17294,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Belting",
     "questionId" : "691",
     "text" : "Was ist 'Belting'?",
     "category" : "Literatur & Sprache"
@@ -17319,7 +17319,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Android_(Betriebssystem)",
     "questionId" : "692",
     "text" : "Von welchem Betriebssystem stammt Android ab?",
     "category" : "Technik"
@@ -17344,7 +17344,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Franka_Potente",
     "questionId" : "693",
     "text" : "Welche deutsche 'Legende' wurde von Schauspielerin Franka Potente in einem Film dargestellt?",
     "category" : "Unterhaltung & Medien"
@@ -17369,7 +17369,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/London#St.C3.A4dtepartnerschaften",
     "questionId" : "694",
     "text" : "Wie heißt die deutsche Partnerstadt von London?",
     "category" : "Gesellschaft"
@@ -17394,7 +17394,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/FIFA",
     "questionId" : "695",
     "text" : "Wo hat die FIFA ihren Sitz?",
     "category" : "Sport & Spiel"
@@ -17419,7 +17419,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Absolutismus",
     "questionId" : "696",
     "text" : "Wie wurde im Absolutismus die staatliche Wirtschaftspolitik genannt?",
     "category" : "Geschichte"
@@ -17444,7 +17444,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Meldepflichtige_Krankheit",
     "questionId" : "697",
     "text" : "Welche der Infektionskrankeiten ist in Deutschland keine meldepflichtige Krankheit?",
     "category" : "Gesundheit"
@@ -17469,7 +17469,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Carambolage",
     "questionId" : "698",
     "text" : "Wie hoch darf ein Billardtisch höchstens sein, wenn Carambol gespielt wird?",
     "category" : "Sport & Spiel"
@@ -17494,7 +17494,7 @@
       }
     ],
     "levelId" : 7,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Frauenwahlrecht",
     "questionId" : "699",
     "text" : "Seit wann dürfen in Deutschland auch Frauen wählen?",
     "category" : "Geschichte"
@@ -25198,5 +25198,80 @@
     "questionId" : "1007",
     "text" : "Wo werden Panamahüte hergestellt?",
     "category" : "Wirtschaft & Verkehr"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Speech",
+        "correct" : false
+      },
+      {
+        "text" : "Catalina",
+        "correct" : false
+      },
+      {
+        "text" : "Demokratie",
+        "correct" : false
+      },
+      {
+        "text" : "Filibuster",
+        "correct" : true
+      }
+    ],
+    "levelId" : 8,
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Filibuster",
+    "questionId" : "1008",
+    "text" : "Wie nannte man in den USA eine aussergewöhnlich lange Rede vor dem Senat?",
+    "category" : "Politik"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Braun",
+        "correct" : false
+      },
+      {
+        "text" : "Grau",
+        "correct" : false
+      },
+      {
+        "text" : "Gelb",
+        "correct" : false
+      },
+      {
+        "text" : "Schwarz",
+        "correct" : true
+      }
+    ],
+    "levelId" : 9,
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Labrador_Retriever",
+    "questionId" : "1009",
+    "text" : "Welche Farbe hatte die Huderasse Labrador Retriever ursprünglich?",
+    "category" : "Wissenschaft & Forschung"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Etwa die Hälfte",
+        "correct" : false
+      },
+      {
+        "text" : "Etwa ein viertel",
+        "correct" : false
+      },
+      {
+        "text" : "Etwa 2\/3.",
+        "correct" : false
+      },
+      {
+        "text" : "Etwa 4 Prozent",
+        "correct" : true
+      }
+    ],
+    "levelId" : 10,
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Geburt",
+    "questionId" : "1010",
+    "text" : "Bei wie viel Prozent der Frauen tritt die Geburt zu dem errechneten Termin ein.",
+    "category" : "Gesundheit"
   }
 ]
