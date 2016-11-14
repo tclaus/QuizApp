@@ -12,6 +12,7 @@
 #import "ADVTheme.h"
 #import "SoundSystem.h"
 #import <AVFoundation/AVFoundation.h>
+#import <DasQuiz-Swift.h>
 
 @interface QuestionViewController ()
 
@@ -32,12 +33,20 @@
 
 @property (nonatomic, strong) SoundSystem* soundSystem;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView;
+@property (strong, nonatomic) IBOutlet UIView *reportViewController;
+@property (weak, nonatomic) IBOutlet UIStackView *reportTypesStackView;
 
+@property (nonatomic) UIVisualEffectView* effectView;
+@property (nonatomic) UIVisualEffect* effect;
+@property (weak, nonatomic) IBOutlet UIButton *sendReportButton;
+ 
 -(void)showCorrectAnswer;
 
 @end
 
 @implementation QuestionViewController
+
+SendReport *sendReport;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,6 +60,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    sendReport = [[SendReport alloc] init];
     
     self.answerTableView.delegate = self;
     self.answerTableView.dataSource = self;
@@ -70,7 +81,12 @@
         }
     }
     
+    UIColor *defaultColor = self.view.tintColor;
+    
     self.view.tintColor = [UIColor whiteColor];
+    
+    self.reportViewController.tintColor = defaultColor;
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = YES;
     
@@ -97,6 +113,14 @@
     
     //self.topMarginConstraint.constant = self.isForReview ? 10 : 70;
     //self.bottomMarginConstraint.constant = self.isForReview ? 0 : 60;
+    
+    
+    // Effects for Reports View
+    self.effectView = [[UIVisualEffectView alloc] initWithFrame:self.view.bounds];
+    self.effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    self.effect = self.effectView.effect;
+    
+    self.effectView.effect = nil;
     
     [self loadData];
 }
@@ -281,7 +305,76 @@
         
     }
 }
+- (IBAction)reportQuestion:(id)sender {
+    
+    
+    [self.view addSubview:self.effectView];
+    
+    [self.effectView addSubview:self.reportViewController];
+    
+    self.reportViewController.center = self.effectView.center;
+    self.reportViewController.alpha = 0;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.effectView.effect = self.effect;
+        self.reportViewController.alpha = 1;
+    }];
+    
+    
+}
 
+
+- (IBAction)dismissReportVC:(id)sender {
+    // AKA Send..
+    [self animateReportOut];
+    
+    // Get Type
+    int reportType;
+    for (UIButton *button in self.reportTypesStackView.subviews) {
+        if (button.selected) {
+          reportType =  (int)button.tag;
+            break;
+        }
+    }
+    
+    // Send question
+    [sendReport sendReportWithQuestionID:self.question.questionID reason:reportType];
+    
+}
+- (IBAction)cancelReportVC:(id)sender {
+    [self animateReportOut];
+}
+
+-(void)animateReportOut{
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.reportViewController.alpha = 0;
+        
+        self.effectView.effect = nil;
+        
+    } completion:^(BOOL finished) {
+        [self.reportViewController removeFromSuperview];
+        [self.effectView removeFromSuperview];
+        
+    }];
+    
+}
+
+
+- (IBAction)reportTypeChecked:(id)sender {
+    UIButton *tappedButton =  (UIButton*)sender;
+    tappedButton.selected = YES;
+    
+    self.sendReportButton.enabled = YES; // Enable sending after first selection
+    
+    // unselect others
+    for (UIButton *button in self.reportTypesStackView.subviews) {
+        if (![button isEqual:tappedButton]) {
+            button.selected = NO;
+        }
+    }
+    
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
