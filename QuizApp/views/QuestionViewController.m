@@ -39,7 +39,12 @@
 @property (nonatomic) UIVisualEffectView* effectView;
 @property (nonatomic) UIVisualEffect* effect;
 @property (weak, nonatomic) IBOutlet UIButton *sendReportButton;
- 
+
+
+// Send successful View
+@property (strong, nonatomic) IBOutlet UIView *reportSent;
+@property (weak, nonatomic) IBOutlet UILabel *sentStatusLabel;
+
 -(void)showCorrectAnswer;
 
 @end
@@ -140,6 +145,11 @@ SendReport *sendReport;
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return self.question.answers.count;
+}
+
+-(NSString*)getAlphabetFromIndex:(NSInteger)index{
+    
+    return self.alphabets[index % self.alphabets.count];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -314,6 +324,14 @@ SendReport *sendReport;
     
     self.reportViewController.center = self.effectView.center;
     self.reportViewController.alpha = 0;
+    
+    // reset selected Buttons
+    for (UIButton *button in self.reportTypesStackView.subviews) {
+        button.selected = NO;
+    }
+    
+    self.sendReportButton.enabled = NO;
+    
     [UIView animateWithDuration:0.3 animations:^{
         self.effectView.effect = self.effect;
         self.reportViewController.alpha = 1;
@@ -382,9 +400,6 @@ SendReport *sendReport;
     // Dispose of any resources that can be recreated.
 }
 
--(NSString*)getAlphabetFromIndex:(NSInteger)index{
-    
-    return self.alphabets[index % self.alphabets.count];
-}
+
 
 @end
