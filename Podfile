@@ -7,6 +7,7 @@ target 'DasQuiz' do
 
   # Pods for DasQuiz
  pod 'Firebase/Core'
+ pod 'Firebase/Messaging'
  pod 'UAAppReviewManager'
 
   target 'DasQuizTests' do
