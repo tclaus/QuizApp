@@ -115,38 +115,38 @@ NSUserDomainMask, YES) objectAtIndex:0]
 
 static NSMutableArray *allQuestions;
 
-/**
- Loads the free number of questions for the given topic
- */
-+(NSArray*)loadFreeQuestionsForTopic:(Topic*)topic{
-    // For base Topic: get a list of questions
-    // For all other (future) topics - all questions
+
++(NSArray<NSString*>*)categories {
+    NSArray *questions =  [Utils loadQuestionsFromTopics:[Config sharedInstance].topics
+                               forTotalNumberOfQuestions:0 minLevel:0];
     
-    NSString *resultsStoragePath = [DocumentsDirectory stringByAppendingPathComponent:@"DemoQuestions.json"];
-    if (!allQuestions) {
-        // Load from file
-        
-        allQuestions = [NSKeyedUnarchiver unarchiveObjectWithFile:resultsStoragePath];
-        if(!allQuestions){
-            allQuestions = [NSMutableArray array];
+    NSMutableSet *categories = [NSMutableSet set];
+    
+    NSString *noCategory;
+    
+    for (Question *question in questions) {
+        if (![categories containsObject:question.category]) {
             
-            // Generate an save questions
-            for (NSDictionary* questionDic in topic.questionJSONObjects) {
-                [allQuestions addObject:questionDic];
+            // Dont get empty categories
+            if (question.category.length > 0) {
+                if ([question.category hasPrefix:@"("]) {
+                    // could be '(No category)'
+                    noCategory = question.category;
+                } else {
+                    [categories addObject:question.category];
+                }
             }
-            
-            NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
-            NSArray* batch = [self getFirst:[Config sharedInstance].quizIAP.numberofFreeQuestions elementsFromArray:shuffledQuestions];
-            
-            [NSKeyedArchiver archiveRootObject:batch toFile:resultsStoragePath];
-            
-            allQuestions = [NSMutableArray arrayWithArray: batch];
         }
-        
     }
     
-    return allQuestions;
+    
+    
+    
+    return [categories allObjects];
+    
 }
+
+
 
 #pragma mark Recent Questions
 static NSMutableArray *_usedQuestions;

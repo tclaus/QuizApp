@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Question.h"
 
 @interface Utils : NSObject
@@ -27,6 +28,11 @@
 +(NSInteger)calculateCorrectScore:(NSArray*)questions;
 
 +(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
+
+/**
+ Returns an array with all questions
+ */
++(NSArray<NSString*>*)categories;
 
 /**
  Add question as used question - will not be shown again until list is cleared

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		651BF8661DCFA3180072C7AC /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651BF8651DCFA3180072C7AC /* AppIcons.xcassets */; };
 		654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654E0C241DAA5B96003C5392 /* thinking.mp3 */; };
+		6562C8891DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562C8881DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift */; };
+		6562C88B1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562C88A1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift */; };
+		6562C88D1DDB69D000EC38BE /* NewQuestionFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562C88C1DDB69D000EC38BE /* NewQuestionFinishViewController.swift */; };
+		6562C88F1DDBB3A400EC38BE /* NewQuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562C88E1DDBB3A400EC38BE /* NewQuestionManager.swift */; };
 		6578C11E1D59A66D001D8DEE /* 1000Fragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 6578C11D1D59A66D001D8DEE /* 1000Fragen.json */; };
 		657DB4601D465FBD0035C3E6 /* demofragen.json in Resources */ = {isa = PBXBuildFile; fileRef = 657DB45F1D465FBD0035C3E6 /* demofragen.json */; };
 		65864C511DDA187A00F5757C /* SendReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65864C501DDA187A00F5757C /* SendReport.swift */; };
@@ -108,6 +112,10 @@
 		57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		651BF8651DCFA3180072C7AC /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
 		654E0C241DAA5B96003C5392 /* thinking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thinking.mp3; sourceTree = "<group>"; };
+		6562C8881DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuestionFirstControllerViewController.swift; sourceTree = "<group>"; };
+		6562C88A1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuestionWrongAnswersViewController.swift; sourceTree = "<group>"; };
+		6562C88C1DDB69D000EC38BE /* NewQuestionFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuestionFinishViewController.swift; sourceTree = "<group>"; };
+		6562C88E1DDBB3A400EC38BE /* NewQuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuestionManager.swift; sourceTree = "<group>"; };
 		6578C11D1D59A66D001D8DEE /* 1000Fragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1000Fragen.json; sourceTree = "<group>"; };
 		657DB45F1D465FBD0035C3E6 /* demofragen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demofragen.json; sourceTree = "<group>"; };
 		65864C4F1DDA187900F5757C /* DasQuiz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DasQuiz-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -343,6 +351,7 @@
 				EC9794B4198A72D400EB7294 /* TopicInAppPurchaseData.m */,
 				65864C501DDA187A00F5757C /* SendReport.swift */,
 				65864C4F1DDA187900F5757C /* DasQuiz-Bridging-Header.h */,
+				6562C88E1DDBB3A400EC38BE /* NewQuestionManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -556,6 +565,9 @@
 				ECAE8EF218C7714800D5EBAB /* ExplanationViewController.m */,
 				ECAE920A18C77E4300D5EBAB /* StartViewController.h */,
 				ECAE920B18C77E4300D5EBAB /* StartViewController.m */,
+				6562C8881DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift */,
+				6562C88A1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift */,
+				6562C88C1DDB69D000EC38BE /* NewQuestionFinishViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -920,7 +932,10 @@
 				ECE03EF5186330410042490A /* DropAnimationController.m in Sources */,
 				ECBD0C8F1876FBF5002DC98B /* PNCircleChart.m in Sources */,
 				ECE03EE818625D440042490A /* QuestionViewController.m in Sources */,
+				6562C88D1DDB69D000EC38BE /* NewQuestionFinishViewController.swift in Sources */,
+				6562C8891DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift in Sources */,
 				EC2141DE189116EF00739070 /* Utils.m in Sources */,
+				6562C88F1DDBB3A400EC38BE /* NewQuestionManager.swift in Sources */,
 				EC2141E118915F8900739070 /* PNScrollBarChart.m in Sources */,
 				EC53D9F218A01B0100AA9D93 /* Config.m in Sources */,
 				EC18EBFB18B24CCD00E7FE4F /* GameChallengeController.m in Sources */,
@@ -929,6 +944,7 @@
 				ECBD0C911876FBF5002DC98B /* PNLineChart.m in Sources */,
 				ECBD0C931876FBF5002DC98B /* UICountingLabel.m in Sources */,
 				ECBD0C5D18733B1A002DC98B /* ReviewViewController.m in Sources */,
+				6562C88B1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift in Sources */,
 				65B31AE51DB410B100872C86 /* GameStats.m in Sources */,
 				EC99213318B294F6000FCA6F /* ChallengeCell.m in Sources */,
 				ECE03EC81862169C0042490A /* TopicCell.m in Sources */,
