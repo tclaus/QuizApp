@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewQuestionFirstControllerViewController: UIViewController {
+class NewQuestionFirstControllerViewController: KeyboardViewController {
 
     @IBOutlet weak var nextButon: UIButton!
     @IBOutlet weak var questionTextField: UITextField!
@@ -25,7 +25,8 @@ class NewQuestionFirstControllerViewController: UIViewController {
         view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
     
-        questionTextField.becomeFirstResponder()
+        setDelegates(questionTextField,correctAnswerTextField)
+        // questionTextField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,6 +22,7 @@
 		65B31AE51DB410B100872C86 /* GameStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B31AE41DB410B100872C86 /* GameStats.m */; };
 		65C37F831DAA783900F793AC /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C37F821DAA783900F793AC /* images.xcassets */; };
 		65C4AD401DB7C16700680EC2 /* backgrounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C4AD3F1DB7C16700680EC2 /* backgrounds.xcassets */; };
+		65C6F8361DE2CEB900A15F2C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C6F8351DE2CEB900A15F2C /* KeyboardViewController.swift */; };
 		65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1B4781DA5A44B00F057EB /* SoundManager.m */; };
 		65D1B47C1DA5BF5500F057EB /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65D1B47B1DA5BF5500F057EB /* heartbeat.mp3 */; };
 		65D8ECC21DB7B4C3009DF03A /* levelup.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ECC11DB7B4C3009DF03A /* levelup.m4a */; };
@@ -129,6 +130,7 @@
 		65B31AE41DB410B100872C86 /* GameStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStats.m; sourceTree = "<group>"; };
 		65C37F821DAA783900F793AC /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		65C4AD3F1DB7C16700680EC2 /* backgrounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = backgrounds.xcassets; sourceTree = "<group>"; };
+		65C6F8351DE2CEB900A15F2C /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		65D1B4751DA5195F00F057EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		65D1B4781DA5A44B00F057EB /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Utils/SoundManager.m; sourceTree = "<group>"; };
 		65D1B4791DA5A44B00F057EB /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Utils/SoundManager.h; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 		ECE03EC31862140E0042490A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65C6F8351DE2CEB900A15F2C /* KeyboardViewController.swift */,
 				ECE03EA3186213E00042490A /* TopicCollectionController.h */,
 				ECE03EA4186213E00042490A /* TopicCollectionController.m */,
 				ECE03EE318621C5B0042490A /* QuestionInfoController.h */,
@@ -963,6 +966,7 @@
 				ECBD0C921876FBF5002DC98B /* PNScrollLineChart.m in Sources */,
 				EC9794B5198A72D400EB7294 /* TopicInAppPurchaseData.m in Sources */,
 				65D1B47A1DA5A44B00F057EB /* SoundManager.m in Sources */,
+				65C6F8361DE2CEB900A15F2C /* KeyboardViewController.swift in Sources */,
 				ECBD0C8C1876FBF5002DC98B /* PNBar.m in Sources */,
 				EC18EBFF18B24EAD00E7FE4F /* FriendCell.m in Sources */,
 				EC0D184D1899721100BE6368 /* UIImageAverageColorAddition.m in Sources */,

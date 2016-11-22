@@ -9,7 +9,7 @@
 import UIKit
 
 
-class NewQuestionWrongAnswersViewController: UIViewController {
+class NewQuestionWrongAnswersViewController: KeyboardViewController {
 
     var questionManager : NewQuestionManager?
     
@@ -25,6 +25,8 @@ class NewQuestionWrongAnswersViewController: UIViewController {
         ADVTheme.addGradientBackground(view)
         view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
+        
+        setDelegates(firstWrongAnswer,secondWrongAnswer,thirdWrongAnswer)
         
     }
 

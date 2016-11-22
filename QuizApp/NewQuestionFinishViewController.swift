@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewQuestionFinishViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
+class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
    
     
     var questionManager : NewQuestionManager?
@@ -25,6 +25,7 @@ class NewQuestionFinishViewController: UIViewController, UIPickerViewDataSource,
         view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
         
+        setDelegates(explanationLink)
         
     }
 
