@@ -17,16 +17,21 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
     @IBOutlet weak var secondWrongAnswer: UITextField!
     @IBOutlet weak var thirdWrongAnswer: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         ADVTheme.addGradientBackground(view)
-        view.tintColor = UIColor.white
+        // view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
         
         setDelegates(firstWrongAnswer,secondWrongAnswer,thirdWrongAnswer)
+        
+        nextButton.tintColor = UIColor.white
+        cancelButton.tintColor = UIColor.white
         
     }
 

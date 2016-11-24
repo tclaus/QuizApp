@@ -17,15 +17,19 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
     @IBOutlet weak var categoryPickerView: UIPickerView!
     @IBOutlet weak var explanationLink: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         ADVTheme.addGradientBackground(view)
-        view.tintColor = UIColor.white
+        // view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
         
         setDelegates(explanationLink)
+        sendButton.tintColor = UIColor.white
+        cancelButton.tintColor = UIColor.white
+        explanationLink.tintColor = UIColor.white
         
     }
 
@@ -35,6 +39,30 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         
     }
     
+    @IBAction func linkButton(_ sender: Any) {
+        
+        // open Link to Wiki, if filed is empty
+        // https://de.wikipedia.org/wiki/Wikipedia:Hauptseite
+        
+       let wikiLink = "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
+        
+        var URLToOpen : URL?
+        
+        if let text = explanationLink.text {
+            if text.characters.count > 3 {
+                URLToOpen = URL(string: text)!
+            }
+        }
+        
+        guard let _ = URLToOpen else {
+            URLToOpen = URL(string: wikiLink)
+            UIApplication.shared.openURL(URLToOpen!)
+            return
+        }
+
+        UIApplication.shared.openURL(URLToOpen!)
+        
+    }
 
     @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {

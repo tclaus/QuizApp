@@ -11,9 +11,13 @@ import UIKit
 class NewQuestionFirstControllerViewController: KeyboardViewController {
 
     @IBOutlet weak var nextButon: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var correctAnswerTextField: UITextField!
     
+    @IBOutlet weak var questionField: UITextField!
+    @IBOutlet weak var answerField: UITextField!
+    @IBOutlet weak var explanationLink: UIButton!
     let questionManager = NewQuestionManager()
     
     override func viewDidLoad() {
@@ -22,11 +26,15 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
         // Do any additional setup after loading the view.
         
         ADVTheme.addGradientBackground(view)
-        view.tintColor = UIColor.white
+        //view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
     
         setDelegates(questionTextField,correctAnswerTextField)
         // questionTextField.becomeFirstResponder()
+        nextButon.tintColor = UIColor.white
+        cancelButton.tintColor = UIColor.white
+        explanationLink.tintColor = UIColor.white
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +57,13 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
         }
     }
     
+    @IBAction func openWikiOfTheDay(_ sender: Any) {
+        let wikiLink = "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
+        
+        let URLToOpen = URL(string: wikiLink)
+        UIApplication.shared.openURL(URLToOpen!)
+        return
+    }
 
     /**
      Checks if at leaset 3 charcters are entered
