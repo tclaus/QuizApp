@@ -17,7 +17,9 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
     @IBOutlet weak var categoryPickerView: UIPickerView!
     @IBOutlet weak var explanationLink: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var levelSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         sendButton.tintColor = UIColor.white
         cancelButton.tintColor = UIColor.white
         explanationLink.tintColor = UIColor.white
+        levelSlider.tintColor = UIColor.white
         
     }
 
@@ -91,11 +94,18 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         explanationLink.resignFirstResponder()
     }
     
+    
+    @IBAction func levelValueChanged(_ sender: Any) {
+        let levelValue : Int = Int(levelSlider.value)
+        levelLabel.text =  "Level: \(levelValue)"
+    }
+    
     @IBAction func sendButton(_ sender: Any) {
     
         sendButton.isEnabled = false
         
         questionManager?.explanation = explanationLink.text
+        questionManager?.level = Int(levelSlider.value)
         questionManager?.category = categories[categoryPickerView.selectedRow(inComponent: 0)]
         // Start HUD
         questionManager?.send(completionHandler: { error in

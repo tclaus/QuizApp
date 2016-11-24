@@ -116,6 +116,17 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
     
 }
+
+- (IBAction)addQuestionButtonTouched:(id)sender {
+    
+    [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{
+                                                                  kFIRParameterItemName:@"Open AddQuestion View",
+                                                                  kFIRParameterItemID:@"OpenAddQuestion"
+                                                                  }];
+
+    
+}
+
 - (IBAction)openSendMail:(id)sender {
     // Email Subject
     NSString *emailTitle = @"DAS!Quiz auf iOS";

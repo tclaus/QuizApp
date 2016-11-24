@@ -39,11 +39,11 @@ class NewQuestionManager {
         let JSONData : [String : Any] =  ["text":text,
                         "correctAnswer":correctAnswer,
                         "wrongAnswer1" : wrongAnswer1,
-                        "wrongAnswer2" : wrongAnswer1,
-                        "wrongAnswer3" : wrongAnswer1,
+                        "wrongAnswer2" : wrongAnswer2,
+                        "wrongAnswer3" : wrongAnswer3,
                         "explanation": explanation,
                         "level": level,
-                        "langauge":language,
+                        "language":language,
                         "category":category]
         
         
