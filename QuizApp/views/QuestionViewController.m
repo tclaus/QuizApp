@@ -189,17 +189,10 @@ SendReport *sendReport;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    
-    [self doAnswerButtonState];
-    
+        [self doAnswerButtonState];
+        self.answerTableView.userInteractionEnabled = NO;
 }
 
-/*
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self doAnswerButtonState];
-}
-*/
 
 
 -(CGFloat)heightOfCellWithIngredientLine:(NSString *)ingredientLine
@@ -306,10 +299,11 @@ SendReport *sendReport;
             if (answer.correct){
                 
                 [cell showCorrectAnswerWithAnimation:^{
+                    self.answerTableView.userInteractionEnabled = YES;
                     [self goToNextQuestion];
                 }];
                 
-            }else if (!answeredCorrect) {
+            }else if (!answer.correct && answer.chosen ) {
                 [cell showWrongAnswerWithAnimation];
             }
         

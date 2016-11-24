@@ -30,7 +30,7 @@
     
     
     self.answerLabel.textColor = [UIColor whiteColor];
-
+    
     self.indexLabel.textColor = [UIColor whiteColor];
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -39,45 +39,45 @@
     
     self.answerImageView.clipsToBounds = YES;
     self.answerImageView.contentMode = UIViewContentModeScaleAspectFit;
-
+    
     self.tickImageView.image = nil;
-     self.barImageView.tintColor = [UIColor clearColor];
+    self.barImageView.tintColor = [UIColor clearColor];
     
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
-    if (self.isForReview) {
+    
+    // Reset all controls
+    if (!selected) {
+        self.tickImageView.image = nil;
+        self.tickImageView.alpha = 0.0;
+        self.barImageView.tintColor = [UIColor whiteColor];
+        self.barImageView.alpha = 0.1;
+    } else {
         return;
     }
-    self.barImageView.alpha = selected ? 1.0 : 0.0;
-
-    if (self.answerTapped) {
-        self.contentView.alpha = 0.1;
-        if (self.isCorrect) {
-            self.contentView.alpha = 1.0;
-            self.barImageView.image = [UIImage imageNamed:@"cross"];
-        } else {
-            self.barImageView.image = [UIImage imageNamed:@"tick"];
-        }
-    } else {
-        self.tickImageView.image = nil;
-    }
+    
+    return;
+    
 }
 
 -(void)showImageForCorrectAnswer:(BOOL)correct AndChosenAnswer:(BOOL)chosen{
-
-    self.barImageView.alpha = chosen ? 1.0 : 0.0;
     
-    if (correct && chosen) {
+    // self.barImageView.alpha = chosen ? 1.0 : 0.0;
+    
+    if (correct) {
         self.tickImageView.image = [UIImage imageNamed:@"tick"];
+        return;
     }
     
-    if (!correct && chosen) {
+    if (!correct && chosen ) {
         self.tickImageView.image = [UIImage imageNamed:@"cross"];
+        return;
     }
+    
+    self.tickImageView.image = nil;
     
 }
 
@@ -86,11 +86,22 @@
 }
 
 -(void)showCorrectAnswerWithAnimation:(void (^)())complete{
-    [UIView animateWithDuration:1.0 animations:^{
-        self.barImageView.alpha = 1.0;
+   
+    NSTimeInterval duration;
+    if (self.selected) {
+        duration = 0.5;
+    } else {
+        duration = 1.0;
+    }
+    
+    [UIView animateWithDuration:duration animations:^{
+        
         // Show green color for right answer
         self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        (self.barImageView).tintColor = [UIColor greenColor];
+        self.barImageView.alpha = 1.0;
+        self.barImageView.tintColor = [UIColor greenColor];
+        self.tickImageView.alpha = 1.0;
+        
     } completion:^(BOOL finished) {
         if (complete) {
             complete();
@@ -104,16 +115,28 @@
 }
 
 -(void)showWrongAnswerWithAnimation:(void (^)())complete{
-    [UIView animateWithDuration:1.0 animations:^{
+   
+    NSTimeInterval duration;
+    if (self.selected) {
+        duration = 0.5;
+    } else {
+        duration = 1.0;
+    }
+    
+    [UIView animateWithDuration:duration animations:^{
+        
+        // show Red color
         self.barImageView.image = [ self.barImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        self.contentView.alpha = 1.0;
-        (self.barImageView).tintColor = [UIColor redColor];
+        self.barImageView.alpha = 1.0;
+        self.barImageView.tintColor = [UIColor redColor];
+        self.tickImageView.alpha = 1.0;
+        
     } completion:^(BOOL finished) {
         if (complete) {
             complete();
         }
     }
-];
+     ];
     
     
     

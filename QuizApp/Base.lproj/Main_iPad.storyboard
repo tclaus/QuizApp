@@ -297,10 +297,10 @@
                                                         </variation>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1ca-fH-jIJ">
-                                                        <rect key="frame" x="1" y="60" width="161" height="54"/>
+                                                        <rect key="frame" x="2" y="60" width="161" height="54"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Ang-90-1tO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="54"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                                 </accessibility>
@@ -309,7 +309,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Tti-YE-rhG">
-                                                                <rect key="frame" x="54" y="0.0" width="54" height="54"/>
+                                                                <rect key="frame" x="53" y="0.0" width="54" height="54"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                                 </accessibility>
@@ -318,7 +318,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CLz-xT-vEk">
-                                                                <rect key="frame" x="108" y="0.0" width="53" height="54"/>
+                                                                <rect key="frame" x="107" y="0.0" width="54" height="54"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                                                 </accessibility>
@@ -329,14 +329,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwA-94-NPf" userLabel="Horizontal Line">
-                                                        <rect key="frame" x="0.0" y="114" width="163" height="2"/>
+                                                        <rect key="frame" x="1" y="114" width="163" height="2"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="2" id="VXn-7S-5m6"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NjX-7L-b1K">
-                                                        <rect key="frame" x="58" y="116" width="47" height="28"/>
+                                                        <rect key="frame" x="59" y="116" width="47" height="28"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -632,7 +632,7 @@
                                         <rect key="frame" x="0.0" y="22" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7x-OV-IYq" id="JRd-Gs-DiG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdn-Z2-Met">
@@ -1600,7 +1600,7 @@
                                         <rect key="frame" x="0.0" y="22" width="406" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D2F-T0-vDY" id="Weo-9Z-TIb">
-                                            <rect key="frame" x="0.0" y="0.0" width="406" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="406" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-44-4UA">
@@ -1809,7 +1809,7 @@
                                         <rect key="frame" x="0.0" y="22" width="406" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dz9-2X-6PU" id="R7F-MZ-VD7">
-                                            <rect key="frame" x="0.0" y="0.0" width="406" height="68.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="406" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QV-1K-oYC">
