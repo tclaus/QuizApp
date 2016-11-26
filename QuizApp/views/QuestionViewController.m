@@ -128,6 +128,10 @@ SendReport *sendReport;
     self.effectView.effect = nil;
     
     [self loadData];
+    [self showAnswersForReview];
+    if (self.isForReview) {
+        self.answerTableView.userInteractionEnabled = NO;
+    }
 }
 
 
@@ -141,6 +145,34 @@ SendReport *sendReport;
 
     [self.answerTableView reloadData];
 }
+
+/**
+    Show answers in review
+ */
+-(void)showAnswersForReview {
+    if (self.isForReview){
+        
+        for (int rowID = 0; rowID < self.question.answers.count ;rowID++) {
+            
+            BOOL isChosenAnswer = [self.question indexIsChosenAnswer:rowID];
+            BOOL isCorrectAnswer = [self.question indexIsCorrectAnswer:rowID];
+            
+            AnswerCell* cell = [self.answerTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:rowID inSection:0]];
+            
+            if (isChosenAnswer || isCorrectAnswer) {
+                [cell showImageForCorrectAnswer:isCorrectAnswer AndChosenAnswer:isChosenAnswer];
+                
+                if (isCorrectAnswer) {
+                    [cell showCorrectAnswerWithAnimation];
+                } else {
+                    [cell showWrongAnswerWithAnimation];
+                }
+            }
+        }
+        
+    }
+}
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
@@ -171,17 +203,6 @@ SendReport *sendReport;
     cell.backgroundColor = [UIColor clearColor];
     
     cell.indexLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:19.0f];
-    
-    
-    
-    if(self.isForReview || self.answerTapped){
-        BOOL isChosenAnswer = [self.question indexIsChosenAnswer:indexPath.row];
-        BOOL isCorrectAnswer = [self.question indexIsCorrectAnswer:indexPath.row];
-        
-        [cell showImageForCorrectAnswer:isCorrectAnswer AndChosenAnswer:isChosenAnswer];
-        cell.isCorrect = isCorrectAnswer;
-    }
-    
     
     cell.contentView.alpha = 1.0f;
     return cell;
@@ -275,18 +296,14 @@ SendReport *sendReport;
     
     self.correctAnswerShown = YES;
     
-    BOOL answeredCorrect;
     
-    if((self.question).hasBeenAnsweredCorrectly){
-        answeredCorrect = YES;
-        [self.soundSystem playHappySound];
-        
-    }else{
-        answeredCorrect = NO;
-        [self.soundSystem playFailureSound];
-        [self.soundSystem vibrate];
-    }
-    
+        if((self.question).hasBeenAnsweredCorrectly){
+            [self.soundSystem playHappySound];
+            
+        }else{
+            [self.soundSystem playFailureSound];
+            [self.soundSystem vibrate];
+        }
     
         for (NSInteger i = 0; i < self.question.answers.count; i++) {
 
@@ -299,8 +316,9 @@ SendReport *sendReport;
             if (answer.correct){
                 
                 [cell showCorrectAnswerWithAnimation:^{
-                    self.answerTableView.userInteractionEnabled = YES;
-                    [self goToNextQuestion];
+                         self.answerTableView.userInteractionEnabled = YES;
+                         [self goToNextQuestion];
+                    
                 }];
                 
             }else if (!answer.correct && answer.chosen ) {

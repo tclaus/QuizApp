@@ -24,8 +24,6 @@
 
 @property (nonatomic, assign) BOOL answerTapped;
 
-@property (nonatomic, assign) BOOL isCorrect;
-
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint* indexTrailing;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint* indexWidth;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint* indexAnswerSpacing;
