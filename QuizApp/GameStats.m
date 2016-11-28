@@ -89,9 +89,32 @@ int maxLevel = 10;
 //
 }
 
+/**
+ Returns the maxnumber of tries per Level
+ */
+-(int)numberOfTriesPerLevel {
+    switch (self.currentLevel) {
+        case 1:
+            return 0;
+            break;
+        
+        case 2:
+            return 1;
+            break;
+        
+        case 3:
+            return 2;
+            break;
+        
+        default:
+            return maxNumberOfTries;
+            break;
+    }
+}
+
 
 -(BOOL)levelUp{
-    if (self.numberOfSuccessfulTries >= maxNumberOfTries) {
+    if (self.numberOfSuccessfulTries >= [self numberOfTriesPerLevel]) {
         if (self.currentLevel < maxLevel) {
             self.currentLevel = self.currentLevel +1;
             self.numberOfSuccessfulTries = 0;
@@ -110,7 +133,7 @@ int maxLevel = 10;
     if (self.numberOfSuccessfulTries == 0 ) {
         if (self.currentLevel > 1) {
             self.currentLevel = self.currentLevel -1;
-            self.numberOfSuccessfulTries = 3;
+            self.numberOfSuccessfulTries = [self numberOfTriesPerLevel];
             [self saveData];
             return YES;
         }
