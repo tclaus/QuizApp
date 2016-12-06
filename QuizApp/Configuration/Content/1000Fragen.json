@@ -21,7 +21,7 @@
     "levelId" : 1,
     "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Entdeckung_Amerikas_1492",
     "questionId" : "0",
-    "text" : "Welchen Kontinent hat Kolumbus entdeckt? pq",
+    "text" : "Welchen Kontinent hat Kolumbus entdeckt?",
     "category" : "Geschichte"
   },
   {
@@ -20744,7 +20744,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Plume_(Geologie)",
     "questionId" : "833",
     "text" : "Der Begriff 'Mantel-Plume' ist ein Fachbegriff aus welchem Fachgebiet?",
     "category" : "Literatur & Sprache"
@@ -20769,7 +20769,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Aletschgletscher",
     "questionId" : "834",
     "text" : "Wie lang ist der größte Gletscher der Alpen, der Aletschgletscher?",
     "category" : "Geographie"
@@ -20794,7 +20794,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Skelett",
     "questionId" : "835",
     "text" : "Das menschliche Skelett hat einen Anteil von wie viel Prozent am Gesamtgewicht des Körpers?",
     "category" : "Gesundheit"
@@ -20819,7 +20819,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Düne",
     "questionId" : "836",
     "text" : "Über wieviel Meter hoch sind die größten Sanddünen der Welt?",
     "category" : "Wissenschaft & Forschung"
@@ -20844,7 +20844,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Paschen_(Würfelspiel)",
     "questionId" : "837",
     "text" : "Welches dieser Würfelspiele spielt man nicht mit 2, sondern mit 3 Würfeln?",
     "category" : "Sport & Spiel"
@@ -20869,7 +20869,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Helmut_Kohl",
     "questionId" : "838",
     "text" : "Welcher deutsche Bundeskanzler wurde bei Parlamentswahlen abgewählt?",
     "category" : "Politik"
@@ -20894,7 +20894,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Gestein#Das_.C3.A4lteste_Gestein",
     "questionId" : "839",
     "text" : "In welchem Land wurde das älteste Gestein mit einem Alter von ca. 4.03 Mrd. Jahren nachgewiesen?",
     "category" : "Wissenschaft & Forschung"
@@ -20919,7 +20919,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hansa_Rostock",
     "questionId" : "840",
     "text" : "Welche Vereinsfarben hat der FC Hansa Rostock?",
     "category" : "Sport & Spiel"
@@ -20944,7 +20944,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Maria_Stuart",
     "questionId" : "841",
     "text" : "Wen heiratete Maria Stuart zuerst?",
     "category" : "Geschichte"
@@ -20969,7 +20969,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Casanova_(Oper)",
     "questionId" : "842",
     "text" : "Welche Oper wurde nicht von Giuseppe Verdi komponiert?",
     "category" : "Musik"
@@ -20994,7 +20994,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Großbritannien_(Insel)",
     "questionId" : "843",
     "text" : "Großbritannien (Insel) besteht aus wie vielen Nationen, die aber nur eingeschränkt eigenständig sind",
     "category" : "Geographie"
@@ -21019,7 +21019,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Frédéric_Passy",
     "questionId" : "844",
     "text" : "Wer erhielt 1901 für sein Lebenswerk den ersten Friedensnobelpreis zusammen mit Frédéric Passy?",
     "category" : "Geschichte"
@@ -21044,7 +21044,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Metalle_der_Seltenen_Erden",
     "questionId" : "845",
     "text" : "Die 'Seltene Erden' umfassen wie viele Elemente?",
     "category" : "Wissenschaft & Forschung"
@@ -21069,7 +21069,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Marseillaise",
     "questionId" : "846",
     "text" : "Wo wurde die franz. Nationalhymne bereits im April 1792 komponiert?",
     "category" : "Geschichte"
@@ -21094,7 +21094,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Der_Krieg_der_Welten",
     "questionId" : "847",
     "text" : "Wer schrieb die literarische Vorlage zu 'Krieg der Welten'?",
     "category" : "Literatur & Sprache"
@@ -21119,7 +21119,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Roter_Thun",
     "questionId" : "848",
     "text" : "Wie lang kann der Rote Thun\/Große Thun werden?",
     "category" : "Wissenschaft & Forschung"
@@ -21144,7 +21144,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Heide_(Landschaft)#Deutschland",
     "questionId" : "849",
     "text" : "In welchem Bundesland in Deutschland liegt die meiste Gesamtfläche aller Heidegebiete?",
     "category" : "Wissenschaft & Forschung"
@@ -21169,7 +21169,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/6._Sinfonie_(Beethoven)",
     "questionId" : "850",
     "text" : "Wie heißt die 6. Symphonie Beethovens auch?",
     "category" : "Musik"
@@ -21194,7 +21194,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Palmaille",
     "questionId" : "851",
     "text" : "In welcher deutschen Großstadt befindet sich die 'Palmaille'?",
     "category" : "Geographie"
@@ -21219,7 +21219,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Das_Schweigen_der_Lämmer_(Film)",
     "questionId" : "852",
     "text" : "Wie viele Oscars erhielt der Film 'Das Schweigen der Lämmer'?",
     "category" : "Unterhaltung & Medien"
@@ -21244,7 +21244,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Scharbockskraut",
     "questionId" : "853",
     "text" : "Sauer eingelegt, werden Knospen welcher Pflanze manchmal als Kapernersatz verwendet.?",
     "category" : "Essen & Trinken"
@@ -21269,7 +21269,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Böblingen",
     "questionId" : "854",
     "text" : "Welche Stadt liegt nicht am Neckar?",
     "category" : "Geographie"
@@ -21294,7 +21294,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Swimming_Pool_(Cocktail)",
     "questionId" : "855",
     "text" : "Welcher Cocktail enthält keinen Gin?",
     "category" : "Essen & Trinken"
@@ -21319,7 +21319,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mütterrente",
     "questionId" : "856",
     "text" : "Wann tritt \/ trat in der BRD das neue Rentenpaket von Andrea Nahles in Kraft?",
     "category" : "Politik"
@@ -21344,7 +21344,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Snooker",
     "questionId" : "857",
     "text" : "Wie viele rote Bälle muss man im klassischen Snooker versenken?",
     "category" : "Sport & Spiel"
@@ -21369,7 +21369,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Königlicher_Nationalstadtpark",
     "questionId" : "858",
     "text" : "In welchem Land liegt der weltweit erste Nationalstadtpark?",
     "category" : "Geographie"
@@ -21419,7 +21419,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Volksrepublik_China",
     "questionId" : "860",
     "text" : "An wie viele Staaten grenzt die Volksrepublik China?",
     "category" : "Geographie"
@@ -21444,7 +21444,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Marge",
     "questionId" : "861",
     "text" : "Welcher Begriff steht nicht für einen Preisnachlass?",
     "category" : "Literatur & Sprache"
@@ -21469,7 +21469,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Rugby",
     "questionId" : "862",
     "text" : "Welche ist die am weitesten verbreitete Rugby-Art der Welt?",
     "category" : "Sport & Spiel"
@@ -21494,7 +21494,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kaltwassergeysir",
     "questionId" : "863",
     "text" : "Wo befindet sich der höchste natürliche Kaltwassergeysir?",
     "category" : "Geographie"
@@ -21519,7 +21519,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Zebroide",
     "questionId" : "864",
     "text" : "Wie nennt man die Kreuzung zwischen Zebra und Esel?",
     "category" : "Wissenschaft & Forschung"
@@ -21544,7 +21544,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Totes_Meer",
     "questionId" : "865",
     "text" : "Wieviel Meter liegt das Tote Meer unter dem Meersesspiegel?",
     "category" : "Geographie"
@@ -21569,7 +21569,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Chymus",
     "questionId" : "866",
     "text" : "Welche Bezeichnung hat der durch die Magenverdauung entstandene Speisebrei?",
     "category" : "Gesundheit"
@@ -21594,7 +21594,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kristallsystem",
     "questionId" : "867",
     "text" : "Heutzutage unterscheidet man zwischen wie vielen Kristallsystemen?",
     "category" : "Wissenschaft & Forschung"
@@ -21619,7 +21619,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Opal",
     "questionId" : "868",
     "text" : "Wo liegt das Hauptvorkommen des seltenen Schwarzen Opals?",
     "category" : "Wissenschaft & Forschung"
@@ -21644,7 +21644,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Walt_Disney_Parks_and_Resorts",
     "questionId" : "869",
     "text" : "Wie viele Disneyparks gibt es 2014 weltweit?",
     "category" : "Unterhaltung & Medien"
@@ -21669,7 +21669,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Panta_rhei",
     "questionId" : "870",
     "text" : "Welcher Philosoph sagte 'Alles fließt'?",
     "category" : "Literatur & Sprache"
@@ -21694,7 +21694,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Arthroskop",
     "questionId" : "871",
     "text" : "Was ist kein nautisches Instrument?",
     "category" : "Technik"
@@ -21719,7 +21719,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Börse",
     "questionId" : "872",
     "text" : "In welcher Stadt wurde die erste internationale Börse eröffnet?",
     "category" : "Wirtschaft & Verkehr"
@@ -21769,7 +21769,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mostgewicht",
     "questionId" : "874",
     "text" : "Welche Einheit bezeichnet in Italien das Mostgewicht des Weines?",
     "category" : "Wissenschaft & Forschung"
@@ -21794,7 +21794,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Whist",
     "questionId" : "875",
     "text" : "Welches dieser Spiele ist keine Variante des Poker-Spiels?",
     "category" : "Sport & Spiel"
@@ -21819,7 +21819,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/ARD",
     "questionId" : "876",
     "text" : "Wann wurde die ARD gegründet?",
     "category" : "Unterhaltung & Medien"
@@ -21844,7 +21844,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Sixtinische_Madonna",
     "questionId" : "877",
     "text" : "Welcher italienische Maler hat die 'Sixtinische Madonna' geschaffen?",
     "category" : "Kunst & Architektur"
@@ -21869,35 +21869,10 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Martinskirche_(Landshut)",
     "questionId" : "878",
     "text" : "Die 'Martinskirche' in welcher Stadt hat den höchsten Backsteinturm der Welt?",
     "category" : "Kunst & Architektur"
-  },
-  {
-    "answers" : [
-      {
-        "text" : "Schweiz",
-        "correct" : false
-      },
-      {
-        "text" : "Niederlande",
-        "correct" : false
-      },
-      {
-        "text" : "Tunesien",
-        "correct" : false
-      },
-      {
-        "text" : "Spanien",
-        "correct" : true
-      }
-    ],
-    "levelId" : 9,
-    "explanation" : "",
-    "questionId" : "879",
-    "text" : "Aus welchem Land stammt die Fluggesellschaft Air Europe?",
-    "category" : "Wirtschaft & Verkehr"
   },
   {
     "answers" : [
@@ -21919,7 +21894,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Inka#Untergang",
     "questionId" : "880",
     "text" : "Wie hieß der spanische Eroberer, der das Reich der Inkas eroberte?",
     "category" : "Geschichte"
@@ -21944,7 +21919,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Arides_Klima",
     "questionId" : "881",
     "text" : "Wie heißt das Klima, bei dem die potenzielle Verdunstung größer ist als der Niederschlag?",
     "category" : "Wissenschaft & Forschung"
@@ -21969,7 +21944,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hebamme#M.C3.A4nner_im_Hebammenberuf",
     "questionId" : "882",
     "text" : "Seit wann dürfen in Deutschland und in Österreich auch Männer den Hebammenberuf ausüben?",
     "category" : "Gesellschaft"
@@ -21994,7 +21969,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Polo_(Sport)",
     "questionId" : "883",
     "text" : "Wie viele Spieler reiten beim Polo pro Mannschaft?",
     "category" : "Sport & Spiel"
@@ -22019,7 +21994,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Designmuseum",
     "questionId" : "884",
     "text" : "Welches Museum gilt als das erste Designmuseum der Welt, lange bevor es dieses Wort gab?",
     "category" : "Kunst & Architektur"
@@ -22044,7 +22019,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Daisy_Cutter",
     "questionId" : "885",
     "text" : "Was wird in den USA 'Gänseblümchenschneider' bzw. 'Daisy Cutter' genannt?",
     "category" : "Literatur & Sprache"
@@ -22069,7 +22044,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/ZDF-Hitparade",
     "questionId" : "886",
     "text" : "Bis zu welchem Jahr wurde die ZDF-Hitparade produziert?",
     "category" : "Unterhaltung & Medien"
@@ -22094,7 +22069,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schnellkochtopf",
     "questionId" : "887",
     "text" : "Wie heißt der Erfinder des Dampfkochtopfs?",
     "category" : "Technik"
@@ -22119,7 +22094,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Nosferatu_–_Eine_Symphonie_des_Grauens",
     "questionId" : "888",
     "text" : "Wer spielte die Hauptrolle in 'Nosferatu - Eine Symphonie des Grauens'?",
     "category" : "Unterhaltung & Medien"
@@ -22144,7 +22119,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Deutsches_Hygiene-Museum",
     "questionId" : "889",
     "text" : "Wo befindet sich das Deutsche Hygiene-Museum?",
     "category" : "Kunst & Architektur"
@@ -22169,7 +22144,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Franz_Schubert",
     "questionId" : "890",
     "text" : "Von wann bis wann lebte der Komponist Franz Schubert?",
     "category" : "Musik"
@@ -22194,7 +22169,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Epik",
     "questionId" : "891",
     "text" : "Welche Form gehört nicht zur Gattung der Epik?",
     "category" : "Literatur & Sprache"
@@ -22219,7 +22194,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ecuador#Geldpolitik_und_W.C3.A4hrungsreform",
     "questionId" : "892",
     "text" : "In welchem dieser Länder ist der US-Dollar auch gesetzliches Zahlungsmittel?",
     "category" : "Wirtschaft & Verkehr"
@@ -22244,7 +22219,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Termiten",
     "questionId" : "893",
     "text" : "Mit welchen Insekten sind Termiten verwandt?",
     "category" : "(keine)"
@@ -22269,7 +22244,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Orgelpfeife",
     "questionId" : "894",
     "text" : "Wie kommt die Luft in die Orgelpfeifen?",
     "category" : "Musik"
@@ -22294,7 +22269,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Esperanto",
     "questionId" : "895",
     "text" : "Die Grundlagen der Plansprache 'Esperanto' wurden 1887 von wem veröffentlicht?",
     "category" : "Literatur & Sprache"
@@ -22319,7 +22294,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Cricket",
     "questionId" : "896",
     "text" : "Aus wie vielen Spielern besteht eine Kricketmannschaft?",
     "category" : "Sport & Spiel"
@@ -22344,7 +22319,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Lepra",
     "questionId" : "897",
     "text" : "Welche Krankheit wurde früher auch Miselsucht genannt?",
     "category" : "Gesundheit"
@@ -22369,7 +22344,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Brom",
     "questionId" : "898",
     "text" : "Welche der Substanzen ist unter Normalbedingungen eine Flüssigkeit?",
     "category" : "Wissenschaft & Forschung"
@@ -22394,7 +22369,7 @@
       }
     ],
     "levelId" : 9,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Backgammon",
     "questionId" : "899",
     "text" : "Welches ist das älteste Brettspiel der Welt?",
     "category" : "Sport & Spiel"
@@ -22419,7 +22394,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ennio_Morricone",
     "questionId" : "900",
     "text" : "Für welche Filmmusik erhielt Ennio Morricone einen Oscar?",
     "category" : "Musik"
@@ -22444,7 +22419,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Impressionismus",
     "questionId" : "901",
     "text" : "Welche Stilrichtung war in der Malerei der Vorgänger der Stilrichtung Impressionismus?",
     "category" : "Kunst & Architektur"
@@ -22469,7 +22444,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mittelmächte",
     "questionId" : "902",
     "text" : "Welches Land zählt nicht zu den Mittelmächten des I. Weltkrieg?",
     "category" : "Geschichte"
@@ -22494,7 +22469,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Indien",
     "questionId" : "903",
     "text" : "In welchem Land wird der Verkauf und die Herstellung von illegalem Alkohol mit dem Tode bestraft?",
     "category" : "Politik"
@@ -22519,7 +22494,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mandarine",
     "questionId" : "904",
     "text" : "Welche dieser Früchte ist kein Rosengewächs?",
     "category" : "Wissenschaft & Forschung"
@@ -22544,7 +22519,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Spanien",
     "questionId" : "905",
     "text" : "Wie viele autonomen Gemeinschaften hat Spanien?",
     "category" : "Geographie"
@@ -22569,7 +22544,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Agenda_21",
     "questionId" : "906",
     "text" : "Wie viele Staaten beschlossen 1992 mit der 'Agenda 21' ein weltweites Umwelt-Aktionsprogramm?",
     "category" : "Politik"
@@ -22594,7 +22569,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Show_Boat_(1936)",
     "questionId" : "907",
     "text" : "Welches Musical gilt als erstes Musical, in dem Text, Musik und Handlung eine Einheit bilden?",
     "category" : "Musik"
@@ -22619,7 +22594,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Vae_victis",
     "questionId" : "908",
     "text" : "Welcher gallische Feldherr soll 'Vae victis!' (Wehe den Besiegten) gesagt haben?",
     "category" : "Literatur & Sprache"
@@ -22644,7 +22619,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Shenandoah-Nationalpark",
     "questionId" : "909",
     "text" : "In welchem Bundesstaat liegt der US-amerikanische Nationalpark Shenandoah-Nationalpark?",
     "category" : "Geographie"
@@ -22669,7 +22644,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Heinrich_Böll",
     "questionId" : "910",
     "text" : "Welches der hier genannten Werke von Heinrich Böll ist postum erschienen?",
     "category" : "Literatur & Sprache"
@@ -22694,7 +22669,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Fette",
     "questionId" : "911",
     "text" : "Was zählt nicht zu den Fettbegleitstoffen?",
     "category" : "Wissenschaft & Forschung"
@@ -22719,7 +22694,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mehrfacher_Überhandknoten",
     "questionId" : "912",
     "text" : "Welcher dieser Knoten ist kein Segelknoten?",
     "category" : "Sport & Spiel"
@@ -22744,7 +22719,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/SEPA",
     "questionId" : "913",
     "text" : "Seit wann wird im inländischen SEPA-Zahlungsverkehr der BIC nicht mehr benötigt?",
     "category" : "Wirtschaft & Verkehr"
@@ -22769,7 +22744,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Schlacht_bei_Tinchebray",
     "questionId" : "914",
     "text" : "Die 'Schlacht bei Tinchebray' fand am 28.09.1106 in Nordfrankreich statt. Wer gewann die Schlacht?",
     "category" : "Geschichte"
@@ -22794,7 +22769,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Claudius_Ptolemäus#Geographie",
     "questionId" : "915",
     "text" : "Wann zeichnete Ptolemäus eine Weltkarte, an der sich die Seefahrer im 15. Jahrhundert orientierten?",
     "category" : "Geschichte"
@@ -22819,7 +22794,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Rumänien",
     "questionId" : "916",
     "text" : "Welches Land grenzt nicht an Rumänien?",
     "category" : "Geographie"
@@ -22844,7 +22819,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Topinambur",
     "questionId" : "917",
     "text" : "Topinambur zählt zur selben Gattung wie ..?",
     "category" : "Wissenschaft & Forschung"
@@ -22869,7 +22844,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_der_Präsidenten_der_Vereinigten_Staaten",
     "questionId" : "918",
     "text" : "Bei welchem US-Präsidenten war sein Vorgänger zugleich auch sein Nachfolger?",
     "category" : "Geschichte"
@@ -22894,7 +22869,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Gelbes_Trikot",
     "questionId" : "919",
     "text" : "Welcher Fahrer trug 1919 das allererste gelbe Trikot als Führender bei der Tour de France?",
     "category" : "Sport & Spiel"
@@ -22919,7 +22894,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/El_Salvador",
     "questionId" : "920",
     "text" : "Welcher mittelamerikanische Staat grenzt nicht an das Karibische Meer?",
     "category" : "Geographie"
@@ -22944,7 +22919,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kirchenjahr",
     "questionId" : "921",
     "text" : "Wann beginnt das orthodoxe Kirchenjahr?",
     "category" : "Glaube & Religion"
@@ -22969,7 +22944,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Containerschiff#Die_gr.C3.B6.C3.9Ften_Containerschiff-Reedereien_der_Welt",
     "questionId" : "922",
     "text" : "Die 2. größte Containerschiff-Reederei der Welt befindet sich in welchem Land?",
     "category" : "Wirtschaft & Verkehr"
@@ -22994,7 +22969,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Steinkräuter",
     "questionId" : "923",
     "text" : "Das Steinkraut gehört zur Pflanzenfamilie der ..?",
     "category" : "Wissenschaft & Forschung"
@@ -23019,7 +22994,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Grafschaft_(England)",
     "questionId" : "924",
     "text" : "Wie viele traditionelle \/ historische Grafschaften Englands gibt es?",
     "category" : "Geschichte"
@@ -23044,7 +23019,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Skype",
     "questionId" : "925",
     "text" : "Wem gehörte 'Skype', bevor es von Microsoft gekauft wurde?",
     "category" : "Wirtschaft & Verkehr"
@@ -23069,7 +23044,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Aeroponik",
     "questionId" : "926",
     "text" : "Was ist 'Aeroponik'?",
     "category" : "Wissenschaft & Forschung"
@@ -23094,7 +23069,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Gustav_Heinemann",
     "questionId" : "927",
     "text" : "Wer war bei der Bundespräsidentenwahl 1969 der Gegenkandiat von Gustav Heinemeann?",
     "category" : "Politik"
@@ -23119,7 +23094,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Andamanensee",
     "questionId" : "928",
     "text" : "Die Andamanensee ist ein Randmeer des ..?",
     "category" : "Geographie"
@@ -23144,7 +23119,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Palaisquartier",
     "questionId" : "929",
     "text" : "In welcher Stadt befindet sich der Gebäudekomplex 'Palais Quartier'?",
     "category" : "Kunst & Architektur"
@@ -23169,7 +23144,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Naturalismus_(Theater)",
     "questionId" : "930",
     "text" : "Welche Art des Naturalismus ging Mitte des 19. Jh. von Frankreich, Deutschland und Russland aus?",
     "category" : "Kunst & Architektur"
@@ -23194,7 +23169,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Luftsportgerät",
     "questionId" : "931",
     "text" : "Welches Gerät gehört rechtlich in Deutschland nicht zu der Luftfahrzeugklasse der Luftsportgeräte?",
     "category" : "Sport & Spiel"
@@ -23219,7 +23194,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Wagner-Festtage_Leipzig",
     "questionId" : "932",
     "text" : "Die Wagner-Festtage finden jährlich in welcher Stadt statt?",
     "category" : "Musik"
@@ -23244,7 +23219,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Inselstaat",
     "questionId" : "933",
     "text" : "Welches ist der weltweit zweitgrößte Inselstaat?",
     "category" : "Geographie"
@@ -23269,7 +23244,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Pascalsche_Wette",
     "questionId" : "934",
     "text" : "In welchem Themenbereich bewegt sich die 'Pascalsche Wette' hauptsächlich?",
     "category" : "Gesellschaft"
@@ -23294,7 +23269,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Siebengebirge",
     "questionId" : "935",
     "text" : "Wie heißt der höchste Berg des Siebengebirges?",
     "category" : "Geographie"
@@ -23319,7 +23294,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Tal_des_Teufels",
     "questionId" : "936",
     "text" : "Wo liegt das 'Tal des Teufels'?",
     "category" : "Geographie"
@@ -23344,7 +23319,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/MIM-104_Patriot",
     "questionId" : "937",
     "text" : "Welcher dieser Staaten hat keine 'Patriot-Raketen' stationiert?",
     "category" : "Politik"
@@ -23369,7 +23344,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Parkuhr",
     "questionId" : "938",
     "text" : "Welches war die erste deutsche Stadt, in der Parkuhren installiert wurden?",
     "category" : "Wirtschaft & Verkehr"
@@ -23394,7 +23369,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Handball",
     "questionId" : "939",
     "text" : "Bei welcher der Ballsportarten ist der Ball am schwersten?",
     "category" : "Sport & Spiel"
@@ -23419,9 +23394,9 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Whisky#Absatz_und_Konsum",
     "questionId" : "940",
-    "text" : "Welches Land ist quantitativ der größte Wiskyproduzent weltweit?",
+    "text" : "Welches Land ist quantitativ der größte Whiskyproduzent weltweit?",
     "category" : "Wirtschaft & Verkehr"
   },
   {
@@ -23444,7 +23419,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/K-141_Kursk",
     "questionId" : "941",
     "text" : "In welchem Jahr ist das russische U-Boot 'K-141 Kursk' in der Barentssee gesunken?",
     "category" : "Geschichte"
@@ -23469,7 +23444,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Weihnachtsmarkt",
     "questionId" : "942",
     "text" : "In welcher deutschen Stadt findet alljährlich der älteste Weihnachtsmarkt statt?",
     "category" : "Gesellschaft"
@@ -23494,7 +23469,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bohrmaschine",
     "questionId" : "943",
     "text" : "Wer gilt als Erfinder der handgeführten elektrischen Bohrmaschine?",
     "category" : "Technik"
@@ -23519,9 +23494,9 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kinoptikum_Gaspoltshofen",
     "questionId" : "944",
-    "text" : "Das Kinoptikum ist ein Kinomuseum.In welchem Ort in Österreich befindet es sich?",
+    "text" : "Das Kinoptikum ist ein Kinomuseum. In welchem Ort in Österreich befindet es sich?",
     "category" : "Gesellschaft"
   },
   {
@@ -23544,7 +23519,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Grimme-Preis",
     "questionId" : "945",
     "text" : "Wo wird der Grimme-Preis verliehen?",
     "category" : "Unterhaltung & Medien"
@@ -23569,7 +23544,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Indonesien",
     "questionId" : "946",
     "text" : "Wie viele Inseln gehören zu Indonesien?",
     "category" : "Geographie"
@@ -23594,7 +23569,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Doping",
     "questionId" : "947",
     "text" : "Woher stammt der etymologische Ursprung des Begriffs 'Doping'?",
     "category" : "Literatur & Sprache"
@@ -23619,7 +23594,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Das_Schweigen_der_Lämmer_(Film)",
     "questionId" : "948",
     "text" : "Wer führte Regie bei dem Thriller 'Das Schweigen der Lämmer'?",
     "category" : "Unterhaltung & Medien"
@@ -23644,7 +23619,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Château_d’Yquem",
     "questionId" : "949",
     "text" : "Das Château d’Yquem ist eines der berühmtesten Weingüter der Erde und bekannt für seinen ..?",
     "category" : "Essen & Trinken"
@@ -23669,7 +23644,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Pompeji",
     "questionId" : "950",
     "text" : "Zu welcher Region Italiens gehört Pompeji?",
     "category" : "Geographie"
@@ -23694,7 +23669,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ascorbinsäure",
     "questionId" : "951",
     "text" : "Welche der hier genannten Pflanzen hat den höchsten Vitamin-C-Gehalt?",
     "category" : "(keine)"
@@ -23719,7 +23694,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Aserbaidschan",
     "questionId" : "952",
     "text" : "Wie heißt der höchste Berg Aserbaidschans?",
     "category" : "Geographie"
@@ -23744,7 +23719,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Sommerrodelbahn",
     "questionId" : "953",
     "text" : "In welchem Land enstanden ursprünglich die Vorläufer von Sommerrodelbahnen und Achterbahnen?",
     "category" : "Sport & Spiel"
@@ -23769,7 +23744,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bläck_Fööss",
     "questionId" : "954",
     "text" : "Welches Album brachten die 'Bläck Fööss' 2011 heraus?",
     "category" : "Musik"
@@ -23794,7 +23769,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Paris_Hilton",
     "questionId" : "955",
     "text" : "Welches Sternzeichen ist Paris Hilton?",
     "category" : "Unterhaltung & Medien"
@@ -23844,7 +23819,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Privatrechtlicher_Hörfunk#Geschichte",
     "questionId" : "957",
     "text" : "Welches ist der älteste private Hörfunksender in Deutschland?",
     "category" : "Unterhaltung & Medien"
@@ -23869,7 +23844,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Stephan_Balkenhol",
     "questionId" : "958",
     "text" : "Der deutsche Künstler Stephan Balkenhol wurde vorwiegend bekannt durch seine Skulpturen aus ..?",
     "category" : "Kunst & Architektur"
@@ -23894,7 +23869,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Toyota_Highlander",
     "questionId" : "959",
     "text" : "Welches 'SUV' ist das Erste mit Hybridantrieb?",
     "category" : "Technik"
@@ -23919,7 +23894,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Chinesischer_Kalender#Die_zw.C3.B6lf_Erdzweige",
     "questionId" : "960",
     "text" : "Wie heißt ein altes chinesisches Nummerierungssystem?",
     "category" : "Wissenschaft & Forschung"
@@ -23944,7 +23919,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Organisation_erdölexportierender_Länder",
     "questionId" : "961",
     "text" : "Wo wurde 1960 die OPEC gegründet?",
     "category" : "Wirtschaft & Verkehr"
@@ -23994,7 +23969,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Autobahn#Gr.C3.BCne_Beschilderung",
     "questionId" : "963",
     "text" : "In welchem dieser Länder sind die Autobahnschilder grün?",
     "category" : "Wirtschaft & Verkehr"
@@ -24019,7 +23994,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hadrian_(Kaiser)",
     "questionId" : "964",
     "text" : "Welcher der folgenden röm. Kaiser ist durch Adoption auf den Thron gekommen?",
     "category" : "Geschichte"
@@ -24044,7 +24019,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Wiener_Klassik",
     "questionId" : "965",
     "text" : "Welcher Komponist zählt nicht zur Stilperiode 'Wiener Klassik' dazu?",
     "category" : "Musik"
@@ -24069,7 +24044,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Vatikanischer_Hügel",
     "questionId" : "966",
     "text" : "Wie hoch ist der 'Vatikanische Hügel' in Rom?",
     "category" : "Geographie"
@@ -24094,7 +24069,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Nordpol#Arktischer_Magnetpol",
     "questionId" : "967",
     "text" : "Wer oder was wandert derzeit jährlich ca. 40 bis 60 km von Kanada nach Sibirien?",
     "category" : "Geographie"
@@ -24119,7 +24094,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Chefarzt",
     "questionId" : "968",
     "text" : "Wie ist in Österreich die Bezeichnung für einen Chefarzt?",
     "category" : "Gesellschaft"
@@ -24144,7 +24119,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Entenhausen#Wissenschaft",
     "questionId" : "969",
     "text" : "In welchen Comics findet man Prof. Marlin und Prof. Zapotek?",
     "category" : "Literatur & Sprache"
@@ -24169,7 +24144,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Talk_That_Talk",
     "questionId" : "970",
     "text" : "Von wem stammt das Album 'Talk That Talk'?",
     "category" : "Musik"
@@ -24194,7 +24169,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Großherzogtum",
     "questionId" : "971",
     "text" : "Wie viele Großherzogtümer existierten in Europa ab dem Wiener Kongress 1815?",
     "category" : "Politik"
@@ -24219,7 +24194,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Richmond_Park",
     "questionId" : "972",
     "text" : "Welcher 'königliche Park' ist der Größte in London?",
     "category" : "Kunst & Architektur"
@@ -24244,7 +24219,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Niagarafälle",
     "questionId" : "973",
     "text" : "Wie tief stürzt das Wasser die Niagarafälle hinab?",
     "category" : "Geographie"
@@ -24269,7 +24244,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Erdatmosphäre",
     "questionId" : "974",
     "text" : "Welches ist die unterste Schicht der Erdatmosphäre?",
     "category" : "Wissenschaft & Forschung"
@@ -24294,7 +24269,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Unbefleckte_Empfängnis",
     "questionId" : "975",
     "text" : "Wann ist 'Maria Empfängnis'?",
     "category" : "Glaube & Religion"
@@ -24319,7 +24294,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bleistift",
     "questionId" : "976",
     "text" : "In welchem Jahr wurden erstmals Bleistifte aus Grafit hergestellt?",
     "category" : "Geschichte"
@@ -24344,7 +24319,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Antonomasie",
     "questionId" : "977",
     "text" : "Wie lautet der Begriff, wenn man an die Stelle eines Eigennamens eine Eigenschaft setzt?",
     "category" : "Literatur & Sprache"
@@ -24369,7 +24344,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Tagesschau.de",
     "questionId" : "978",
     "text" : "Welches Jubiläum feierte das zentrale Nachrichtenwebportal der ARD 'Tagesschau.de' im August 2016?",
     "category" : "Unterhaltung & Medien"
@@ -24394,7 +24369,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Innenrüttler",
     "questionId" : "979",
     "text" : "Einen Flaschenrüttler braucht man für ..?",
     "category" : "Literatur & Sprache"
@@ -24419,7 +24394,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Kaffeine",
     "questionId" : "980",
     "text" : "Wie heißt ein freier Multimedia-Player für Computer mit dem Betriebssystem Linux?",
     "category" : "Technik"
@@ -24444,7 +24419,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ethik",
     "questionId" : "981",
     "text" : "Was zählt nicht zu den Humanwissenschaften?",
     "category" : "Wissenschaft & Forschung"
@@ -24469,7 +24444,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mozartkugel",
     "questionId" : "982",
     "text" : "Wer war der Erfinder der 'Original Salzburger Mozartkugel'?",
     "category" : "Essen & Trinken"
@@ -24494,7 +24469,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Dualsystem",
     "questionId" : "983",
     "text" : "Welche Binärzahl ergibt 1 + 1 im Binärsystem?",
     "category" : "Wissenschaft & Forschung"
@@ -24519,7 +24494,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Liste_der_Umweltpreise",
     "questionId" : "984",
     "text" : "Welcher Preis ist weltweit einer der bedeutendsten Umweltschutz-Preise?",
     "category" : "Gesellschaft"
@@ -24544,7 +24519,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Spiel_des_Jahres",
     "questionId" : "985",
     "text" : "Welches Spiel wurde 'Spiel des Jahres 2013'?",
     "category" : "Sport & Spiel"
@@ -24569,7 +24544,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Mondial_de_l’Automobile",
     "questionId" : "986",
     "text" : "Welche Autoausstellung war die Erste und ist nach wie vor eine der meistbesuchten?",
     "category" : "Wirtschaft & Verkehr"
@@ -24594,7 +24569,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Sahara",
     "questionId" : "987",
     "text" : "Die Sahara hat etwa die wieviel-fache Fläche von Deutschland?",
     "category" : "Geographie"
@@ -24619,7 +24594,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/RAIPON",
     "questionId" : "988",
     "text" : "Wie hieß der erste Präsident der Organisation 'Raipon'?",
     "category" : "Gesellschaft"
@@ -24644,7 +24619,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/UEFA",
     "questionId" : "989",
     "text" : "In welcher Schweizer Stadt hat die Europäische Fußballunion (UEFA)ihren Sitz?",
     "category" : "Sport & Spiel"
@@ -24669,7 +24644,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Moderner_Fünfkampf",
     "questionId" : "990",
     "text" : "Welche Disziplin gehört nicht zum modernen Fünfkampf?",
     "category" : "Sport & Spiel"
@@ -24694,7 +24669,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Realismus_(Literatur)",
     "questionId" : "991",
     "text" : "Welcher Dichter prägte den Begriff 'Poetischer Realismus'?",
     "category" : "Literatur & Sprache"
@@ -24719,35 +24694,10 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Trump_International_Hotel_and_Tower_(Chicago)",
     "questionId" : "992",
     "text" : "Welches Gebäude ist das höchstes Gebäude der Welt mit einer puren Stahlbetonkonstruktion?",
     "category" : "Kunst & Architektur"
-  },
-  {
-    "answers" : [
-      {
-        "text" : "Der Löwe",
-        "correct" : false
-      },
-      {
-        "text" : "Der Fuchs",
-        "correct" : false
-      },
-      {
-        "text" : "Der Lachs",
-        "correct" : false
-      },
-      {
-        "text" : "Der Luchs",
-        "correct" : true
-      }
-    ],
-    "levelId" : 10,
-    "explanation" : "",
-    "questionId" : "993",
-    "text" : "Wie heißt ein Literaturpreis für Kinder- und Jugendbücher?",
-    "category" : "Literatur & Sprache"
   },
   {
     "answers" : [
@@ -24769,7 +24719,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Ummanz",
     "questionId" : "994",
     "text" : "Vor welcher Insel liegt die Ostsee-Insel Ummanz westlich vorgelagert?",
     "category" : "Geographie"
@@ -24794,7 +24744,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Donau",
     "questionId" : "995",
     "text" : "Welcher dieser Flüsse entspringt nicht in der Schweiz?",
     "category" : "Geographie"
@@ -24819,7 +24769,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Autobahn#Europa",
     "questionId" : "996",
     "text" : "Welches Land hat die höchste Autobahndichte der EU?",
     "category" : "Wirtschaft & Verkehr"
@@ -24844,7 +24794,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Max_Ernst",
     "questionId" : "997",
     "text" : "Max Ernst gilt als Vertreter des ..?",
     "category" : "Kunst & Architektur"
@@ -24869,7 +24819,7 @@
       }
     ],
     "levelId" : 10,
-    "explanation" : "",
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Smiley",
     "questionId" : "998",
     "text" : "Aus welchem Jahr stammt die älteste belegbare Verwendung des Smileys?",
     "category" : "Gesellschaft"
@@ -25421,7 +25371,7 @@
     "levelId" : 1,
     "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Bürgerliches_Gesetzbuch",
     "questionId" : "1020",
-    "text" : "Das BGB ist das",
+    "text" : "Die Abkürzung BGB steht für das",
     "category" : "Gesellschaft"
   },
   {
@@ -25448,5 +25398,105 @@
     "questionId" : "1021",
     "text" : "Welcher Monat wird als 'Wonnemonat' bezeichnet?",
     "category" : "Gesellschaft"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Human Drive",
+        "correct" : false
+      },
+      {
+        "text" : "Kurt Stöpel",
+        "correct" : false
+      },
+      {
+        "text" : "Eugène Christophe",
+        "correct" : false
+      },
+      {
+        "text" : "Henri Desgrange.",
+        "correct" : true
+      }
+    ],
+    "levelId" : 10,
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Gelbes_Trikot",
+    "questionId" : "1022",
+    "text" : "Das Kürze HD auf dem Gelben Trokot bei Radrennen steht für..",
+    "category" : "Sport & Spiel"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "30",
+        "correct" : false
+      },
+      {
+        "text" : "10",
+        "correct" : false
+      },
+      {
+        "text" : "5",
+        "correct" : false
+      },
+      {
+        "text" : "6",
+        "correct" : true
+      }
+    ],
+    "levelId" : 10,
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Trump_International_Hotel_and_Tower_(Chicago)",
+    "questionId" : "1023",
+    "text" : "Wie viele Tump Towers gibt es?",
+    "category" : "Gesellschaft"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Ethikus Medicus",
+        "correct" : false
+      },
+      {
+        "text" : "die 10 Gebote",
+        "correct" : false
+      },
+      {
+        "text" : "Schweigepflicht",
+        "correct" : false
+      },
+      {
+        "text" : "Hippokratischer Eid",
+        "correct" : true
+      }
+    ],
+    "levelId" : 6,
+    "explanation" : "",
+    "questionId" : "1024",
+    "text" : "Eine frühere grundsätzliche Formulierung Ärztlicher Ethik heisst",
+    "category" : "Gesundheit"
+  },
+  {
+    "answers" : [
+      {
+        "text" : "Aristoteles",
+        "correct" : false
+      },
+      {
+        "text" : "Dr. Mabuse",
+        "correct" : false
+      },
+      {
+        "text" : "Medicus",
+        "correct" : false
+      },
+      {
+        "text" : "Hippokrates",
+        "correct" : true
+      }
+    ],
+    "levelId" : 6,
+    "explanation" : "https:\/\/de.wikipedia.org\/wiki\/Hippokrates_von_Kos",
+    "questionId" : "1025",
+    "text" : "Ein berühmter Arzt des Altertums war",
+    "category" : "Gesundheit"
   }
 ]
