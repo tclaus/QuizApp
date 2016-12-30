@@ -124,6 +124,11 @@
 
 
 -(void)reportAchievementToGameCenter:(CGFloat)percentScore points:(NSInteger)points{
+    
+    if (self.questions.count == 0) {
+        return;
+    }
+    
     if([Config sharedInstance].gameCenterEnabled){
         
         NSString* leaderboardID;

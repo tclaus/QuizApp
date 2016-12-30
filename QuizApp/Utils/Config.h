@@ -52,4 +52,9 @@
 
 @property (NS_NONATOMIC_IOSONLY, getter=getAllInAppPurchases, readonly, copy) NSArray *allInAppPurchases;
 
+/**
+ Set question topics in the right language
+ */
+-(void)defineQuestionLanguage;
+
 @end

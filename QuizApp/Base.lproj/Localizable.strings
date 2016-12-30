@@ -126,3 +126,5 @@
 
 /* Level for question */
 "Level %ld" = "Stufe: %ld";
+
+"THE!Quiz on iOS" = "DAS!Quiz auf iOS";

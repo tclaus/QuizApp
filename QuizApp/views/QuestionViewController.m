@@ -62,6 +62,10 @@ SendReport *sendReport;
     return self;
 }
 
+-(CGRect)screenBounds {
+    return [[UIScreen mainScreen] bounds];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -70,13 +74,17 @@ SendReport *sendReport;
     
     self.answerTableView.delegate = self;
     self.answerTableView.dataSource = self;
-    self.answerTableView.estimatedRowHeight = 80.0;
-   // self.answerTableView.rowHeight = UITableViewAutomaticDimension;
-
+    
+    self.answerTableView.estimatedRowHeight = 40.0; // Ovcerwritten by iPhone 4
+    self.answerTableView.rowHeight = 40.0;
+    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         // get size, will only check if iphone 4S: 480, 5: 568, 6/7 : 667
-        if (self.view.bounds.size.height == 480) {
+        if ([self screenBounds].size.height == 480) {
             self.stackView.spacing = 10;
+            self.questionLabel.font = [UIFont fontWithName:self.questionLabel.font.fontName size:16.0f];;
+            self.answerTableView.estimatedRowHeight = 30.0;
+            self.answerTableView.rowHeight = 30.0;
         }
         if (self.view.bounds.size.height == 568) {
             self.stackView.spacing = 15;
@@ -202,7 +210,26 @@ SendReport *sendReport;
     cell.isForReview = self.isForReview;
     cell.backgroundColor = [UIColor clearColor];
     
-    cell.indexLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:19.0f];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        // get size, will only check if iphone 4S: 480, 5: 568, 6/7 : 667
+        
+        if ([self screenBounds].size.height == 480) {
+            cell.indexLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:14.0f];
+            cell.answerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:16.0f];
+            
+        } else {
+            cell.indexLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:19.0f];
+            cell.answerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:22.0f];
+        }
+        /*
+        if (self.view.bounds.size.height == 568) {
+            
+        }
+        if (self.view.bounds.size.height > 568) {
+            
+        }
+         */
+    }
     
     cell.contentView.alpha = 1.0f;
     return cell;
@@ -233,6 +260,7 @@ SendReport *sendReport;
     //    return the calculated required height of the cell considering the label
     return labelRect.size.height;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -273,6 +301,7 @@ SendReport *sendReport;
     }
     
 }
+
 
 -(void)goToNextQuestion {
     [self.delegate questionHasBeenAnswered:self.question withController:self];

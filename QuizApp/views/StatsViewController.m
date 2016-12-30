@@ -196,6 +196,7 @@
     self.gameModeLabel.text = gameModeHeadline;
     self.gameModeLabel.textColor = [UIColor whiteColor];
     
+    self.chooseTopicsButton.hidden = YES;
     [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     // self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
     [self.chooseTopicsButton setTitle:NSLocalizedString(@"TOPICS",@"") forState:UIControlStateNormal];

@@ -1,4 +1,4 @@
-//
+ //
 //  Config.m
 //  QuizApp
 //
@@ -39,20 +39,7 @@
     
     self.configInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
     
-    NSArray* topicsData = self.configInfo[@"Questions Data"];
-    
-    NSMutableArray* topics = [NSMutableArray arrayWithCapacity:topicsData.count];
-    for (NSDictionary* topicDic in topicsData) {
-     
-        Topic* topic = [[Topic alloc] init];
-        topic.title = topicDic[@"Topic Title"];
-        topic.image = [UIImage imageNamed:topicDic[@"Topic Image"]];
-        topic.inAppPurchaseIdentifier = topicDic[@"In App Purchase Identifier"];
-        topic.questionJSONObjects = [Datasource questionsFromFile:topicDic[@"Questions File"]];
-        [topics addObject:topic];
-    }
-    
-    self.topics = [NSArray arrayWithArray:topics];
+    [self defineQuestionLanguage];
     
     NSDictionary* quizSettings = self.configInfo[@"Quiz Settings"];
     
@@ -106,6 +93,46 @@
     self.topicIAP.messageBuy = topicIAPSettings[@"IAP Alert Buy"];
     self.topicIAP.messageBuyAll = topicIAPSettings[@"IAP Alert Buy All"];
 
+}
+
+/**
+ Set question topics in the right language
+ */
+-(void)defineQuestionLanguage{
+    NSArray* topicsData = self.configInfo[@"Questions Data"];
+    
+    NSMutableArray* topics = [NSMutableArray arrayWithCapacity:topicsData.count];
+    for (NSDictionary* topicDic in topicsData) {
+        
+        Topic* topic = [[Topic alloc] init];
+        topic.title = topicDic[@"Topic Title"];
+        topic.image = [UIImage imageNamed:topicDic[@"Topic Image"]];
+        topic.inAppPurchaseIdentifier = topicDic[@"In App Purchase Identifier"];
+        
+        // Load questions according to the system Language
+        // Then override it with the user preferences
+        // question_language
+        NSString* languageKey =   [[NSUserDefaults standardUserDefaults] stringForKey:@"question_language"];
+        NSString* questionFilename;
+        
+        if (!languageKey) {
+            
+            // Store defualt language
+            NSString *defaultLanguage = NSLocale.preferredLanguages[0];
+            [[NSUserDefaults standardUserDefaults] setObject:defaultLanguage forKey:@"question_language"];
+            
+            questionFilename = topicDic[@"Questions File"];
+        } else {
+            questionFilename = [NSString stringWithFormat:@"1000-questions_%@.json",languageKey ];
+        }
+        
+        
+        topic.questionJSONObjects = [Datasource questionsFromFile:questionFilename];
+        
+        [topics addObject:topic];
+    }
+    
+    self.topics = [NSArray arrayWithArray:topics];
 }
 
 -(NSArray*)getAllInAppPurchases{

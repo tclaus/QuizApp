@@ -1,0 +1,270 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "14V-qZ-J1y"; */
+"14V-qZ-J1y.text" = "Label";
+
+/* Class = "UILabel"; text = "Send Succesful"; ObjectID = "1Fd-Gj-5A1"; */
+"1Fd-Gj-5A1.text" = "Send succesful";
+
+/* Class = "UILabel"; text = "Falsch 2: "; ObjectID = "22O-wy-CK3"; */
+"22O-wy-CK3.text" = "False 2: ";
+
+/* Class = "UIButton"; normalTitle = "STARTBUTTON"; ObjectID = "2Oi-BR-gEd"; */
+"2Oi-BR-gEd.normalTitle" = "STARTBUTTON";
+
+/* Class = "UIButton"; accessibilityHint = "App Seite auf FAcebook besuchen"; ObjectID = "2oi-md-gu8"; */
+"2oi-md-gu8.accessibilityHint" = "Go to facebook";
+
+/* Class = "UIButton"; accessibilityLabel = "Facebook"; ObjectID = "2oi-md-gu8"; */
+"2oi-md-gu8.accessibilityLabel" = "Facebook";
+
+/* Class = "UIButton"; normalTitle = "Zu schwer"; ObjectID = "39q-mm-OGF"; */
+"39q-mm-OGF.normalTitle" = "To difficult";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "3m0-Mq-LVB"; */
+"3m0-Mq-LVB.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Testen Sie ihr Wissen bla bla"; ObjectID = "5As-Ak-5IG"; */
+"5As-Ak-5IG.text" = "Check your knowledge";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5QV-1K-oYC"; */
+"5QV-1K-oYC.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Abbrechen"; ObjectID = "5xd-il-TO2"; */
+"5xd-il-TO2.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; accessibilityHint = "Email an den Entwickler senden"; ObjectID = "6o4-US-3Vv"; */
+"6o4-US-3Vv.accessibilityHint" = "Send email";
+
+/* Class = "UIButton"; accessibilityLabel = "Email"; ObjectID = "6o4-US-3Vv"; */
+"6o4-US-3Vv.accessibilityLabel" = "Email";
+
+/* Class = "UILabel"; text = "Gib drei falsche Antworten ein. Sei kreativ!"; ObjectID = "6oO-ps-4Cr"; */
+"6oO-ps-4Cr.text" = "Chose three false answers. Be creative!";
+
+/* Class = "UILabel"; text = "Schritt 3 (Freiwillig) Link zur Wikipedia und Kategorie angeben"; ObjectID = "7Zw-Xh-Tl9"; */
+"7Zw-Xh-Tl9.text" = "Step 3 (Optional) Link to wikipedia";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "8Ps-44-4UA"; */
+"8Ps-44-4UA.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "Weiter"; ObjectID = "9GY-8q-sx0"; */
+"9GY-8q-sx0.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "9HI-nr-Zlr"; */
+"9HI-nr-Zlr.text" = "Question";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9SI-aX-9xI"; */
+"9SI-aX-9xI.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AJ3-S0-AA3"; */
+"AJ3-S0-AA3.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Abbrechen"; ObjectID = "AMO-ka-xkm"; */
+"AMO-ka-xkm.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Schritt 1 von 3"; ObjectID = "B5n-5e-hju"; */
+"B5n-5e-hju.text" = "Step 1 of 3";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Bqc-fs-SfC"; */
+"Bqc-fs-SfC.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Game Mode 2"; ObjectID = "D4J-zQ-sFi"; */
+"D4J-zQ-sFi.normalTitle" = "Game Mode 2";
+
+/* Class = "UITextField"; accessibilityHint = "Zweite falsche Antwort"; ObjectID = "D53-XH-PT5"; */
+"D53-XH-PT5.accessibilityHint" = "Second false answer";
+
+/* Class = "UITextField"; accessibilityHint = "Dritte falsche Antwort"; ObjectID = "Dfl-c0-E7I"; */
+"Dfl-c0-E7I.accessibilityHint" = "Thirst false answer";
+
+/* Class = "UIButton"; normalTitle = "challenge friend"; ObjectID = "EtM-77-YYl"; */
+"EtM-77-YYl.normalTitle" = "challenge friend";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FKp-fd-sTp"; */
+"FKp-fd-sTp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Game Mode"; ObjectID = "Fu5-Iq-IJe"; */
+"Fu5-Iq-IJe.text" = "Game Mode";
+
+/* Class = "UILabel"; text = "12.000"; ObjectID = "Fyq-5X-TW1"; */
+"Fyq-5X-TW1.text" = "12.000";
+
+/* Class = "UITextField"; accessibilityLabel = "Richtige Antwort"; ObjectID = "G9c-Oy-E6S"; */
+"G9c-Oy-E6S.accessibilityLabel" = "Correct answer";
+
+/* Class = "UIButton"; normalTitle = "facebook"; ObjectID = "GX7-Ha-H3g"; */
+"GX7-Ha-H3g.normalTitle" = "facebook";
+
+/* Class = "UIButton"; normalTitle = "Nicht angemessen"; ObjectID = "IDA-di-3uL"; */
+"IDA-di-3uL.normalTitle" = "Not appropriate";
+
+/* Class = "UIButton"; normalTitle = "Abbrechen"; ObjectID = "Isg-zh-Bhg"; */
+"Isg-zh-Bhg.normalTitle" = "Cancel";
+
+/* Class = "UIBarButtonItem"; title = "Start"; ObjectID = "Itg-M3-0VZ"; */
+"Itg-M3-0VZ.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Veraltet"; ObjectID = "J6C-ex-2Im"; */
+"J6C-ex-2Im.normalTitle" = "Outdated";
+
+/* Class = "UILabel"; text = "Gib eine neue Frage und die richtige Antwort ein."; ObjectID = "JNT-Ee-zon"; */
+"JNT-Ee-zon.text" = "Enter a new question and the correct answer.";
+
+/* Class = "UIButton"; normalTitle = "Senden"; ObjectID = "K3Z-PT-cdm"; */
+"K3Z-PT-cdm.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "Punkte"; ObjectID = "LDr-P2-Pm8"; */
+"LDr-P2-Pm8.text" = "Points";
+
+/* Class = "UIButton"; normalTitle = "Senden"; ObjectID = "MEO-12-gf3"; */
+"MEO-12-gf3.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "Answer Text Label"; ObjectID = "NUl-co-UAI"; */
+"NUl-co-UAI.text" = "Answer Text Label";
+
+/* Class = "UILabel"; text = "Level"; ObjectID = "NjX-7L-b1K"; */
+"NjX-7L-b1K.text" = "Level";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OLc-QH-ZNy"; */
+"OLc-QH-ZNy.text" = "Label";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Ppm-Ml-i9J"; */
+"Ppm-Ml-i9J.text" = "2";
+
+/* Class = "UITextField"; accessibilityHint = "Gib eine Frage ein"; ObjectID = "R5u-Tk-bB5"; */
+"R5u-Tk-bB5.accessibilityHint" = "Enter a question";
+
+/* Class = "UITextField"; accessibilityLabel = "Frage"; ObjectID = "R5u-Tk-bB5"; */
+"R5u-Tk-bB5.accessibilityLabel" = "Question";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "RxX-Hf-hzL"; */
+"RxX-Hf-hzL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "S0N-7Z-R7H"; */
+"S0N-7Z-R7H.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Frage melden"; ObjectID = "Sqy-Yc-elj"; */
+"Sqy-Yc-elj.normalTitle" = "Report question";
+
+/* Class = "UILabel"; text = "Subtitle subtitle"; ObjectID = "SyF-fH-dA2"; */
+"SyF-fH-dA2.text" = "Subtitle subtitle";
+
+/* Class = "UIButton"; normalTitle = "Weiter"; ObjectID = "TsH-q5-hhz"; */
+"TsH-q5-hhz.normalTitle" = "Weiter";
+
+/* Class = "UILabel"; text = "Falsch 3: "; ObjectID = "TyU-kh-uym"; */
+"TyU-kh-uym.text" = "False 3: ";
+
+/* Class = "UIButton"; accessibilityLabel = "Im Appstore bewerten"; ObjectID = "Ueb-aH-PGp"; */
+"Ueb-aH-PGp.accessibilityLabel" = "Rate in appstore";
+
+/* Class = "UILabel"; text = "Richtige Antwort"; ObjectID = "WNa-a7-qLf"; */
+"WNa-a7-qLf.text" = "Correct Answer";
+
+/* Class = "UIButton"; normalTitle = "SEEHIGHSCRORE"; ObjectID = "Wbk-eF-sMJ"; */
+"Wbk-eF-sMJ.normalTitle" = "SEEHIGHSCRORE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wdn-Z2-Met"; */
+"Wdn-Z2-Met.text" = "Label";
+
+/* Class = "UILabel"; text = "Frage:"; ObjectID = "Wgz-XR-fqr"; */
+"Wgz-XR-fqr.text" = "Question:";
+
+/* Class = "UIButton"; normalTitle = "CHOOSETOPICS"; ObjectID = "XOq-HF-MAW"; */
+"XOq-HF-MAW.normalTitle" = "CHOOSETOPICS";
+
+/* Class = "UILabel"; text = "Schritt 2 von 3"; ObjectID = "YWP-Z8-kbj"; */
+"YWP-Z8-kbj.text" = "Step 2 of 3";
+
+/* Class = "UILabel"; text = "Frage melden"; ObjectID = "a1z-Af-gdQ"; */
+"a1z-Af-gdQ.text" = "Report question";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "atx-iR-w7z"; */
+"atx-iR-w7z.text" = "2";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c9Q-wn-bWh"; */
+"c9Q-wn-bWh.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Review Questions"; ObjectID = "cLp-Rd-ttY"; */
+"cLp-Rd-ttY.normalTitle" = "Review Questions";
+
+/* Class = "UIButton"; accessibilityHint = "Öffne Wiki des Tages"; ObjectID = "dSt-b5-pag"; */
+"dSt-b5-pag.accessibilityHint" = "Open wiki of the day. (Link)";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. "; ObjectID = "dbc-pU-fgS"; */
+"dbc-pU-fgS.text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ";
+
+/* Class = "UILabel"; text = "Wikipedia Link"; ObjectID = "dch-CU-8iM"; */
+"dch-CU-8iM.text" = "Wikipedia Link";
+
+/* Class = "UIButton"; normalTitle = "SEECHALLENGES"; ObjectID = "eLi-rm-vAE"; */
+"eLi-rm-vAE.normalTitle" = "SEECHALLENGES";
+
+/* Class = "UIBarButtonItem"; title = "Start"; ObjectID = "eRV-Pl-6qF"; */
+"eRV-Pl-6qF.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Twitter"; ObjectID = "hPn-2u-A79"; */
+"hPn-2u-A79.normalTitle" = "Twitter";
+
+/* Class = "UIButton"; normalTitle = "Game Mode 1 test"; ObjectID = "iG3-9a-nVk"; */
+"iG3-9a-nVk.normalTitle" = "Game Mode 1 test";
+
+/* Class = "UITextField"; placeholder = "Wikipedia Link"; ObjectID = "l8M-j4-VSc"; */
+"l8M-j4-VSc.placeholder" = "Wikipedia Link";
+
+/* Class = "UIButton"; normalTitle = "Abbrechen"; ObjectID = "n6V-Lf-1kO"; */
+"n6V-Lf-1kO.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Kategorie"; ObjectID = "nEm-mn-Giv"; */
+"nEm-mn-Giv.text" = "Topic";
+
+/* Class = "UIButton"; normalTitle = "Zu leicht"; ObjectID = "nZt-VX-ngI"; */
+"nZt-VX-ngI.normalTitle" = "Too easy";
+
+/* Class = "UILabel"; text = "Question Category"; ObjectID = "njb-XR-6NH"; */
+"njb-XR-6NH.text" = "Question Category";
+
+/* Class = "UILabel"; accessibilityHint = "Erste falsche Antwort"; ObjectID = "oDT-T5-bai"; */
+"oDT-T5-bai.accessibilityHint" = "First false answer";
+
+/* Class = "UILabel"; text = "Falsch 1: "; ObjectID = "oDT-T5-bai"; */
+"oDT-T5-bai.text" = "False 1: ";
+
+/* Class = "UILabel"; text = "Explanation label"; ObjectID = "odF-lL-OgB"; */
+"odF-lL-OgB.text" = "Explanation label";
+
+/* Class = "UIButton"; accessibilityLabel = "Neue Frage einreichen"; ObjectID = "pzn-DC-0Et"; */
+"pzn-DC-0Et.accessibilityLabel" = "Send a new question";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "qGk-xV-kIP"; */
+"qGk-xV-kIP.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Level: 1"; ObjectID = "raR-gf-waz"; */
+"raR-gf-waz.text" = "Level: 1";
+
+/* Class = "UIButton"; normalTitle = "STARTQUIZ"; ObjectID = "uiw-Ga-lKG"; */
+"uiw-Ga-lKG.normalTitle" = "STARTQUIZ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uj8-8o-wjD"; */
+"uj8-8o-wjD.text" = "Label";
+
+/* Class = "UILabel"; text = "Last Points"; ObjectID = "wS3-KR-SpW"; */
+"wS3-KR-SpW.text" = "Last Points";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "wgy-ck-ivJ"; */
+"wgy-ck-ivJ.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. "; ObjectID = "wnq-G2-1bR"; */
+"wnq-G2-1bR.text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ";
+
+/* Class = "UILabel"; text = "Info Label"; ObjectID = "x9x-B5-Nps"; */
+"x9x-B5-Nps.text" = "Info Label";
+
+/* Class = "UILabel"; text = "questions Label"; ObjectID = "xCZ-n0-vdq"; */
+"xCZ-n0-vdq.text" = "questions Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ya3-2r-yIy"; */
+"ya3-2r-yIy.text" = "Label";
+
+/* Class = "UILabel"; text = "Level: 1"; ObjectID = "z8r-9a-KrU"; */
+"z8r-9a-KrU.text" = "Level: 1";
