@@ -340,11 +340,13 @@ static BOOL heartSoundPlaying;
             // PossibleLevel up
             BOOL nextLevel = false;
             
-            if ([self IAPProductPurchased] || ( [GameStats sharedInstance].currentLevel <= 4 && [GameStats sharedInstance].numberOfSuccessfulTries < 3)  ) {
+            if ([self IAPProductPurchased] ||
+                ( [GameStats sharedInstance].currentLevel < [Config sharedInstance].quizIAP.numberOfFreeLevels) ||
+                ( [GameStats sharedInstance].currentLevel == [Config sharedInstance].quizIAP.numberOfFreeLevels && [GameStats sharedInstance].numberOfSuccessfulTries < 3)  ) {
                 nextLevel= [[GameStats sharedInstance] levelUp];
             } else {
                 // Not purchased!  
-                return @"Wenn Du in das nächset Level möchtest, musst du das Spiel freischalten.";
+                return NSLocalizedString(@"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.",@"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.");
             }
             
             
@@ -352,9 +354,9 @@ static BOOL heartSoundPlaying;
             // If next Level - Show screen
             // If only next Try - show number of tries
             if (nextLevel) {
-                return @"Das war SUPER!";
+                return NSLocalizedString(@"Das war SUPER!",@"Das war SUPER!");
             } else {
-                return @"Du hast ein Stern verdient!";
+                return NSLocalizedString(@"Du hast ein Stern verdient!",@"Du hast ein Stern verdient!");
             }
             
             
@@ -363,7 +365,7 @@ static BOOL heartSoundPlaying;
             // ab 20 Fragen UND 80% richtig
             NSInteger neededQuestions = (20 - results.count);
             if (neededQuestions > 0) {
-                return [NSString stringWithFormat:@"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern.",neededQuestions];
+                return [NSString stringWithFormat:NSLocalizedString(@"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern.",@"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern."),neededQuestions];
             } else {
                 // Dann war es wohl zu schlecht
                 return @"Üben, üben, üben...";
@@ -377,14 +379,14 @@ static BOOL heartSoundPlaying;
             // If level down - Show screen
             
             if (downLevel) {
-                return @"Schade. Du wirst herabgestuft.";
+                return NSLocalizedString(@"Schade. Du wirst herabgestuft.",@"Schade. Du wirst herabgestuft.");
             } else {
-                return @"Das war nicht schlecht. Aber nicht einfach drauf los tippen.";
+                return NSLocalizedString(@"Das war nicht schlecht. Aber nicht einfach drauf los tippen.",@"Das war nicht schlecht. Aber nicht einfach drauf los tippen.");
             }
             
         }
     } else {
-        return @"Kannst du mehr Fragen richtig lösen?";
+        return NSLocalizedString(@"Kannst du mehr Fragen richtig lösen?",@"Kannst du mehr Fragen richtig lösen?");
     }
     
 }

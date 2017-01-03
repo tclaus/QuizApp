@@ -9,6 +9,7 @@ target 'DasQuiz' do
  pod 'Firebase/Core'
  pod 'Firebase/Messaging'
  pod 'UAAppReviewManager'
+ pod 'InAppSettingsKit'
 
   target 'DasQuizTests' do
     inherit! :search_paths

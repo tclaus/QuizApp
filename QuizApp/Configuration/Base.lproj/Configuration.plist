@@ -11,11 +11,11 @@
 		<key>Bold Font</key>
 		<string>Avenir-Black</string>
 		<key>Start Page Title</key>
-		<string>The! Quiz</string>
+		<string>Das! Quiz</string>
 		<key>Start Page Description</key>
-		<string>Test your general knowledge</string>
+		<string>Testen Sie ihr Wissen</string>
 		<key>Start Page Sub Description</key>
-		<string>Choose a game mode</string>
+		<string>Wähle einen Spielmodus</string>
 		<key>Start Page Image</key>
 		<string>mainImage</string>
 		<key>Show Topics in Grid</key>
@@ -25,11 +25,11 @@
 	<array>
 		<dict>
 			<key>Topic Title</key>
-			<string>Base Questions</string>
+			<string>Basis Fragen</string>
 			<key>Topic Image</key>
-			<string></string>
+			<string>baseQuestions</string>
 			<key>Questions File</key>
-			<string>1000-questions_en.json</string>
+			<string>1000-questions_de.json</string>
 		</dict>
 	</array>
 	<key>Quiz Settings</key>
@@ -49,6 +49,8 @@
 		<true/>
 		<key>Leaderboard ID</key>
 		<string>TopScoresLeaderboard</string>
+		<key>Leaderboard ID Time Based</key>
+		<string>TimeBasedGame</string>
 		<key>Achievements</key>
 		<array>
 			<dict>
@@ -66,13 +68,13 @@
 		<key>In-App Purchase ID</key>
 		<string>questions.purchase</string>
 		<key>IAP Alert Title</key>
-		<string>Notice</string>
+		<string>Hinweis</string>
 		<key>IAP Alert Message</key>
-		<string>Game is restricted to %ld levels. Do you like to upgrade? More than 30.000 points are possible.</string>
+		<string>Das Spiel ist auf %ld Level eingeschränkt. Möchtest du die anderen 5 Levels freischalten? Über 30.000 Punkte sind dann möglich.</string>
 		<key>IAP Alert Buy</key>
-		<string>Upgrade!</string>
+		<string>Freischalten!</string>
 		<key>IAP Alert Cancel</key>
-		<string>Stay Basic</string>
+		<string>Bei Basisversion bleiben</string>
 	</dict>
 </dict>
 </plist>

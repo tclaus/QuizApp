@@ -10,8 +10,7 @@
 
 @interface QuizInAppPurchaseData : NSObject
 
-@property (nonatomic, assign) BOOL limitQuestions;
-@property (nonatomic, assign) NSInteger numberofFreeQuestions;
+@property (nonatomic) NSInteger numberOfFreeLevels;
 @property (nonatomic, strong) NSString* inAppPurchaseID;
 @property (nonatomic, strong) NSString* messageTitle;
 @property (nonatomic, strong) NSString* messageText;

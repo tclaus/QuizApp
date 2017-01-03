@@ -93,13 +93,6 @@
     
     Topic* topic = self.topics[indexPath.row];
     
-    if (![self canViewTopic:topic]){
-        
-        self.topicToPurchase = topic;
-        [self displayInAppPurchaseAlert];
-        
-        [self.collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    }
 }
 
 
@@ -109,57 +102,19 @@
     if (![self canViewTopic:topic]){
         
         self.topicToPurchase = topic;
-        [self displayInAppPurchaseAlert];
         
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
 
--(void)displayInAppPurchaseAlert{
-    
-    UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle message:[Config sharedInstance].quizIAP.messageText preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* buyCurrent = [UIAlertAction actionWithTitle:[Config sharedInstance].topicIAP.messageBuy style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
-        
-        [self buyCurrentTopic];
-    }];
-    
-    UIAlertAction* buyAll = [UIAlertAction actionWithTitle:[Config sharedInstance].topicIAP.messageBuyAll style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
-        
-        [self buyAllTopics];
-    }];
-    
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:nil];
-    
-    [alert addAction:buyAll];
-    [alert addAction:buyCurrent];
-    [alert addAction:cancelAction];
-    
-    [self presentViewController:alert animated:YES completion:nil];
-}
+
 
 -(void)buyCurrentTopic{
     [self buyProduct:self.topicToPurchase.inAppPurchaseIdentifier];
 }
 
--(void)buyAllTopics{
-    [self buyProduct:[Config sharedInstance].topicIAP.inAppPurchaseID];
-}
-
 
 -(BOOL)canViewTopic:(Topic*) topic {
-    
-    if(topic.inAppPurchaseIdentifier && [Config sharedInstance].topicIAP.limitTopics){
-        BOOL purchased = [[QuizIAPHelper sharedInstance] productPurchased:topic.inAppPurchaseIdentifier];
-        
-        BOOL purchasedAll = [[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
-        
-        if(!(purchasedAll || purchased)){
-            
-            return NO;
-        }
-    }
-    
     return YES;
 }
 

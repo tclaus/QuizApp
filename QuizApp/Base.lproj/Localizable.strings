@@ -126,3 +126,27 @@
 
 /* Level for question */
 "Level %ld" = "Stufe: %ld";
+
+"THE!Quiz on iOS" = "DAS!Quiz auf iOS";
+
+"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten." = "Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.";
+
+"Das war SUPER!" = "Das war SUPER!";
+
+"Du hast ein Stern verdient!" = "Du hast ein Stern verdient!";
+
+"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern." = "Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern.";
+
+"Üben, üben, üben..." = "Üben, üben, üben...";
+
+"Schade. Du wirst herabgestuft." = "Schade. Du wirst herabgestuft.";
+
+"Das war nicht schlecht. Aber nicht einfach drauf los tippen." = "Das war nicht schlecht. Aber nicht einfach drauf los tippen.";
+
+"Kannst du mehr Fragen richtig lösen?" = "Kannst du mehr Fragen richtig lösen?";
+
+"Nö" = "Nö";
+"Später" = "Später vielleicht";
+
+"twitterText" = "Ich habe bei 'DAS!Quiz' soeben %ld Punkte im Level %ld erreicht!";
+

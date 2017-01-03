@@ -126,10 +126,12 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
 
     
 }
+- (IBAction)settingsButton:(id)sender {
+}
 
 - (IBAction)openSendMail:(id)sender {
     // Email Subject
-    NSString *emailTitle = @"DAS!Quiz auf iOS";
+    NSString *emailTitle = NSLocalizedString(@"THE!Quiz on iOS",@"THE!Quiz on iOS");
     // Email Content
     NSString *messageBody = @"";
     // To address

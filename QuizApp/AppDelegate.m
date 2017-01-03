@@ -44,8 +44,8 @@
     [UAAppReviewManager setReviewTitle:NSLocalizedString(@"Das!Quiz bewerten", @"reviewTitle")];
     [UAAppReviewManager setReviewMessage:NSLocalizedString( @"Gefällt dir 'Das!Quiz'? Dann teile doch anderen mit, was du denkst. So kann Das!Quiz bekannt und besser werden. Vielen Dank!", @"reviewMessage")];
     [UAAppReviewManager setRateButtonTitle:NSLocalizedString(@"Das!Quiz bewerten", @"rateButtonTitle")];
-    [UAAppReviewManager setCancelButtonTitle:@"Nö"];
-    [UAAppReviewManager setRemindButtonTitle:@"Später vielleicht"];
+    [UAAppReviewManager setCancelButtonTitle:NSLocalizedString(@"Nö",@"Informal no")];
+    [UAAppReviewManager setRemindButtonTitle:NSLocalizedString(@"Später vielleicht",@"Later - maybe")];
     [UAAppReviewManager showPromptIfNecessary];
     
     

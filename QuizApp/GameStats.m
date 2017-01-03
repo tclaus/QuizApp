@@ -103,7 +103,7 @@ int maxLevel = 10;
             break;
         
         case 3:
-            return 2;
+            return 3;
             break;
         
         default:
