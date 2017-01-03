@@ -54,7 +54,7 @@
         self.tickImageView.image = nil;
         self.tickImageView.alpha = 0.0;
         self.barImageView.tintColor = [UIColor whiteColor];
-        self.barImageView.alpha = 0.1;
+        self.barImageView.alpha = 0.5;
     } else {
         return;
     }
@@ -65,7 +65,6 @@
 
 -(void)showImageForCorrectAnswer:(BOOL)correct AndChosenAnswer:(BOOL)chosen{
     
-    // self.barImageView.alpha = chosen ? 1.0 : 0.0;
     
     if (correct) {
         self.tickImageView.image = [UIImage imageNamed:@"tick"];

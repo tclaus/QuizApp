@@ -75,8 +75,8 @@ SendReport *sendReport;
     self.answerTableView.delegate = self;
     self.answerTableView.dataSource = self;
     
-    self.answerTableView.estimatedRowHeight = 40.0; // Ovcerwritten by iPhone 4
-    self.answerTableView.rowHeight = 40.0;
+    self.answerTableView.estimatedRowHeight = 70.0; // Ovcerwritten by iPhone 4
+    self.answerTableView.rowHeight = 70.0;
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         // get size, will only check if iphone 4S: 480, 5: 568, 6/7 : 667

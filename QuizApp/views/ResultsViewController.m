@@ -214,7 +214,7 @@
             
             SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             
-            [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"Ich habe bei 'DAS!Quiz' soeben %ld Punkte im Level %ld erreicht!",(long)gamePoints,level]];
+            [mySLComposerSheet setInitialText:[NSString stringWithFormat:NSLocalizedString(@"twitterText", @"A message for twitter"),(long)gamePoints,level]];
             
             [mySLComposerSheet addURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
             
@@ -246,7 +246,7 @@
         
         SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
-        [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"Ich habe bei 'DAS!Quiz' soeben %ld Punkte im Level %ld erreicht!",(long)gamePoints,(long)level]];
+        [mySLComposerSheet setInitialText:[NSString stringWithFormat:NSLocalizedString(@"twitterText", @"A message for twitter"),(long)gamePoints,(long)level]];
         
         [mySLComposerSheet addURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
         
