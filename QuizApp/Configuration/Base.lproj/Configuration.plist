@@ -63,10 +63,8 @@
 	</dict>
 	<key>In App Purchase Settings</key>
 	<dict>
-		<key>Limit Number of Questions</key>
-		<true/>
-		<key>Number of Free Questions</key>
-		<integer>100</integer>
+		<key>Number of free levels</key>
+		<integer>3</integer>
 		<key>In-App Purchase ID</key>
 		<string>questions.purchase</string>
 		<key>IAP Alert Title</key>
@@ -77,23 +75,6 @@
 		<string>Freischalten!</string>
 		<key>IAP Alert Cancel</key>
 		<string>Bei Basisversion bleiben</string>
-	</dict>
-	<key>Topic Purchase Settings</key>
-	<dict>
-		<key>Limit Topics</key>
-		<false/>
-		<key>In-App Purchase ID</key>
-		<string>topics.purchase</string>
-		<key>IAP Alert Title</key>
-		<string>Hinweis</string>
-		<key>IAP Alert Message</key>
-		<string>Du kannst dieses Thema als kostenpflichtiges In App Kauf freischalten. Möchtest du das nun freischalten?</string>
-		<key>IAP Alert Buy</key>
-		<string>Thema freischalten</string>
-		<key>IAP Alert Buy All</key>
-		<string>Alle Themen freischalten</string>
-		<key>IAP Alert Cancel</key>
-		<string>Weiter mit der Basis-Version</string>
 	</dict>
 </dict>
 </plist>

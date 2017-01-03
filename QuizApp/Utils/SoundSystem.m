@@ -101,7 +101,11 @@
 }
 
 -(void)vibrate{
-    AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+    
+#if !(TARGET_OS_SIMULATOR)
+        AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
+    #endif
+    
 }
 
 - (void) dealloc {

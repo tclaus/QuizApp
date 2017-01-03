@@ -61,39 +61,18 @@
 	</dict>
 	<key>In App Purchase Settings</key>
 	<dict>
-		<key>Limit Number of Questions</key>
-		<true/>
-		<key>Number of Free Questions</key>
+		<key>Number of free levels</key>
 		<integer>3</integer>
-		<key>Number of Free Quizzes</key>
-		<integer>100</integer>
 		<key>In-App Purchase ID</key>
 		<string>questions.purchase</string>
 		<key>IAP Alert Title</key>
 		<string>Notice</string>
 		<key>IAP Alert Message</key>
-		<string>The game is currently restricted to %ld questions. Would you like to upgrade to the PRO version to enjoy the entire functionality?</string>
+		<string>Game is restricted to %ld levels. Do you like to upgrade? More than 30.000 points are possible.</string>
 		<key>IAP Alert Buy</key>
 		<string>Upgrade!</string>
 		<key>IAP Alert Cancel</key>
 		<string>Stay Basic</string>
-	</dict>
-	<key>Topic Purchase Settings</key>
-	<dict>
-		<key>Limit Topics</key>
-		<true/>
-		<key>In-App Purchase ID</key>
-		<string>topics.purchase</string>
-		<key>IAP Alert Title</key>
-		<string>Notice</string>
-		<key>IAP Alert Message</key>
-		<string>You get this topic as part of the Pro upgrade package. Would you like to unlock this topic?</string>
-		<key>IAP Alert Buy</key>
-		<string>Unlock this topic</string>
-		<key>IAP Alert Buy All</key>
-		<string>Unlock all Topics</string>
-		<key>IAP Alert Cancel</key>
-		<string>Continue With Basic Version</string>
 	</dict>
 </dict>
 </plist>

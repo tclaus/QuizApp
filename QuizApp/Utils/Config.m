@@ -70,10 +70,11 @@
     
     NSDictionary* quizIAPSettings = self.configInfo[@"In App Purchase Settings"];
     
-    self.quizIAP = [[QuizInAppPurchaseData alloc] init];
+    self.quizIAP = [[QuizInAppPurchaseData alloc] init]; 
+    self.quizIAP.numberOfFreeLevels = [quizIAPSettings[@"Number of free levels"] integerValue];
     
-    self.quizIAP.limitQuestions = [quizIAPSettings[@"Limit Number of Questions"] boolValue];
-    self.quizIAP.numberofFreeQuestions = [quizIAPSettings[@"Number of Free Questions"] integerValue];
+    // TODO: Hier A/B Test
+    
     self.quizIAP.inAppPurchaseID = quizIAPSettings[@"In-App Purchase ID"];
     self.quizIAP.messageTitle = quizIAPSettings[@"IAP Alert Title"];
     self.quizIAP.messageText = quizIAPSettings[@"IAP Alert Message"];
@@ -81,18 +82,6 @@
     self.quizIAP.messageBuy = quizIAPSettings[@"IAP Alert Buy"];
     
     
-    NSDictionary* topicIAPSettings = self.configInfo[@"Topic Purchase Settings"];
-    
-    self.topicIAP = [[TopicInAppPurchaseData alloc] init];
-    
-    self.topicIAP.limitTopics = [topicIAPSettings[@"Limit Topics"] boolValue];
-    self.topicIAP.inAppPurchaseID = topicIAPSettings[@"In-App Purchase ID"];
-    self.topicIAP.messageTitle = topicIAPSettings[@"IAP Alert Title"];
-    self.topicIAP.messageText = topicIAPSettings[@"IAP Alert Message"];
-    self.topicIAP.messageCancel = topicIAPSettings[@"IAP Alert Cancel"];
-    self.topicIAP.messageBuy = topicIAPSettings[@"IAP Alert Buy"];
-    self.topicIAP.messageBuyAll = topicIAPSettings[@"IAP Alert Buy All"];
-
 }
 
 /**
@@ -141,10 +130,6 @@
     
     if(self.quizIAP.inAppPurchaseID && self.quizIAP.inAppPurchaseID.length > 0){
         [iaps addObject:self.quizIAP.inAppPurchaseID];
-    }
-    
-    if(self.topicIAP.inAppPurchaseID && self.topicIAP.inAppPurchaseID.length > 0){
-        [iaps addObject:self.topicIAP.inAppPurchaseID];
     }
     
     for (Topic*  topic in self.topics) {

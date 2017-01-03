@@ -396,18 +396,6 @@
 }
 
 -(BOOL)canViewTopic:(Topic*) topic {
-    
-    if(topic.inAppPurchaseIdentifier && [Config sharedInstance].topicIAP.limitTopics){
-        BOOL purchased = [[QuizIAPHelper sharedInstance] productPurchased:topic.inAppPurchaseIdentifier];
-        
-        BOOL purchasedAll = [[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
-        
-        if(!(purchasedAll || purchased)){
-            
-            return NO;
-        }
-    }
-    
     return YES;
 }
 
@@ -505,12 +493,12 @@
     NSLog(@"Level = %ld",(long) [GameStats sharedInstance].currentLevel );
     NSLog(@"Tries = %ld",(long)[GameStats sharedInstance].numberOfSuccessfulTries );
     
-    if ([GameStats sharedInstance].currentLevel >= 4) {
+    if ([GameStats sharedInstance].currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels ) {
             if ( [self IAPCheck]) {
                 NSLog(@"Not buyed. Repair fraud");
                 
-                if ([GameStats sharedInstance].currentLevel > 4) {
-                    [GameStats sharedInstance].currentLevel = 4;
+                if ([GameStats sharedInstance].currentLevel > [Config sharedInstance].quizIAP.numberOfFreeLevels) {
+                    [GameStats sharedInstance].currentLevel = [Config sharedInstance].quizIAP.numberOfFreeLevels;
                     [GameStats sharedInstance].numberOfSuccessfulTries = 3;
                     [[GameStats sharedInstance] saveData];
                 }
@@ -519,10 +507,10 @@
         
     }
     
-    if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+    if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle
-                                                                        message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText, 4]
+                                                                        message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText, [Config sharedInstance].quizIAP.numberOfFreeLevels]
                                                                  preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* buyAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageBuy style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
@@ -588,11 +576,6 @@
             *stop = YES;
         }
     }];
-    
-    //
-    //    [self startDirectQuizWithNumberOfQuestions:[Config sharedInstance].quizIAP.numberofFreeQuestions
-    //                                    fromTopics:_pendingQuiz[@"topics"]];
-    //
 }
 
 - (void)productPurchased:(NSNotification *)notification {

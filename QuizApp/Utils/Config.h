@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "QuizInAppPurchaseData.h"
-#import "TopicInAppPurchaseData.h"
+
 
 @interface Config : NSObject
 
@@ -41,8 +41,9 @@
 @property (nonatomic, strong) NSString* boldFont;
 @property (nonatomic, strong) NSString* mainBackground;
 
+
 @property (nonatomic, strong) QuizInAppPurchaseData* quizIAP;
-@property (nonatomic, strong) TopicInAppPurchaseData* topicIAP;
+
 
 @property (nonatomic, assign) CGFloat timeNeededInMinutes;
 
