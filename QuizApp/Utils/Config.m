@@ -108,12 +108,22 @@
             
             // Store defualt language
             NSString *defaultLanguage = NSLocale.preferredLanguages[0];
-            [[NSUserDefaults standardUserDefaults] setObject:defaultLanguage forKey:@"question_language"];
             
-            questionFilename = topicDic[@"Questions File"];
-        } else {
-            questionFilename = [NSString stringWithFormat:@"1000-questions_%@.json",languageKey ];
+            if ([defaultLanguage hasPrefix:@"de"]) {
+                [[NSUserDefaults standardUserDefaults] setObject:@"de" forKey:@"question_language"];
+                languageKey  =@"de";
+            } else {
+                [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"question_language"];
+                languageKey  =@"en";
+            }
         }
+        
+        if ([languageKey hasPrefix:@"de"]) {
+            questionFilename = @"1000-questions_de.json";
+        } else {
+            questionFilename = @"1000-questions_en.json";
+        }
+        
         
         
         topic.questionJSONObjects = [Datasource questionsFromFile:questionFilename];
