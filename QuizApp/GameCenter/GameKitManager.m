@@ -139,7 +139,8 @@
 -(void)loadChallenges{
  
     if (!_localPlayerAuthenticated) {
-        NSLog(@"Player not authenticated"); return;
+        NSLog(@"Player not authenticated");
+        return;
     }
     
     [GKChallenge loadReceivedChallengesWithCompletionHandler:^(NSArray *challenges, NSError *error) {
@@ -172,8 +173,6 @@
                 [_delegate didReportAchievement:achievement];
         }];
 }
-
-
 
 -(void)reportAchievementWithID:(NSString*)identifier percentComplete:(float)percent{
     
@@ -268,7 +267,6 @@
         [self presentViewController:gameCenterController];
     }
 }
-
 
 - (void)hostMatch
 {
@@ -375,5 +373,13 @@
 
 }
 
+
+- (void)matchmakerViewController:(nonnull GKMatchmakerViewController *)viewController didFailWithError:(nonnull NSError *)error {
+    NSLog(@"Match Maker did fail with error: %@", error);
+}
+
+- (void)matchmakerViewControllerWasCancelled:(nonnull GKMatchmakerViewController *)viewController {
+    NSLog(@"matchmaker was canceled");
+}
 
 @end

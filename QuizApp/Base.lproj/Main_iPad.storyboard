@@ -1286,16 +1286,16 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item-selected-empty" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-Xc-SAI">
-                                                            <rect key="frame" x="0.0" y="3" width="536" height="120"/>
+                                                            <rect key="frame" x="0.0" y="3" width="319" height="122"/>
                                                         </imageView>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-Ml-i9J">
-                                                            <rect key="frame" x="19" y="47" width="13" height="27"/>
+                                                            <rect key="frame" x="19" y="47.5" width="13" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-15-TxF">
-                                                            <rect key="frame" x="54" y="13" width="203" height="89.5"/>
+                                                            <rect key="frame" x="54" y="13.5" width="203" height="89.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="203" id="bF7-wP-nx1"/>
                                                                 <constraint firstAttribute="height" constant="89.5" id="dVa-Vg-d3M"/>
@@ -1314,7 +1314,7 @@
                                                             </variation>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-Ac-ANR">
-                                                            <rect key="frame" x="498" y="54" width="24" height="19"/>
+                                                            <rect key="frame" x="281" y="54.5" width="24" height="19"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1515,19 +1515,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-pU-fgS">
-                                                    <rect key="frame" x="99" y="8" width="402" height="84"/>
+                                                    <rect key="frame" x="99" y="8" width="185" height="84"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list-bottom-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="P2I-69-ac4">
-                                                    <rect key="frame" x="15" y="100" width="562" height="2"/>
+                                                    <rect key="frame" x="15" y="100" width="345" height="2"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="JG5-YR-rOE"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-C1-e51">
-                                                    <rect key="frame" x="536" y="41" width="24" height="19"/>
+                                                    <rect key="frame" x="319" y="41" width="24" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19" id="QX9-if-RIq"/>
                                                         <constraint firstAttribute="width" constant="24" id="sly-DJ-Un3"/>
@@ -1592,7 +1592,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="43"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9Q-wn-bWh">
-                                        <rect key="frame" x="18" y="11.5" width="42" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="11.5" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1611,8 +1611,8 @@
                                 <constraints>
                                     <constraint firstItem="AJ3-S0-AA3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9TH-Go-jvu" secondAttribute="leading" constant="20" symbolic="YES" id="07d-bz-oGV"/>
                                     <constraint firstAttribute="height" constant="43" id="2jW-t1-yPy"/>
-                                    <constraint firstItem="c9Q-wn-bWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9TH-Go-jvu" secondAttribute="leading" id="7E5-ai-BwH"/>
-                                    <constraint firstAttribute="trailing" secondItem="c9Q-wn-bWh" secondAttribute="trailing" constant="315" id="L4h-rx-sga"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c9Q-wn-bWh" secondAttribute="trailing" constant="20" symbolic="YES" id="6Qg-1R-mib"/>
+                                    <constraint firstItem="c9Q-wn-bWh" firstAttribute="leading" secondItem="9TH-Go-jvu" secondAttribute="leading" id="7E5-ai-BwH"/>
                                     <constraint firstAttribute="trailing" secondItem="AJ3-S0-AA3" secondAttribute="trailing" constant="8" id="Uh2-uH-Jiu"/>
                                     <constraint firstAttribute="centerY" secondItem="c9Q-wn-bWh" secondAttribute="centerY" id="lm6-gB-kdI"/>
                                     <constraint firstAttribute="centerY" secondItem="AJ3-S0-AA3" secondAttribute="centerY" constant="-0.5" id="ySZ-Jv-fwU"/>
@@ -1857,7 +1857,7 @@
         <image name="tick.png" width="24" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LWf-bN-Slx"/>
+        <segue reference="oN6-oc-yWp"/>
         <segue reference="AV6-u2-hDM"/>
     </inferredMetricsTieBreakers>
 </document>

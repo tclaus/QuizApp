@@ -16,6 +16,7 @@ class SendReport: NSObject {
     let baseURL : String = "https://rocky-temple-21345.herokuapp.com/"
     // let baseURL : String = "http://localhost:5000"
     
+    @objc
     func sendReport(questionID : Int, reason : Int)  {
         print("Sending a report...Question: \(questionID), Reason:\(reason)")
         
