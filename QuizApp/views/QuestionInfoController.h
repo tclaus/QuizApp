@@ -7,12 +7,13 @@
 //
 // This view is shown right before the questions start
 #import <UIKit/UIKit.h>
-#import "Topic.h"
 #import "QuestionViewController.h"
 
-typedef void (^UserPressedStart)();
+typedef void (^UserPressedStart)(void);
 
 @protocol QuestionInfoControllerDelegate;
+
+@class Questions;
 
 @interface QuestionInfoController : UIViewController
 
@@ -22,7 +23,7 @@ typedef void (^UserPressedStart)();
 
 @property (nonatomic, weak) IBOutlet UIButton* startButton;
 
-@property (nonatomic, strong) NSArray* questions;
+@property (nonatomic, strong) Questions* questions;
 
 @property (nonatomic, copy) UserPressedStart userPressedStartBlock;
 

@@ -24,6 +24,7 @@ class KeyboardViewController: UIViewController, UIGestureRecognizerDelegate, UIT
         
     }
     
+    @objc
     func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         dismissKeyboard()
     }
@@ -39,12 +40,14 @@ class KeyboardViewController: UIViewController, UIGestureRecognizerDelegate, UIT
         
     }
     
+    @objc 
     func keyboardWillHide(_ notification: Notification) {
         if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size.height) != nil {
             view.frame.origin.y = 0
         }
     }
     
+    @objc
     func keyboardWillShow(_ notification: Notification) {
         
         if let userInfo = notification.userInfo,
@@ -93,7 +96,6 @@ class KeyboardViewController: UIViewController, UIGestureRecognizerDelegate, UIT
         } else {
             return origin
         }
-        
     }
     
     func setDelegates(_ fields: AnyObject...) {

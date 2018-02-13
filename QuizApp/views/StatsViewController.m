@@ -11,7 +11,6 @@
 #import "PNScrollLineChart.h"
 #import "PNScrollBarChart.h"
 #import "QuestionInfoController.h"
-#import "TopicCollectionController.h"
 #import "DropAnimationController.h"
 #import "QuestionContainerController.h"
 #import "AvailableChallengesController.h"
@@ -25,10 +24,11 @@
 #import "GameStats.h"
 #import "SoundSystem.h"
 #import <UAAppReviewManager/UAAppReviewManager.h>
+#import <DasQuiz-Swift.h>
 
 @import FirebaseAnalytics;
 
-@interface StatsViewController () <TopicCollectionControllerDelegate, QuestionInfoControllerDelegate, GameKitManagerProtocol, UIGestureRecognizerDelegate>
+@interface StatsViewController () <QuestionInfoControllerDelegate, GameKitManagerProtocol, UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) IBOutlet ADVRoundProgressChart* scoresProgress;
 
@@ -52,11 +52,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *highScoreButton;
 
-@property (nonatomic, weak) IBOutlet UIButton* chooseTopicsButton;
-
 @property (nonatomic, strong) IBOutlet UIBarButtonItem* restorePurchase;
-
-@property (nonatomic, strong) NSArray* selectedQuestions;
 
 @property (nonatomic, strong) NSArray* gamecenterChallenges;
 @property (nonatomic, strong) NSArray* gamecenterChallengeInfos;
@@ -64,8 +60,8 @@
 @property (nonatomic, strong) DropAnimationController* animationController;
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+
 @property (nonatomic, strong) NSArray *products;
-@property (nonatomic, strong) NSDictionary *pendingQuiz;
 
 @property (nonatomic, weak) IBOutlet UIView* topStatsContainer;
 @property (nonatomic, weak) IBOutlet UIView* buttonContainer;
@@ -79,8 +75,6 @@
 @property (nonatomic) BOOL infoScreenShowed;
 
 // Stars for level progress
-
-
 @property (weak, nonatomic) IBOutlet UIImageView *star1;
 @property (weak, nonatomic) IBOutlet UIImageView *star2;
 @property (weak, nonatomic) IBOutlet UIImageView *star3;
@@ -93,9 +87,8 @@
 
 @implementation StatsViewController {
     NSInteger lastLevel;
+    ActiveQuizGame* _activeQuizGame;
 }
-
-
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -114,12 +107,18 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    
     if (lastLevel < [GameStats sharedInstance].currentLevel) {
         [self animateIn];
         lastLevel = [GameStats sharedInstance].currentLevel;
     }
     
+}
+
+-(ActiveQuizGame*) activeQuizGame {
+    if (!_activeQuizGame) {
+        _activeQuizGame =  [[ActiveQuizGame alloc] init];
+    }
+    return _activeQuizGame;
 }
 
 - (void)viewDidLoad
@@ -196,11 +195,6 @@
     self.gameModeLabel.text = gameModeHeadline;
     self.gameModeLabel.textColor = [UIColor whiteColor];
     
-    self.chooseTopicsButton.hidden = YES;
-    [self.chooseTopicsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
-    // self.chooseTopicsButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
-    [self.chooseTopicsButton setTitle:NSLocalizedString(@"TOPICS",@"") forState:UIControlStateNormal];
-    
     [self.challengesButton setHidden:YES];
     [self.challengesButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     // self.challengesButton.titleLabel.font = [UIFont fontWithName:[ADVTheme boldFont] size:15.0f];
@@ -215,8 +209,6 @@
     [self.highScoreButton setTitle:NSLocalizedString(@"HIGHSCORES",@"") forState:UIControlStateNormal];
     
     [self.startButton addTarget:self action:@selector(startTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.chooseTopicsButton addTarget:self action:@selector(chooseTopicsTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
@@ -340,7 +332,7 @@
         [self.effectView removeFromSuperview];
         
         [UAAppReviewManager userDidSignificantEvent:YES];
-       
+        
     }];
 }
 
@@ -383,128 +375,63 @@
 
 -(IBAction)startTapped:(id)sender{
     
-    NSArray* topics = [Config sharedInstance].topics;
-    
-    NSMutableArray* availableTopics = [NSMutableArray array];
-    for (Topic* topic in topics) {
-        if([self canViewTopic:topic]){
-            [availableTopics addObject:topic];
-        }
-    }
-    
-    [self startQuizFromTopics:availableTopics];
+    [self prepareStartQuiz];
 }
 
--(BOOL)canViewTopic:(Topic*) topic {
-    return YES;
-}
-
--(IBAction)chooseTopicsTapped:(id)sender{
-    
-    NSString* segueIdentifier = [Config sharedInstance].showTopicsinGrid ? @"topics" : @"topics-tableView";
-    [self performSegueWithIdentifier:segueIdentifier sender:self];
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showInfo"]){
+   
+    if ([segue.identifier isEqualToString:@"showInfo"]) {
         
         QuestionInfoController* controller = segue.destinationViewController;
-        controller.questions = self.selectedQuestions;
-        
+        controller.questions = self.activeQuizGame.questions;
         
         controller.userPressedStartBlock = ^(){
             [self userDidStartQuiz];
         };
         
-    }else if([segue.identifier isEqualToString:@"startTest"]){
+    } else if([segue.identifier isEqualToString:@"startTest"]){
         UINavigationController* controller = segue.destinationViewController;
-        QuestionContainerController* c = (QuestionContainerController*)controller.topViewController;
-        c.questions = self.selectedQuestions;
+        QuestionContainerController* questionContainerController = (QuestionContainerController*)controller.topViewController;
+        questionContainerController.questions = self.activeQuizGame.questions;
         
-    } else if([segue.identifier isEqualToString:@"topics"] || [segue.identifier isEqualToString:@"topics-tableView"]){
-        
-        UINavigationController* nav = segue.destinationViewController;
-        TopicCollectionController* controller = (TopicCollectionController*)nav.topViewController;
-        controller.delegate = self;
-    }else if ([segue.identifier isEqualToString:@"challenges"]){
+    } else if ([segue.identifier isEqualToString:@"challenges"]){
         
         UINavigationController* nav = segue.destinationViewController;
         AvailableChallengesController* controller = (AvailableChallengesController*)nav.topViewController;
         controller.challenges = self.gamecenterChallengeInfos;
-        /*if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-         controller.transitioningDelegate = self;
-         controller.modalPresentationStyle = UIModalPresentationCustom;
-         }*/
-        controller.userDidAcceptChallengeBlock = ^(GKChallenge* challenge) {
-            NSArray* topics = [Config sharedInstance].topics;
-            NSInteger questionCount = [Config sharedInstance].numberOfQuestionsToAnswer;
-            [self startDirectQuizWithNumberOfQuestions:questionCount fromTopics:topics];
-        };
         
+        controller.userDidAcceptChallengeBlock = ^(GKChallenge* challenge) {
+            Questions* questions = [Config sharedInstance].questions;
+            NSInteger questionCount = [Config sharedInstance].numberOfQuestionsToAnswer;
+            [self startDirectQuizWithNumberOfQuestions:questionCount withQuestions:questions];
+        };
     }
 }
-
-
 
 -(void)userDidStartQuiz{
     [self performSegueWithIdentifier:@"startTest" sender:self];
 }
 
--(void)didSelectTopics:(NSArray *)topics{
+-(void)prepareStartQuiz {
     
-    if(topics.count > 0){
-        NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
-        
-        if ([self IAPCheck]) {
-            _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
-            
-            UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle message:[Config sharedInstance].quizIAP.messageText preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction* buyAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageBuy style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
-                
-                [self buyProduct];
-            }];
-            
-            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[Config sharedInstance].quizIAP.messageCancel style:UIAlertActionStyleCancel handler:nil];
-            
-            [alert addAction:buyAction];
-            [alert addAction:cancelAction];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-            
-            
-            return;
-        }
-        
-        [self startDirectQuizWithNumberOfQuestions:questionCount fromTopics:topics];
-    }
-}
-
--(void)startQuizFromTopics:(NSArray*)topics {
-    
-    NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
     
     // For training: fixed number from all topics
     // For Time based: unlimited Number. (countQuestions is 0)
     
-    
-    _pendingQuiz = @{@"topics": topics, @"numberOfQuestions": @(questionCount)};
-    
     NSLog(@"Level = %ld",(long) [GameStats sharedInstance].currentLevel );
-    NSLog(@"Tries = %ld",(long)[GameStats sharedInstance].numberOfSuccessfulTries );
+    NSLog(@"Tries = %ld",(long) [GameStats sharedInstance].numberOfSuccessfulTries );
     
     if ([GameStats sharedInstance].currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels ) {
-            if ( [self IAPCheck]) {
-                NSLog(@"Not buyed. Repair fraud");
-                
-                if ([GameStats sharedInstance].currentLevel > [Config sharedInstance].quizIAP.numberOfFreeLevels) {
-                    [GameStats sharedInstance].currentLevel = [Config sharedInstance].quizIAP.numberOfFreeLevels;
-                    [GameStats sharedInstance].numberOfSuccessfulTries = 3;
-                    [[GameStats sharedInstance] saveData];
-                }
-                
+        if ( [self IAPCheck]) {
+            NSLog(@"Not buyed. Repair fraud");
+            
+            if ([GameStats sharedInstance].currentLevel > [Config sharedInstance].quizIAP.numberOfFreeLevels) {
+                [GameStats sharedInstance].currentLevel = [Config sharedInstance].quizIAP.numberOfFreeLevels;
+                [GameStats sharedInstance].numberOfSuccessfulTries = 3;
+                [[GameStats sharedInstance] saveData];
             }
-        
+        }
     }
     
     if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
@@ -535,14 +462,27 @@
 
 -(void)startQuiz{
     
+    NSInteger questionCount = [GameModel sharedInstance].numberOfQuestions;
+    
     // Generate questions
     if ([GameModel sharedInstance].activeGameMode == GameModeTrainig ) {
         
-        self.selectedQuestions = [Utils loadQuestionsWithIncreasingLevelFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue];
+        Questions* questions = [Utils loadQuestionsWithIncreasingLevel:Config.sharedInstance.questions
+                                             forTotalNumberOfQuestions:questionCount];
+        
+        self.activeQuizGame.questions = questions;
+        self.activeQuizGame.totalNumberOfQuestions = questionCount;
+        self.activeQuizGame.currentIndex = 0;
         
     } else {
         
-        self.selectedQuestions = [Utils loadQuestionsFromTopics:_pendingQuiz[@"topics"] forTotalNumberOfQuestions:((NSNumber*)_pendingQuiz[@"numberOfQuestions"]).integerValue minLevel:[GameStats sharedInstance].currentLevel] ;
+        Questions* questions = [Utils loadQuestionsShuffeledFromTopics:Config.sharedInstance.questions
+                                              forTotalNumberOfQuestions:questionCount
+                                                               minLevel:GameStats.sharedInstance.currentLevel];
+        
+        self.activeQuizGame.questions = questions;
+        self.activeQuizGame.totalNumberOfQuestions = questionCount;
+        self.activeQuizGame.currentIndex = 0;
     }
     
     if (!self.infoScreenShowed) {
@@ -560,11 +500,7 @@
  */
 - (BOOL)IAPCheck {
     
-    // the App comes with 100 free questions, User should buy for the last 900.
-    
-    // Check, if number of quiz is limited. (Studid, then you cant play any more)
     return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
-    
 }
 
 -(void)buyProduct{
@@ -584,21 +520,23 @@
     [_products enumerateObjectsUsingBlock:^(SKProduct * product, NSUInteger idx, BOOL *stop) {
         if ([product.productIdentifier isEqualToString:productIdentifier]) {
             
-            [self startDirectQuizWithNumberOfQuestions:[_pendingQuiz[@"numberOfQuestions"] integerValue]
-                                            fromTopics:_pendingQuiz[@"topics"]];
+            [self startDirectQuizWithNumberOfQuestions:self.activeQuizGame.totalNumberOfQuestions
+                                         withQuestions:self.activeQuizGame.questions];
+            
             *stop = YES;
         }
     }];
-    
 }
 
--(void)startDirectQuizWithNumberOfQuestions:(NSInteger)numberOfQuestions fromTopics:(NSArray*)topics{
-    self.selectedQuestions = [Utils loadQuestionsFromTopics:topics forTotalNumberOfQuestions:numberOfQuestions minLevel:[GameStats sharedInstance].currentLevel];
+-(void)startDirectQuizWithNumberOfQuestions:(NSInteger)numberOfQuestions withQuestions:(Questions*) questions {
+    
+    self.activeQuizGame.questions = [Utils loadQuestionsShuffeledFromTopics:Config.sharedInstance.questions
+                                           forTotalNumberOfQuestions:numberOfQuestions
+                                                            minLevel:[GameStats sharedInstance].currentLevel];
     
     [self performSegueWithIdentifier:@"startTest" sender:self];
     
 }
-
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting
@@ -614,7 +552,6 @@
     self.animationController.isPresenting = NO;
     return self.animationController;
 }
-
 
 -(void)didLoadChallenges:(NSArray *)challenges{
     

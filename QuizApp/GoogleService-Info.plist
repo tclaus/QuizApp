@@ -34,6 +34,8 @@
 	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:1028165675466:ios:a6633e4f7d12492b</string>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<false/>
 	<key>DATABASE_URL</key>
 	<string>https://dasquiz-b0e89.firebaseio.com</string>
 </dict>

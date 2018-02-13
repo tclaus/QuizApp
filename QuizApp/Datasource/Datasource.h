@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ResultAggregate.h"
 
+@class Questions;
 @interface Datasource : NSObject
 
 /**
@@ -17,9 +18,8 @@
 +(NSArray*)loadTimeBasedAggregates;
 +(NSArray*)loadTrainingAggregates;
 
-+(void)saveTimeBasedAggregates:(NSArray*)results forDate:(NSDate*)date;
-+(void)saveTrainingAggregates:(NSArray*)results forDate:(NSDate*)date;
++(void)saveTimeBasedAggregates:(Questions*) resultQuestions forDate:(NSDate*) date;
++(void)saveTrainingAggregates:(Questions*) resultQuestions forDate:(NSDate*) date;
 
-+(NSArray*)questionsFromFile:(NSString*)file;
-
++(Questions *)questionsFromFile:(NSString*)file;
 @end

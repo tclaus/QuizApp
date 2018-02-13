@@ -14,6 +14,7 @@
 #import "QuestionContainerController.h"
 #import "Config.h"
 #import "GameModel.h"
+#import <DasQuiz-Swift.h>
 
 @interface QuestionInfoController ()
 
@@ -54,7 +55,6 @@
     // Du musst 50 Fragen lösen. Die Schwierigkeit steigt dabei an. Es gibt keine Zeitbeschränkung.
     //
     
-    
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
             gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTimeBasedCompetitionDescription", @"Needs a placeholder for maxtime"), [GameModel sharedInstance].gameTime] ;
@@ -66,7 +66,6 @@
             gameInfoText = [NSString stringWithFormat:NSLocalizedString(@"GameModeTrainigDescription", @"Needs a placeholder for questioncount"), [GameModel sharedInstance].numberOfQuestions] ;
             self.questionsLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%lu Questions",@""), (unsigned long)[GameModel sharedInstance].numberOfQuestions];
             
-        
     }
     
     self.infoLabel.text = gameInfoText;

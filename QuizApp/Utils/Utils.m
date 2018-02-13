@@ -9,8 +9,7 @@
 #import "Utils.h"
 #import "ResultAggregate.h"
 #import "Config.h"
-#import "Topic.h"
-
+#import <DasQuiz-Swift.h>
 
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, \
 NSUserDomainMask, YES) objectAtIndex:0]
@@ -32,7 +31,7 @@ NSUserDomainMask, YES) objectAtIndex:0]
 }
 
 +(CGFloat)getLastTestScore:(NSArray*)aggregates{
-
+    
     CGFloat scorePercent = 0.0;
     if(aggregates.count > 0){
         
@@ -42,7 +41,6 @@ NSUserDomainMask, YES) objectAtIndex:0]
     
     return scorePercent;
 }
-
 
 +(NSArray*)getLast:(NSInteger)count scoresFromAggregates:(NSArray*)aggregates{
     
@@ -56,7 +54,7 @@ NSUserDomainMask, YES) objectAtIndex:0]
 }
 
 +(NSArray*)getLast:(NSInteger)count labelsForAggregates:(NSArray *)aggregates{
-
+    
     NSMutableArray* labels = [NSMutableArray array];
     for(ResultAggregate* aggregate in aggregates){
         
@@ -66,65 +64,59 @@ NSUserDomainMask, YES) objectAtIndex:0]
     return [self getLast:count elementsFromArray:labels];
 }
 
-+(CGFloat)calculateCorrectPercent:(NSArray*)questions{
++(CGFloat)calculateCorrectPercent:(Questions*) questions{
     
     CGFloat fractionCorrect = 0.0;
     
-    if(questions.count  > 0){
-        
+    if (questions.count > 0){
         NSInteger correctCount = [self calculateNumberOfCorrectAnswers:questions];
         fractionCorrect = correctCount/(CGFloat)questions.count;
     }
-    
-    
     return fractionCorrect;
 }
 
-+(NSInteger)calculateCorrectScore:(NSArray*)questions{
++(NSInteger)calculateCorrectScore:(Questions*)questions{
     
     NSInteger fractionCorrect = 0;
     
     if(questions.count  > 0){
-        for (Question* question in questions) {
+        for (Question* question in questions.listOfQuestions) {
             if(question.hasBeenAnsweredCorrectly){
                 fractionCorrect = fractionCorrect + question.points ;
             }
         }
     }
     
-    
     return fractionCorrect;
 }
 
-+(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions{
++(NSInteger)calculateNumberOfCorrectAnswers:(Questions*)questions{
     
     NSInteger correctCount = 0;
-
+    
     if(questions.count  > 0){
-        for (Question* question in questions) {
+        for (Question* question in questions.listOfQuestions) {
             if(question.hasBeenAnsweredCorrectly){
                 correctCount++;
             }
         }
     }
-
+    
     return correctCount;
 }
 
-
-
-static NSMutableArray *allQuestions;
-
-
+/**
+ Returns a list of all question categories
+ */
 +(NSArray<NSString*>*)categories {
-    NSArray *questions =  [Utils loadQuestionsFromTopics:[Config sharedInstance].topics
-                               forTotalNumberOfQuestions:0 minLevel:0];
+    
+    Questions *questions =  [Config sharedInstance].questions;
     
     NSMutableSet *categories = [NSMutableSet set];
     
     NSString *noCategory;
     
-    for (Question *question in questions) {
+    for (Question *question in questions.listOfQuestions) {
         if (![categories containsObject:question.category]) {
             
             // Dont get empty categories
@@ -138,15 +130,8 @@ static NSMutableArray *allQuestions;
             }
         }
     }
-    
-    
-    
-    
     return [categories allObjects];
-    
 }
-
-
 
 #pragma mark Recent Questions
 static NSMutableArray *_usedQuestions;
@@ -162,7 +147,6 @@ static NSMutableArray *_usedQuestions;
     if (_usedQuestions.count > 60) {
         [_usedQuestions removeObjectsAtIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
-    
 }
 
 +(void)clearAllUsedQuestions {
@@ -171,15 +155,15 @@ static NSMutableArray *_usedQuestions;
     }
 }
 
-
 #pragma mark -
 #pragma mark Load Questions
+
 /*
  Sort and return questions
  */
-+(NSArray*) sortArrayByLevel:(NSArray*)questions{
-    
-    questions = [questions sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
++(void)sortQuestionsByLevel:(Questions*)questions
+{
+    NSArray <Question*>* shuffeldArray = [questions.listOfQuestions sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         Question *q1 = obj1;
         Question *q2 = obj2;
         
@@ -198,97 +182,91 @@ static NSMutableArray *_usedQuestions;
         return NSOrderedSame;
     }];
     
-    return questions;
-
+    questions.listOfQuestions = shuffeldArray;
 }
 
-+(NSArray*)loadQuestionsWithIncreasingLevelFromTopics:(NSArray *)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount {
-    NSArray *questions = [self loadQuestionsFromTopics:selectedTopics forTotalNumberOfQuestions:questionCount minLevel:0];
-    
-    questions = [self sortArrayByLevel:questions];
-    
-    
-    return questions;
-    
-    
-}
-
-
-+(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount minLevel:(NSInteger)minLevel{
-    
-    NSMutableArray *allQuestions = [NSMutableArray array];
-    for (Topic* topic in selectedTopics) {
-        
-        if (!topic.inAppPurchaseIdentifier) { // Base questions, just get a subset of questions until bought
-            
-            for (NSDictionary* questionDic in topic.questionJSONObjects) { // [self loadFreeQuestionsForTopic:topic]) {
-                Question* question = [[Question alloc] initWithDictionary:questionDic];
-                if (question.level >= minLevel) {
-                    [allQuestions addObject:question];
-                }
-            }
-        } else { // For all other topics get all other qustions
-            for (NSDictionary* questionDic in topic.questionJSONObjects) {
-                Question* question = [[Question alloc] initWithDictionary:questionDic];
-                if (question.level >= minLevel) {
-                    [allQuestions addObject:question];
-                }
-            }
-        }
-        
-    }
-    
-    NSArray* shuffledQuestions = [self shuffleArray:allQuestions];
-    
-    NSMutableArray* batch;
-    if (questionCount > 0 ) {
-        batch = [NSMutableArray arrayWithArray:[self getFirst:questionCount elementsFromArray:shuffledQuestions]];
-    } else {
-        batch = [NSMutableArray arrayWithArray:shuffledQuestions];
-    }
-    
-    for (Question* question in batch) {
-        NSArray* shuffledAnswers = [self shuffleArray:question.answers];
-        question.answers = shuffledAnswers;
-    }
-    
-    // sort by level
-    batch = [NSMutableArray arrayWithArray: [self sortArrayByLevel:batch]];
-    
-    // Remove recent questions
-    if (_usedQuestions) {
-        
-        for (Question *question in _usedQuestions) {
-            
-            if ([batch containsObject:question]) {
-                [batch removeObject:question];
-            }
-        }
-        
-        
-    }
-    return batch;
-}
-
-
-+(NSArray*)shuffleArray:(NSArray*)array
+/*
+ Shuffle questions and answers
+ */
++(void)shuffleQuestions:(Questions*)questions
 {
-    NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
-    static BOOL seeded = NO;
-    if(!seeded)
+    static BOOL seedRandomGenerator = NO;
+    if(!seedRandomGenerator)
     {
-        seeded = YES;
+        seedRandomGenerator = YES;
         srandom((unsigned int)time(NULL));
     }
     
+    questions.listOfQuestions = [self shuffleArray:questions.listOfQuestions];
+    for (Question *question in questions.listOfQuestions) {
+        question.answers = [self shuffleArray:question.answers];
+    }
+}
+
+/**
+ Shuffles any Array
+ */
++(NSArray*) shuffleArray:(NSArray*) array {
+    
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
     NSUInteger count = array.count;
     for (NSUInteger i = 0; i < count; ++i) {
         NSUInteger nElements = count - i;
         NSUInteger n = (random() % nElements) + i;
         [mutableArray exchangeObjectAtIndex:i withObjectAtIndex:n];
     }
-    
     return mutableArray;
+}
+
++(Questions*) loadQuestionsWithIncreasingLevel:(Questions *)questions forTotalNumberOfQuestions:(NSInteger)questionCount {
+    
+    Questions *questionsWithIncreasingLevel = [self loadQuestionsShuffeledFromTopics:questions forTotalNumberOfQuestions:questionCount minLevel:0];
+    
+    [self sortQuestionsByLevel:questionsWithIncreasingLevel];
+    return questionsWithIncreasingLevel;
+}
+
++(Questions*) loadQuestionsShuffeledFromTopics:(Questions*)questions
+                     forTotalNumberOfQuestions:(NSInteger)questionCount
+                                      minLevel:(NSInteger)minLevel{
+    
+    Questions *allQuestions = [[Questions alloc] init];
+    NSMutableArray *questionList = [NSMutableArray array];
+    
+    for (Question* question in questions.listOfQuestions) {
+        if (question.level >= minLevel) {
+            [questionList addObject:question];
+        }
+    }
+    allQuestions.listOfQuestions = questionList;
+    
+    [self shuffleQuestions:allQuestions];
+    
+    // Reduce total number of questions
+    if (questionCount > 0 ) {
+        allQuestions.listOfQuestions = [NSMutableArray arrayWithArray:[self getFirst:questionCount elementsFromArray:allQuestions.listOfQuestions]];
+    }
+    
+    // sort by level
+    [self sortQuestionsByLevel:allQuestions];
+    
+    // Remove recently used questions
+    if (_usedQuestions) {
+        NSMutableArray* mutableArray = [NSMutableArray arrayWithArray: allQuestions.listOfQuestions];
+        for (Question *question in _usedQuestions) {
+            if ([mutableArray containsObject:question]) {
+                [mutableArray removeObject:question];
+            }
+        }
+        allQuestions.listOfQuestions = mutableArray;
+    }
+    return allQuestions;
+}
+
++(Questions*) getFirst:(Questions*)questions numberOfQuestions:(NSInteger) numberOfQuestions{
+    Questions* subQuestions = [[Questions alloc]init];
+    subQuestions.listOfQuestions = [Utils getFirst:numberOfQuestions elementsFromArray:questions.listOfQuestions];
+    return subQuestions;
 }
 
 +(NSArray*)getFirst:(NSInteger)count elementsFromArray:(NSArray*)array{
@@ -323,12 +301,10 @@ static NSMutableArray *_usedQuestions;
 +(void)addConstraintsToSuperView:(UIView*)mainView andSubView:(UIView*)subView withPadding:(CGFloat)padding{
     
     NSLayoutConstraint* top = [NSLayoutConstraint constraintWithItem:mainView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeTop multiplier:1.0 constant:padding];
-    
     NSLayoutConstraint* left = [NSLayoutConstraint constraintWithItem:mainView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:padding];
     
     
     NSLayoutConstraint* right = [NSLayoutConstraint constraintWithItem:mainView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeRight multiplier:1.0 constant:-padding];
-    
     NSLayoutConstraint* bottom = [NSLayoutConstraint constraintWithItem:mainView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:subView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-padding];
     
     [mainView addConstraints:@[top, bottom, left, right]];

@@ -2,10 +2,6 @@
 //  QuestionContainerController.m
 //  QuizApp
 //
-//  Created by Tope Abayomi on 23/01/2014.
-//  Copyright (c) 2014 App Design Vault. All rights reserved.
-//
-
 #import "QuestionContainerController.h"
 #import "QuestionDisplayEngine.h"
 #import "Datasource.h"
@@ -18,6 +14,7 @@
 #import "GameModel.h"
 #import "GameStats.h"
 #import "Utils.h"
+#import <DasQuiz-Swift.h>
 
 @import FirebaseAnalytics;
 
@@ -45,7 +42,6 @@
 
 @property (nonatomic, strong) SoundSystem* soundSystem;
 
-
 @end
 
 @implementation QuestionContainerController
@@ -65,6 +61,23 @@ static BOOL heartSoundPlaying;
 {
     [super viewDidLoad];
     
+    [self setupEnvironment];
+    
+    [self showNextQuestion];
+    
+    [self startBackgroundSound];
+    
+}
+
+-(void) startBackgroundSound {
+    if (!heartSoundPlaying) {
+        [self.soundSystem playHeartBeatSound];
+        [self.soundSystem playThinkingMusic];
+        heartSoundPlaying = YES;
+    }
+}
+
+-(void)setupEnvironment {
     self.navigationItem.hidesBackButton = YES;
     
     self.displayEngine = [[QuestionDisplayEngine alloc] init];
@@ -73,15 +86,13 @@ static BOOL heartSoundPlaying;
     NSArray* nibs = [[NSBundle mainBundle] loadNibNamed:@"StatusView" owner:nil options:nil];
     UIView* statusView = nibs[0];
     
-    self.statusLabel = (UILabel*)[statusView viewWithTag:1];
     self.statusProgress = (UIProgressView*)[statusView viewWithTag:2];
     self.navigationItem.titleView = statusView;
     
+    self.statusLabel = (UILabel*)[statusView viewWithTag:1];
     self.statusLabel.textColor = [UIColor whiteColor];
     self.statusLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:14.0f];
     self.statusProgress.tintColor = [ADVTheme mainColor];
-    
-    self.currentQuestionIndex = -1;
     
     self.view.backgroundColor = [UIColor blackColor];
     
@@ -90,12 +101,13 @@ static BOOL heartSoundPlaying;
     self.timerLabel.font = [UIFont fontWithName:[ADVTheme mainFont] size:14.0f];
     self.timerLabel.alpha = 0.0;
     
+    self.currentQuestionIndex = -1;
     self.points = 0;
     
-    // Set game time. Can be 0 in trainig mode
+    // Set game time. Can be 0 in training mode
     self.totalTimeInterval = [GameModel sharedInstance].gameTime;
     
-    if(self.totalTimeInterval > 0){
+    if (self.totalTimeInterval > 0){
         self.timerLabel.alpha = 1.0;
         self.currentTimeInterval = 0;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
@@ -112,14 +124,6 @@ static BOOL heartSoundPlaying;
     self.infoBarButton = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
     self.navigationItem.leftBarButtonItem = self.infoBarButton;
     self.soundSystem = [SoundSystem sharedInstance];
-    
-    [self showNextQuestion];
-    
-    if (!heartSoundPlaying) {
-        [self.soundSystem playHeartBeatSound];
-        [self.soundSystem playThinkingMusic];
-        heartSoundPlaying = YES;
-    }
     
 }
 
@@ -170,7 +174,7 @@ static BOOL heartSoundPlaying;
 
 -(void)questionHasBeenAnswered:(Question *)question withController:(QuestionViewController *)controller{
     
-
+    
     
     [Utils addAsUsedQuestion:controller.question];
     
@@ -180,18 +184,20 @@ static BOOL heartSoundPlaying;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    // Show solved questions
     if([segue.identifier isEqualToString:@"results"]){
         ResultsViewController* controller = segue.destinationViewController;
         
-        NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
-        controller.questions = subQuestions;
+        Questions* solvedQuestions = [[Questions alloc]init];
+        solvedQuestions.listOfQuestions = [self.questions.listOfQuestions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
+        controller.questions = solvedQuestions;
         
-        
-    }else if([segue.identifier isEqualToString:@"info"]){
+    } else if([segue.identifier isEqualToString:@"info"]) {
         
         ExplanationViewController* controller = segue.destinationViewController;
         
-        Question* question = self.questions[self.currentQuestionIndex];
+        Question* question = self.questions.listOfQuestions[self.currentQuestionIndex];
         controller.explanationText = question.explanation;
     }
 }
@@ -219,10 +225,7 @@ static BOOL heartSoundPlaying;
             self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Question %ld of %ld",@"Headline in questionlist for trainingmode"), (long)count+1, (unsigned long)self.questions.count];
             [self.statusProgress setProgress:count/(CGFloat)self.questions.count animated:YES];
             break;
-            
     }
-    
-    
 }
 
 -(void)updateTime:(id)sender{
@@ -239,7 +242,6 @@ static BOOL heartSoundPlaying;
         [self.soundSystem playTimeOutSound];
         [self timeUp];
     }
-    
 }
 
 -(void)updateTimerText{
@@ -258,18 +260,16 @@ static BOOL heartSoundPlaying;
     if  ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
         [self.statusProgress setProgress:self.currentTimeInterval/(CGFloat)self.totalTimeInterval animated:YES];
     }
-    
 }
 
--(void)timeUp{
-    
+-(void) timeUp {
     
     long qc = self.currentQuestionIndex;
     NSLog(@"Questions solved: %ld",qc);
     
-    
     [self.timer invalidate];
-    NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
+    
+    Questions *subQuestions = [Utils getFirst:self.questions numberOfQuestions:self.currentQuestionIndex];
     
     NSString *message = [self gameOverAlertMessage:subQuestions secondsNeeded:self.totalTimeInterval];
     
@@ -285,8 +285,6 @@ static BOOL heartSoundPlaying;
     [alert addAction:cancelAction];
     
     [self presentViewController:alert animated:YES completion:nil];
-    
-    
 }
 
 /**
@@ -294,14 +292,15 @@ static BOOL heartSoundPlaying;
  */
 -(void)saveResultsAndShowThem{
     
-    NSArray *subQuestions = [self.questions subarrayWithRange:NSMakeRange(0, self.currentQuestionIndex)];
+    // Subquestion
+    Questions *subQuestions = [Utils getFirst:self.questions numberOfQuestions:self.currentQuestionIndex];
     
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
             [Datasource saveTimeBasedAggregates:subQuestions forDate:[NSDate date]];
             [self checkLevelProgress:subQuestions secondsNeeded:self.totalTimeInterval];
-            
             break;
+            
         case GameModeTrainig:
             [Datasource saveTrainingAggregates:subQuestions forDate:[NSDate date]];
             break;
@@ -312,13 +311,14 @@ static BOOL heartSoundPlaying;
     [self performSegueWithIdentifier:@"results" sender:self];
 }
 
--(void)checkLevelProgress:(NSArray*)results secondsNeeded:(int)time{
+-(void)checkLevelProgress:(Questions*)resultQuestions secondsNeeded:(int)time{
     // 3.7sec pro Antwort  = 31 Fragen.
     // davon 90% richtig => Level up
     // 120 Punkte? => 1200
     
     // IAP Check
-    if ([self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 &&  [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+    if ([self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 &&
+        [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
         NSLog(@"Level 4 reached with 3 tries. But no IAP until now");
         return;
     }
@@ -330,11 +330,11 @@ static BOOL heartSoundPlaying;
     
 }
 
--(NSString*)gameOverAlertMessage:(NSArray*)results secondsNeeded:(int)time{
+-(NSString*)gameOverAlertMessage:(Questions*)resultQuestions secondsNeeded:(int)time{
     
     // Number of questions reached?
-    if ((time / results.count) < 6.0) {
-        CGFloat percent = [Utils calculateCorrectPercent:results];
+    if ((time / resultQuestions.count) < 6.0) {
+        CGFloat percent = [Utils calculateCorrectPercent:resultQuestions];
         // >= 90 % success?
         if (percent >=0.80) {
             // PossibleLevel up
@@ -345,7 +345,7 @@ static BOOL heartSoundPlaying;
                 ( [GameStats sharedInstance].currentLevel == [Config sharedInstance].quizIAP.numberOfFreeLevels && [GameStats sharedInstance].numberOfSuccessfulTries < 3)  ) {
                 nextLevel= [[GameStats sharedInstance] levelUp];
             } else {
-                // Not purchased!  
+                // Not purchased!
                 return NSLocalizedString(@"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.",@"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.");
             }
             
@@ -363,7 +363,7 @@ static BOOL heartSoundPlaying;
         } else if(percent >0.5 && percent <0.80) {
             
             // ab 20 Fragen UND 80% richtig
-            NSInteger neededQuestions = (20 - results.count);
+            NSInteger neededQuestions = (20 - resultQuestions.count);
             if (neededQuestions > 0) {
                 return [NSString stringWithFormat:NSLocalizedString(@"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern.",@"Kannst du noch %ld Fragen richtig lösen? Dann winkt ein Stern."),neededQuestions];
             } else {
@@ -396,13 +396,11 @@ static BOOL heartSoundPlaying;
  */
 - (BOOL)IAPCheck {
     
-    // the App comes with 100 free questions, User should buy for the last 900.
     
     // Check, if number of quiz is limited. (Studid, then you cant play any more)
     return  ![[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
     
 }
-
 
 /**
  YES if purchased
@@ -410,14 +408,11 @@ static BOOL heartSoundPlaying;
 - (BOOL)IAPProductPurchased {
     
     return  [[QuizIAPHelper sharedInstance] productPurchased:[Config sharedInstance].quizIAP.inAppPurchaseID];
-    
 }
-
 
 -(IBAction)moreInfoTapped:(id)sender{
     
-   
-    Question* question = self.questions[self.currentQuestionIndex];
+    Question* question = self.questions.listOfQuestions[self.currentQuestionIndex];
     
     NSURL *url = [NSURL URLWithString:question.explanation];
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
@@ -430,14 +425,14 @@ static BOOL heartSoundPlaying;
         [[UIApplication sharedApplication] openURL:url];
     }
     // Dont open a view, go to wikipedia
-   // [self performSegueWithIdentifier:@"info" sender:self];
+    // [self performSegueWithIdentifier:@"info" sender:self];
 }
 
 -(void)setInfoButtonStatus{
     
     if(self.currentQuestionIndex < self.questions.count){
         
-        Question* question = self.questions[self.currentQuestionIndex];
+        Question* question = self.questions.listOfQuestions[self.currentQuestionIndex];
         
         BOOL hasExplanation = question.explanation != nil && question.explanation.length > 0;
         self.infoBarButton.enabled = hasExplanation;

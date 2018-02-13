@@ -7,8 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Topic.h"
-#import "Question.h"
 #import "Utils.h"
 
 @interface QuizAppTests : XCTestCase

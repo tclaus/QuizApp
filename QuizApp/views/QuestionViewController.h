@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Question.h"
 
 @protocol QuestionViewControllerDelegate;
 
+@class Question;
 @interface QuestionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) Question* question;

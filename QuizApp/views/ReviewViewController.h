@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Questions;
 @interface ReviewViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
 
-@property (nonatomic, strong) NSArray* questions;
+@property (nonatomic, strong) Questions* questions;
 
 @end

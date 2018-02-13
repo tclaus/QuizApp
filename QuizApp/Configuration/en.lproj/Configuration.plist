@@ -21,19 +21,10 @@
 		<key>Show Topics in Grid</key>
 		<true/>
 	</dict>
-	<key>Questions Data</key>
-	<array>
-		<dict>
-			<key>Topic Title</key>
-			<string>Base Questions</string>
-			<key>Topic Image</key>
-			<string></string>
-			<key>Questions File</key>
-			<string>1000-questions_en.json</string>
-		</dict>
-	</array>
 	<key>Quiz Settings</key>
 	<dict>
+		<key>Filename</key>
+		<string>1000-questions_en.json</string>
 		<key>Number Of Questions To Answer</key>
 		<integer>10</integer>
 		<key>Pass Threshold</key>
@@ -45,6 +36,8 @@
 	</dict>
 	<key>Game Center Settings</key>
 	<dict>
+		<key>Leaderboard ID Time Based</key>
+		<string>TimeBasedGame</string>
 		<key>Game Center Enabled</key>
 		<true/>
 		<key>Leaderboard ID</key>

@@ -8,31 +8,34 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Question.h"
 
+@class Questions;
+@class Question;
 @interface Utils : NSObject
 
-+(CGFloat)calculateAverageTestScores:(NSArray*)aggregates;
++(CGFloat) calculateAverageTestScores:(NSArray*)aggregates;
 
-+(CGFloat)getLastTestScore:(NSArray*)aggregates;
++(CGFloat) getLastTestScore:(NSArray*)aggregates;
 
-+(NSArray*)getLast:(NSInteger)count scoresFromAggregates:(NSArray*)aggregates;
++(NSArray*) getLast:(NSInteger)count scoresFromAggregates:(NSArray*)aggregates;
 
-+(NSArray*)getLast:(NSInteger)count labelsForAggregates:(NSArray*)aggregates;
++(NSArray*) getLast:(NSInteger)count labelsForAggregates:(NSArray*)aggregates;
+
++(Questions*) getFirst:(Questions*)questions numberOfQuestions:(NSInteger) numberOfQuestions;
 
 /**
   Calculates the correct pecent from numberoftotal solced questions
  @param numberOfQuestions Number ob actually proceeded questions
  */
-+(CGFloat)calculateCorrectPercent:(NSArray*)questions;
-+(NSInteger)calculateCorrectScore:(NSArray*)questions;
++(CGFloat) calculateCorrectPercent:(Questions*) questions;
++(NSInteger) calculateCorrectScore:(Questions*) questions;
 
-+(NSInteger)calculateNumberOfCorrectAnswers:(NSArray*)questions;
++(NSInteger) calculateNumberOfCorrectAnswers:(Questions*)questions;
 
 /**
- Returns an array with all questions
+ Returns a list of all question categories
  */
-+(NSArray<NSString*>*)categories;
++(NSArray <NSString*>*) categories;
 
 /**
  Add question as used question - will not be shown again until list is cleared
@@ -42,20 +45,25 @@
 /**
  Clear recently used list
  */
-+(void)clearAllUsedQuestions;
++(void) clearAllUsedQuestions;
 
 /**
  Loads topics and shuffels the questions to generate a list of newly shuffled questions. If questioncount is 0, then every possible question will beloaded.
  Sorted then by question levels
  */
-+(NSArray*)loadQuestionsWithIncreasingLevelFromTopics:(NSArray *)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount;
++(Questions*) loadQuestionsWithIncreasingLevel:(Questions *)questions
+                     forTotalNumberOfQuestions:(NSInteger)questionCount;
 
 /**
  Loads topics and shuffels the questions to generate a list of newly shuffled questions. If questioncount is 0, then every possible question will beloaded.
  */
-+(NSArray*)loadQuestionsFromTopics:(NSArray*)selectedTopics forTotalNumberOfQuestions:(NSInteger)questionCount minLevel:(NSInteger)minLevel;
++(Questions*) loadQuestionsShuffeledFromTopics:(Questions*)questions
+                     forTotalNumberOfQuestions:(NSInteger)questionCount
+                                      minLevel:(NSInteger)minLevel;
 
-+(void)addConstraintsToSuperView:(UIView*)mainView andSubView:(UIView*)subView withPadding:(CGFloat)padding;
++(void)addConstraintsToSuperView:(UIView*)mainView
+                      andSubView:(UIView*)subView
+                     withPadding:(CGFloat)padding;
 
 
 @end

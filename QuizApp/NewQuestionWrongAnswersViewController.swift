@@ -28,7 +28,7 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
         // view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
         
-        setDelegates(firstWrongAnswer,secondWrongAnswer,thirdWrongAnswer)
+        setDelegates(firstWrongAnswer, secondWrongAnswer,thirdWrongAnswer)
         
         nextButton.tintColor = UIColor.white
         cancelButton.tintColor = UIColor.white
@@ -40,7 +40,6 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func answer1changed(_ sender: Any) {
         isValidTextField()
     }
@@ -73,9 +72,9 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
      Checks if at leaset 3 charcters are entered
      */
     func isValidTextField() {
-        if let answer1Count = firstWrongAnswer.text?.characters.count,
-            let answer2Count = secondWrongAnswer.text?.characters.count,
-            let answer3Count = thirdWrongAnswer.text?.characters.count {
+        if let answer1Count = firstWrongAnswer.text?.count,
+            let answer2Count = secondWrongAnswer.text?.count,
+            let answer3Count = thirdWrongAnswer.text?.count {
             
             if answer1Count >= 1 && answer2Count >= 1 && answer3Count >= 1 {
                 nextButton.isEnabled = true
@@ -86,7 +85,6 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
         nextButton.isEnabled = false
     }
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -102,8 +100,5 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
             
             (segue.destination as! NewQuestionFinishViewController).questionManager = questionManager
         }
-        
     }
-    
-
 }
