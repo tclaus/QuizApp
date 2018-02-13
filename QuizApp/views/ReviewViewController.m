@@ -9,8 +9,9 @@
 #import "ReviewViewController.h"
 #import "QuestionViewController.h"
 #import "ReviewCell.h"
-#import "Question.h"
 #import "ADVTheme.h"
+#import <DasQuiz-Swift.h>
+
 @import Firebase;
 
 @interface ReviewViewController ()
@@ -18,8 +19,6 @@
 @end
 
 @implementation ReviewViewController
-
-
 
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,7 +53,7 @@
     
     ReviewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
     
-    Question* question = self.questions[indexPath.row];
+    Question* question = self.questions.listOfQuestions[indexPath.row];
     
     cell.countLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)indexPath.row + 1];
     cell.questionLabel.text = question.text;
@@ -66,7 +65,7 @@
 }
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    Question* question = self.questions[indexPath.row];
+    Question* question = self.questions.listOfQuestions[indexPath.row];
     NSURL *explanatioinURL = [NSURL URLWithString:question.explanation];
     
     if ([[UIApplication sharedApplication] canOpenURL:explanatioinURL]) {
@@ -84,7 +83,7 @@
     UITableViewRowAction *info = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                                     title:@"Info"
                                                                   handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-                                                                      Question* question = self.questions[indexPath.row];
+                                                                      Question* question = self.questions.listOfQuestions[indexPath.row];
                                                                       NSURL *explanatioinURL = [NSURL URLWithString:question.explanation];
                                                                       
                                                                           [FIRAnalytics logEventWithName:@"ViewExplanation"
@@ -112,8 +111,7 @@
     
     ReviewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
     
-    Question* question = self.questions[indexPath.row];
-    
+    Question* question = self.questions.listOfQuestions[indexPath.row];
     
     CGSize labelSize = CGSizeMake(cell.questionLabel.frame.size.width, MAXFLOAT);
     CGRect labelRect;
@@ -131,7 +129,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     NSIndexPath* indexPath = (self.tableView).indexPathForSelectedRow;
-    Question* question = self.questions[indexPath.row];
+    Question* question = self.questions.listOfQuestions[indexPath.row];
     
     QuestionViewController* controller = segue.destinationViewController;
     controller.question = question;

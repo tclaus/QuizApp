@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "QuestionViewController.h"
 
+@class Questions;
 @interface QuestionDisplayEngine : NSObject
 
 -(void)attachDelegate:(id<QuestionViewControllerDelegate>)delegate;
 
--(BOOL)showNextQuestion:(NSArray*)questions inMainView:(UIView*)mainView;
+-(BOOL)showNextQuestion:(Questions*)questions inMainView:(UIView*)mainView;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "QuestionViewController.h"
 #import "AnswerCell.h"
-#import "Answer.h"
 #import "ADVTheme.h"
 #import "SoundSystem.h"
 #import <AVFoundation/AVFoundation.h>
@@ -162,8 +161,8 @@ SendReport *sendReport;
         
         for (int rowID = 0; rowID < self.question.answers.count ;rowID++) {
             
-            BOOL isChosenAnswer = [self.question indexIsChosenAnswer:rowID];
-            BOOL isCorrectAnswer = [self.question indexIsCorrectAnswer:rowID];
+            BOOL isChosenAnswer = [self.question indexIsChosenAnswerWithAnswerIndex:rowID];
+            BOOL isCorrectAnswer = [self.question indexIsCorrectAnswerWithAnswerIndex:rowID];
             
             AnswerCell* cell = [self.answerTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:rowID inSection:0]];
             
@@ -197,14 +196,8 @@ SendReport *sendReport;
     AnswerCell* cell = nil;
     Answer* answer = self.question.answers[indexPath.row];
     
-    // If the answer contains an image - show the image instead of text
-    if(answer.image){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCellImage"];
-        cell.answerImageView.image = [UIImage imageNamed:answer.image];
-    }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell"];
         cell.answerLabel.text = answer.text;
-    }
     cell.answerTapped = self.answerTapped;
     cell.indexLabel.text = [self getAlphabetFromIndex:indexPath.row];
     cell.isForReview = self.isForReview;
@@ -267,9 +260,6 @@ SendReport *sendReport;
 
     Answer* answer = self.question.answers[indexPath.row];
     
-    if(answer.image){
-        return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 170 : 90;
-    }else{
          AnswerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell"];
         
         cell.answerLabel.text = answer.text;
@@ -298,7 +288,6 @@ SendReport *sendReport;
         //// for separator
         // height += 1.0f;
         return height;
-    }
     
 }
 

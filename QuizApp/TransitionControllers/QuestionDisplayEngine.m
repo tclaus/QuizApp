@@ -8,7 +8,7 @@
 
 #import "QuestionDisplayEngine.h"
 #import "ConstraintsPackage.h"
-
+#import <DasQuiz-Swift.h>
 #define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 @interface QuestionDisplayEngine ()
@@ -49,16 +49,16 @@
     self.questionController2.delegate = delegate;
 }
 
--(BOOL)showNextQuestion:(NSArray*)questions inMainView:(UIView*)mainView{
+-(BOOL)showNextQuestion:(Questions*)questions inMainView:(UIView*)mainView{
     
-    if(self.nextIndex < questions.count){
+    if (self.nextIndex < questions.count){
         
         QuestionViewController* controller = self.nextIndex % 2 == 0 ? self.questionController1 : self.questionController2;
         QuestionViewController* currentController = self.nextIndex % 2 == 1 ? self.questionController1 : self.questionController2;
       
-        controller.question = questions[self.nextIndex];
+        controller.question = questions.listOfQuestions[self.nextIndex];
         
-        if(self.nextIndex == 0){
+        if (self.nextIndex == 0){
     
             [controller.view setTranslatesAutoresizingMaskIntoConstraints:NO];
             [mainView addSubview:controller.view];
@@ -80,7 +80,7 @@
 
         self.nextIndex++;
         return YES;
-    }else{
+    } else {
         
         [self.questionController1.view removeFromSuperview];
         [self.questionController2.view removeFromSuperview];

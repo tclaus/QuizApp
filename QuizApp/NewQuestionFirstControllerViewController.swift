@@ -69,8 +69,8 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
      Checks if at leaset 3 charcters are entered
      */
     func isValidTextField() {
-        if let answerCount = correctAnswerTextField.text?.characters.count,
-            let questionCount = questionTextField.text?.characters.count {
+        if let answerCount = correctAnswerTextField.text?.count,
+            let questionCount = questionTextField.text?.count {
             
             if answerCount >= 3 && questionCount >= 3 {
                 nextButon.isEnabled = true

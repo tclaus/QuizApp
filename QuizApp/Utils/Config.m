@@ -1,4 +1,4 @@
- //
+//
 //  Config.m
 //  QuizApp
 //
@@ -7,19 +7,17 @@
 //
 
 #import "Config.h"
-#import "Topic.h"
 #import "Datasource.h"
+#import <DasQuiz-Swift.h>
 
 @interface Config ()
 
--(void)loadInfo;
 
 @property (nonatomic, strong) NSDictionary* configInfo;
 
 @end
 
 @implementation Config
-
 
 + (Config *)sharedInstance
 {
@@ -33,13 +31,17 @@
     return sharedInstance;
 }
 
--(void)loadInfo{
+-(void) loadInfo {
+    
+    [self loadSetup];
+    [self loadQuestions];
+}
+
+-(void) loadSetup{
     
     NSString* path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     
     self.configInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
-    
-    [self defineQuestionLanguage];
     
     NSDictionary* quizSettings = self.configInfo[@"Quiz Settings"];
     
@@ -51,7 +53,7 @@
     
     NSDictionary* gameCenterSettings = self.configInfo[@"Game Center Settings"];
     self.gameCenterEnabled = [gameCenterSettings[@"Game Center Enabled"] boolValue];
-
+    
     self.gameCenterLeaderboardID = gameCenterSettings[@"Leaderboard ID"];
     self.gameCenterTimeBasedLeaderboardID = gameCenterSettings[@"Leaderboard ID Time Based"];
     self.gameCenterAchievements = gameCenterSettings[@"Achievements"];
@@ -66,11 +68,9 @@
     self.startPageImage = interfaceSettings[@"Start Page Image"];
     self.showTopicsinGrid = [interfaceSettings[@"Show Topics in Grid"] boolValue];
     
-    
-    
     NSDictionary* quizIAPSettings = self.configInfo[@"In App Purchase Settings"];
     
-    self.quizIAP = [[QuizInAppPurchaseData alloc] init]; 
+    self.quizIAP = [[QuizInAppPurchaseData alloc] init];
     self.quizIAP.numberOfFreeLevels = [quizIAPSettings[@"Number of free levels"] integerValue];
     
     // TODO: Hier A/B Test
@@ -80,58 +80,41 @@
     self.quizIAP.messageText = quizIAPSettings[@"IAP Alert Message"];
     self.quizIAP.messageCancel = quizIAPSettings[@"IAP Alert Cancel"];
     self.quizIAP.messageBuy = quizIAPSettings[@"IAP Alert Buy"];
-    
-    
 }
 
 /**
- Set question topics in the right language
+ Loads all questions from file
  */
--(void)defineQuestionLanguage{
-    NSArray* topicsData = self.configInfo[@"Questions Data"];
+-(void)loadQuestions{
     
-    NSMutableArray* topics = [NSMutableArray arrayWithCapacity:topicsData.count];
-    for (NSDictionary* topicDic in topicsData) {
+    // Load questions according to the system Language
+    // Then override it with the user preferences
+    // question_language
+    NSString* languageKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"question_language"];
+    NSString* questionFilename;
+    
+    if (!languageKey) {
         
-        Topic* topic = [[Topic alloc] init];
-        topic.title = topicDic[@"Topic Title"];
-        topic.image = [UIImage imageNamed:topicDic[@"Topic Image"]];
-        topic.inAppPurchaseIdentifier = topicDic[@"In App Purchase Identifier"];
+        // Store defualt language
+        NSString *defaultLanguage = NSLocale.preferredLanguages[0];
         
-        // Load questions according to the system Language
-        // Then override it with the user preferences
-        // question_language
-        NSString* languageKey =   [[NSUserDefaults standardUserDefaults] stringForKey:@"question_language"];
-        NSString* questionFilename;
-        
-        if (!languageKey) {
-            
-            // Store defualt language
-            NSString *defaultLanguage = NSLocale.preferredLanguages[0];
-            
-            if ([defaultLanguage hasPrefix:@"de"]) {
-                [[NSUserDefaults standardUserDefaults] setObject:@"de" forKey:@"question_language"];
-                languageKey  =@"de";
-            } else {
-                [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"question_language"];
-                languageKey  =@"en";
-            }
-        }
-        
-        if ([languageKey hasPrefix:@"de"]) {
-            questionFilename = @"1000-questions_de.json";
+        if ([defaultLanguage hasPrefix:@"de"]) {
+            [[NSUserDefaults standardUserDefaults] setObject:@"de" forKey:@"question_language"];
+            languageKey  =@"de";
         } else {
-            questionFilename = @"1000-questions_en.json";
+            [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"question_language"];
+            languageKey  =@"en";
         }
-        
-        
-        
-        topic.questionJSONObjects = [Datasource questionsFromFile:questionFilename];
-        
-        [topics addObject:topic];
     }
     
-    self.topics = [NSArray arrayWithArray:topics];
+    if ([languageKey hasPrefix:@"de"]) {
+        questionFilename = @"1000-questions_de.json";
+    } else {
+        questionFilename = @"1000-questions_en.json";
+    }
+    
+    self.questions = [Datasource questionsFromFile:questionFilename];
+    
 }
 
 -(NSArray*)getAllInAppPurchases{
@@ -140,12 +123,6 @@
     
     if(self.quizIAP.inAppPurchaseID && self.quizIAP.inAppPurchaseID.length > 0){
         [iaps addObject:self.quizIAP.inAppPurchaseID];
-    }
-    
-    for (Topic*  topic in self.topics) {
-        if(topic.inAppPurchaseIdentifier){
-            [iaps addObject:topic.inAppPurchaseIdentifier];
-        }
     }
     
     return iaps;

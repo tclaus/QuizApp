@@ -2,28 +2,22 @@
 //  Datasource.m
 //  QuizApp
 //
-//  Created by Tope Abayomi on 18/12/2013.
-//  Copyright (c) 2013 App Design Vault. All rights reserved.
-//
-
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, \
 NSUserDomainMask, YES) objectAtIndex:0]
 
 
 #import "Datasource.h"
-#import "Topic.h"
-#import "Question.h"
-#import "Answer.h"
 #import "Utils.h"
 #import "ResultAggregate.h"
 #import "GameStats.h"
+#import <DasQuiz-Swift.h>
 
 @implementation Datasource
 
 /**
- Loads the questions
+ Loads all questions from a file
  */
-+(NSArray*)questionsFromFile:(NSString*)file{
++(Questions*)questionsFromFile:(NSString*)file {
     
     NSString* name = file.stringByDeletingPathExtension;
     NSString* extension = file.pathExtension;
@@ -31,41 +25,42 @@ NSUserDomainMask, YES) objectAtIndex:0]
     NSString* path = [[NSBundle mainBundle] pathForResource:name ofType:extension];
     NSData* questionsData = [NSData dataWithContentsOfFile:path];
     
-    NSArray* questionDictionaries = @[];
+    Questions* questionContainer = [[Questions alloc] init];
     
-    if(questionsData){
+    if (questionsData) {
         NSError* error;
-        questionDictionaries = [NSJSONSerialization JSONObjectWithData:questionsData options:NSJSONReadingAllowFragments error:&error];
+        NSArray* questionDictionaries = [NSJSONSerialization JSONObjectWithData:questionsData options:NSJSONReadingAllowFragments error:&error];
+        NSMutableArray<Question*>* questions = [NSMutableArray array];
+        
+        for (NSDictionary *item in questionDictionaries) {
+            // NSLog(@"Item: %@", item);
+            [questions addObject:[[Question alloc] initWithDictionary:item]];
+        }
+        
+        questionContainer.listOfQuestions = questions;
         
         if(error){
             NSLog(@"Error loading from file %@.%@ Error Message: %@", name, extension, error.description);
         }
     }
     
-    return questionDictionaries;
+    return questionContainer;
 }
 
 +(NSArray*)loadTimeBasedAggregates{
-    
     return [self loadAggregates:@"timebasedResultsAggregate.plist"];
 }
 
-+(void)saveTimeBasedAggregates:(NSArray*)results forDate:(NSDate*)date{
-    
-    [self saveAggregates:@"timebasedResultsAggregate.plist" results:results forDate:date];
-    
++(void)saveTimeBasedAggregates:(Questions*) resultQuestions forDate:(NSDate*)date{
+    [self saveAggregates:@"timebasedResultsAggregate.plist" results:resultQuestions forDate:date];
 }
 
-
 +(NSArray*)loadTrainingAggregates{
-    
     return [self loadAggregates:@"trainingResultsAggregate.plist"];
 }
 
-+(void)saveTrainingAggregates:(NSArray*)results forDate:(NSDate*)date{
-    
-    [self saveAggregates:@"trainingResultsAggregate.plist" results:results forDate:date];
-
++(void)saveTrainingAggregates:(Questions*)resultQuestions forDate:(NSDate*)date{
+    [self saveAggregates:@"trainingResultsAggregate.plist" results:resultQuestions forDate:date];
 }
 
 +(NSArray*)loadAggregates:(NSString*)filename{
@@ -80,10 +75,10 @@ NSUserDomainMask, YES) objectAtIndex:0]
     return aggregates;
 }
 
-+(void)saveAggregates:(NSString*)filename results:(NSArray*)results forDate:(NSDate*)date {
++(void)saveAggregates:(NSString*)filename results:(Questions*)resultQuestions forDate:(NSDate*)date {
     
-    CGFloat correctScore = [Utils calculateCorrectScore:results];
-    CGFloat correctPercent = [Utils calculateCorrectPercent:results];
+    CGFloat correctScore = [Utils calculateCorrectScore:resultQuestions];
+    CGFloat correctPercent = [Utils calculateCorrectPercent:resultQuestions];
     
     ResultAggregate* result = [[ResultAggregate alloc] init];
     result.date = date;
@@ -103,5 +98,6 @@ NSUserDomainMask, YES) objectAtIndex:0]
     
 }
 
-
 @end
+
+

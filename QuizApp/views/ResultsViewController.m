@@ -18,7 +18,7 @@
 #import "DropAnimationController.h"
 #import "GameModel.h"
 #import "GameStats.h"
-
+#import <DasQuiz-Swift.h>
 
 @interface ResultsViewController ()
 
@@ -131,10 +131,11 @@
     
     if([Config sharedInstance].gameCenterEnabled){
         
-        NSString* leaderboardID;
+       
        
         if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
-          
+            
+            NSString* leaderboardID;
             leaderboardID = [Config sharedInstance].gameCenterTimeBasedLeaderboardID;
             
             [[GameKitManager sharedInstance] submitTestResult:points forLeaderboard:leaderboardID];

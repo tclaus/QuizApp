@@ -21,19 +21,10 @@
 		<key>Show Topics in Grid</key>
 		<true/>
 	</dict>
-	<key>Questions Data</key>
-	<array>
-		<dict>
-			<key>Topic Title</key>
-			<string>Basis Fragen</string>
-			<key>Topic Image</key>
-			<string>baseQuestions</string>
-			<key>Questions File</key>
-			<string>1000-questions_de.json</string>
-		</dict>
-	</array>
 	<key>Quiz Settings</key>
 	<dict>
+		<key>Filename</key>
+		<string>1000-questions_de.json</string>
 		<key>Number Of Questions To Answer</key>
 		<integer>10</integer>
 		<key>Pass Threshold</key>

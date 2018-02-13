@@ -11,7 +11,6 @@ import UIKit
 /**
  Sends a report about a question
  */
-@objc
 class SendReport: NSObject {
 
     let baseURL : String = "https://rocky-temple-21345.herokuapp.com/"

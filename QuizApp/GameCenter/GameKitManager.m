@@ -47,8 +47,10 @@
 }
 
 -(void)setLastError:(NSError*)error {
-    _lastError = [error copy];
-    if (_lastError) {
+
+    if (error) {
+        _lastError = [error copy];
+        // TODO Send error
         NSLog(@"GameKitManager: Error: %@", _lastError.userInfo.description);
     }
 }
@@ -90,6 +92,7 @@
         return;
     }
     
+    if (leaderboardIdentifier) {
     int64_t intScore = (int64_t)score;
     
     GKScore* gkScore = [[GKScore alloc] initWithLeaderboardIdentifier:leaderboardIdentifier];
@@ -102,6 +105,9 @@
         if([_delegate respondsToSelector:@selector(didSubmitScores:)])
             [_delegate didSubmitScores:success];
     }];
+    } else {
+        NSLog(@"leaderboardIdentifier was null or empty casnt not sumbit highscores to gamecenter");
+    }
 }
 
 -(void) loadAchievements {

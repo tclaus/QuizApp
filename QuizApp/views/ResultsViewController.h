@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ADVRoundProgressChart.h"
 
+@class Questions;
 @interface ResultsViewController : UIViewController <UIViewControllerTransitioningDelegate>
 
-@property (nonatomic, strong) NSArray* questions;
+@property (nonatomic, strong) Questions* questions;
 @end
 

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GameKitManager.h"
 
-typedef void (^FriendsPickerCancelButtonPressed)();
-typedef void (^FriendsPickerChallengeButtonPressed)();
+typedef void (^FriendsPickerCancelButtonPressed)(void);
+typedef void (^FriendsPickerChallengeButtonPressed)(void);
 
 @interface GameChallengeController : UIViewController <UITableViewDataSource,
 UITableViewDelegate, UITextFieldDelegate, GameKitManagerProtocol>

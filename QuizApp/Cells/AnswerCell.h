@@ -35,9 +35,9 @@
 -(void)showImageForCorrectAnswer:(BOOL)correct AndChosenAnswer:(BOOL)chosen;
 
 -(void)showCorrectAnswerWithAnimation;
--(void)showCorrectAnswerWithAnimation:(void (^)())complete;
+-(void)showCorrectAnswerWithAnimation:(void (^)(void))complete;
 
 -(void)showWrongAnswerWithAnimation;
--(void)showWrongAnswerWithAnimation:(void (^)())complete;
+-(void)showWrongAnswerWithAnimation:(void (^)(void))complete;
 
 @end

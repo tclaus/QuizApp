@@ -84,7 +84,7 @@
     [self showCorrectAnswerWithAnimation:nil];
 }
 
--(void)showCorrectAnswerWithAnimation:(void (^)())complete{
+-(void)showCorrectAnswerWithAnimation:(void (^)(void))complete{
    
     NSTimeInterval duration;
     if (self.selected) {
@@ -113,7 +113,7 @@
     [self showWrongAnswerWithAnimation:nil];
 }
 
--(void)showWrongAnswerWithAnimation:(void (^)())complete{
+-(void)showWrongAnswerWithAnimation:(void (^)(void))complete{
    
     NSTimeInterval duration;
     if (self.selected) {

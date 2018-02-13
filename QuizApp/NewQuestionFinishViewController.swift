@@ -9,7 +9,7 @@
 import UIKit
 
 class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
-   
+    
     
     var questionManager : NewQuestionManager?
     lazy var categories : [String]  =  Utils.categories()
@@ -23,11 +23,10 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         ADVTheme.addGradientBackground(view)
         // view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
-        
         setDelegates(explanationLink)
         sendButton.tintColor = UIColor.white
         cancelButton.tintColor = UIColor.white
@@ -35,7 +34,7 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         levelSlider.tintColor = UIColor.white
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,12 +46,12 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         // open Link to Wiki, if filed is empty
         // https://de.wikipedia.org/wiki/Wikipedia:Hauptseite
         
-       let wikiLink = "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
+        let wikiLink = "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
         
-        var URLToOpen : URL?
+        var URLToOpen: URL?
         
         if let text = explanationLink.text {
-            if text.characters.count > 3 {
+            if text.count > 3 {
                 URLToOpen = URL(string: text)!
             }
         }
@@ -62,11 +61,11 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
             UIApplication.shared.openURL(URLToOpen!)
             return
         }
-
+        
         UIApplication.shared.openURL(URLToOpen!)
         
     }
-
+    
     @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -81,7 +80,7 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-         return categories[row]
+        return categories[row]
     }
     
     @IBAction func cancelButton(_ sender: Any) {
@@ -101,7 +100,7 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
     }
     
     @IBAction func sendButton(_ sender: Any) {
-    
+        
         sendButton.isEnabled = false
         
         questionManager?.explanation = explanationLink.text
@@ -115,19 +114,17 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
                 self.navigationController!.popToRootViewController(animated: true)
                 self.dismiss(animated: true, completion: nil)
             }
-            
-            
         })
         
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
