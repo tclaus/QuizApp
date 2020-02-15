@@ -72,7 +72,7 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
     }
     
     @IBAction func explanationLinkChanged(_ sender: Any) {
-        questionManager?.explanation = explanationLink.text
+        questionManager?.explanation = explanationLink.text!
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -103,7 +103,7 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         
         sendButton.isEnabled = false
         
-        questionManager?.explanation = explanationLink.text
+        questionManager?.explanation = explanationLink.text!
         questionManager?.level = Int(levelSlider.value)
         questionManager?.category = categories[categoryPickerView.selectedRow(inComponent: 0)]
         // Start HUD

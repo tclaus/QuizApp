@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- Holds informatin about current Game
+ Holds information about current Game
  */
 class ActiveQuizGame: NSObject {
     

@@ -114,16 +114,17 @@
     Question* question = self.questions.listOfQuestions[indexPath.row];
     
     CGSize labelSize = CGSizeMake(cell.questionLabel.frame.size.width, MAXFLOAT);
-    CGRect labelRect;
-    if (question.text.length > 0)
-        labelRect = [question.text boundingRectWithSize:labelSize
+    CGFloat heigth = 0.0;
+    if (question.text.length > 0) {
+        CGRect labelRect = [question.text boundingRectWithSize:labelSize
                                                 options:NSStringDrawingUsesLineFragmentOrigin
                                              attributes:  @{NSFontAttributeName:[UIFont systemFontOfSize:22],
                                                             NSParagraphStyleAttributeName: paragraphStyle.copy}
                                                 context:nil];
-  
+        heigth =  labelRect.size.height;
+    }
    
-    return 24.0 + labelRect.size.height;
+    return 24.0 + heigth;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

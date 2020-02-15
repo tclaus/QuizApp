@@ -8,7 +8,14 @@
 
 import Foundation
 
-class Answer: NSObject {
+@objc
+class Answer: NSObject, Decodable, Encodable {
+    
+    enum CodingKeys: String, CodingKey {
+        case text = "text"
+        case correct = "correct"
+    }
+    
     @objc
     var text: String = ""
     @objc
@@ -16,17 +23,23 @@ class Answer: NSObject {
     @objc
     var chosen: Bool = false
     
-    @objc
-    init(dictionary:[String:Any]) {
-        self.text = dictionary["text"] as! String
-        
-        if let correct = dictionary["correct"] {
-            self.correct = (correct as! NSNumber).intValue == 1 ? true : false
-        }
-        
-        if let chosen = dictionary["chosen"] {
-            self.chosen = (chosen as! NSNumber).intValue == 1 ? true : false
-        }
+    override init() {
     }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.text = try! (container.decodeIfPresent(String.self, forKey: CodingKeys.text) ?? "")
+        self.correct = try! (container.decodeIfPresent(Bool.self, forKey: CodingKeys.correct) ?? false)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.text, forKey: CodingKeys.text)
+        try container.encode(self.correct, forKey: CodingKeys.correct)
+    }
+    
+    override var debugDescription: String {
+        return "\(correct): \(text)"
+       }
     
 }

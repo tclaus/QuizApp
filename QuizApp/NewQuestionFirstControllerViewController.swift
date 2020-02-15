@@ -95,8 +95,8 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
         // Pass the selected object to the new view controller.
         
         if segue.destination is NewQuestionWrongAnswersViewController {
-            questionManager.text = questionTextField.text
-            questionManager.correctAnswer = correctAnswerTextField.text
+            questionManager.text = questionTextField.text!
+            questionManager.correctAnswer = correctAnswerTextField.text!
             (segue.destination as! NewQuestionWrongAnswersViewController).questionManager = questionManager
             
         }

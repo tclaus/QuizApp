@@ -26,6 +26,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *gameModeButton1;
 @property (weak, nonatomic) IBOutlet UIButton *gameModeButton2;
+@property (weak, nonatomic) IBOutlet UIButton *mailSendButton;
 
 @end
 
@@ -50,7 +51,6 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
     [ADVTheme addGradientBackground:self.view];
     
     self.view.tintColor = [UIColor whiteColor];
-    
     
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.numberOfLines = 0;
@@ -80,6 +80,8 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
     [self.gameModeButton1 setTitle:mode1Text forState:UIControlStateNormal];
     [self.gameModeButton2 setTitle:NSLocalizedString(@"GameModeTrainingBased",@"") forState:UIControlStateNormal];
 
+    self.mailSendButton.enabled = [MFMailComposeViewController canSendMail];
+    
 }
 
 -(IBAction)startTapped:(id)sender{
@@ -111,11 +113,6 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
 }
 
 #pragma mark -
-- (IBAction)openFacebook:(id)sender {
-    
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/DasQuiz-1225048260850398/"]];
-    
-}
 
 - (IBAction)addQuestionButtonTouched:(id)sender {
     
@@ -123,9 +120,8 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
                                                                   kFIRParameterItemName:@"Open AddQuestion View",
                                                                   kFIRParameterItemID:@"OpenAddQuestion"
                                                                   }];
-
-    
 }
+
 - (IBAction)settingsButton:(id)sender {
 }
 

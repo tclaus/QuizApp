@@ -12,7 +12,7 @@
 #import "ExplanationViewController.h"
 #import "SoundSystem.h"
 #import "GameModel.h"
-#import "GameStats.h"
+
 #import "Utils.h"
 #import <DasQuiz-Swift.h>
 
@@ -62,11 +62,8 @@ static BOOL heartSoundPlaying;
     [super viewDidLoad];
     
     [self setupEnvironment];
-    
     [self showNextQuestion];
-    
     [self startBackgroundSound];
-    
 }
 
 -(void) startBackgroundSound {
@@ -317,8 +314,8 @@ static BOOL heartSoundPlaying;
     // 120 Punkte? => 1200
     
     // IAP Check
-    if ([self IAPCheck] && [GameStats sharedInstance].currentLevel >= 4 &&
-        [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+    if ([self IAPCheck] && GameStats.INSTANCE.currentLevel >= 4 &&
+        GameStats.INSTANCE.numberOfSuccessfulTries >= 3) {
         NSLog(@"Level 4 reached with 3 tries. But no IAP until now");
         return;
     }
@@ -326,7 +323,7 @@ static BOOL heartSoundPlaying;
     // In unterschiedlichen Levels, die Zeit anziehen lassen: 3Sec Pro Frage ist schon sehr schnell
     // Den ganz lahmen, oder wenn man einfach gar nichts macht, wird aber kein Punkt abgezogen
     
-    [GameStats sharedInstance].lastPoints = self.points;
+    GameStats.INSTANCE.lastPoints = self.points;
     
 }
 
@@ -341,15 +338,15 @@ static BOOL heartSoundPlaying;
             BOOL nextLevel = false;
             
             if ([self IAPProductPurchased] ||
-                ( [GameStats sharedInstance].currentLevel < [Config sharedInstance].quizIAP.numberOfFreeLevels) ||
-                ( [GameStats sharedInstance].currentLevel == [Config sharedInstance].quizIAP.numberOfFreeLevels && [GameStats sharedInstance].numberOfSuccessfulTries < 3)  ) {
-                nextLevel= [[GameStats sharedInstance] levelUp];
+                ( GameStats.INSTANCE.currentLevel < [Config sharedInstance].quizIAP.numberOfFreeLevels) ||
+                ( GameStats.INSTANCE.currentLevel == [Config sharedInstance].quizIAP.numberOfFreeLevels &&
+                 GameStats.INSTANCE.numberOfSuccessfulTries < 3)  ) {
+                
+                nextLevel= [GameStats.INSTANCE levelUp];
             } else {
                 // Not purchased!
                 return NSLocalizedString(@"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.",@"Wenn Du in das nächste Level möchtest, musst du das Spiel freischalten.");
             }
-            
-            
             
             // If next Level - Show screen
             // If only next Try - show number of tries
@@ -358,7 +355,6 @@ static BOOL heartSoundPlaying;
             } else {
                 return NSLocalizedString(@"Du hast ein Stern verdient!",@"Du hast ein Stern verdient!");
             }
-            
             
         } else if(percent >0.5 && percent <0.80) {
             
@@ -371,10 +367,9 @@ static BOOL heartSoundPlaying;
                 return @"Üben, üben, üben...";
             }
             
-            
         } else  {
             // Player just tapped, but doesn't care about right answers
-            BOOL downLevel = [[GameStats sharedInstance] levelDown];
+            BOOL downLevel = [GameStats.INSTANCE levelDown];
             
             // If level down - Show screen
             

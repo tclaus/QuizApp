@@ -2,7 +2,7 @@
 //  SettingsTableViewController.swift
 //  DasQuiz
 //
-//  Created by Thorsten Claus on 28.12.16.
+//  Created by Thorsten Claus on 28.12.16
 //  Copyright © 2016 Claus-Software. All rights reserved.
 //
 

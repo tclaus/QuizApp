@@ -376,7 +376,7 @@ SendReport *sendReport;
     [self animateReportOut];
     
     // Get Type
-    int reportType;
+    int reportType = 0;
     for (UIButton *button in self.reportTypesStackView.subviews) {
         if (button.selected) {
           reportType =  (int)button.tag;

@@ -13,9 +13,6 @@ import UIKit
  */
 class SendReport: NSObject {
 
-    let baseURL : String = "https://rocky-temple-21345.herokuapp.com/"
-    // let baseURL : String = "http://localhost:5000"
-    
     @objc
     func sendReport(questionID : Int, reason : Int)  {
         print("Sending a report...Question: \(questionID), Reason:\(reason)")
@@ -23,30 +20,17 @@ class SendReport: NSObject {
         let JSONData = ["reason":reason,
                         "questionID":questionID]
         
-        
-        
         let configuration = URLSessionConfiguration.default
         
-        let username = "quiz"
-        let password = "lehn170#Yong"
-        let authStr = "\(username):\(password)"
-        
-        let authData = authStr.data(using: String.Encoding.ascii)
-        let authStrData : String = (authData?.base64EncodedString(options: []))!
-        
-        
-        let session = URLSession(configuration: configuration)
-        
-        let request = NSMutableURLRequest()
-        request.url = URL(string: baseURL)?.appendingPathComponent("reports")
+        var request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: "reports", queryItems: nil)
         request.httpMethod = "POST";
         request.timeoutInterval = 30;
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody  = try! JSONSerialization.data( withJSONObject: JSONData, options: [])
-        request.setValue("Basic \(authStrData)", forHTTPHeaderField: "Authorization")
-
         
+
+        let session = URLSession(configuration: configuration)
         let dataTask = session.dataTask(with: request as URLRequest) {data, response , error in
             //
             guard let httpResponse = response as? HTTPURLResponse, let receivedData = data
@@ -72,8 +56,6 @@ class SendReport: NSObject {
             }
         }
         dataTask.resume();
-        
-        
         
     }
     

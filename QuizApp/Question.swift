@@ -8,12 +8,24 @@
 
 import UIKit
 
-class Question: NSObject {
+class Question: NSObject, Decodable, Encodable {
+    
+    enum CodingKeys: String, CodingKey {
+        case uid = "_id"
+        case questionId = "questionId"
+        case text = "text"
+        case levelId = "levelId"
+        case explanation = "explanation"
+        case category = "category"
+        case answers = "answers"
+    }
     
     @objc
-    var questionID: Int
+    var uid : String = ""
     @objc
-    var level: Int
+    var questionID: Int = 0
+    @objc
+    var level: Int = 0
     @objc
     var text: String = ""
     @objc
@@ -22,6 +34,7 @@ class Question: NSObject {
     var explanation: String = ""
     @objc
     var category: String = ""
+    
     
     /**
      Number of points given for a correct answered question
@@ -63,7 +76,7 @@ class Question: NSObject {
         }
         return false
     }
-
+    
     @objc
     override func isEqual(_ object: Any?) -> Bool {
         if let o = object as? Question {
@@ -72,21 +85,39 @@ class Question: NSObject {
         return false
     }
     
-    @objc
-    init(dictionary: [String:Any]) {
+    
+    override init() {
+        super.init()
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.text = dictionary["text"] as! String
-        self.explanation = dictionary["explanation"] as! String
-        self.category = dictionary["category"] as! String
-        
-        self.level = ( dictionary["levelId"] as! NSNumber) as! Int
-        self.questionID  = Int(dictionary["questionId"] as! String)!
-        
-        let answerArray = dictionary["answers"] as! [[String:Any]]
-        for answerDictionary in answerArray {
-            let answer = Answer(dictionary: answerDictionary)
-            self.answers.append(answer)
+        self.uid = try (container.decodeIfPresent(String.self, forKey: CodingKeys.uid) ?? "")
+        if let questionId = try? (container.decodeIfPresent(String.self, forKey: CodingKeys.questionId) ?? "0") {
+            self.questionID = Int(questionId)!
         }
+        else {
+            if let questionId = try? (container.decodeIfPresent(Int.self, forKey: CodingKeys.questionId) ?? 0) {
+                self.questionID = questionId
+            }
+        }
+        
+        self.level = try (container.decodeIfPresent(Int.self, forKey: CodingKeys.levelId) ?? 0)
+        self.text = try (container.decodeIfPresent(String.self, forKey: CodingKeys.text) ?? "")
+        self.explanation = try (container.decodeIfPresent(String.self, forKey: CodingKeys.explanation) ?? "")
+        self.category = try (container.decodeIfPresent(String.self, forKey: CodingKeys.category) ?? "")
+        self.answers = try (container.decodeIfPresent([Answer].self, forKey: CodingKeys.answers) ?? [Answer]())
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.uid, forKey: CodingKeys.uid)
+        try container.encode(self.text, forKey: CodingKeys.text)
+        try container.encode(self.level, forKey: CodingKeys.levelId)
+        try container.encode(self.explanation, forKey: CodingKeys.explanation)
+        try container.encode(self.category, forKey: CodingKeys.category)
+        try container.encode(self.answers, forKey: CodingKeys.answers)
     }
     
     override var debugDescription: String {

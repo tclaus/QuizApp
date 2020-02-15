@@ -21,5 +21,4 @@
 +(void)saveTimeBasedAggregates:(Questions*) resultQuestions forDate:(NSDate*) date;
 +(void)saveTrainingAggregates:(Questions*) resultQuestions forDate:(NSDate*) date;
 
-+(Questions *)questionsFromFile:(NSString*)file;
 @end

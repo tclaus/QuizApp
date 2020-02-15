@@ -14,7 +14,7 @@
 
 
 @property (nonatomic, strong) NSDictionary* configInfo;
-
+@property (nonnull, strong) QuestionUpdater* questionUpdater;
 @end
 
 @implementation Config
@@ -42,6 +42,7 @@
     NSString* path = [[NSBundle mainBundle] pathForResource:@"Configuration" ofType:@"plist"];
     
     self.configInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
+    self.questionUpdater = [[QuestionUpdater alloc] init];
     
     NSDictionary* quizSettings = self.configInfo[@"Quiz Settings"];
     
@@ -113,7 +114,11 @@
         questionFilename = @"1000-questions_en.json";
     }
     
-    self.questions = [Datasource questionsFromFile:questionFilename];
+    // Store loaded questins statically in this property
+    self.questions = [QuestionsFileLoader loadQuestionsFromFileWithFileName: questionFilename];
+    
+    // Check for updates
+    [self.questionUpdater updateQuestionsWithQuestions:self.questions];
     
 }
 

@@ -21,7 +21,6 @@
 #import "GameKitManager.h"
 #import "QuizIAPHelper.h"
 #import "GameModel.h"
-#import "GameStats.h"
 #import "SoundSystem.h"
 #import <UAAppReviewManager/UAAppReviewManager.h>
 #import <DasQuiz-Swift.h>
@@ -107,9 +106,9 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (lastLevel < [GameStats sharedInstance].currentLevel) {
+    if (lastLevel < GameStats.INSTANCE.currentLevel) {
         [self animateIn];
-        lastLevel = [GameStats sharedInstance].currentLevel;
+        lastLevel = GameStats.INSTANCE.currentLevel;
     }
     
 }
@@ -212,14 +211,17 @@
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
-    [self.refreshControl beginRefreshing];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(productPurchased:)
+                                                 name:IAPHelperProductPurchasedNotification
+                                               object:nil];
+
     [[QuizIAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
         if (success) {
-            _products = products;
+            self->_products = products;
         }
-        [self.refreshControl endRefreshing];
     }];
     
     
@@ -227,10 +229,8 @@
     self.scoresBarChartContainer.backgroundColor = [UIColor clearColor];
     self.spacerView.backgroundColor = [UIColor clearColor];
     
-    
-    
     // Save Effect
-    lastLevel = [GameStats sharedInstance].currentLevel;
+    lastLevel = GameStats.INSTANCE.currentLevel;
     
     self.effectView = [[UIVisualEffectView alloc] initWithFrame:self.view.bounds];
     self.effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
@@ -299,7 +299,7 @@
 -(void)animateIn{
     
     [FIRAnalytics logEventWithName:kFIREventLevelUp parameters:@{
-                                                                 kFIRParameterLevel:[NSNumber numberWithInteger:[GameStats sharedInstance].currentLevel]}];
+                                                                 kFIRParameterLevel:[NSNumber numberWithInteger:GameStats.INSTANCE.currentLevel]}];
     
     [[SoundSystem sharedInstance] playLevelUpSound];
     
@@ -341,27 +341,27 @@
  */
 -(void)displayLevelAndStars {
     
-    self.levelNumber.text = [NSString stringWithFormat:@"%ld", (long)[GameStats sharedInstance].currentLevel];
-    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", (long)[GameStats sharedInstance].lastPoints];
+    self.levelNumber.text = [NSString stringWithFormat:@"%ld", (long)GameStats.INSTANCE.currentLevel];
+    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", (long)GameStats.INSTANCE.lastPoints];
     self.star1.alpha = 0;
     self.star2.alpha = 0;
     self.star3.alpha = 0;
     
-    if ([GameStats sharedInstance].numberOfSuccessfulTries >= 1) {
+    if (GameStats.INSTANCE.numberOfSuccessfulTries >= 1) {
         
         [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
             self.star1.alpha = 1.0;
         } completion:nil];
     }
     
-    if ([GameStats sharedInstance].numberOfSuccessfulTries >= 2) {
+    if (GameStats.INSTANCE.numberOfSuccessfulTries >= 2) {
         
         [UIView animateWithDuration:0.5 delay:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
             self.star2.alpha = 1.0;
         } completion:nil];
     }
     
-    if ([GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+    if (GameStats.INSTANCE.numberOfSuccessfulTries >= 3) {
         
         [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveLinear animations:^{
             self.star3.alpha = 1.0;
@@ -415,26 +415,25 @@
 
 -(void)prepareStartQuiz {
     
-    
     // For training: fixed number from all topics
     // For Time based: unlimited Number. (countQuestions is 0)
     
-    NSLog(@"Level = %ld",(long) [GameStats sharedInstance].currentLevel );
-    NSLog(@"Tries = %ld",(long) [GameStats sharedInstance].numberOfSuccessfulTries );
+    NSLog(@"Level = %ld",(long) GameStats.INSTANCE.currentLevel );
+    NSLog(@"Tries = %ld",(long) GameStats.INSTANCE.numberOfSuccessfulTries );
     
-    if ([GameStats sharedInstance].currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels ) {
+    if (GameStats.INSTANCE.currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels ) {
         if ( [self IAPCheck]) {
             NSLog(@"Not buyed. Repair fraud");
             
-            if ([GameStats sharedInstance].currentLevel > [Config sharedInstance].quizIAP.numberOfFreeLevels) {
-                [GameStats sharedInstance].currentLevel = [Config sharedInstance].quizIAP.numberOfFreeLevels;
-                [GameStats sharedInstance].numberOfSuccessfulTries = 3;
-                [[GameStats sharedInstance] saveData];
+            if (GameStats.INSTANCE.currentLevel > [Config sharedInstance].quizIAP.numberOfFreeLevels) {
+                GameStats.INSTANCE.currentLevel = [Config sharedInstance].quizIAP.numberOfFreeLevels;
+                GameStats.INSTANCE.numberOfSuccessfulTries = 3;
+                [GameStats.INSTANCE saveData];
             }
         }
     }
     
-    if ( [self IAPCheck] && [GameStats sharedInstance].currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels && [GameStats sharedInstance].numberOfSuccessfulTries >= 3) {
+    if ( [self IAPCheck] && GameStats.INSTANCE.currentLevel >= [Config sharedInstance].quizIAP.numberOfFreeLevels && GameStats.INSTANCE.numberOfSuccessfulTries >= 3) {
         
         UIAlertController* alert =  [UIAlertController alertControllerWithTitle:[Config sharedInstance].quizIAP.messageTitle
                                                                         message:[NSString stringWithFormat:[Config sharedInstance].quizIAP.messageText, [Config sharedInstance].quizIAP.numberOfFreeLevels]
@@ -478,7 +477,7 @@
         
         Questions* questions = [Utils loadQuestionsShuffeledFromTopics:Config.sharedInstance.questions
                                               forTotalNumberOfQuestions:questionCount
-                                                               minLevel:GameStats.sharedInstance.currentLevel];
+                                                            minLevel:GameStats.INSTANCE.currentLevel];
         
         self.activeQuizGame.questions = questions;
         self.activeQuizGame.totalNumberOfQuestions = questionCount;
@@ -532,7 +531,7 @@
     
     self.activeQuizGame.questions = [Utils loadQuestionsShuffeledFromTopics:Config.sharedInstance.questions
                                            forTotalNumberOfQuestions:numberOfQuestions
-                                                            minLevel:[GameStats sharedInstance].currentLevel];
+                                                            minLevel:GameStats.INSTANCE.currentLevel];
     
     [self performSegueWithIdentifier:@"startTest" sender:self];
     

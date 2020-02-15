@@ -94,9 +94,9 @@ class NewQuestionWrongAnswersViewController: KeyboardViewController {
         
         if segue.destination is NewQuestionFinishViewController {
             
-            questionManager?.wrongAnswer1 = firstWrongAnswer.text
-            questionManager?.wrongAnswer2 = secondWrongAnswer.text
-            questionManager?.wrongAnswer3 = thirdWrongAnswer.text
+            questionManager?.wrongAnswer1 = firstWrongAnswer.text!
+            questionManager?.wrongAnswer2 = secondWrongAnswer.text!
+            questionManager?.wrongAnswer3 = thirdWrongAnswer.text!
             
             (segue.destination as! NewQuestionFinishViewController).questionManager = questionManager
         }

@@ -2,8 +2,7 @@
 //  AppDelegate.m
 //  QuizApp
 //
-//  Created by Tope Abayomi on 18/12/2013.
-//  Copyright (c) 2013 App Design Vault. All rights reserved.
+//  Created by Thorsten Claus in 2017 - redesigned in 2020
 //
 
 #import "AppDelegate.h"
@@ -33,6 +32,8 @@
 
 @implementation AppDelegate
 
+
+NSString *const kGCMMessageIDKey = @"gcm.message_id";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [ADVTheme customizeTheme];
@@ -48,59 +49,39 @@
     [UAAppReviewManager setRemindButtonTitle:NSLocalizedString(@"Später vielleicht",@"Later - maybe")];
     [UAAppReviewManager showPromptIfNecessary];
     
+    [FIRApp configure];
+    [FIRMessaging messaging].delegate = self;
     
-    // Register for remote notifications
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
-        // iOS 7.1 or earlier. Disable the deprecation warnings.
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        UIRemoteNotificationType allNotificationTypes =
-        (UIRemoteNotificationTypeSound |
-         UIRemoteNotificationTypeAlert |
-         UIRemoteNotificationTypeBadge);
-        [application registerForRemoteNotificationTypes:allNotificationTypes];
-#pragma clang diagnostic pop
+    // Register for remote notifications. This shows a permission dialog on first run, to
+    // show the dialog at a more appropriate time move this registration accordingly.
+    // [START register_for_notifications]
+    if ([UNUserNotificationCenter class] != nil) {
+        // iOS 10 or later
+        // For iOS 10 display notification (sent via APNS)
+        [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+        UNAuthorizationOptions authOptions = UNAuthorizationOptionAlert |
+        UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+        [[UNUserNotificationCenter currentNotificationCenter]
+         requestAuthorizationWithOptions:authOptions
+         completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            // ...
+        }];
     } else {
-        // iOS 8 or later
-        // [START register_for_notifications]
-        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max) {
-            UIUserNotificationType allNotificationTypes =
-            (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
-            UIUserNotificationSettings *settings =
-            [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
-            [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-        } else {
-            // iOS 10 or later
-#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
-            UNAuthorizationOptions authOptions =
-            UNAuthorizationOptionAlert
-            | UNAuthorizationOptionSound
-            | UNAuthorizationOptionBadge;
-            [[UNUserNotificationCenter currentNotificationCenter]
-             requestAuthorizationWithOptions:authOptions
-             completionHandler:^(BOOL granted, NSError * _Nullable error) {
-             }
-             ];
-            
-            // For iOS 10 display notification (sent via APNS)
-            [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
-            // For iOS 10 data message (sent via FCM)
-            [[FIRMessaging messaging] setRemoteMessageDelegate:self];
-#endif
-        }
-        
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-        // [END register_for_notifications]
-        
+        // iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
+        UIUserNotificationType allNotificationTypes =
+        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+        UIUserNotificationSettings *settings =
+        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+        [application registerUserNotificationSettings:settings];
     }
+    
+    [application registerForRemoteNotifications];
+    
+    // [END register_for_notifications]
+    
     // [END configure_firebase]
     
-    [FIRApp configure];
-    
     // Add observer for InstanceID token refresh callback.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tokenRefreshNotification:)
-                                                 name:kFIRInstanceIDTokenRefreshNotification object:nil];
-    
     
     return YES;
 }
@@ -113,13 +94,14 @@
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
          withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-    // Print message ID.
-    NSDictionary *userInfo = notification.request.content.userInfo;
-    NSLog(@"Message ID: %@", userInfo[@"gcm.message_id"]);
     
-    // Print full message.
-    NSLog(@"%@", userInfo);
+    NSLog(@"Got a new Message");
+    
+    // Change this to your preferred presentation option
+    completionHandler(UNNotificationPresentationOptionAlert);
 }
+
+
 
 // Handle notification messages after display notification is tapped by the user.
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
@@ -127,6 +109,8 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
          withCompletionHandler:(void (^)(void))completionHandler {
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     NSLog(@"%@", userInfo);
+    completionHandler();
+    
 }
 #endif
 // [END ios_10_message_handling]
@@ -142,6 +126,18 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 #endif
 // [END ios_10_data_message_handling]
 
+
+// [START refresh_token]
+- (void)messaging:(FIRMessaging *)messaging didReceiveRegistrationToken:(NSString *)fcmToken {
+    NSLog(@"FCM registration token: %@", fcmToken);
+    // Notify about received token.
+    NSDictionary *dataDict = [NSDictionary dictionaryWithObject:fcmToken forKey:@"token"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:
+     @"FCMToken" object:nil userInfo:dataDict];
+    // TODO: If necessary send token to application server.
+    // Note: This callback is fired at each app startup and whenever a new token is generated.
+}
+
 // To receive notifications for iOS 9 and below.
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
@@ -149,36 +145,15 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     // this callback will not be fired till the user taps on the notification launching the application.
     // TODO: Handle data of notification
     
-    // Print message ID.
-    NSLog(@"Message ID: %@", userInfo[@"gcm.message_id"]);
+    if (userInfo[kGCMMessageIDKey]) {
+        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
+    }
     
     // Print full message.
     NSLog(@"%@", userInfo);
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 
-- (void)tokenRefreshNotification:(NSNotification *)notification {
-    // Note that this callback will be fired everytime a new token is generated, including the first
-    // time. So if you need to retrieve the token as soon as it is available this is where that
-    // should be done.
-    NSString *refreshedToken = [[FIRInstanceID instanceID] token];
-    NSLog(@"InstanceID token: %@", refreshedToken);
-    
-    // Connect to FCM since connection may have failed when attempted before having a token.
-    [self connectToFcm];
-    
-    // TODO: If necessary send token to application server.
-}
-
-// [START connect_to_fcm]
-- (void)connectToFcm {
-    [[FIRMessaging messaging] connectWithCompletion:^(NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Unable to connect to FCM. %@", error);
-        } else {
-            NSLog(@"Connected to FCM.");
-        }
-    }];
-}
 // [END connect_to_fcm]
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -192,24 +167,13 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     NSLog(@"APNs token retrieved: %@", deviceToken);
     
     // With swizzling disabled you must set the APNs token here.
-    // [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+    [FIRMessaging messaging].APNSToken = deviceToken;
 }
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [[FIRMessaging messaging] disconnect];
-    NSLog(@"Disconnected from FCM");
-    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
