@@ -807,7 +807,6 @@
 						TestTargetID = ECE03E87186213E00042490A;
 					};
 					ECE03E87186213E00042490A = {
-						DevelopmentTeam = MYEC2JCSBB;
 						DevelopmentTeamName = "Thorsten Claus";
 						LastSwiftMigration = 1130;
 						SystemCapabilities = {
@@ -1356,6 +1355,7 @@
 				CODE_SIGN_ENTITLEMENTS = DasQuiz.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MYEC2JCSBB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuizApp/DasQuiz-Prefix.pch";
 				INFOPLIST_FILE = "QuizApp/DasQuiz-Info.plist";
@@ -1383,6 +1383,7 @@
 				CODE_SIGN_ENTITLEMENTS = DasQuiz.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MYEC2JCSBB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuizApp/DasQuiz-Prefix.pch";
 				INFOPLIST_FILE = "QuizApp/DasQuiz-Info.plist";
