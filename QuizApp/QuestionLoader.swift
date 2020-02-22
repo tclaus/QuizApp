@@ -30,19 +30,26 @@ class QuestionLoader: NSObject {
             lastCheck = "2017-01-01"
         }
         
-        loadNewQuestions(language: language!, since: lastCheck!, questionCompletionHandler: { (jsonData) in
-            var results : (added: Int,updated: Int) = (0,0)
-            if let jsonData = jsonData {
-                let decoder = JSONDecoder()
-                let incommingNewQuestions = try! decoder.decode([ServerQuestion].self, from: jsonData)
-                results = existingQuestions.mergeNewQuestions(newQuestions: incommingNewQuestions)
-                print("Questions added: \(results.added), updated: \(results.updated)")
-                
-                let ts = self.currentTimeStamp()
-                UserDefaults.standard.set(ts, forKey: "last_check_for_new_questions_" + language!)
-            }
-            completed(results.added, results.updated)
-        })
+        // check once a week
+        #if targetEnvironment(simulator)
+            lastCheck = "2017-01-01"
+        #endif
+        if (daysSinceLastCheck(lastCheck: lastCheck!) > 1) {
+            
+            loadNewQuestions(language: language!, since: lastCheck!, questionCompletionHandler: { (jsonData) in
+                var results : (added: Int,updated: Int) = (0,0)
+                if let jsonData = jsonData {
+                    let decoder = JSONDecoder()
+                    let incommingNewQuestions = try! decoder.decode([ServerQuestion].self, from: jsonData)
+                    results = existingQuestions.mergeNewQuestions(newQuestions: incommingNewQuestions)
+                    print("Questions added: \(results.added), updated: \(results.updated)")
+                    
+                    let ts = self.currentTimeStamp()
+                    UserDefaults.standard.set(ts, forKey: "last_check_for_new_questions_" + language!)
+                }
+                completed(results.added, results.updated)
+            })
+        }
     }
     
     func currentTimeStamp() -> String {
@@ -50,6 +57,19 @@ class QuestionLoader: NSObject {
         dfmatter.dateFormat="yyyy-MM-dd"
         let dateString = dfmatter.string(from: Date())
         return dateString
+    }
+    
+    func daysSinceLastCheck(lastCheck: String) -> Int {
+        let dfmatter = DateFormatter()
+        dfmatter.dateFormat="yyyy-MM-dd"
+        let lastCheckDate = dfmatter.date(from: lastCheck)!
+        let calendar = Calendar.current
+        let date1 = calendar.startOfDay(for: lastCheckDate)
+        let date2 = calendar.startOfDay(for: Date())
+        let flags = Set([Calendar.Component.day])
+        let dateComponents = calendar.dateComponents(flags, from: date1, to: date2)
+        print("Last cheeck was: \(dateComponents)")
+        return dateComponents.day!
     }
     
     /**

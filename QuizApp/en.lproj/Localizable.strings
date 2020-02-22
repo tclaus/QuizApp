@@ -151,3 +151,6 @@
 
 "twitterText" = "I got %ld points in level %ld with 'DAS!Quiz' for iOS!";
 
+"New questions arrived" = "New questions arrived";
+
+"We got %lu new questions and %lu updated." = "We got %lu new questions and %lu updated.";

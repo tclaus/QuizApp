@@ -150,3 +150,6 @@
 
 "twitterText" = "Ich habe bei 'DAS!Quiz' soeben %ld Punkte im Level %ld erreicht!";
 
+"New questions arrived" = "Neue Fragen eingetroffen";
+
+"We got %lu new questions and %lu updated." = "Es wuden %lu Fragen hinzugefügt und %lu aktualisiert";

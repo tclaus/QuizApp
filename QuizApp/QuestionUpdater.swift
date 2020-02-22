@@ -18,10 +18,15 @@ class QuestionUpdater: NSObject {
     @objc
     func updateQuestions(questions: Questions ) {
         questionLoader.loadAndProcessNewQuestions(existingQuestions: questions) { (added, updated) in
-            // Notify !
+            
+            // Notify only with new or updated questions!
+            if (added == 0 && updated == 0) {
+                return
+            }
+            
             let content = UNMutableNotificationContent()
-            content.title = "New questions arrived"
-            content.body = "We got \(added) new questions and \(updated) updated."
+            content.title = NSLocalizedString("New questions arrived", comment: "")
+            content.body = String.init(format: NSLocalizedString("We got %lu new questions and %lu updated.", comment: ""), added,updated)
             
             let uuidString = UUID().uuidString
             
