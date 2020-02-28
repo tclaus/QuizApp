@@ -312,24 +312,17 @@
 {
     GKLocalPlayer *lp = [GKLocalPlayer localPlayer];
     if (lp.authenticated){
-        /*[lp loadFriendsWithCompletionHandler:^(NSArray *friendIDs, NSError *error) {
-            
-            [self setLastError:error];
-            if (friendIDs != nil){
-                
-                if([_delegate respondsToSelector:@selector(didReceiveFriendsList:)])
-                    [_delegate didReceiveFriendsList:friendIDs];
-            }
-        }];*/
         
-        [lp loadFriendPlayersWithCompletionHandler:^(NSArray *players, NSError *error) {
+        
+        [lp loadChallengableFriendsWithCompletionHandler:^(NSArray<GKPlayer *> * _Nullable challengableFriends, NSError * _Nullable error) {
             [self setLastError:error];
-            if (players != nil){
+            if (challengableFriends != nil){
                 
                 if([self->_delegate respondsToSelector:@selector(didReceiveFriendsList:)])
-                    [self->_delegate didReceiveFriendsList:players];
+                    [self->_delegate didReceiveFriendsList:challengableFriends];
             }
         }];
+    
     }
 }
 

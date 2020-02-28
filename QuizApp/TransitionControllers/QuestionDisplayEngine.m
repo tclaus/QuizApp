@@ -37,7 +37,6 @@
         UIStoryboard* storyboard = [UIStoryboard storyboardWithName:storybardName bundle:nil];
         
         self.questionController1 = [storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
-        
         self.questionController2 = [storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
         
     }
@@ -104,11 +103,11 @@
         
         fromPackage.centerXConstraint.constant = -fromValue;
         toPackage.centerXConstraint.constant = toValue;
-        // [mainView layoutIfNeeded];
+        [mainView layoutIfNeeded];
         
     } completion:^(BOOL finished) {
         
-        fromPackage.centerXConstraint.constant = 2*mainView.frame.size.width;
+        fromPackage.centerXConstraint.constant = 2 * mainView.frame.size.width;
     }];
     
     if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {

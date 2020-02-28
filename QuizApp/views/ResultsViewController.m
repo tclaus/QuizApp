@@ -116,8 +116,6 @@
     
     if([Config sharedInstance].gameCenterEnabled){
         
-       
-       
         if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
             
             NSString* leaderboardID;
