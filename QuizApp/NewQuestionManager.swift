@@ -43,20 +43,17 @@ class NewQuestionManager {
             "language":language!,
             "category":category!]
         
-       
-        
-        var request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: "newQuestions", queryItems: nil)
+        var request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: "/api/newQuestions", queryItems: nil)
         request.httpMethod = "POST";
         request.timeoutInterval = 30;
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody  = try! JSONSerialization.data( withJSONObject: JSONData, options: [])
-         
+        
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
         let dataTask = session.dataTask(with: request as URLRequest) {data, response , error in
-            //
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
             guard let httpResponse = response as? HTTPURLResponse, let receivedData = data
                 else {
                     print("No valid response")
@@ -68,7 +65,7 @@ class NewQuestionManager {
             case 200,201:
                 let response = NSString (data: receivedData, encoding: String.Encoding.utf8.rawValue)
                 print("SUCCESS: New question successfully end to server: \(String(describing: response)) ")
-                
+                self.createSuccessNotification()
             default:
                 print("Sending report got response \(httpResponse.statusCode)")
             }
@@ -76,7 +73,29 @@ class NewQuestionManager {
             completionHandler(error)
             
         }
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         dataTask.resume();
     }
+    
+    /**
+        Send a positive message send notification
+        */
+       func createSuccessNotification(){
+           let content = UNMutableNotificationContent()
+           content.title = NSLocalizedString("New question received", comment: "")
+           content.body = NSLocalizedString("Your question will be processed and added later to the database. Thank you.", comment: "")
+           
+           let uuidString = UUID().uuidString
+           
+           let request = UNNotificationRequest(identifier: uuidString,
+                                               content: content, trigger: nil)
+           
+           // Schedule the request with the system.
+           let notificationCenter = UNUserNotificationCenter.current()
+           notificationCenter.add(request) { (error) in
+               if error != nil {
+                   // Handle any errors.
+               }
+           }
+       }
+    
 }

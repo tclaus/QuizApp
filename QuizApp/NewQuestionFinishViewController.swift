@@ -58,11 +58,11 @@ class NewQuestionFinishViewController: KeyboardViewController, UIPickerViewDataS
         
         guard let _ = URLToOpen else {
             URLToOpen = URL(string: wikiLink)
-            UIApplication.shared.openURL(URLToOpen!)
+            UIApplication.shared.open(URLToOpen!, options: [:] , completionHandler: nil)
             return
         }
         
-        UIApplication.shared.openURL(URLToOpen!)
+        UIApplication.shared.open(URLToOpen!, options: [:] , completionHandler: nil)
         
     }
     

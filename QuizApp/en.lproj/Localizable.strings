@@ -154,3 +154,7 @@
 "New questions arrived" = "New questions arrived";
 
 "We got %lu new questions and %lu updated." = "We got %lu new questions and %lu updated.";
+
+"New question received" = "New question received";
+
+"Your question will be processed and added later to the database. Thank you." = "Your question will be processed and added later to the database. Thank you.";

@@ -416,8 +416,7 @@ static BOOL heartSoundPlaying;
                             parameters:@{
                                          @"questionID": [NSNumber numberWithInteger: question.questionID]
                                          }];
-        
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options: @{} completionHandler:nil];
     }
     // Dont open a view, go to wikipedia
     // [self performSegueWithIdentifier:@"info" sender:self];

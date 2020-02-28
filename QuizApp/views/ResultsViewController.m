@@ -14,7 +14,6 @@
 #import "Utils.h"
 #import "GameKitManager.h"
 #import "Config.h"
-#import "GameChallengeController.h"
 #import "DropAnimationController.h"
 #import "GameModel.h"
 #import <DasQuiz-Swift.h>
@@ -139,36 +138,7 @@
         } else {
             // TODO: Endles game leaderboard
         }
-        
-       
     }
-}
-
-
--(IBAction)reviewButtonTapped:(id)sender{
-    [self performSegueWithIdentifier:@"review" sender:self];
-}
-
--(IBAction)challengeFriendsTapped:(id)sender{
-    
-    [self performSegueWithIdentifier:@"challenge" sender:self];
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"review"]){
-        
-        ReviewViewController* controller = segue.destinationViewController;
-        
-        controller.questions = self.questions;
-    }else if([segue.identifier isEqualToString:@"challenge"]){
-        
-        GameChallengeController* controller = segue.destinationViewController;
-        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
-            controller.transitioningDelegate = self;
-            controller.modalPresentationStyle = UIModalPresentationCustom;
-        }
-    }
-    
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented

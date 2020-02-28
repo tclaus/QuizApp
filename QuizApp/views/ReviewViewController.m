@@ -89,9 +89,8 @@
                                                                           [FIRAnalytics logEventWithName:@"ViewExplanation"
                                                                                               parameters:@{
                                                                                                            @"questionID": [NSNumber numberWithInteger: question.questionID]
-                                                                                                           }];
-                                                                          
-                                                                          [[UIApplication sharedApplication] openURL:explanatioinURL];
+                                                                                              }];
+        [[UIApplication sharedApplication] openURL:explanatioinURL options:@{} completionHandler:nil];
                                                                       
                                                                   }];
     return @[info];

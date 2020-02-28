@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -70,7 +70,6 @@
 		9986495FD3EA31D49EE802CC /* Pods_DasQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */; };
 		EC0D18361899354F00BE6368 /* QuestionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0D18351899354F00BE6368 /* QuestionHeaderView.xib */; };
 		EC0D184D1899721100BE6368 /* UIImageAverageColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D184C1899721100BE6368 /* UIImageAverageColorAddition.m */; };
-		EC18EBFB18B24CCD00E7FE4F /* GameChallengeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC18EBF918B24CCD00E7FE4F /* GameChallengeController.m */; };
 		EC18EBFF18B24EAD00E7FE4F /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC18EBFE18B24EAD00E7FE4F /* FriendCell.m */; };
 		EC2141DA189029CE00739070 /* ResultAggregate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2141D9189029CE00739070 /* ResultAggregate.m */; };
 		EC2141DE189116EF00739070 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2141DD189116EF00739070 /* Utils.m */; };
@@ -208,8 +207,6 @@
 		EC0D18351899354F00BE6368 /* QuestionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionHeaderView.xib; sourceTree = "<group>"; };
 		EC0D184B1899721100BE6368 /* UIImageAverageColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAverageColorAddition.h; sourceTree = "<group>"; };
 		EC0D184C1899721100BE6368 /* UIImageAverageColorAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAverageColorAddition.m; sourceTree = "<group>"; };
-		EC18EBF818B24CCC00E7FE4F /* GameChallengeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameChallengeController.h; sourceTree = "<group>"; };
-		EC18EBF918B24CCD00E7FE4F /* GameChallengeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameChallengeController.m; sourceTree = "<group>"; };
 		EC18EBFD18B24EAD00E7FE4F /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCell.h; path = Cells/FriendCell.h; sourceTree = "<group>"; };
 		EC18EBFE18B24EAD00E7FE4F /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCell.m; path = Cells/FriendCell.m; sourceTree = "<group>"; };
 		EC2141D8189029CE00739070 /* ResultAggregate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultAggregate.h; path = Model/ResultAggregate.h; sourceTree = "<group>"; };
@@ -505,8 +502,6 @@
 			children = (
 				ECD4C8C018ABEC0D00BE5492 /* GameKitManager.h */,
 				ECD4C8C118ABEC0D00BE5492 /* GameKitManager.m */,
-				EC18EBF818B24CCC00E7FE4F /* GameChallengeController.h */,
-				EC18EBF918B24CCD00E7FE4F /* GameChallengeController.m */,
 			);
 			path = GameCenter;
 			sourceTree = "<group>";
@@ -821,48 +816,14 @@
 				};
 			};
 			buildConfigurationList = ECE03E83186213E00042490A /* Build configuration list for PBXProject "DasQuiz" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				de,
 				Base,
 				en,
-				el,
-				"zh-Hans",
-				ja,
-				uk,
-				nb,
-				es,
-				it,
-				sv,
-				"zh-Hant",
-				hu,
-				tr,
-				pl,
-				"es-MX",
-				ru,
-				fr,
-				nl,
-				th,
-				pt,
-				"pt-PT",
-				hr,
-				ca,
-				he,
-				ar,
 				arm,
-				hy,
-				da,
-				sk,
-				ms,
-				cs,
-				ko,
-				"pt-BR",
-				vi,
-				fi,
-				id,
-				ro,
 			);
 			mainGroup = ECE03E7F186213E00042490A;
 			productRefGroup = ECE03E89186213E00042490A /* Products */;
@@ -1038,7 +999,6 @@
 				6562C88F1DDBB3A400EC38BE /* NewQuestionManager.swift in Sources */,
 				EC2141E118915F8900739070 /* PNScrollBarChart.m in Sources */,
 				EC53D9F218A01B0100AA9D93 /* Config.m in Sources */,
-				EC18EBFB18B24CCD00E7FE4F /* GameChallengeController.m in Sources */,
 				ECAE920C18C77E4300D5EBAB /* StartViewController.m in Sources */,
 				ECBD0C911876FBF5002DC98B /* PNLineChart.m in Sources */,
 				ECBD0C931876FBF5002DC98B /* UICountingLabel.m in Sources */,
@@ -1147,7 +1107,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DasQuizTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.DasQuizTests";
@@ -1176,7 +1140,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DasQuizTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.DasQuizTests";
@@ -1202,7 +1170,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DasQuizUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.DasQuizUITests";
@@ -1231,7 +1203,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = DasQuizUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.DasQuizUITests";
@@ -1340,7 +1316,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1360,14 +1337,16 @@
 				GCC_PREFIX_HEADER = "QuizApp/DasQuiz-Prefix.pch";
 				INFOPLIST_FILE = "QuizApp/DasQuiz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.quizshow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/DasQuiz-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1388,13 +1367,15 @@
 				GCC_PREFIX_HEADER = "QuizApp/DasQuiz-Prefix.pch";
 				INFOPLIST_FILE = "QuizApp/DasQuiz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.claus-software.quizshow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QuizApp/DasQuiz-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

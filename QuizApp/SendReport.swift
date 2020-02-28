@@ -12,7 +12,7 @@ import UIKit
  Sends a report about a question
  */
 class SendReport: NSObject {
-
+    
     @objc
     func sendReport(questionID : Int, reason : Int)  {
         print("Sending a report...Question: \(questionID), Reason:\(reason)")
@@ -22,14 +22,14 @@ class SendReport: NSObject {
         
         let configuration = URLSessionConfiguration.default
         
-        var request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: "reports", queryItems: nil)
+        var request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: "/reports", queryItems: nil)
         request.httpMethod = "POST";
         request.timeoutInterval = 30;
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody  = try! JSONSerialization.data( withJSONObject: JSONData, options: [])
         
-
+        
         let session = URLSession(configuration: configuration)
         let dataTask = session.dataTask(with: request as URLRequest) {data, response , error in
             //
@@ -41,14 +41,11 @@ class SendReport: NSObject {
             
             switch (httpResponse.statusCode)
             {
-            case 200:
-                
+            case 200,201:
                 let response = NSString (data: receivedData, encoding: String.Encoding.utf8.rawValue)
-                
-                
                 if response == "SUCCESS"
                 {
-                    
+                    self.createReportSentNotification()
                 }
                 
             default:
@@ -56,7 +53,27 @@ class SendReport: NSObject {
             }
         }
         dataTask.resume();
-        
     }
     
+    /**
+     Send a positive message send notification
+     */
+    func createReportSentNotification(){
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("Report sucessfully received", comment: "")
+        content.body = NSLocalizedString("Thank you for sending a report", comment: "")
+        
+        let uuidString = UUID().uuidString
+        
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content, trigger: nil)
+        
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+            if error != nil {
+                // Handle any errors.
+            }
+        }
+    }
 }

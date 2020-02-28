@@ -350,7 +350,7 @@ SendReport *sendReport;
     
     [self.view addSubview:self.effectView];
     
-    [self.effectView addSubview:self.reportViewController];
+    [self.effectView.contentView addSubview:self.reportViewController];
     
     self.reportViewController.center = self.effectView.center;
     self.reportViewController.alpha = 0;

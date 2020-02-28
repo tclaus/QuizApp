@@ -98,13 +98,13 @@
     
     CGFloat toValue =  0;
     CGFloat fromValue = mainView.frame.size.width;
-    [mainView layoutIfNeeded];
+    // [mainView layoutIfNeeded];
     
     [UIView animateWithDuration:duration animations:^{
         
         fromPackage.centerXConstraint.constant = -fromValue;
         toPackage.centerXConstraint.constant = toValue;
-        [mainView layoutIfNeeded];
+        // [mainView layoutIfNeeded];
         
     } completion:^(BOOL finished) {
         

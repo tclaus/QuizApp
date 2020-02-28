@@ -9,7 +9,7 @@
 import UIKit
 
 class NewQuestionFirstControllerViewController: KeyboardViewController {
-
+    
     @IBOutlet weak var nextButon: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var questionTextField: UITextField!
@@ -22,13 +22,13 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         ADVTheme.addGradientBackground(view)
         //view.tintColor = UIColor.white
         navigationItem.hidesBackButton = true
-    
+        
         setDelegates(questionTextField,correctAnswerTextField)
         // questionTextField.becomeFirstResponder()
         nextButon.tintColor = UIColor.white
@@ -36,7 +36,7 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
         explanationLink.tintColor = UIColor.white
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,11 +60,12 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
     @IBAction func openWikiOfTheDay(_ sender: Any) {
         let wikiLink = "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
         
-        let URLToOpen = URL(string: wikiLink)
-        UIApplication.shared.openURL(URLToOpen!)
+        if let URLToOpen = URL(string: wikiLink) {
+            UIApplication.shared.open(URLToOpen, options: [:], completionHandler: nil)
+        }
         return
     }
-
+    
     /**
      Checks if at leaset 3 charcters are entered
      */
@@ -88,7 +89,7 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -98,16 +99,6 @@ class NewQuestionFirstControllerViewController: KeyboardViewController {
             questionManager.text = questionTextField.text!
             questionManager.correctAnswer = correctAnswerTextField.text!
             (segue.destination as! NewQuestionWrongAnswersViewController).questionManager = questionManager
-            
         }
-        
     }
-    
-
 }
-
-
-
-
-
-

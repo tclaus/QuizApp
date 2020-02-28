@@ -378,6 +378,9 @@
     [self prepareStartQuiz];
 }
 
+-(void)userDidStartQuiz{
+    [self performSegueWithIdentifier:@"startTest" sender:self];
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
    
@@ -394,23 +397,7 @@
         UINavigationController* controller = segue.destinationViewController;
         QuestionContainerController* questionContainerController = (QuestionContainerController*)controller.topViewController;
         questionContainerController.questions = self.activeQuizGame.questions;
-        
-    } else if ([segue.identifier isEqualToString:@"challenges"]){
-        
-        UINavigationController* nav = segue.destinationViewController;
-        AvailableChallengesController* controller = (AvailableChallengesController*)nav.topViewController;
-        controller.challenges = self.gamecenterChallengeInfos;
-        
-        controller.userDidAcceptChallengeBlock = ^(GKChallenge* challenge) {
-            Questions* questions = [Config sharedInstance].questions;
-            NSInteger questionCount = [Config sharedInstance].numberOfQuestionsToAnswer;
-            [self startDirectQuizWithNumberOfQuestions:questionCount withQuestions:questions];
-        };
     }
-}
-
--(void)userDidStartQuiz{
-    [self performSegueWithIdentifier:@"startTest" sender:self];
 }
 
 -(void)prepareStartQuiz {

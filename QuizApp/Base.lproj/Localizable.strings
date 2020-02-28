@@ -153,3 +153,7 @@
 "New questions arrived" = "Neue Fragen eingetroffen";
 
 "We got %lu new questions and %lu updated." = "Es wuden %lu Fragen hinzugefügt und %lu aktualisiert";
+
+"New question received" = "Neue Frage erhalten";
+
+"Your question will be processed and added later to the database. Thank you." = "Deine neue Frage ist eingegangen. Nachdem diese bearbeitet wurde, wird sie der App hinzugefügt. Vielen Dank.";

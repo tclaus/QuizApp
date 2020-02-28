@@ -36,12 +36,12 @@
         [self setLastError:error];
         
         if (blockLocalPlayer.authenticated) {
-            _localPlayerAuthenticated = YES;
+            self->_localPlayerAuthenticated = YES;
             [self loadChallenges];
         } else if(viewController) {
             [self presentViewController:viewController];
         } else {
-            _localPlayerAuthenticated = NO;
+            self->_localPlayerAuthenticated = NO;
         }
     };
 }
@@ -102,8 +102,8 @@
         [self setLastError:error];
         BOOL success = (error == nil);
         
-        if([_delegate respondsToSelector:@selector(didSubmitScores:)])
-            [_delegate didSubmitScores:success];
+        if([self->_delegate respondsToSelector:@selector(didSubmitScores:)])
+            [self->_delegate didSubmitScores:success];
     }];
     } else {
         NSLog(@"leaderboardIdentifier was null or empty casnt not sumbit highscores to gamecenter");
@@ -120,19 +120,19 @@
      ^(NSArray* loadedAchievements, NSError* error) {
          
          [self setLastError:error];
-         if (_achievements == nil) {
-             _achievements = [[NSMutableDictionary alloc] init];
+        if (self->_achievements == nil) {
+            self->_achievements = [[NSMutableDictionary alloc] init];
          } else {
-             [_achievements removeAllObjects];
+             [self->_achievements removeAllObjects];
          }
          
          for (GKAchievement* achievement in loadedAchievements) {
              achievement.showsCompletionBanner = YES;
-             _achievements[achievement.identifier] = achievement;
+             self->_achievements[achievement.identifier] = achievement;
          }
         
-         if([_delegate respondsToSelector:@selector(didLoadAchievements:)])
-             [_delegate didLoadAchievements:_achievements];
+        if([self->_delegate respondsToSelector:@selector(didLoadAchievements:)])
+            [self->_delegate didLoadAchievements:self->_achievements];
      }];
 }
 
@@ -146,8 +146,8 @@
     [GKChallenge loadReceivedChallengesWithCompletionHandler:^(NSArray *challenges, NSError *error) {
         if (challenges){
             
-            if([_delegate respondsToSelector:@selector(didLoadChallenges:)])
-                [_delegate didLoadChallenges:challenges];
+            if([self->_delegate respondsToSelector:@selector(didLoadChallenges:)])
+                [self->_delegate didLoadChallenges:challenges];
         }
     }];
 }
@@ -169,8 +169,8 @@
         [GKAchievement reportAchievements:@[achievement] withCompletionHandler:^(NSError *error) {
             [self setLastError:error];
             
-            if([_delegate respondsToSelector:@selector(didReportAchievement:)])
-                [_delegate didReportAchievement:achievement];
+            if([self->_delegate respondsToSelector:@selector(didReportAchievement:)])
+                [self->_delegate didReportAchievement:achievement];
         }];
 }
 
@@ -190,8 +190,8 @@
         [GKAchievement reportAchievements:@[achievement] withCompletionHandler:^(NSError *error) {
             [self setLastError:error];
             
-            if([_delegate respondsToSelector:@selector(didReportAchievement:)])
-                [_delegate didReportAchievement:achievement];
+            if([self->_delegate respondsToSelector:@selector(didReportAchievement:)])
+                [self->_delegate didReportAchievement:achievement];
         }];
     }
 }
@@ -292,7 +292,7 @@
         [self setLastError:error];
         BOOL success = (error == nil);
         if (success) {
-            if (!_includeLocalPlayerScore) {
+            if (!self->_includeLocalPlayerScore) {
                 
                 NSMutableArray *friendsScores = [NSMutableArray array];
                 for (GKScore *score in scores) {
@@ -302,8 +302,8 @@
                 scores = friendsScores;
             }
 
-            if([_delegate respondsToSelector:@selector(didLoadScoresToChallenge:)])
-                [_delegate didLoadScoresToChallenge:scores];
+            if([self->_delegate respondsToSelector:@selector(didLoadScoresToChallenge:)])
+                [self->_delegate didLoadScoresToChallenge:scores];
         }
     }];
 }
@@ -326,8 +326,8 @@
             [self setLastError:error];
             if (players != nil){
                 
-                if([_delegate respondsToSelector:@selector(didReceiveFriendsList:)])
-                    [_delegate didReceiveFriendsList:players];
+                if([self->_delegate respondsToSelector:@selector(didReceiveFriendsList:)])
+                    [self->_delegate didReceiveFriendsList:players];
             }
         }];
     }
@@ -342,8 +342,8 @@
     [GKPlayer loadPlayersForIdentifiers:playerList withCompletionHandler:^(NSArray* players, NSError* error) {
         [self setLastError:error];
         
-        if([_delegate respondsToSelector:@selector(didReceivePlayerInfo:)])
-            [_delegate didReceivePlayerInfo:players];
+        if([self->_delegate respondsToSelector:@selector(didReceivePlayerInfo:)])
+            [self->_delegate didReceivePlayerInfo:players];
     }];
 }
 
@@ -364,8 +364,8 @@
        
         NSLog(@"challenge issues %d", didIssueChallenge);
         
-        if([_delegate respondsToSelector:@selector(didIssueChallengeWithController:)])
-            [_delegate didIssueChallengeWithController:composeController];
+        if([self->_delegate respondsToSelector:@selector(didIssueChallengeWithController:)])
+            [self->_delegate didIssueChallengeWithController:composeController];
         
     }];
     

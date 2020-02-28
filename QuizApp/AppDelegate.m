@@ -66,14 +66,7 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
          completionHandler:^(BOOL granted, NSError * _Nullable error) {
             // ...
         }];
-    } else {
-        // iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
-        UIUserNotificationType allNotificationTypes =
-        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
-        UIUserNotificationSettings *settings =
-        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
-        [application registerUserNotificationSettings:settings];
-    }
+    } 
     
     [application registerForRemoteNotifications];
     
