@@ -146,10 +146,8 @@ static NSString * const reviewURLTemplate                   = @"itms-apps://itun
 
 - (IBAction)openAppStore:(id)sender {
     // reviewURLTemplate
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURLTemplate]];
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://appstore.com/dasquiz"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURLTemplate] options:@{} completionHandler:nil];
 }
-
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
