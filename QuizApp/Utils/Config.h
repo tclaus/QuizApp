@@ -4,9 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QuizInAppPurchaseData.h"
 
 @class Questions;
+@class QuizInAppPurchaseData;
+
 @interface Config : NSObject
 
 + (Config *)sharedInstance;

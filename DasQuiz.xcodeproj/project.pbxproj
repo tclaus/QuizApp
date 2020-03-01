@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65039084240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65039083240A845D00CA8B17 /* QuizInAppPurchaseData.swift */; };
+		65039085240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65039083240A845D00CA8B17 /* QuizInAppPurchaseData.swift */; };
+		65039086240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65039083240A845D00CA8B17 /* QuizInAppPurchaseData.swift */; };
 		651BF8661DCFA3180072C7AC /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651BF8651DCFA3180072C7AC /* AppIcons.xcassets */; };
 		654E0C251DAA5B96003C5392 /* thinking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654E0C241DAA5B96003C5392 /* thinking.mp3 */; };
 		655825EC1E13CA7500BB12A5 /* 1000-questions_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 655825EB1E13CA7500BB12A5 /* 1000-questions_en.json */; };
@@ -79,7 +82,6 @@
 		EC344A8918A296D1008BB993 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EC344A8818A296D1008BB993 /* UIImage+ImageEffects.m */; };
 		EC53D9F218A01B0100AA9D93 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = EC53D9F118A01B0100AA9D93 /* Config.m */; };
 		EC8D200D1AACC4F0003735D3 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D200C1AACC4F0003735D3 /* Launch.storyboard */; };
-		EC9794B2198A72BB00EB7294 /* QuizInAppPurchaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9794B1198A72BB00EB7294 /* QuizInAppPurchaseData.m */; };
 		EC97B5E919D3084200848267 /* ConstraintsPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC97B5E819D3084200848267 /* ConstraintsPackage.m */; };
 		EC99213018B28C0F000FCA6F /* AvailableChallengesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99212F18B28C0F000FCA6F /* AvailableChallengesController.m */; };
 		EC99213318B294F6000FCA6F /* ChallengeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99213218B294F6000FCA6F /* ChallengeCell.m */; };
@@ -138,6 +140,7 @@
 
 /* Begin PBXFileReference section */
 		57A95A51FD6A1C3AF6C0960E /* Pods_DasQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DasQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65039083240A845D00CA8B17 /* QuizInAppPurchaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizInAppPurchaseData.swift; sourceTree = "<group>"; };
 		6504794A1DF9B6720052ADCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		6504794B1DF9B6720052ADCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6504794C1DF9B6720052ADCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -223,8 +226,6 @@
 		EC53D9F018A01B0100AA9D93 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Config.h; path = Utils/Config.h; sourceTree = "<group>"; };
 		EC53D9F118A01B0100AA9D93 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Config.m; path = Utils/Config.m; sourceTree = "<group>"; };
 		EC8D200C1AACC4F0003735D3 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		EC9794B0198A72BB00EB7294 /* QuizInAppPurchaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizInAppPurchaseData.h; path = Utils/QuizInAppPurchaseData.h; sourceTree = "<group>"; };
-		EC9794B1198A72BB00EB7294 /* QuizInAppPurchaseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizInAppPurchaseData.m; path = Utils/QuizInAppPurchaseData.m; sourceTree = "<group>"; };
 		EC97B5E719D3084200848267 /* ConstraintsPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstraintsPackage.h; path = Model/ConstraintsPackage.h; sourceTree = "<group>"; };
 		EC97B5E819D3084200848267 /* ConstraintsPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConstraintsPackage.m; path = Model/ConstraintsPackage.m; sourceTree = "<group>"; };
 		EC99212E18B28C0F000FCA6F /* AvailableChallengesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvailableChallengesController.h; path = views/AvailableChallengesController.h; sourceTree = "<group>"; };
@@ -407,8 +408,6 @@
 				EC53D9F118A01B0100AA9D93 /* Config.m */,
 				ECB251FB18BF9CB9007B8CC0 /* SoundSystem.h */,
 				ECB251FC18BF9CB9007B8CC0 /* SoundSystem.m */,
-				EC9794B0198A72BB00EB7294 /* QuizInAppPurchaseData.h */,
-				EC9794B1198A72BB00EB7294 /* QuizInAppPurchaseData.m */,
 				65864C501DDA187A00F5757C /* SendReport.swift */,
 				65864C4F1DDA187900F5757C /* DasQuiz-Bridging-Header.h */,
 				6562C88E1DDBB3A400EC38BE /* NewQuestionManager.swift */,
@@ -416,6 +415,7 @@
 				65F71F8923F8AFA7005DA142 /* QuizzAppUrlHelper.swift */,
 				65FD269A23FE6CD300574D66 /* QuestionsFileLoader.swift */,
 				65FD26B323FFB14500574D66 /* QuestionUpdater.swift */,
+				65039083240A845D00CA8B17 /* QuizInAppPurchaseData.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -948,6 +948,7 @@
 				65F71F8523F8A710005DA142 /* ServerQuestion.swift in Sources */,
 				65FD26B523FFB14500574D66 /* QuestionUpdater.swift in Sources */,
 				65FD269523FDC64D00574D66 /* TestQuestionsContainer.swift in Sources */,
+				65039085240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */,
 				65F71F9823FD1CA8005DA142 /* Question.swift in Sources */,
 				65F71F9023F95E6B005DA142 /* QuestionLoader.swift in Sources */,
 				65FD269623FDC64D00574D66 /* TestQuizzAppUrlHelper.swift in Sources */,
@@ -961,6 +962,7 @@
 				65FD26AF23FFB01B00574D66 /* Question.swift in Sources */,
 				65FD26A723FFAF5300574D66 /* DasQuizUITests.swift in Sources */,
 				65FD26B123FFB03200574D66 /* ServerQuestion.swift in Sources */,
+				65039086240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */,
 				65FD26AE23FFB01800574D66 /* Questions.swift in Sources */,
 				65FD26B223FFB04700574D66 /* QuestionsFileLoader.swift in Sources */,
 				65FD26B623FFB14500574D66 /* QuestionUpdater.swift in Sources */,
@@ -984,7 +986,6 @@
 				EC97B5E919D3084200848267 /* ConstraintsPackage.m in Sources */,
 				ECE03F36186341820042490A /* ADVTheme.m in Sources */,
 				65D3F2DC20239B26009F36F4 /* Questions.swift in Sources */,
-				EC9794B2198A72BB00EB7294 /* QuizInAppPurchaseData.m in Sources */,
 				ECB251FD18BF9CB9007B8CC0 /* SoundSystem.m in Sources */,
 				ECE03EE518621C5B0042490A /* QuestionInfoController.m in Sources */,
 				65E973E1202ECEF0002DA0EE /* ActiveQuizGame.swift in Sources */,
@@ -998,6 +999,7 @@
 				65FD269B23FE6CD300574D66 /* QuestionsFileLoader.swift in Sources */,
 				6562C88F1DDBB3A400EC38BE /* NewQuestionManager.swift in Sources */,
 				EC2141E118915F8900739070 /* PNScrollBarChart.m in Sources */,
+				65039084240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */,
 				EC53D9F218A01B0100AA9D93 /* Config.m in Sources */,
 				ECAE920C18C77E4300D5EBAB /* StartViewController.m in Sources */,
 				ECBD0C911876FBF5002DC98B /* PNLineChart.m in Sources */,
@@ -1332,6 +1334,7 @@
 				CODE_SIGN_ENTITLEMENTS = DasQuiz.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MYEC2JCSBB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuizApp/DasQuiz-Prefix.pch";
@@ -1362,6 +1365,7 @@
 				CODE_SIGN_ENTITLEMENTS = DasQuiz.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MYEC2JCSBB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuizApp/DasQuiz-Prefix.pch";

@@ -50,6 +50,11 @@
     
     self.numberOfQuestionsToPractice = [quizSettings[@"Number of Questions To Practice"] integerValue];
     self.timeNeededInMinutes = [quizSettings[@"Time Needed In Minutes"] floatValue];
+    
+#if DEBUG
+    self.timeNeededInMinutes = 0.5;
+#endif
+    
     self.passThreshold = [quizSettings[@"Pass Threshold"] integerValue];
     
     NSDictionary* gameCenterSettings = self.configInfo[@"Game Center Settings"];

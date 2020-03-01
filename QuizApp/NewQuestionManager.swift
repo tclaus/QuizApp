@@ -66,6 +66,7 @@ class NewQuestionManager {
                 let response = NSString (data: receivedData, encoding: String.Encoding.utf8.rawValue)
                 print("SUCCESS: New question successfully end to server: \(String(describing: response)) ")
                 self.createSuccessNotification()
+                
             default:
                 print("Sending report got response \(httpResponse.statusCode)")
             }

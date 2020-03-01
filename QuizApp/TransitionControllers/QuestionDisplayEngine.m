@@ -36,6 +36,7 @@
         
         UIStoryboard* storyboard = [UIStoryboard storyboardWithName:storybardName bundle:nil];
         
+        // switch to next question controller
         self.questionController1 = [storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
         self.questionController2 = [storyboard instantiateViewControllerWithIdentifier:@"QuestionViewController"];
         
@@ -92,30 +93,28 @@
     NSTimeInterval duration = 0.3;
     
     ConstraintsPackage* fromPackage = (ConstraintsPackage*)self.constraintPackages[fromViewController.view.tag];
-    
     ConstraintsPackage* toPackage = (ConstraintsPackage*)self.constraintPackages[toViewController.view.tag];
     
     CGFloat toValue =  0;
     CGFloat fromValue = mainView.frame.size.width;
     // [mainView layoutIfNeeded];
     
-    [UIView animateWithDuration:duration animations:^{
-        
-        fromPackage.centerXConstraint.constant = -fromValue;
-        toPackage.centerXConstraint.constant = toValue;
-        [mainView layoutIfNeeded];
-        
-    } completion:^(BOOL finished) {
-        
-        fromPackage.centerXConstraint.constant = 2 * mainView.frame.size.width;
-    }];
+     [UIView animateWithDuration:duration animations:^{
+     
+     fromPackage.centerXConstraint.constant = -fromValue;
+     toPackage.centerXConstraint.constant = toValue;
+     [mainView layoutIfNeeded];
+     
+     } completion:^(BOOL finished) {
+     
+     fromPackage.centerXConstraint.constant = 2 * mainView.frame.size.width;
+     }];
+     
     
     if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
         [fromViewController viewDidAppear:YES];
         [toViewController viewDidAppear:YES];
     }
-    
-    
 }
 
 - (ConstraintsPackage*)addConstraintsToSuperview:(UIView *)superview subview:(UIView*)subview{

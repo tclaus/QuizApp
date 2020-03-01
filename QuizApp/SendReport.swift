@@ -29,7 +29,6 @@ class SendReport: NSObject {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody  = try! JSONSerialization.data( withJSONObject: JSONData, options: [])
         
-        
         let session = URLSession(configuration: configuration)
         let dataTask = session.dataTask(with: request as URLRequest) {data, response , error in
             //
@@ -43,10 +42,8 @@ class SendReport: NSObject {
             {
             case 200,201:
                 let response = NSString (data: receivedData, encoding: String.Encoding.utf8.rawValue)
-                if response == "SUCCESS"
-                {
-                    self.createReportSentNotification()
-                }
+                print("SUCCESS: Send report to server: \(String(describing: response)) ")
+                self.createReportSentNotification()
                 
             default:
                 print("Sending report got response \(httpResponse.statusCode)")

@@ -154,6 +154,12 @@
     return self.animationController;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"reviewQuestions"]) {
+        ReviewViewController* reviewViewController = segue.destinationViewController;
+        reviewViewController.questions = self.questions;
+    }
+}
 
 -(IBAction)doneTapped:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];

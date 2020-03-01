@@ -66,19 +66,17 @@
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     Question* question = self.questions.listOfQuestions[indexPath.row];
-    NSURL *explanatioinURL = [NSURL URLWithString:question.explanation];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:explanatioinURL]) {
-        return YES;
-    } else {
-        return NO;
+    if ([question.explanation length] != 0 ) {
+        NSURL *explanationURL = [NSURL URLWithString:question.explanation];
+        
+        if (explanationURL != NULL && [[UIApplication sharedApplication] canOpenURL:explanationURL]) {
+            return YES;
+        }
     }
+    return NO;
 }
 
 -(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
     
     UITableViewRowAction *info = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                                     title:@"Info"
@@ -94,8 +92,6 @@
                                                                       
                                                                   }];
     return @[info];
-        
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
