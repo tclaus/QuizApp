@@ -213,7 +213,7 @@ static BOOL heartSoundPlaying;
         case GameModeTimeBasedCompetition:
             
             // In Quizmode: Punkte vergeben?
-            self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Points: %ld",@"Headline in questionlist for quizmode"), self.points];
+            self.statusLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Points: %d",@"Headline in questionlist for quizmode"), self.points];
             [self.statusProgress setProgress:self.currentTimeInterval/(CGFloat)self.totalTimeInterval animated:YES];
             break;
             

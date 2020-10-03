@@ -26,7 +26,7 @@ class SettingsTableViewController: IASKAppSettingsViewController, IASKSettingsDe
     /**
      Settings are changed, reload settings
      */
-    func settingsViewControllerDidEnd(_ sender: IASKAppSettingsViewController!) {
+    func settingsViewControllerDidEnd(_ sender: IASKAppSettingsViewController) {
         
         Config.sharedInstance().loadQuestions()
         

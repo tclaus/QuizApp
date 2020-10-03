@@ -8,10 +8,10 @@
 
 import UIKit
 
-class QuizzAppUrlHelper: NSObject {
+class QuizzAppUrlHelper  {
     
     /// Returns a query object with api and optional query parameters
-    class func getServiceURLRequest(apiPath : String, queryItems : [URLQueryItem]?) -> URLRequest {
+    static func getServiceURLRequest(apiPath : String, queryItems : [URLQueryItem]?) -> URLRequest {
         let username = "quiz"
         let password = "lehn170#Yong"
         let baseURL = "rocky-temple-21345.herokuapp.com"

@@ -14,7 +14,7 @@ import UIKit
 class QuestionLoader: NSObject {
     
     /// Loads new questions from server and adds them to the existing questions list
-    func loadAndProcessNewQuestions(existingQuestions : Questions, completed: @escaping (Int, Int) -> () ) {
+    func loadAndProcessNewQuestions(existingQuestions : Questions, completed: @escaping (_ added: Int,_ updated: Int) -> () ) {
         // as a parameters - insert the current question list
         // make a server-call
         // add to questions list
@@ -77,7 +77,7 @@ class QuestionLoader: NSObject {
      */
     func loadNewQuestions(language: String,  since: String, questionCompletionHandler: @escaping  (Data?) -> Void ) {
         let getQuestions = "/api/questions"
-        let query = [URLQueryItem.init(name: "language", value: language),URLQueryItem.init(name: "since", value: since) ]
+        let query = [URLQueryItem.init(name: "language", value: language), URLQueryItem.init(name: "since", value: since) ]
         let request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: getQuestions, queryItems: query)
         
         print("Load questions from server since: /(since)")

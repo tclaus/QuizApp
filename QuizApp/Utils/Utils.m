@@ -220,7 +220,9 @@ static NSMutableArray *_usedQuestions;
 
 +(Questions*) loadQuestionsWithIncreasingLevel:(Questions *)questions forTotalNumberOfQuestions:(NSInteger)questionCount {
     
-    Questions *questionsWithIncreasingLevel = [self loadQuestionsShuffeledFromTopics:questions forTotalNumberOfQuestions:questionCount minLevel:0];
+    Questions *questionsWithIncreasingLevel = [self loadQuestionsShuffeledFromTopics:questions
+                                                           forTotalNumberOfQuestions:questionCount
+                                                                            minLevel:0];
     
     [self sortQuestionsByLevel:questionsWithIncreasingLevel];
     return questionsWithIncreasingLevel;

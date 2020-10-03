@@ -45,7 +45,7 @@ class TestQuestionLoader: XCTestCase {
         let questionLoader = QuestionLoader()
         
         UserDefaults.standard.removeObject(forKey: "last_check_for_new_questions_de")
-        questionLoader.loadAndProcessNewQuestions(existingQuestions: existingQuestions,completed: {()-> Void in
+        questionLoader.loadAndProcessNewQuestions(existingQuestions: existingQuestions,completed: { (results, updated) in
             expectation.fulfill()
         })
         

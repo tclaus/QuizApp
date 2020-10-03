@@ -45,7 +45,8 @@ class TestQuestionsContainer: XCTestCase {
         let questions = Questions()
         
         let newServerQuestion = getNewQuestion()
-        questions.mergeNewQuestions(newQuestions: [newServerQuestion])
+        let result = questions.mergeNewQuestions(newQuestions: [newServerQuestion])
+        XCTAssertNotNil(result)
         // Added one question
         
         // Now change a question
