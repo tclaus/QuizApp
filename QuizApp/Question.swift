@@ -40,9 +40,9 @@ class Question: NSObject, Decodable, Encodable {
      Number of points given for a correct answered question
      */
     @objc
-    var points : Float {
+    var points : Int {
         get {
-            return Float(self.level) * 100.0
+            return level * 100
         }
     }
     

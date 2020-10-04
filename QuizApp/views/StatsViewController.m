@@ -15,7 +15,6 @@
 #import "QuestionContainerController.h"
 #import "AvailableChallengesController.h"
 #import "ADVTheme.h"
-#import "Datasource.h"
 #import "Utils.h"
 #import "Config.h"
 #import "GameKitManager.h"
@@ -217,7 +216,7 @@
                                              selector:@selector(productPurchased:)
                                                  name:IAPHelperProductPurchasedNotification
                                                object:nil];
-
+    
     [[QuizIAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
         if (success) {
             self->_products = products;
@@ -239,20 +238,18 @@
     self.effectView.effect = nil;
     
     self.levelUpView.layer.cornerRadius = 5;
-    
 }
-
 
 -(void)displayCharts{
     NSArray* aggregates;
     
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
-            aggregates= [Datasource loadTimeBasedAggregates];
+            aggregates = [DataSource loadTimeBasedAggregates];
             break;
             
         case GameModeTrainig:
-            aggregates= [Datasource loadTrainingAggregates];
+            aggregates= [DataSource loadTrainingAggregates];
             break;
     }
     
@@ -299,7 +296,9 @@
 -(void)animateIn{
     
     [FIRAnalytics logEventWithName:kFIREventLevelUp parameters:@{
-                                                                 kFIRParameterLevel:[NSNumber numberWithInteger:GameStats.INSTANCE.currentLevel]}];
+        kFIRParameterLevel:[NSNumber numberWithInteger:GameStats.INSTANCE.currentLevel]
+        
+    }];
     
     [[SoundSystem sharedInstance] playLevelUpSound];
     
@@ -383,7 +382,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-   
+    
     if ([segue.identifier isEqualToString:@"showInfo"]) {
         
         QuestionInfoController* controller = segue.destinationViewController;
@@ -463,8 +462,8 @@
     } else {
         
         Questions* questions = [Utils loadQuestionsShuffeledFromTopics:Config.sharedInstance.questions
-                                              forTotalNumberOfQuestions:questionCount
-                                                            minLevel:GameStats.INSTANCE.currentLevel];
+                                             forTotalNumberOfQuestions:questionCount
+                                                              minLevel:GameStats.INSTANCE.currentLevel];
         
         self.activeQuizGame.questions = questions;
         self.activeQuizGame.totalNumberOfQuestions = questionCount;
@@ -517,8 +516,8 @@
 -(void)startDirectQuizWithNumberOfQuestions:(NSInteger)numberOfQuestions withQuestions:(Questions*) questions {
     
     self.activeQuizGame.questions = [Utils loadQuestionsShuffeledFromTopics:Config.sharedInstance.questions
-                                           forTotalNumberOfQuestions:numberOfQuestions
-                                                            minLevel:GameStats.INSTANCE.currentLevel];
+                                                  forTotalNumberOfQuestions:numberOfQuestions
+                                                                   minLevel:GameStats.INSTANCE.currentLevel];
     
     [self performSegueWithIdentifier:@"startTest" sender:self];
     

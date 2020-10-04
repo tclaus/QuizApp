@@ -51,9 +51,9 @@
 {
     [super viewDidLoad];
     
-    NSInteger gamePoints = [Utils calculateCorrectScore:self.questions];
-    CGFloat correctFraction = [Utils calculateCorrectPercent:self.questions];
-    NSInteger correctCount = [Utils calculateNumberOfCorrectAnswers:self.questions];
+    NSInteger gamePoints = [ScoreCalculationsUtilities calculateCorrectScoreWithQuestions:_questions.listOfQuestions];
+    float correctFraction = [ScoreCalculationsUtilities calculateCorrectPercentWithQuestions:_questions.listOfQuestions];
+    NSInteger correctCount = [ScoreCalculationsUtilities calculateNumberOfCorrectAnswersWithQuestions:_questions.listOfQuestions];
     
     if ([GameModel sharedInstance].activeGameMode == GameModeTimeBasedCompetition) {
         [self reportAchievementToGameCenter:correctFraction points:gamePoints];

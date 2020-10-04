@@ -13,8 +13,6 @@
 @class Question;
 @interface Utils : NSObject
 
-+(CGFloat) calculateAverageTestScores:(NSArray*)aggregates;
-
 +(CGFloat) getLastTestScore:(NSArray*)aggregates;
 
 +(NSArray*) getLast:(NSInteger)count scoresFromAggregates:(NSArray*)aggregates;
@@ -22,15 +20,6 @@
 +(NSArray*) getLast:(NSInteger)count labelsForAggregates:(NSArray*)aggregates;
 
 +(Questions*) getFirst:(Questions*)questions numberOfQuestions:(NSInteger) numberOfQuestions;
-
-/**
-  Calculates the correct pecent from numberoftotal solced questions
- @param numberOfQuestions Number ob actually proceeded questions
- */
-+(CGFloat) calculateCorrectPercent:(Questions*) questions;
-+(NSInteger) calculateCorrectScore:(Questions*) questions;
-
-+(NSInteger) calculateNumberOfCorrectAnswers:(Questions*)questions;
 
 /**
  Returns a list of all question categories

@@ -4,7 +4,6 @@
 //
 #import "QuestionContainerController.h"
 #import "QuestionDisplayEngine.h"
-#import "Datasource.h"
 #import "ADVTheme.h"
 #import "Config.h"
 #import "QuizIAPHelper.h"
@@ -294,12 +293,12 @@ static BOOL heartSoundPlaying;
     
     switch ([GameModel sharedInstance].activeGameMode) {
         case GameModeTimeBasedCompetition:
-            [Datasource saveTimeBasedAggregates:subQuestions forDate:[NSDate date]];
+            [DataSource saveTimeBasedAggregatesWithQuestions:subQuestions.listOfQuestions dateOfGame:[NSDate date]];
             [self checkLevelProgress:subQuestions secondsNeeded:self.totalTimeInterval];
             break;
             
         case GameModeTrainig:
-            [Datasource saveTrainingAggregates:subQuestions forDate:[NSDate date]];
+            [DataSource saveTrainingAggregatesWithQuestions:subQuestions.listOfQuestions dateOfGame:[NSDate date]];
             break;
     }
     
@@ -331,9 +330,9 @@ static BOOL heartSoundPlaying;
     
     // Number of questions reached?
     if ((time / resultQuestions.count) < 6.0) {
-        CGFloat percent = [Utils calculateCorrectPercent:resultQuestions];
+        float percent = [ScoreCalculationsUtilities calculateCorrectPercentWithQuestions:resultQuestions.listOfQuestions];
         // >= 90 % success?
-        if (percent >=0.80) {
+        if (percent >= 0.80) {
             // PossibleLevel up
             BOOL nextLevel = false;
             

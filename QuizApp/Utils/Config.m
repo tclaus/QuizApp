@@ -7,7 +7,6 @@
 //
 
 #import "Config.h"
-#import "Datasource.h"
 #import <DasQuiz-Swift.h>
 
 @interface Config ()

@@ -9,8 +9,6 @@
 
 #import "QuestionInfoController.h"
 #import "ADVTheme.h"
-#import "ResultAggregate.h"
-#import "Datasource.h"
 #import "QuestionContainerController.h"
 #import "Config.h"
 #import "GameModel.h"

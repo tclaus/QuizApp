@@ -7,7 +7,6 @@
 //
 
 #import "Utils.h"
-#import "ResultAggregate.h"
 #import "Config.h"
 #import <DasQuiz-Swift.h>
 
@@ -15,20 +14,6 @@
 NSUserDomainMask, YES) objectAtIndex:0]
 
 @implementation Utils
-
-+(CGFloat)calculateAverageTestScores:(NSArray*)aggregates{
-    
-    CGFloat average = 0.0;
-    
-    for (ResultAggregate* aggregate in aggregates) {
-        average+= aggregate.percent;
-    }
-    
-    if(aggregates.count > 0){
-        average /= aggregates.count;
-    }
-    return average;
-}
 
 +(CGFloat)getLastTestScore:(NSArray*)aggregates{
     
@@ -62,47 +47,6 @@ NSUserDomainMask, YES) objectAtIndex:0]
     }
     
     return [self getLast:count elementsFromArray:labels];
-}
-
-+(CGFloat)calculateCorrectPercent:(Questions*) questions{
-    
-    CGFloat fractionCorrect = 0.0;
-    
-    if (questions.count > 0){
-        NSInteger correctCount = [self calculateNumberOfCorrectAnswers:questions];
-        fractionCorrect = correctCount/(CGFloat)questions.count;
-    }
-    return fractionCorrect;
-}
-
-+(NSInteger)calculateCorrectScore:(Questions*)questions{
-    
-    NSInteger fractionCorrect = 0;
-    
-    if(questions.count  > 0){
-        for (Question* question in questions.listOfQuestions) {
-            if(question.hasBeenAnsweredCorrectly){
-                fractionCorrect = fractionCorrect + question.points ;
-            }
-        }
-    }
-    
-    return fractionCorrect;
-}
-
-+(NSInteger)calculateNumberOfCorrectAnswers:(Questions*)questions{
-    
-    NSInteger correctCount = 0;
-    
-    if(questions.count  > 0){
-        for (Question* question in questions.listOfQuestions) {
-            if(question.hasBeenAnsweredCorrectly){
-                correctCount++;
-            }
-        }
-    }
-    
-    return correctCount;
 }
 
 /**

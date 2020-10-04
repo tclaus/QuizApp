@@ -92,7 +92,6 @@ public class Questions: NSObject {
         existingQuestion.answers.append(wrongAnswer3)
     }
     
-    
     public override var debugDescription: String {
         return  "Questions: \(self.count)"
     }
