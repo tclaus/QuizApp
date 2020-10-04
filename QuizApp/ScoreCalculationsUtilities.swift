@@ -14,7 +14,7 @@ class ScoreCalculationsUtilities : NSObject {
     @objc
     static func calculateCorrectPercent(questions : [Question]) -> Float {
         let correctCount = calculateNumberOfCorrectAnswers(questions: questions)
-        return Float(correctCount / questions.count)
+        return Float(correctCount) / Float(questions.count)
     }
     
     /// Returns the total score of all correctly answered questions

@@ -252,14 +252,13 @@
             aggregates= [DataSource loadTrainingAggregates];
             break;
     }
-    
-    CGFloat lastScore = [Utils getLastTestScore:aggregates];
     [self displayLevelAndStars];
     
+    CGFloat lastScore = [Utils getLastTestScore:aggregates];
     self.scoresProgress.progress = lastScore/100.0;
     
     NSInteger numberOfScoresToShow = 15;
-    NSArray* scores = [Utils getLast:numberOfScoresToShow scoresFromAggregates:aggregates];
+    NSArray* scores = [Utils getLast:numberOfScoresToShow percentSolvedFromAggregates:aggregates];
     NSArray* labels = [Utils getLast:numberOfScoresToShow labelsForAggregates:aggregates];
     
     NSDictionary* dataPoints = @{@"titles" : labels, @"values" : scores};
@@ -316,7 +315,6 @@
         self.levelUpView.transform = CGAffineTransformIdentity;
         
     }];
-    
 }
 
 -(void)animateOut{
@@ -340,8 +338,8 @@
  */
 -(void)displayLevelAndStars {
     
-    self.levelNumber.text = [NSString stringWithFormat:@"%ld", (long)GameStats.INSTANCE.currentLevel];
-    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", (long)GameStats.INSTANCE.lastPoints];
+    self.levelNumber.text = [NSString stringWithFormat:@"%ld", (long) GameStats.INSTANCE.currentLevel];
+    self.pointsLabel.text = [NSString stringWithFormat:@"%ld", (long) GameStats.INSTANCE.lastPoints];
     self.star1.alpha = 0;
     self.star2.alpha = 0;
     self.star3.alpha = 0;

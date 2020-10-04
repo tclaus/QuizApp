@@ -20,6 +20,8 @@
 		655637772529DC1D00A47672 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655637762529DC1D00A47672 /* DataSource.swift */; };
 		655637782529DC1D00A47672 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655637762529DC1D00A47672 /* DataSource.swift */; };
 		655637792529DC1D00A47672 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655637762529DC1D00A47672 /* DataSource.swift */; };
+		65563780252A225300A47672 /* ResultAggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655637662529D7BD00A47672 /* ResultAggregate.swift */; };
+		65563784252A225400A47672 /* ResultAggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655637662529D7BD00A47672 /* ResultAggregate.swift */; };
 		655825EC1E13CA7500BB12A5 /* 1000-questions_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 655825EB1E13CA7500BB12A5 /* 1000-questions_en.json */; };
 		6562C8891DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562C8881DDB694600EC38BE /* NewQuestionFirstControllerViewController.swift */; };
 		6562C88B1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562C88A1DDB69AC00EC38BE /* NewQuestionWrongAnswersViewController.swift */; };
@@ -964,6 +966,7 @@
 				65F71F8223F87533005DA142 /* GameStats.swift in Sources */,
 				65FD269E23FF19B100574D66 /* TestQuestionsFileLoader.swift in Sources */,
 				65F71F8523F8A710005DA142 /* ServerQuestion.swift in Sources */,
+				65563780252A225300A47672 /* ResultAggregate.swift in Sources */,
 				65FD26B523FFB14500574D66 /* QuestionUpdater.swift in Sources */,
 				655637612529CBB000A47672 /* ScoreCalculationsUtilities.swift in Sources */,
 				655637782529DC1D00A47672 /* DataSource.swift in Sources */,
@@ -985,6 +988,7 @@
 				65039086240A845D00CA8B17 /* QuizInAppPurchaseData.swift in Sources */,
 				65FD26AE23FFB01800574D66 /* Questions.swift in Sources */,
 				655637622529CBB000A47672 /* ScoreCalculationsUtilities.swift in Sources */,
+				65563784252A225400A47672 /* ResultAggregate.swift in Sources */,
 				655637792529DC1D00A47672 /* DataSource.swift in Sources */,
 				65FD26B223FFB04700574D66 /* QuestionsFileLoader.swift in Sources */,
 				65FD26B623FFB14500574D66 /* QuestionUpdater.swift in Sources */,

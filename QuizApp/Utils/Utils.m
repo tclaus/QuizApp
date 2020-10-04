@@ -27,11 +27,10 @@ NSUserDomainMask, YES) objectAtIndex:0]
     return scorePercent;
 }
 
-+(NSArray*)getLast:(NSInteger)count scoresFromAggregates:(NSArray*)aggregates{
++(NSArray*)getLast:(NSInteger)count percentSolvedFromAggregates:(NSArray*)aggregates{
     
     NSMutableArray* scores = [NSMutableArray array];
     for(ResultAggregate* aggregate in aggregates){
-        
         [scores addObject:@(aggregate.percent)];
     }
     

@@ -15,7 +15,7 @@
 
 +(CGFloat) getLastTestScore:(NSArray*)aggregates;
 
-+(NSArray*) getLast:(NSInteger)count scoresFromAggregates:(NSArray*)aggregates;
++(NSArray*) getLast:(NSInteger)count percentSolvedFromAggregates:(NSArray*)aggregates;
 
 +(NSArray*) getLast:(NSInteger)count labelsForAggregates:(NSArray*)aggregates;
 
