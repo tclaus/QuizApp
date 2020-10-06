@@ -370,8 +370,7 @@
     [[QuizIAPHelper sharedInstance] restorePurchases];
 }
 
--(IBAction)startTapped:(id)sender{
-    
+-(IBAction)startTapped:(id)sender {
     [self prepareStartQuiz];
 }
 
@@ -379,7 +378,7 @@
     [self performSegueWithIdentifier:@"startTest" sender:self];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showInfo"]) {
         

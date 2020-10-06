@@ -170,8 +170,6 @@ static BOOL heartSoundPlaying;
 
 -(void)questionHasBeenAnswered:(Question *)question withController:(QuestionViewController *)controller{
     
-    
-    
     [Utils addAsUsedQuestion:controller.question];
     
     [self calculatePoints:question];
@@ -265,6 +263,7 @@ static BOOL heartSoundPlaying;
     
     [self.timer invalidate];
     
+    [GameStats.INSTANCE setLastPoints:self.points];
     Questions *subQuestions = [Utils getFirst:self.questions numberOfQuestions:self.currentQuestionIndex];
     
     NSString *message = [self gameOverAlertMessage:subQuestions secondsNeeded:self.totalTimeInterval];
