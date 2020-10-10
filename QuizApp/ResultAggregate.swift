@@ -17,7 +17,7 @@ class ResultAggregate: NSObject, Codable {
     
     /// Points achived in this game
     @objc
-    var points: Float = 0.0
+    var points: Int = 0
     
     /// Percent of correct answers
     @objc

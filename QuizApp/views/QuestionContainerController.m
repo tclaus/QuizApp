@@ -47,15 +47,6 @@
 
 static BOOL heartSoundPlaying;
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -263,7 +254,9 @@ static BOOL heartSoundPlaying;
     
     [self.timer invalidate];
     
-    [GameStats.INSTANCE setLastPoints:self.points];
+    [GameStats.INSTANCE setLastPoints: self.points];
+    [GameStats.INSTANCE saveData];
+    
     Questions *subQuestions = [Utils getFirst:self.questions numberOfQuestions:self.currentQuestionIndex];
     
     NSString *message = [self gameOverAlertMessage:subQuestions secondsNeeded:self.totalTimeInterval];
@@ -354,7 +347,7 @@ static BOOL heartSoundPlaying;
                 return NSLocalizedString(@"Du hast ein Stern verdient!",@"Du hast ein Stern verdient!");
             }
             
-        } else if(percent >0.5 && percent <0.80) {
+        } else if(percent > 0.5 && percent < 0.8) {
             
             // ab 20 Fragen UND 80% richtig
             NSInteger neededQuestions = (20 - resultQuestions.count);

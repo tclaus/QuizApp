@@ -12,6 +12,18 @@ class DataSource : NSObject {
     private static let timeBasedResulsFilename = "timebasedResultsAggregate.plist"
     private static let trainingResultsFilename = "trainingResultsAggregate.plist"
     
+    
+    @objc
+    static func getLastPoints() -> Int {
+       let results = loadAggregates(filename: timeBasedResulsFilename)
+        if results.count > 0 {
+            if let points = results.last?.points {
+                return points
+            }
+        }
+        return 0
+    }
+    
     /// Loads all results for time based games
     @objc
     static func loadTimeBasedAggregates() -> [ResultAggregate] {
@@ -62,7 +74,7 @@ class DataSource : NSObject {
         
         let newResult = ResultAggregate()
         newResult.date = dateOfGame
-        newResult.points =  Float(correctScore)
+        newResult.points =  correctScore
         newResult.percent = Float(percent * 100).rounded()
         
         var existingResults :[ResultAggregate] = loadAggregates(filename: filename)

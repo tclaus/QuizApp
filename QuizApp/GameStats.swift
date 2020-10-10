@@ -98,32 +98,40 @@ class GameStats: NSObject {
         }
     }
     
+    struct LevelData: Codable {
+        var currentLevel: Int
+        var numberOfSuccessfulTries: Int
+        var lastPoints: Int
+    }
+    
     /// Saves current points
     @objc
     func saveData() {
+        let path = URL(fileURLWithPath: documentsPath()).appendingPathComponent(gamestatFilename)
         
-        let path = URL(fileURLWithPath: documentsPath()).appendingPathComponent(gamestatFilename + ".plist")
-        var dictionary = [String:Any]()
-        dictionary["currentLevel"] = currentLevel
-        dictionary["numberOfSuccessfulTries"] = numberOfSuccessfulTries
-        dictionary["lastPoints"] = lastPoints
+        let levelData = LevelData(currentLevel: currentLevel, numberOfSuccessfulTries: numberOfSuccessfulTries, lastPoints: lastPoints)
+        let encodedData = try? PropertyListEncoder().encode(levelData)
+        
         do {
-            let data = try PropertyListSerialization.data(fromPropertyList: dictionary, format: .binary, options: 0)
-            try data.write(to: path)
-        } catch (let err){
-            print(err.localizedDescription)
+            try encodedData?.write(to: path)
+        }    catch {
+            print("\(error)")
         }
         
     }
-    
+        
     /// Loads current Data
     func loadData() {
-        if let path = Bundle.main.path(forResource: gamestatFilename, ofType: "plist") {
-            let dictionary = NSDictionary(contentsOfFile: path) as! Dictionary<String, AnyObject>
-            currentLevel = dictionary["currentLevel"] as! Int
-            numberOfSuccessfulTries = dictionary["numberOfSuccessfulTries"] as! Int
-            lastPoints = dictionary["lastPoints"] as! Int
-            
+        let path = URL(fileURLWithPath: documentsPath()).appendingPathComponent(gamestatFilename)
+        let data = try? Data.init(contentsOf: path)
+        // guard let data = FileManager.default.contents(atPath: path) else { return  }
+        do {
+            let levelData = try PropertyListDecoder().decode(LevelData.self, from: data!)
+            currentLevel = levelData.currentLevel
+            numberOfSuccessfulTries = levelData.numberOfSuccessfulTries
+            lastPoints = levelData.lastPoints
+        } catch {
+            print("\(error)")
         }
     }
     
@@ -131,5 +139,4 @@ class GameStats: NSObject {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
         return paths.firstObject as! String
     }
-    
 }

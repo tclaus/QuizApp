@@ -38,14 +38,6 @@
 
 @implementation ResultsViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -83,7 +75,7 @@
         [self.challengeFriendsButton setBackgroundImage:buttonBackground forState:UIControlStateNormal];
 
         [self.challengeFriendsButton setTitle:NSLocalizedString(@"CHALLENGE FRIENDS",@"") forState:UIControlStateNormal];
-    }else{
+    } else {
         self.challengeFriendsButton.alpha = 0.0;
     }
     
@@ -126,7 +118,7 @@
             [[GameKitManager sharedInstance] reportAchievementsTestResult:percentScore];
             
             
-            NSInteger time =  [Config sharedInstance].timeNeededInMinutes * 60;
+            NSInteger time = [Config sharedInstance].timeNeededInMinutes * 60;
             NSInteger questionsSolved = self.questions.count;
             
             CGFloat ratio = time / questionsSolved;
