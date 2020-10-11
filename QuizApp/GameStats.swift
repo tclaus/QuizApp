@@ -117,21 +117,21 @@ class GameStats: NSObject {
         }    catch {
             print("\(error)")
         }
-        
     }
         
     /// Loads current Data
     func loadData() {
         let path = URL(fileURLWithPath: documentsPath()).appendingPathComponent(gamestatFilename)
-        let data = try? Data.init(contentsOf: path)
-        // guard let data = FileManager.default.contents(atPath: path) else { return  }
-        do {
-            let levelData = try PropertyListDecoder().decode(LevelData.self, from: data!)
-            currentLevel = levelData.currentLevel
-            numberOfSuccessfulTries = levelData.numberOfSuccessfulTries
-            lastPoints = levelData.lastPoints
-        } catch {
-            print("\(error)")
+        if let data = try? Data.init(contentsOf: path) {
+            // guard let data = FileManager.default.contents(atPath: path) else { return  }
+            do {
+                let levelData = try PropertyListDecoder().decode(LevelData.self, from: data)
+                currentLevel = levelData.currentLevel
+                numberOfSuccessfulTries = levelData.numberOfSuccessfulTries
+                lastPoints = levelData.lastPoints
+            } catch {
+                print("\(error)")
+            }
         }
     }
     
