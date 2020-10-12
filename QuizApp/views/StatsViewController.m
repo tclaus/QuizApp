@@ -332,9 +332,9 @@
     
     self.levelNumber.text = [NSString stringWithFormat:@"%ld", (long) GameStats.INSTANCE.currentLevel];
     self.pointsLabel.text = [NSString stringWithFormat:@"%ld", (long) GameStats.INSTANCE.lastPoints];
-    self.star1.alpha = 0;
-    self.star2.alpha = 0;
-    self.star3.alpha = 0;
+    self.star1.alpha = 0.2;
+    self.star2.alpha = 0.2;
+    self.star3.alpha = 0.2;
     
     if (GameStats.INSTANCE.numberOfSuccessfulTries >= 1) {
         

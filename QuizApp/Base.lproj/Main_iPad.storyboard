@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vUh-Ro-nUU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vUh-Ro-nUU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -201,7 +201,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1ca-fH-jIJ">
                                                         <rect key="frame" x="0.0" y="60" width="163.5" height="54.5"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Ang-90-1tO">
+                                                            <imageView opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Ang-90-1tO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="54.5"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -210,7 +210,7 @@
                                                                     <constraint firstAttribute="width" secondItem="Ang-90-1tO" secondAttribute="height" multiplier="1:1" id="FXI-wx-fg5"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Tti-YE-rhG">
+                                                            <imageView opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Tti-YE-rhG">
                                                                 <rect key="frame" x="54.5" y="0.0" width="54.5" height="54.5"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -219,7 +219,7 @@
                                                                     <constraint firstAttribute="width" secondItem="Tti-YE-rhG" secondAttribute="height" multiplier="1:1" id="6MX-uT-Si8"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CLz-xT-vEk">
+                                                            <imageView opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CLz-xT-vEk">
                                                                 <rect key="frame" x="109" y="0.0" width="54.5" height="54.5"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -332,7 +332,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Qd-SQ-6Tn" userLabel="Buttons Stackview">
                                         <rect key="frame" x="82" y="332.5" width="179" height="94"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-Ga-lKG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-Ga-lKG">
                                                 <rect key="frame" x="0.0" y="0.0" width="179" height="42"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                                 <state key="normal" title="STARTQUIZ" backgroundImage="button">
@@ -342,7 +342,7 @@
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="44"/>
                                                 </variation>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbk-eF-sMJ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbk-eF-sMJ">
                                                 <rect key="frame" x="0.0" y="52" width="179" height="42"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                                 <state key="normal" title="SEEHIGHSCRORE" backgroundImage="button"/>
@@ -448,7 +448,7 @@
                                     <constraint firstAttribute="height" constant="34" id="o1g-Mu-3na"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oi-BR-gEd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oi-BR-gEd">
                                 <rect key="frame" x="98.5" y="342" width="178" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="178" id="C8u-a5-CaL"/>
@@ -581,7 +581,7 @@
                                             <action selector="editingChanged:" destination="drv-1D-lYw" eventType="editingChanged" id="SZf-gT-MCA"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsH-q5-hhz">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsH-q5-hhz">
                                         <rect key="frame" x="0.0" y="229" width="327" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Weiter"/>
@@ -591,7 +591,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-ka-xkm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-ka-xkm">
                                 <rect key="frame" x="149.5" y="617" width="76" height="30"/>
                                 <state key="normal" title="Abbrechen"/>
                                 <connections>
@@ -650,7 +650,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isg-zh-Bhg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isg-zh-Bhg">
                                 <rect key="frame" x="149.5" y="617" width="76" height="30"/>
                                 <state key="normal" title="Abbrechen"/>
                                 <connections>
@@ -722,7 +722,7 @@
                                             <action selector="thirstAnswerNextButton:" destination="3Tq-ic-Glt" eventType="primaryActionTriggered" id="Ukq-mi-e91"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GY-8q-sx0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GY-8q-sx0">
                                         <rect key="frame" x="0.0" y="251.5" width="327" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Weiter"/>
@@ -764,7 +764,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="TGc-hi-o7D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="1hG-nI-YjL" id="1mR-zY-nB9"/>
                             <outlet property="delegate" destination="1hG-nI-YjL" id="AMt-ku-35A"/>
@@ -857,7 +857,7 @@
                                             <outlet property="delegate" destination="sOM-1i-iZc" id="C67-a3-HiJ"/>
                                         </connections>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3Z-PT-cdm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3Z-PT-cdm">
                                         <rect key="frame" x="0.0" y="401.5" width="327" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Senden"/>
@@ -867,7 +867,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6V-Lf-1kO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6V-Lf-1kO">
                                 <rect key="frame" x="149.5" y="589.5" width="76" height="57.5"/>
                                 <state key="normal" title="Abbrechen"/>
                                 <connections>
@@ -932,7 +932,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-Rd-ttY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-Rd-ttY">
                                 <rect key="frame" x="16" y="423" width="343" height="43"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="Review Questions">
@@ -1012,7 +1012,7 @@
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-Yc-elj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-Yc-elj">
                                         <rect key="frame" x="124.5" y="92.5" width="94" height="30"/>
                                         <state key="normal" title="Frage melden"/>
                                         <connections>
@@ -1035,13 +1035,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="319" height="40"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" text="Answer Text Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUl-co-UAI">
-                                                            <rect key="frame" x="46" y="7.5" width="218" height="30.5"/>
+                                                            <rect key="frame" x="47" y="7.5" width="216" height="30.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="HgV-qT-w8Q">
-                                                            <rect key="frame" x="274" y="13" width="24" height="19"/>
+                                                            <rect key="frame" x="273" y="13" width="24" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24" id="KRG-Ug-whi"/>
                                                             </constraints>
@@ -1076,16 +1076,16 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item-selected-empty" translatesAutoresizingMaskIntoConstraints="NO" id="DIH-Xc-SAI">
-                                                            <rect key="frame" x="7" y="3" width="305" height="114"/>
+                                                            <rect key="frame" x="8" y="3" width="303" height="114"/>
                                                         </imageView>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-Ml-i9J">
-                                                            <rect key="frame" x="26" y="47" width="13" height="20"/>
+                                                            <rect key="frame" x="27" y="47" width="13" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-15-TxF">
-                                                            <rect key="frame" x="61" y="13" width="203" height="84"/>
+                                                            <rect key="frame" x="62" y="13" width="203" height="84"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="203" id="bF7-wP-nx1"/>
                                                                 <constraint firstAttribute="height" constant="89.5" id="dVa-Vg-d3M"/>
@@ -1104,7 +1104,7 @@
                                                             </variation>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-Ac-ANR">
-                                                            <rect key="frame" x="274" y="50.5" width="24" height="19"/>
+                                                            <rect key="frame" x="273" y="50.5" width="24" height="19"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1184,7 +1184,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-12-gf3">
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-12-gf3">
                             <rect key="frame" x="16" y="243.5" width="53" height="30"/>
                             <state key="normal" title="Senden">
                                 <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1193,7 +1193,7 @@
                                 <action selector="dismissReportVC:" destination="77I-kR-Tb7" eventType="touchUpInside" id="l9n-8i-VKR"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-il-TO2">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xd-il-TO2">
                             <rect key="frame" x="166" y="233" width="76" height="51"/>
                             <state key="normal" title="Abbrechen"/>
                             <connections>
@@ -1203,28 +1203,28 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="HlT-gN-6gu">
                             <rect key="frame" x="65" y="69" width="128" height="153"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDA-di-3uL">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDA-di-3uL">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
                                     <state key="normal" title="Nicht angemessen"/>
                                     <connections>
                                         <action selector="reportTypeChecked:" destination="77I-kR-Tb7" eventType="touchUpInside" id="vPc-Jv-7e9"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6C-ex-2Im">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6C-ex-2Im">
                                     <rect key="frame" x="0.0" y="41" width="128" height="30"/>
                                     <state key="normal" title="Veraltet"/>
                                     <connections>
                                         <action selector="reportTypeChecked:" destination="77I-kR-Tb7" eventType="touchUpInside" id="mAd-U4-I73"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-VX-ngI">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-VX-ngI">
                                     <rect key="frame" x="0.0" y="82" width="128" height="30"/>
                                     <state key="normal" title="Zu leicht"/>
                                     <connections>
                                         <action selector="reportTypeChecked:" destination="77I-kR-Tb7" eventType="touchUpInside" id="rGg-6B-4fj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39q-mm-OGF">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39q-mm-OGF">
                                     <rect key="frame" x="0.0" y="123" width="128" height="30"/>
                                     <state key="normal" title="Zu schwer"/>
                                     <connections>
@@ -1296,7 +1296,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ps-44-4UA">
-                                                    <rect key="frame" x="27" y="26.5" width="42" height="47"/>
+                                                    <rect key="frame" x="28" y="26.5" width="42" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="IRo-J5-epW"/>
                                                         <constraint firstAttribute="height" constant="47" id="Pm4-Eo-fJK"/>
@@ -1306,19 +1306,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-pU-fgS">
-                                                    <rect key="frame" x="99" y="8" width="185" height="84"/>
+                                                    <rect key="frame" x="100" y="8" width="183" height="84"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list-bottom-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="P2I-69-ac4">
-                                                    <rect key="frame" x="15" y="100" width="345" height="2"/>
+                                                    <rect key="frame" x="16" y="100" width="343" height="2"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="JG5-YR-rOE"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-C1-e51">
-                                                    <rect key="frame" x="319" y="40.5" width="24" height="19"/>
+                                                    <rect key="frame" x="318" y="40.5" width="24" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19" id="QX9-if-RIq"/>
                                                         <constraint firstAttribute="width" constant="24" id="sly-DJ-Un3"/>
@@ -1409,11 +1409,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="505" translatesAutoresizingMaskIntoConstraints="NO" id="uj8-8o-wjD">
-                                <rect key="frame" x="166.5" y="87" width="42" height="20.5"/>
+                                <rect key="frame" x="167" y="87" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-fd-sTp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-fd-sTp">
                                 <rect key="frame" x="106.5" y="531" width="163" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="163" id="MzZ-an-JzU"/>
@@ -1482,6 +1482,9 @@
             <point key="canvasLocation" x="321" y="1527"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oN6-oc-yWp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Level_Up_Star" width="443" height="390"/>
         <image name="button" width="145" height="42"/>
@@ -1494,8 +1497,8 @@
         <image name="questions-icon" width="34" height="34"/>
         <image name="star" width="96" height="88.5"/>
         <image name="tick" width="24" height="19"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="oN6-oc-yWp"/>
-    </inferredMetricsTieBreakers>
 </document>
