@@ -254,6 +254,4 @@ static NSMutableArray *_usedQuestions;
     
     [mainView addConstraints:@[top, bottom, left, right]];
 }
-
-
 @end

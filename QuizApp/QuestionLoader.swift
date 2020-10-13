@@ -24,7 +24,7 @@ class QuestionLoader: NSObject {
             UserDefaults.standard.set(language, forKey: "question_language")
         }
         
-        var lastCheck =  UserDefaults.standard.string(forKey: "last_check_for_new_questions_" + language!)
+        var lastCheck = UserDefaults.standard.string(forKey: "last_check_for_new_questions_" + language!)
         
         if lastCheck == nil {
             lastCheck = "2017-01-01"
@@ -37,7 +37,7 @@ class QuestionLoader: NSObject {
         if (daysSinceLastCheck(lastCheck: lastCheck!) > 1) {
             
             loadNewQuestions(language: language!, since: lastCheck!, questionCompletionHandler: { (jsonData) in
-                var results : (added: Int,updated: Int) = (0,0)
+                var results : (added: Int, updated: Int) = (0,0)
                 if let jsonData = jsonData {
                     let decoder = JSONDecoder()
                     let incommingNewQuestions = try! decoder.decode([ServerQuestion].self, from: jsonData)
@@ -80,7 +80,7 @@ class QuestionLoader: NSObject {
         let query = [URLQueryItem.init(name: "language", value: language), URLQueryItem.init(name: "since", value: since) ]
         let request = QuizzAppUrlHelper.getServiceURLRequest(apiPath: getQuestions, queryItems: query)
         
-        print("Load questions from server since: /(since)")
+        print("Load questions from server since: \(since)")
         
         let task = URLSession.shared.dataTask(with: request , completionHandler: { data, response, error in
             if let error = error {

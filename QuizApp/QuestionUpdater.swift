@@ -21,6 +21,7 @@ class QuestionUpdater: NSObject {
             
             // Notify only with new or updated questions!
             if (added == 0 && updated == 0) {
+                print("No new questions, no updated questions found")
                 return
             }
             
