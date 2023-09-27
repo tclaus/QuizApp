@@ -7,11 +7,11 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1028165675466-s5qg760qovvh0v5nrmm4lihhiklmaopb.apps.googleusercontent.com</string>
+	<string>CLIENT-ID</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1028165675466-s5qg760qovvh0v5nrmm4lihhiklmaopb</string>
+	<string>REV-CLIENT-ID</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCw_hQsRGvO10dkTZZlHUo7rUEbtq943Gw</string>
+	<string>API-KEY</string>
 	<key>GCM_SENDER_ID</key>
 	<string>1028165675466</string>
 	<key>PLIST_VERSION</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1028165675466:ios:a6633e4f7d12492b</string>
+	<string></string>
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<false/>
 	<key>DATABASE_URL</key>
